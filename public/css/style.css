@@ -1,0 +1,48 @@
+@media (min-width: 992px) {
+    .bg-nav {
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    p,
+    .navbar-nav .nav-item a {
+        color: white !important;
+    }
+
+    .navbar .container .box-title-desa {
+        margin: 0px 40px;
+    }
+
+    .navbar .container .desa-1 {
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .navbar .container .desa-2 {
+        font-size: 17.6px;
+        font-weight: 350;
+    }
+
+    .navbar .container .desa-3 {
+        font-size: 15.8px;
+        font-weight: 350;
+    }
+
+    .navbar .container .nav-item {
+        margin: 0px 19px;
+        font-size: 17px;
+    }
+
+    .bg-jumbotron {
+        background-image: url('../img/desajatituju.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 800px !important;
+        margin-top: -160px;
+    }
+}
+
+@media (max-width: 576px) {
+    .color {
+        background-color: pink;
+    }
+}
