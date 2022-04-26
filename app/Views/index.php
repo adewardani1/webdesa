@@ -14,7 +14,7 @@
 
 <body>
   <!-- start navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-nav">
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-nav">
     <div class="container py-4">
       <img src="/img/logo-desajatituju.png" width="70px" height="90px" alt="" srcset="">
       <p class="box-title-desa">

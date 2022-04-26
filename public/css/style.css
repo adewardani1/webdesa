@@ -37,12 +37,25 @@
         background-repeat: no-repeat;
         background-size: cover;
         padding-bottom: 800px !important;
-        margin-top: -160px;
     }
 }
 
 @media (max-width: 576px) {
-    .color {
-        background-color: pink;
+    .bg-nav {
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    p,
+    .navbar-nav .nav-item a {
+        color: white !important;
+    }
+
+    .navbar .container .navbar-toggler {
+        border-color: rgb(247, 247, 247);
+    }
+
+
+    .navbar .container .navbar-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(247,247,247)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     }
 }
