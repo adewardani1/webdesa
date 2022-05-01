@@ -1,4 +1,8 @@
 @media (min-width: 992px) {
+    /* body {
+        overflow: none;
+    } */
+
     .bg-nav {
         background: rgba(0, 0, 0, 0.6);
     }
@@ -38,6 +42,82 @@
         background-size: cover;
         padding-bottom: 800px !important;
     }
+
+    .carousel .carousel-inner .carousel-item img {
+        background-size: cover;
+        width: 500px;
+        height: 900px;
+    }
+
+    .d-flex {
+        background-color: #fff8cc;
+    }
+
+    .d-flex .btn-menu {
+        border: 3px solid #f2de5c;
+        padding: 0px 69.6px;
+        transition: 0.3s ease;
+    }
+
+    .d-flex .btn-menu .btn-icon {
+        transition: 0.3s ease;
+    }
+
+    .d-flex .btn-menu .btn-icon:hover {
+        color: #f2de5c;
+    }
+
+    .d-flex .btn-menu:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .d-flex .btn-menu .btn-text p {
+        color: black !important;
+        font-weight: bold;
+    }
+
+    .d-flex .btn-menu .btn-icon {
+        margin: 40px 0px;
+    }
+
+    .d-flex .btn-menu .btn-icon i {
+        transition: 0.1s ease;
+    }
+
+    .d-flex .btn-menu .btn-icon i:hover {
+        font-size: 70px;
+    }
+
+    /* .d-flex{
+        background-color: ;
+    }
+
+    .d-flex .space {
+        padding: 50px 75.3px;
+        color: #076187;
+    }
+
+    .d-flex button {
+        border: 1px solid #c1d600;
+    }
+
+    .d-flex button p {
+        color: #076187 !important;
+        font-weight: bold;
+        font-size: 16px;
+    } */
+
+    /* .d-flex button .space p {
+        color: #0256cc !important;
+    } */
+
+    /* .box-btn button {
+        padding: 70px;
+    } */
+
+    /* img {
+        width: 300px;
+    } */
 }
 
 @media (max-width: 576px) {

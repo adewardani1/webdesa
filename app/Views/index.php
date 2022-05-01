@@ -7,75 +7,175 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/style.css">
+
   <title>Desa Jatitujuh</title>
 </head>
 
 <body>
   <!-- start navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-nav">
-    <div class="container py-4">
-      <img src="/img/logo-desajatituju.png" width="70px" height="90px" alt="" srcset="">
-      <p class="box-title-desa">
-        <span class="desa-1">DESA JATITUJUH</span><br>
-        <span class="desa-2">KECAMATAN JATITUJUH</span><br>
-        <span class="desa-3">KABUPATEN MAJALENGKA</span>
-      </p>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">HOME</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">BERITA</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">PROFILE</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">DATA</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">GALLERI</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">EVENT</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">KONTAK</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link">|</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa-solid fa-circle-exclamation"></i></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <?= $this->extend('layout/page_layout') ?>
   <!-- end navbar -->
 
-  <!-- start jumbotron -->
-  <div class="p-5 bg-jumbotron"></div>
+  <!-- start carousel -->
+  <?= $this->Section('content') ?>
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/img/desajatituju.jpg" class="img-size d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/img/WhatsApp Image 2022-04-26 at 21.29.46.jpeg" class="img-size d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/img/WhatsApp Image 2022-04-26 at 21.30.05.jpeg" class="img-size d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- end carousel -->
+
+  <!-- start menu button -->
+  <div class="box-btn">
+    <!-- <div class="box-btn-link text-center">
+      <a href="#" class="">
+        <i class="fa-solid fa-house-user"></i><br>
+        HOME
+      </a>
+      <a href="#" class="">
+        <i class="fa-solid fa-house-user"></i><br>
+        INFORMASI PUBLIK
+      </a>
+      <a href="#" class="">
+        <i class="fa-solid fa-house-user"></i>
+        HOME
+      </a>
+      <a href="#" class="">
+        <i class="fa-solid fa-house-user"></i>
+        HOME
+      </a>
+      <a href="#" class="">
+        <i class="fa-solid fa-house-user"></i>
+        HOME
+      </a>
+      <a href="#" class="">
+        <i class="fa-solid fa-house-user"></i>
+        HOME
+      </a>
+    </div> -->
+    <div class="d-flex justify-content-center">
+      <div class="btn-menu text-center">
+        <div class="btn-icon">
+          <i class="fa-solid fa-building-columns fa-4x"></i>
+        </div>
+        <div class="btn-text">
+          <p>PROFILE</p>
+        </div>
+      </div>
+      <div class="btn-menu text-center">
+        <div class="btn-icon">
+          <i class="fa-solid fa-book-open fa-4x"></i>
+        </div>
+        <div class="btn-text">
+          <p>INFORMASI PUBLIK</p>
+        </div>
+      </div>
+      <div class="btn-menu text-center">
+        <div class="btn-icon">
+          <i class="fa-solid fa-bullhorn fa-4x"></i>
+        </div>
+        <div class="btn-text">
+          <p>PENGUMUMAN</p>
+        </div>
+      </div>
+      <div class="btn-menu text-center">
+        <div class="btn-icon">
+          <i class="fa-solid fa-users fa-4x"></i>
+        </div>
+        <div class="btn-text">
+          <p>ASPIRASI WARGA</p>
+        </div>
+      </div>
+      <div class="btn-menu text-center">
+        <div class="btn-icon">
+          <i class="fa-solid fa-phone fa-4x"></i>
+        </div>
+        <div class="btn-text">
+          <p>HELLO DESA</p>
+        </div>
+      </div>
+      <div class="btn-menu text-center">
+        <div class="btn-icon">
+          <i class="fa-solid fa-basket-shopping fa-4x"></i>
+        </div>
+        <div class="btn-text">
+          <p>PRODUK DESA</p>
+        </div>
+      </div>
+      <div class="btn-menu text-center">
+        <div class="btn-icon">
+          <i class="fa-solid fa-building fa-4x"></i>
+        </div>
+        <div class="btn-text">
+          <p>BUMDES</p>
+        </div>
+      </div>
+      <!-- <a href="#" class="">
+        <i class="fa-solid fa-house-user"></i><br>
+        HOME
+      </a>
+      <a href="#" class="">
+        <i class="fa-solid fa-house-user"></i><br>
+        BERANDA
+      </a> -->
+      <!-- <button>
+        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
+        <p>PROFILE</p>
+      </button>
+      <button>
+        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
+        <p>INFORMASI PUBLIK</p>
+      </button>
+      <button>
+        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
+        <p>PENGUMUMAN</p>
+      </button>
+      <button>
+        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
+        <p>ASPIRASI WARGA</p>
+      </button>
+      <button>
+        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
+        <p>HELLO DESA</p>
+      </button>
+      <button>
+        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
+        <p>PRODUK DESA</p>
+      </button>
+      <button>
+        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
+        <p>BUMDES</p>
+      </button> -->
+    </div>
+  </div>
 
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/90be7449aa.js" crossorigin="anonymous"></script>
+
+
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
+  <?= $this->endSection() ?>
 </body>
 
 </html>
