@@ -209,47 +209,84 @@
 
   <!-- end profil kepala desa -->
 
-  <div class="wave-container">
-    <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#ffffff" fill-opacity="1" d="M0,96L11.4,90.7C22.9,85,46,75,69,80C91.4,85,114,107,137,112C160,117,183,107,206,133.3C228.6,160,251,224,274,229.3C297.1,235,320,181,343,165.3C365.7,149,389,171,411,192C434.3,213,457,235,480,240C502.9,245,526,235,549,234.7C571.4,235,594,245,617,224C640,203,663,149,686,144C708.6,139,731,181,754,202.7C777.1,224,800,224,823,202.7C845.7,181,869,139,891,101.3C914.3,64,937,32,960,26.7C982.9,21,1006,43,1029,58.7C1051.4,75,1074,85,1097,85.3C1120,85,1143,75,1166,85.3C1188.6,96,1211,128,1234,149.3C1257.1,171,1280,181,1303,176C1325.7,171,1349,149,1371,154.7C1394.3,160,1417,192,1429,208L1440,224L1440,0L1428.6,0C1417.1,0,1394,0,1371,0C1348.6,0,1326,0,1303,0C1280,0,1257,0,1234,0C1211.4,0,1189,0,1166,0C1142.9,0,1120,0,1097,0C1074.3,0,1051,0,1029,0C1005.7,0,983,0,960,0C937.1,0,914,0,891,0C868.6,0,846,0,823,0C800,0,777,0,754,0C731.4,0,709,0,686,0C662.9,0,640,0,617,0C594.3,0,571,0,549,0C525.7,0,503,0,480,0C457.1,0,434,0,411,0C388.6,0,366,0,343,0C320,0,297,0,274,0C251.4,0,229,0,206,0C182.9,0,160,0,137,0C114.3,0,91,0,69,0C45.7,0,23,0,11,0L0,0Z"></path>
-    </svg>
-    <h1 class="text-center">Jatitujuh Desa</h1>
-    <div class="d-flex justify-content-center">
-      <div class="text-center icon">
-        <i class="fa-solid fa-users fa-4x"></i>
-        <p>2000</p>
-        <p>Penduduk</p>
+  <!-- start data stattistik -->
+
+  <div class="jumbotron-statistik">
+    <div class="wave-container">
+      <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#ffffff" fill-opacity="1" d="M0,96L11.4,90.7C22.9,85,46,75,69,80C91.4,85,114,107,137,112C160,117,183,107,206,133.3C228.6,160,251,224,274,229.3C297.1,235,320,181,343,165.3C365.7,149,389,171,411,192C434.3,213,457,235,480,240C502.9,245,526,235,549,234.7C571.4,235,594,245,617,224C640,203,663,149,686,144C708.6,139,731,181,754,202.7C777.1,224,800,224,823,202.7C845.7,181,869,139,891,101.3C914.3,64,937,32,960,26.7C982.9,21,1006,43,1029,58.7C1051.4,75,1074,85,1097,85.3C1120,85,1143,75,1166,85.3C1188.6,96,1211,128,1234,149.3C1257.1,171,1280,181,1303,176C1325.7,171,1349,149,1371,154.7C1394.3,160,1417,192,1429,208L1440,224L1440,0L1428.6,0C1417.1,0,1394,0,1371,0C1348.6,0,1326,0,1303,0C1280,0,1257,0,1234,0C1211.4,0,1189,0,1166,0C1142.9,0,1120,0,1097,0C1074.3,0,1051,0,1029,0C1005.7,0,983,0,960,0C937.1,0,914,0,891,0C868.6,0,846,0,823,0C800,0,777,0,754,0C731.4,0,709,0,686,0C662.9,0,640,0,617,0C594.3,0,571,0,549,0C525.7,0,503,0,480,0C457.1,0,434,0,411,0C388.6,0,366,0,343,0C320,0,297,0,274,0C251.4,0,229,0,206,0C182.9,0,160,0,137,0C114.3,0,91,0,69,0C45.7,0,23,0,11,0L0,0Z"></path>
+      </svg>
+      <h1 class="text-center">Jatitujuh Desa</h1>
+      <div class="d-flex justify-content-center">
+        <div class="text-center icon">
+          <i class="fa-solid fa-users fa-4x"></i>
+          <p>2000</p>
+          <p>Penduduk</p>
+        </div>
+        <div class="text-center icon">
+          <i class="fa-solid fa-user-tie fa-4x"></i>
+          <p>2000</p>
+          <p>Kepala Heluarga</p>
+        </div>
+        <div class="text-center icon">
+          <i class="fa-solid fa-people-group fa-4x"></i>
+          <p>2000</p>
+          <P>Anggota Keluarga</P>
+        </div>
+        <div class="text-center icon">
+          <i class="fa-solid fa-person fa-4x"></i>
+          <p>2000</p>
+          <p>Laki-Laki</p>
+        </div>
+        <div class="text-center icon">
+          <i class="fa-solid fa-person-dress fa-4x"></i>
+          <p>2000</p>
+          <p>Perempuan</p>
+        </div>
       </div>
-      <div class="text-center icon">
-        <i class="fa-solid fa-user-tie fa-4x"></i>
-        <p>2000</p>
-        <p>Kepala Heluarga</p>
-      </div>
-      <div class="text-center icon">
-        <i class="fa-solid fa-people-group fa-4x"></i>
-        <p>2000</p>
-        <P>Anggota Keluarga</P>
-      </div>
-      <div class="text-center icon">
-        <i class="fa-solid fa-person fa-4x"></i>
-        <p>2000</p>
-        <p>Laki-Laki</p>
-      </div>
-      <div class="text-center icon">
-        <i class="fa-solid fa-person-dress fa-4x"></i>
-        <p>2000</p>
-        <p>Perempuan</p>
-      </div>
-    </div>
-    <div class="d-flex justify-content-center">
-      <div class="btn-statistik">
-        <a href="#">Statistik Penduduk</a>
-      </div>
-      <div class="btn-statistik">
-        <a href="#">Demografi</a>
+      <div class="d-flex justify-content-center">
+        <div class="btn-statistik">
+          <a href="#">Statistik Penduduk</a>
+        </div>
+        <div class="btn-statistik">
+          <a href="#">Demografi</a>
+        </div>
       </div>
     </div>
   </div>
+
+  <!-- end data stattistik -->
+
+  <!-- start sotk -->
+
+  <div class="jumbotron-sotk">
+    <div class="container">
+      <div class="header text-center">
+        <h1>SOTK</h1>
+        <p class="text-black">Struktur Organisasi dan Tata kerja Pemerintah Desa Jatitujuh Kecamatan Jatitujuh Kabupaten Majalengka Provinsi Jawa Barat</p>
+        <hr />
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="group-profile" data-aos="fade-right" data-aos-duration="1000">
+          <img class="img-fluid" src="/img/foto.png" alt="">
+        </div>
+        <div class="group-profile" data-aos="fade-up" data-aos-duration="1000">
+          <img class="img-fluid" src="/img/foto.png" alt="">
+        </div>
+        <div class="group-profile" data-aos="fade-up" data-aos-duration="1000">
+          <img class="img-fluid" src="/img/foto.png" alt="">
+        </div>
+        <div class="group-profile" data-aos="fade-left" data-aos-duration="1000">
+          <img class="img-fluid" src="/img/foto.png" alt="">
+        </div>
+      </div>
+      <div class="box-detail">
+        <a href="#">Selengkapnya</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- end sotk -->
 
   <!-- Optional JavaScript; choose one of the two! -->
 
