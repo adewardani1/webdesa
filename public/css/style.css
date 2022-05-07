@@ -1,7 +1,11 @@
 @media (min-width: 992px) {
-    /* body {
-        overflow: none;
-    } */
+
+
+    body {
+        font-family: "Times New Roman", Times, serif;
+    }
+
+    /* start css navbar */
 
     .bg-nav {
         background: rgba(0, 0, 0, 0.6);
@@ -13,7 +17,7 @@
     }
 
     .navbar .container .box-title-desa {
-        margin: 0px 40px;
+        margin: 0px 10px;
     }
 
     .navbar .container .desa-1 {
@@ -36,27 +40,52 @@
         font-size: 17px;
     }
 
-    .bg-jumbotron {
-        background-image: url('../img/desajatituju.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding-bottom: 800px !important;
+    /* end css navbar */
+
+    /* start css carousel */
+
+    .carousel .carousel-item {
+        height: 670px;
     }
 
     .carousel .carousel-inner .carousel-item img {
-        background-size: cover;
+        /* background-size: cover;
         width: 500px;
-        height: 900px;
+        height: 900px; */
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        width: 400px;
+        height: 800px;
     }
 
-    .d-flex {
+    .carousel .carousel-inner .carousel-item img {
+        animation: zoom-in 30s ease infinite;
+    }
+
+    @keyframes zoom-in {
+        0% {
+            transform: scale(1, 1);
+        }
+
+        50% {
+            transform: scale(1.5, 1.5);
+        }
+    }
+
+    /* end css carousel */
+
+    /* start css btn-menu */
+
+    .bg-flex {
         background-color: #fff8cc;
     }
 
     .d-flex .btn-menu {
         border: 3px solid #f2de5c;
-        padding: 0px 69.6px;
-        transition: 0.3s ease;
+        padding: 0px 56.5px;
+        transition: 0.5s ease;
     }
 
     .d-flex .btn-menu .btn-icon {
@@ -81,12 +110,117 @@
     }
 
     .d-flex .btn-menu .btn-icon i {
-        transition: 0.1s ease;
+        transition: 0.3s ease;
     }
 
     .d-flex .btn-menu .btn-icon i:hover {
         font-size: 70px;
     }
+
+    /* end css btn-menu */
+
+    /* start css box-head-profil */
+
+    .box-head-profil .container .row .col-sm-6 h1 {
+        font-weight: bold;
+        font-size: 100px;
+        text-align: left;
+    }
+
+    .box-head-profil .container .row .col-sm-6 p {
+        font-size: 23px;
+    }
+
+    .box-head-profil .container .row .col-sm-6 h3 {
+        font-family: 'Parisienne', cursive;
+        font-weight: 900;
+        font-size: 50px;
+        margin-top: 50px;
+    }
+
+    .box-head-profil .container .row .col-sm-6 h4 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+
+    .box-head-profil .container .row .col-sm-6 a {
+        font-family: 'Roboto', sans-serif;
+        background-color: #fc6a6a;
+        padding: 20px 40px;
+        text-decoration: none;
+        color: white;
+        font-weight: 900;
+        transition: 0.3s ease;
+    }
+
+    .box-head-profil .container .row .col-sm-6 a:hover {
+        background-color: #b50404;
+    }
+
+    /* start css box-head-profil */
+
+    /* start css statistik */
+
+    .wave-container {
+        /* background-image: url("/img/desajatituju.jpg"); */
+        background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("/img/desajatituju.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 900px;
+        margin-top: 30px;
+        /* opacity: 0.70; */
+        background-color: black !important;
+    }
+
+    .wave-container h1 {
+        font-family: 'Parisienne', cursive;
+        font-weight: bolder;
+        color: #faee02;
+        opacity: 0.7;
+        font-size: 80px;
+        margin-top: 40px;
+    }
+
+    .wave-container .d-flex {
+        margin-top: 50px;
+    }
+
+    .wave-container .d-flex .icon {
+        margin: 40px 70px;
+        color: white;
+    }
+
+    .wave-container .d-flex .icon p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 23px;
+        margin-top: 20px;
+        color: white !important;
+        font-weight: bolder;
+    }
+
+    .wave-container .d-flex .btn-statistik {
+        margin: 0px 30px;
+        padding: 20px;
+        border-radius: 40px;
+        border-style: solid;
+        border-color: white;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .wave-container .d-flex .btn-statistik:hover {
+        background-color: red;
+    }
+
+    .wave-container .d-flex .btn-statistik a {
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+        color: white;
+        font-weight: bolder;
+    }
+
+    /* end css statistik */
 
     /* .d-flex{
         background-color: ;
