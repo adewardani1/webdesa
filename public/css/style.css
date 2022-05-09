@@ -228,7 +228,7 @@
 
     /* end css statistik */
 
-    /* start css stok */
+    /* start css sotk */
 
     .jumbotron-sotk {
         font-family: 'Roboto', sans-serif;
@@ -289,6 +289,75 @@
         font-weight: bolder;
         font-size: 20px;
     }
+
+    .jumbotron-sotk .container .box-detail a:hover {
+        text-decoration: underline;
+    }
+
+    /* end css sotk */
+
+    /* start css layanan */
+
+    .jumbotron-layanan .container h1 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+    }
+
+    .jumbotron-layanan .container .header-layanan hr {
+        color: red;
+        padding: 3px 0px;
+        width: 30px;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    .jumbotron-layanan .container .row-1 .col-sm-1 {
+        margin-top: 20px;
+    }
+
+    .jumbotron-layanan .container .row-1 .col-sm-1 a {
+        text-decoration: none;
+        color: white;
+        background-color: #0047b3;
+        padding-top: 50px;
+        padding-bottom: 10px;
+        border-radius: 100px;
+        padding: 30px 15px 15px 15px;
+        border-style: solid;
+        border-color: white;
+        border-width: 5px;
+        box-shadow: 0px 0px 10px gray;
+        transition: 0.3s ease;
+    }
+
+    .jumbotron-layanan .container .row-1 .col-sm-1 a:hover {
+        background-color: #ff6600;
+    }
+
+    .jumbotron-layanan .container .row-2 .col-sm-1 a {
+        text-decoration: none;
+        color: white;
+        background-color: #ff6600;
+        padding-top: 50px;
+        padding-bottom: 10px;
+        border-radius: 100px;
+        padding: 30px 15px 15px 15px;
+        border-style: solid;
+        border-color: white;
+        border-width: 5px;
+        box-shadow: 0px 0px 10px gray;
+        transition: 0.3s ease;
+    }
+
+    .jumbotron-layanan .container .row-2 .col-sm-1 a:hover {
+        background-color: #0047b3;
+    }
+
+    /* end css layanan */
+
+    /* .jumbotron-layanan .container .d-flex .group-layanan .text-layanan {
+        float: right;
+    } */
 
     /* .d-flex{
         background-color: ;

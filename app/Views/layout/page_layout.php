@@ -24,6 +24,14 @@
     <script>
         AOS.init();
     </script>
+    <!-- <script>
+        // let mouse = document.getElementById("boxImg");
+        // mouse.addEventListener('mouseover', fadeUp());
+
+        function fadeUp() {
+            alert("sukses");
+        }
+    </script> -->
 </body>
 
 </html>
