@@ -377,6 +377,30 @@
 
   <!-- end layanan publik -->
 
+  <!-- start peduli lindungi -->
+
+  <div class="jumbotron-covid">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-4">
+          <div class="group-text-peduli">
+            <h2 class="text-light">#DARI DESA MELAWAN COVID19</h2>
+            <p class="mb-5">dimulai dari diri sendiri mari jadi pahlawan indonesia dengan disiplin menjalankan covid-19, jaga diri, jaga keluarga dan jaga sesama<br>#BersatuKitaBisa #CepatPulihIndonesia</p>
+            <a class="btn-vaksin" href="#">#AyoVaksin</a>
+          </div>
+        </div>
+        <div class="col-sm-4">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end peduli lindungin -->
+
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: Bootstrap Bundle with Popper -->

@@ -355,6 +355,33 @@
 
     /* end css layanan */
 
+    /* start css peduli lindungi */
+
+    .jumbotron-covid {
+        background-image: url("/img/bg-peduli.jpeg");
+        font-family: 'Roboto', sans-serif;
+        padding: 2rem 1rem;
+    }
+
+    .jumbotron-covid .container .row .col-sm-4 .group-text-peduli h2 {
+        font-size: 25px;
+        font-weight: bolder;
+    }
+
+    .jumbotron-covid .container .row .col-sm-4 .group-text-peduli p {
+        font-weight: lighter;
+    }
+
+    .jumbotron-covid .container .row .col-sm-4 .group-text-peduli .btn-vaksin {
+        text-decoration: none;
+        background-color: white;
+        color: black;
+        font-weight: 700;
+        padding: 10px 20px;
+    }
+
+    /* end css peduli lindungi */
+
     /* .jumbotron-layanan .container .d-flex .group-layanan .text-layanan {
         float: right;
     } */
