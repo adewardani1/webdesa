@@ -31,8 +31,35 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+//route view desa
 $routes->get('/', 'Home::index');
 
+//route SIDES (sistem informasi desa)
+$routes->get('/sides', 'Sides::index');
+
+//route penduduk (sistem informasi desa)
+$routes->get('/penduduk/create', 'Penduduk::create'); //tampil form tambah
+$routes->post('/penduduk/save', 'Penduduk::insert');
+$routes->get('/penduduk', 'Penduduk::index');
+$routes->get('/penduduk/show/(:num)', 'Penduduk::show/$1');
+$routes->post('/penduduk/update/(:num)', 'Penduduk::updated/$1');
+$routes->get('/penduduk/delete/(:num)', 'Penduduk::destroy/$1');
+
+//route aspirasi (sistem informasi desa)
+$routes->get('/aspirasi', 'AspirasiWarga::index');
+$routes->get('/aspirasi/(:num)', 'AspirasiWarga::show/$1');
+$routes->post('/aspirasi/update(:num)', 'AspirasiWarga::update/$1');
+$routes->get('/aspirasi/delete(:num)', 'AspirasiWarga::delete/$1');
+
+//route berita (sistem informasi desa)
+$routes->get('/berita/create', 'Berita::create'); //tampil form tambah
+$routes->post('/berita/save', 'Berita::insert');
+$routes->get('/berita', 'Berita::index');
+$routes->get('/berita/show/(:num)', 'Berita::show/$1');
+$routes->post('/berita/update/(:num)', 'Berita::updated/$1');
+$routes->get('/berita/delete/(:num)', 'Berita::destroy/$1');
+$routes->get('/berita/foto/(:num)', 'Berita::foto/$1'); //tampil foto
 /*
  * --------------------------------------------------------------------
  * Additional Routing
