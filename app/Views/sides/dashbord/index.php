@@ -77,7 +77,7 @@
             with font-awesome or any other icon font library -->
             <li class="nav-item">
               <a href="<?php echo base_url('/penduduk'); ?>" class="nav-link">
-                <i class="nav-icon fas fa-th"></i>
+                <i class="fas fa-users"></i>
                 <p>
                   Penduduk
                 </p>
@@ -85,7 +85,7 @@
             </li>
             <li class="nav-item">
               <a href="<?php echo base_url('/berita'); ?>" class="nav-link">
-                <i class="nav-icon fas fa-th"></i>
+                <i class="fas fa-newspaper"></i>
                 <p>
                   Berita
                 </p>
@@ -93,7 +93,7 @@
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-th"></i>
+                <i class="fas fa-lightbulb"></i>
                 <p>
                   Aspirasi Warga
                 </p>

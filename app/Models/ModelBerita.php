@@ -50,7 +50,7 @@ class ModelBerita extends Model
     // }
     public function updateById($data, $id)
     {
-        return $this->database->table('penduduk')->update($data, ['id' => $id]);
+        return $this->database->table('berita')->update($data, ['id' => $id]);
     }
 
     public function deleteById($id)

@@ -38,6 +38,10 @@
         <script>
             alert('gagal simpan');
         </script>
+    <?php } else if (session()->getFlashdata('error') === true) { ?>
+        <script>
+            alert('gagal update berita');
+        </script>
     <?php }
     ?>
     <div class="wrapper">
@@ -148,18 +152,18 @@
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form class="form-horizontal" method="post" enctype="multipart/form-data" action="<?php echo base_url('/berita/save'); ?>">
+                                <form class="form-horizontal" method="post" enctype="multipart/form-data" action="<?php echo base_url('/berita/update/' . $berita->id); ?>">
                                     <div class="card-body">
                                         <div class="form-group row">
                                             <label for="inputEmail3" class="col-sm-2 col-form-label">Judul Berita</label>
                                             <div class="col-sm-10">
-                                                <input type="text" name="judul" class="form-control" placeholder="Judul Berita">
+                                                <input type="text" name="judul" value="<?php echo $berita->judul; ?>" class="form-control" placeholder="Judul Berita">
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="inputPassword3" class="col-sm-2 col-form-label">Isi Berita</label>
                                             <div class="col-sm-10">
-                                                <textarea class="form-control" name="konten" rows="3" placeholder="Isi Berita"></textarea>
+                                                <textarea class="form-control" name="konten" rows="3" placeholder="Isi Berita"><?php echo $berita->konten; ?></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group row">
