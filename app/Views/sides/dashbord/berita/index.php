@@ -64,7 +64,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="<?php base_url('/sides'); ?>" class="brand-link">
+            <a href="<?php base_url('sides'); ?>" class="brand-link">
                 <img src="<?php echo base_url('img/logo-desajatituju.png'); ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">SIDES</span>
             </a>
@@ -86,7 +86,7 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="<?php echo base_url('/penduduk'); ?>" class="nav-link">
+                            <a href="<?php echo base_url('sides/penduduk'); ?>" class="nav-link">
                                 <i class="fas fa-users"></i>
                                 <p>
                                     Penduduk
@@ -94,7 +94,7 @@
                             </a>
                         </li>
                         <li class="nav-item active">
-                            <a href="<?php echo base_url('/berita'); ?>" class="nav-link active">
+                            <a href="<?php echo base_url('sides/berita'); ?>" class="nav-link active">
                                 <i class="fas fa-newspaper"></i>
                                 <p>
                                     Berita
@@ -102,7 +102,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="<?php echo base_url('sides/aspirasi'); ?>" class="nav-link">
                                 <i class="fas fa-lightbulb"></i>
                                 <p>
                                     Aspirasi Warga
@@ -144,7 +144,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <a class="btn btn-primary" href="<?php echo base_url('/berita/create'); ?>">Tambah Data</a>
+                                    <a class="btn btn-primary" href="<?php echo base_url('sides/berita/create'); ?>">Tambah Data</a>
                                     <div class="card-tools">
                                         <div class="input-group input-group-sm" style="width: 150px;">
                                             <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
@@ -184,11 +184,11 @@
                                                     <td><?php echo $row->updated_at; ?></td>
                                                     <td>
                                                         <div class="btn-group" role="group" aria-label="Basic example">
-                                                            <a class="btn btn-danger" href="<?php echo base_url('berita/delete/' . $row->id); ?>">Hapus</a>
-                                                            <a class="btn btn-warning" href="<?php echo base_url('berita/show/' . $row->id); ?>">Edit</a>
+                                                            <a class="btn btn-danger" href="<?php echo base_url('sides/berita/delete/' . $row->id); ?>">Hapus</a>
+                                                            <a class="btn btn-warning" href="<?php echo base_url('sides/berita/show/' . $row->id); ?>">Edit</a>
                                                         </div>
                                                     </td>
-                                                    <td><a href="<?php echo base_url('/berita/foto/' . $row->id); ?>" class="btn btn-outline-primary"><i class="fas fa-image"></i> Download</a></td>
+                                                    <td><a href="<?php echo base_url('sides/berita/foto/' . $row->id); ?>" class="btn btn-outline-primary"><i class="fas fa-image"></i> Download</a></td>
                                                 </tr>
                                             <?php }
                                             ?>

@@ -90,7 +90,7 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="<?php echo base_url('/penduduk'); ?>" class="nav-link">
+                            <a href="<?php echo base_url('sides/penduduk'); ?>" class="nav-link">
                                 <i class="fas fa-users"></i>
                                 <p>
                                     Penduduk
@@ -98,7 +98,7 @@
                             </a>
                         </li>
                         <li class="nav-item active">
-                            <a href="<?php echo base_url('/berita'); ?>" class="nav-link active">
+                            <a href="<?php echo base_url('sides/berita'); ?>" class="nav-link active">
                                 <i class="fas fa-newspaper"></i>
                                 <p>
                                     Berita
@@ -106,7 +106,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="<?php echo base_url('sides/aspirasi'); ?>" class="nav-link">
                                 <i class="fas fa-lightbulb"></i>
                                 <p>
                                     Aspirasi Warga
@@ -152,7 +152,7 @@
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form class="form-horizontal" method="post" enctype="multipart/form-data" action="<?php echo base_url('/berita/update/' . $berita->id); ?>">
+                                <form class="form-horizontal" method="post" enctype="multipart/form-data" action="<?php echo base_url('sides/berita/update/' . $berita->id); ?>">
                                     <div class="card-body">
                                         <div class="form-group row">
                                             <label for="inputEmail3" class="col-sm-2 col-form-label">Judul Berita</label>

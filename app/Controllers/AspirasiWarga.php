@@ -13,7 +13,7 @@ class Penduduk extends BaseController
     public function index()
     {
         $data = [
-            'penduduk' => $this->model->show()
+            'aspirasi' => $this->model->show()
         ];
 
         if ($data) {
@@ -38,5 +38,6 @@ class Penduduk extends BaseController
 
     public function insert()
     {
+        $data 
     }
 }

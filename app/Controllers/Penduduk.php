@@ -63,7 +63,7 @@ class Penduduk extends BaseController
 
         if ($simpan) {
             session()->setFlashdata('pesan_insert', 'data berhasil di tambahkan');
-            return redirect()->to('/penduduk');
+            return redirect()->to('sides/penduduk');
         } else {
             return false;
         }
@@ -91,7 +91,7 @@ class Penduduk extends BaseController
 
             $simpan = $this->model->updateById($data, $id);
             if ($simpan) {
-                return redirect()->to('/penduduk');
+                return redirect()->to('sides/penduduk');
             } else {
                 return false;
             }
@@ -103,7 +103,7 @@ class Penduduk extends BaseController
         $delete = $this->model->delete(['id' => $id]);
         if ($delete) {
             session()->setFlashdata('pesan_hapus', true);
-            return redirect()->to('/penduduk');
+            return redirect()->to('sides/penduduk');
         } else {
             return false;
         }

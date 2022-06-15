@@ -86,7 +86,7 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
                         <li class="nav-item active">
-                            <a href="<?php echo base_url('/penduduk'); ?>" class="nav-link active">
+                            <a href="<?php echo base_url('/sides/penduduk'); ?>" class="nav-link active">
                                 <i class="fas fa-users"></i>
                                 <p>
                                     Penduduk
@@ -94,7 +94,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo base_url('/berita'); ?>" class="nav-link">
+                            <a href="<?php echo base_url('/sides/berita'); ?>" class="nav-link">
                                 <i class="fas fa-newspaper"></i>
                                 <p>
                                     Berita
@@ -102,7 +102,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="<?php echo base_url('/sides/aspirasi'); ?>" class="nav-link">
                                 <i class="fas fa-lightbulb"></i>
                                 <p>
                                     Aspirasi Warga
@@ -144,7 +144,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <a class="btn btn-primary" href="<?php echo base_url('/penduduk/create'); ?>">Tambah Data</a>
+                                    <a class="btn btn-primary" href="<?php echo base_url('/sides/penduduk/create'); ?>">Tambah Data</a>
                                     <div class="card-tools">
                                         <div class="input-group input-group-sm" style="width: 150px;">
                                             <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
@@ -195,8 +195,8 @@
                                                     <td><?php echo $row->agama; ?></td>
                                                     <td>
                                                         <div class="btn-group" role="group" aria-label="Basic example">
-                                                            <a class="btn btn-danger" href="<?php echo base_url('penduduk/delete/' . $row->id); ?>">Hapus</a>
-                                                            <a class="btn btn-warning" href="<?php echo base_url('penduduk/show/' . $row->id); ?>">Edit</a>
+                                                            <a class="btn btn-danger" href="<?php echo base_url('/sides/penduduk/delete/' . $row->id); ?>">Hapus</a>
+                                                            <a class="btn btn-warning" href="<?php echo base_url('/sides/penduduk/show/' . $row->id); ?>">Edit</a>
                                                             <!-- <button type="button" class="btn btn-danger">Hapus</button>
                                                             <button type="button" class="btn btn-warning">Edit</button> -->
                                                         </div>

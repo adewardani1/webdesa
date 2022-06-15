@@ -35,31 +35,36 @@ $routes->setAutoRoute(true);
 //route view desa
 $routes->get('/', 'Home::index');
 
-//route SIDES (sistem informasi desa)
-$routes->get('/sides', 'Sides::index');
 
-//route penduduk (sistem informasi desa)
-$routes->get('/penduduk/create', 'Penduduk::create'); //tampil form tambah
-$routes->post('/penduduk/save', 'Penduduk::insert');
-$routes->get('/penduduk', 'Penduduk::index');
-$routes->get('/penduduk/show/(:num)', 'Penduduk::show/$1');
-$routes->post('/penduduk/update/(:num)', 'Penduduk::updated/$1');
-$routes->get('/penduduk/delete/(:num)', 'Penduduk::destroy/$1');
+//route login SIDES (sistem informasi website desa)
+$routes->get('auth', 'Login::index');
+$routes->post('auth/proses', 'Login::auth');
+
+//route SIDES (sistem informasi website desa)
+$routes->get('sides', 'Sides::index');
+
+//route penduduk (sistem informasi website desa)
+$routes->get('sides/penduduk/create', 'Penduduk::create'); //tampil form tambah
+$routes->post('sides/penduduk/save', 'Penduduk::insert');
+$routes->get('sides/penduduk', 'Penduduk::index');
+$routes->get('sides/penduduk/show/(:num)', 'Penduduk::show/$1');
+$routes->post('sides/penduduk/update/(:num)', 'Penduduk::updated/$1');
+$routes->get('sides/penduduk/delete/(:num)', 'Penduduk::destroy/$1');
 
 //route aspirasi (sistem informasi desa)
-$routes->get('/aspirasi', 'AspirasiWarga::index');
-$routes->get('/aspirasi/(:num)', 'AspirasiWarga::show/$1');
-$routes->post('/aspirasi/update(:num)', 'AspirasiWarga::update/$1');
-$routes->get('/aspirasi/delete(:num)', 'AspirasiWarga::delete/$1');
+$routes->get('sides/aspirasi', 'AspirasiWarga::index');
+$routes->get('sides/aspirasi/(:num)', 'AspirasiWarga::show/$1');
+$routes->post('sides/aspirasi/update(:num)', 'AspirasiWarga::update/$1');
+$routes->get('sides/aspirasi/delete(:num)', 'AspirasiWarga::delete/$1');
 
-//route berita (sistem informasi desa)
-$routes->get('/berita/create', 'Berita::create'); //tampil form tambah
-$routes->post('/berita/save', 'Berita::insert');
-$routes->get('/berita', 'Berita::index');
-$routes->get('/berita/show/(:num)', 'Berita::show/$1');
-$routes->post('/berita/update/(:num)', 'Berita::updated/$1');
-$routes->get('/berita/delete/(:num)', 'Berita::destroy/$1');
-$routes->get('/berita/foto/(:num)', 'Berita::foto/$1'); //tampil foto
+//route berita (sistem informasi website desa)
+$routes->get('sides/berita/create', 'Berita::create'); //tampil form tambah
+$routes->post('sides/berita/save', 'Berita::insert');
+$routes->get('sides/berita', 'Berita::index');
+$routes->get('sides/berita/show/(:num)', 'Berita::show/$1');
+$routes->post('sides/berita/update/(:num)', 'Berita::updated/$1');
+$routes->get('sides/berita/delete/(:num)', 'Berita::destroy/$1');
+$routes->get('sides/berita/foto/(:num)', 'Berita::foto/$1'); //tampil foto
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -45,7 +45,7 @@ class Berita extends BaseController
 
         if (!$validation) {
             session()->setFlashdata('alert', true);
-            return redirect()->to('/berita/create');
+            return redirect()->to('sides/berita/create');
         } else {
             $image = $this->request->getFile('gambar');
             $gambar = $image->getClientName();
@@ -66,10 +66,10 @@ class Berita extends BaseController
         $simpan = $this->model->insert($data);
         if (!$simpan) {
             session()->setFlashdata('error', true);
-            return redirect()->to('/berita');
+            return redirect()->to('sides/berita');
         } else {
             session()->setFlashdata('pesan_insert', true);
-            return redirect()->to('/berita');
+            return redirect()->to('sides/berita');
         }
     }
 
@@ -99,7 +99,7 @@ class Berita extends BaseController
 
             if (!$validation) {
                 session()->setFlashdata('alert', true);
-                return redirect()->to('/berita/show/' . $id);
+                return redirect()->to('sides/berita/show/' . $id);
             } else {
                 $image = $this->request->getFile('gambar');
                 $gambar = $image->getClientName();
@@ -121,10 +121,10 @@ class Berita extends BaseController
             $simpan = $this->model->updateById($data, $id);
             if (!$simpan) {
                 session()->setFlashdata('error', true);
-                return redirect()->to('/berita/show/' . $id);
+                return redirect()->to('sides/berita/show/' . $id);
             } else {
                 session()->setFlashdata('pesan_insert', true);
-                return redirect()->to('/berita');
+                return redirect()->to('sides/berita');
             }
         } else {
 
@@ -140,10 +140,10 @@ class Berita extends BaseController
             $simpan = $this->model->updateById($data, $id);
             if (!$simpan) {
                 session()->setFlashdata('error', true);
-                return redirect()->to('/berita/show/' . $id);
+                return redirect()->to('sides/berita/show/' . $id);
             } else {
                 session()->setFlashdata('pesan_insert', true);
-                return redirect()->to('/berita');
+                return redirect()->to('sides/berita');
             }
         }
     }
@@ -154,7 +154,7 @@ class Berita extends BaseController
 
         if ($deleteBeritaById) {
             session()->setFlashdata('pesan_hapus', true);
-            return redirect()->to('/berita');
+            return redirect()->to('sides/berita');
         } else {
             return false;
         }
