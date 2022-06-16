@@ -47,6 +47,13 @@
           <a href="#" class="nav-link">Home</a>
         </li>
       </ul>
+
+      <!-- right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="<?php echo base_url('sides/logout');?>" class="nav-link btn btn-danger text-white">Log Out</a>
+        </li>
+      </ul>
     </nav>
     <!-- /.navbar -->
 

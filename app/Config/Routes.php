@@ -42,6 +42,7 @@ $routes->post('auth/proses', 'Login::auth');
 
 //route SIDES (sistem informasi website desa)
 $routes->get('sides', 'Sides::index');
+$routes->get('sides/logout', 'Sides::logout');
 
 //route penduduk (sistem informasi website desa)
 $routes->get('sides/penduduk/create', 'Penduduk::create'); //tampil form tambah

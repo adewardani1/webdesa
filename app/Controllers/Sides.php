@@ -8,4 +8,9 @@ class Sides extends BaseController
     {
         return view('sides/dashbord/index');
     }
+
+    public function logout(){
+        session_destroy();
+        return redirect()->to('auth');
+    }
 }
