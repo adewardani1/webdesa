@@ -30,11 +30,11 @@
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <?php
-    if (session()->getFlashdata('pesan_insert') == true) { ?>
+    if (session()->getFlashdata('pesan_insert')) { ?>
         <script>
             alert('data berhasil di tambahkan');
         </script>
-    <?php } else if (session()->getFlashdata('pesan_hapus') == true) { ?>
+    <?php } else if (session()->getFlashdata('pesan_hapus')) { ?>
         <script>
             alert('data berhasil di hapus');
         </script>

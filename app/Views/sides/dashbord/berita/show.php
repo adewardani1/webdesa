@@ -30,15 +30,15 @@
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <?php
-    if (session()->getFlashdata('alert') === true) { ?>
+    if (session()->getFlashdata('alert')) { ?>
         <script>
             alert('gambar harus format jpg / png / jpeg');
         </script>
-    <?php } else if (session()->getFlashdata('loc') === true) { ?>
+    <?php } else if (session()->getFlashdata('loc')) { ?>
         <script>
             alert('gagal simpan');
         </script>
-    <?php } else if (session()->getFlashdata('error') === true) { ?>
+    <?php } else if (session()->getFlashdata('error')) { ?>
         <script>
             alert('gagal update berita');
         </script>
@@ -117,6 +117,14 @@
                                 <i class="fas fa-lightbulb"></i>
                                 <p>
                                     Aspirasi Warga
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
+                                <i class="fas fa-user-circle"></i>
+                                <p>
+                                    Akun
                                 </p>
                             </a>
                         </li>

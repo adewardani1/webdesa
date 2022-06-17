@@ -51,7 +51,7 @@
       <!-- right navbar links -->
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a href="<?php echo base_url('sides/logout');?>" class="nav-link btn btn-danger text-white">Log Out</a>
+          <a href="<?php echo base_url('sides/logout'); ?>" class="nav-link btn btn-danger text-white">Log Out</a>
         </li>
       </ul>
     </nav>
@@ -103,6 +103,14 @@
                 <i class="fas fa-lightbulb"></i>
                 <p>
                   Aspirasi Warga
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
+                <i class="fas fa-user-circle"></i>
+                <p>
+                  Akun
                 </p>
               </a>
             </li>

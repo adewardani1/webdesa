@@ -2,29 +2,29 @@
 
 namespace App\Controllers;
 
-use App\Models\ModelPenduduk;
+use App\Models\ModelAkun;
 
-class Penduduk extends BaseController
+class Akun extends BaseController
 {
     public function __construct()
     {
-        $this->model = new ModelPenduduk();
+        $this->model = new ModelAkun();
     }
 
     //return view add form
     public function create()
     {
-        return view('sides/dashbord/penduduk/create');
+        return view('sides/dashbord/akun/create');
     }
 
     public function index()
     {
         $data = [
-            'penduduk' => $this->model->show()
+            'akun' => $this->model->show()
         ];
 
         if ($data) {
-            return view('sides/dashbord/penduduk/index', $data);
+            return view('sides/dashbord/akun/index', $data);
         } else {
             return false;
         }
@@ -36,7 +36,7 @@ class Penduduk extends BaseController
             'penduduk' => $this->model->getPendudukById($id)
         ];
 
-        return view('sides/dashbord/penduduk/show', $data);
+        return view('sides/dashbord/akun/show', $data);
     }
 
     public function insert()
@@ -63,7 +63,7 @@ class Penduduk extends BaseController
 
         if ($simpan) {
             session()->setFlashdata('pesan_insert', 'data berhasil di tambahkan');
-            return redirect()->to('sides/penduduk');
+            return redirect()->to('sides/akun');
         } else {
             return false;
         }
@@ -92,7 +92,7 @@ class Penduduk extends BaseController
             $simpan = $this->model->updateById($data, $id);
             if ($simpan) {
                 session()->setFlashdata('pesanUpdated', true);
-                return redirect()->to('sides/penduduk');
+                return redirect()->to('sides/akun');
             } else {
                 return false;
             }
@@ -104,7 +104,7 @@ class Penduduk extends BaseController
         $delete = $this->model->delete(['id' => $id]);
         if ($delete) {
             session()->setFlashdata('pesan_hapus', true);
-            return redirect()->to('sides/penduduk');
+            return redirect()->to('sides/akun');
         } else {
             return false;
         }

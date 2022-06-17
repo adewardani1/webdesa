@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\ModelAspirasiWarga;
 
-class Penduduk extends BaseController
+class AspirasiWarga extends BaseController
 {
     public function __construct()
     {
@@ -34,10 +34,5 @@ class Penduduk extends BaseController
         } else {
             return false;
         }
-    }
-
-    public function insert()
-    {
-        $data 
     }
 }

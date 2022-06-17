@@ -17,36 +17,59 @@ class Login extends BaseController
 
     public function auth()
     {
-        $user = $this->request->getPost('user');
-        $pass = $this->request->getPost('pass');
+        $validation = $this->validate([
+            'user' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Username tidak boleh kosong',
+                ]
+            ],
 
-        $passModel = $this->isUser($user);
+            'pass' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Password tidak boleh kosong',
+                ]
+            ],
+
+        ]);
+
+        if (!$validation) {
+            return redirect()->to('auth')->withInput();
+        } else {
+            $user = $this->request->getPost('user');
+            $pass = $this->request->getPost('pass');
+
+            $isSucces = $this->prosesAuth($user, $pass);
+
+            return $isSucces;
+        }
+    }
+
+    public function prosesAuth($user, $pass)
+    {
+        $model = $this->model->isAkun($user);
+
+        if (!$model) {
+            session()->setFlashdata('alert', true);
+            return redirect()->to('/auth');
+        }
         // dd(password_hash("admin", PASSWORD_BCRYPT));
 
-        if (!password_verify($pass, $passModel)) {
+        if (!password_verify($pass, $model->password)) {
             session()->setFlashdata('alert', true);
             return redirect()->to('/auth');
         } else {
             $newdata = [
                 'username'  => $user,
-                'password'  => $passModel,
+                'password'  => $model->password,
+                'level'  => $model->level,
                 'isLogged' => true
             ];
 
             session()->set($newdata);
 
             return redirect()->to('sides');
-        }
-    }
-
-    public function isUser($user)
-    {
-        $model = $this->model->isAkun($user);
-
-        if (!$model) {
-            return false;
-        } else {
-            return $model->password;
         }
     }
 }

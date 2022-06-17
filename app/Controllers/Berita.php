@@ -181,4 +181,10 @@ class Berita extends BaseController
             return $this->response->download($path, null);
         }
     }
+
+    public function logout()
+    {
+        session_destroy();
+        return redirect()->to('auth');
+    }
 }

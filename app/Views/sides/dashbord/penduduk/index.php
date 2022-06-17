@@ -30,13 +30,17 @@
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <?php
-    if (session()->getFlashdata('pesan_insert') == true) { ?>
+    if (session()->getFlashdata('pesan_insert')) { ?>
         <script>
             alert('data berhasil di tambahkan');
         </script>
-    <?php } else if (session()->getFlashdata('pesan_hapus') == true) { ?>
+    <?php } else if (session()->getFlashdata('pesan_hapus')) { ?>
         <script>
             alert('data berhasil di hapus');
+        </script>
+    <?php } else if (session()->getFlashdata('pesanUpdated')) { ?>
+        <script>
+            alert('data berhasil di ubah');
         </script>
     <?php }
     ?>
@@ -113,6 +117,14 @@
                                 <i class="fas fa-lightbulb"></i>
                                 <p>
                                     Aspirasi Warga
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
+                                <i class="fas fa-user-circle"></i>
+                                <p>
+                                    Akun
                                 </p>
                             </a>
                         </li>

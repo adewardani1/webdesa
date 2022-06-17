@@ -29,17 +29,6 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-    <?php
-    if (session()->getFlashdata('pesan_insert')) { ?>
-        <script>
-            alert('data berhasil di tambahkan');
-        </script>
-    <?php } else if (session()->getFlashdata('pesan_hapus')) { ?>
-        <script>
-            alert('data berhasil di hapus');
-        </script>
-    <?php }
-    ?>
     <div class="wrapper">
 
         <!-- Preloader -->
@@ -100,8 +89,8 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item active">
-                            <a href="<?php echo base_url('sides/berita'); ?>" class="nav-link active">
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/berita'); ?>" class="nav-link">
                                 <i class="fas fa-newspaper"></i>
                                 <p>
                                     Berita
@@ -116,8 +105,8 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
+                        <li class="nav-item active">
+                            <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link active">
                                 <i class="fas fa-user-circle"></i>
                                 <p>
                                     Akun
@@ -178,32 +167,30 @@
                                         <thead>
                                             <tr>
                                                 <th>No.</th>
-                                                <th>Headline</th>
-                                                <th>Jenis Berita</th>
+                                                <th>Username</th>
+                                                <th>Jenis Akun</th>
                                                 <th>#Di Buat</th>
                                                 <th>#Di Ubah</th>
                                                 <th>Action</th>
-                                                <th>gambar</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php
                                             $nomor = null;
-                                            foreach ($berita as $row) {
+                                            foreach ($akun as $row) {
                                                 $nomor++; ?>
                                                 <tr>
                                                     <td><?php echo $nomor; ?></td>
-                                                    <td><?php echo $row->judul; ?></td>
-                                                    <td><?php echo $row->jenis; ?></td>
+                                                    <td><?php echo $row->username; ?></td>
+                                                    <td><?php echo $row->level; ?></td>
                                                     <td><?php echo $row->created_at; ?></td>
                                                     <td><?php echo $row->updated_at; ?></td>
                                                     <td>
                                                         <div class="btn-group" role="group" aria-label="Basic example">
-                                                            <a class="btn btn-danger" href="<?php echo base_url('sides/berita/delete/' . $row->id); ?>">Hapus</a>
-                                                            <a class="btn btn-warning" href="<?php echo base_url('sides/berita/show/' . $row->id); ?>">Edit</a>
+                                                            <a class="btn btn-danger" href="<?php echo base_url('sides/akun/delete/' . $row->id); ?>">Hapus</a>
+                                                            <a class="btn btn-warning" href="<?php echo base_url('sides/akun/show/' . $row->id); ?>">Edit</a>
                                                         </div>
                                                     </td>
-                                                    <td><a href="<?php echo base_url('sides/berita/foto/' . $row->id); ?>" class="btn btn-outline-primary"><i class="fas fa-image"></i> Download</a></td>
                                                 </tr>
                                             <?php }
                                             ?>

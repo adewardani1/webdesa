@@ -32,19 +32,19 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
-//route view desa
+//route view desaq
 $routes->get('/', 'Home::index');
 
 
-//route login SIDES (sistem informasi website desa)
+//route login SIDES
 $routes->get('auth', 'Login::index');
 $routes->post('auth/proses', 'Login::auth');
 
-//route SIDES (sistem informasi website desa)
+//route SIDES
 $routes->get('sides', 'Sides::index');
 $routes->get('sides/logout', 'Sides::logout');
 
-//route penduduk (sistem informasi website desa)
+//route penduduk
 $routes->get('sides/penduduk/create', 'Penduduk::create'); //tampil form tambah
 $routes->post('sides/penduduk/save', 'Penduduk::insert');
 $routes->get('sides/penduduk', 'Penduduk::index');
@@ -52,13 +52,13 @@ $routes->get('sides/penduduk/show/(:num)', 'Penduduk::show/$1');
 $routes->post('sides/penduduk/update/(:num)', 'Penduduk::updated/$1');
 $routes->get('sides/penduduk/delete/(:num)', 'Penduduk::destroy/$1');
 
-//route aspirasi (sistem informasi desa)
+//route aspirasi
 $routes->get('sides/aspirasi', 'AspirasiWarga::index');
 $routes->get('sides/aspirasi/(:num)', 'AspirasiWarga::show/$1');
 $routes->post('sides/aspirasi/update(:num)', 'AspirasiWarga::update/$1');
 $routes->get('sides/aspirasi/delete(:num)', 'AspirasiWarga::delete/$1');
 
-//route berita (sistem informasi website desa)
+//route berita
 $routes->get('sides/berita/create', 'Berita::create'); //tampil form tambah
 $routes->post('sides/berita/save', 'Berita::insert');
 $routes->get('sides/berita', 'Berita::index');
@@ -66,6 +66,14 @@ $routes->get('sides/berita/show/(:num)', 'Berita::show/$1');
 $routes->post('sides/berita/update/(:num)', 'Berita::updated/$1');
 $routes->get('sides/berita/delete/(:num)', 'Berita::destroy/$1');
 $routes->get('sides/berita/foto/(:num)', 'Berita::foto/$1'); //tampil foto
+
+//route akun
+$routes->get('sides/akun/create', 'Akun::create'); //tampil form tambah
+$routes->post('sides/akun/save', 'Akun::insert');
+$routes->get('sides/akun', 'Akun::index');
+$routes->get('sides/akun/show/(:num)', 'Akun::show/$1');
+$routes->post('sides/akun/update/(:num)', 'Akun::updated/$1');
+$routes->get('sides/akun/delete/(:num)', 'Akun::destroy/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

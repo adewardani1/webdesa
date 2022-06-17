@@ -12,7 +12,8 @@ class Auth implements FilterInterface
     {
 
         if (!session()->get('isLogged')) {
-            return redirect()->to('/');
+            session()->setFlashdata('logFirst', true);
+            return redirect()->to('auth');
         }
     }
 
