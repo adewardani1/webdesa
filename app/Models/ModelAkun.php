@@ -9,9 +9,13 @@ class ModelAkun extends Model
     protected $table = 'akun';
     protected $primaryKey = 'id';
     protected $allowedFields = [
+        'nama_depan',
+        'nama_belakang',
         'username',
         'password',
-        'level'
+        'level',
+        'email',
+        'nomor_hp'
     ];
 
     protected $useTimestamps = true;
@@ -56,6 +60,18 @@ class ModelAkun extends Model
     public function deleteById($id)
     {
         return $this->database->delete(['id' => $id]);
+    }
+
+    public function checkUsername($username)
+    {
+        $sql = "
+            SELECT
+                akun.username
+            FROM akun
+            WHERE akun.username = '" . $username . "'
+        ";
+
+        return $this->database->query($sql)->getRow();
     }
     // ...
 }

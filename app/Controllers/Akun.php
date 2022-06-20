@@ -33,7 +33,7 @@ class Akun extends BaseController
     public function show($id)
     {
         $data = [
-            'penduduk' => $this->model->getPendudukById($id)
+            'akun' => $this->model->getAkunById($id)
         ];
 
         return view('sides/dashbord/akun/show', $data);
@@ -41,27 +41,21 @@ class Akun extends BaseController
 
     public function insert()
     {
-        $tombol = $this->request->getPost('submit');
-        if (isset($tombol)) {
-            $data = [
-                "nama" => $this->request->getPost('nama'),
-                "no_ktp" => $this->request->getPost('no_ktp'),
-                "jenis_kelamin" => $this->request->getPost('jenis_kelamin'),
-                "desa" => $this->request->getPost('desa'),
-                "dusun" => $this->request->getPost('dusun'),
-                "rt" => $this->request->getPost('rt'),
-                "rw" => $this->request->getPost('rw'),
-                "status" => $this->request->getPost('status'),
-                "pendidikan" => $this->request->getPost('pendidikan'),
-                "agama" => $this->request->getPost('agama'),
-                "created_at" => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s'))),
-                "updated_at" => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s')))
-            ];
-        }
+        $data = [
+            "nama_depan" => $this->request->getPost('nama_depan'),
+            "nama_belakang" => $this->request->getPost('nama_belakang'),
+            "level" => $this->request->getPost('level'),
+            "email" => $this->request->getPost('email'),
+            "nomor_hp" => $this->request->getPost('nomor_hp'),
+            "username" => $this->request->getPost('username'),
+            "password" => password_hash($this->request->getPost('password'), PASSWORD_BCRYPT),
+            "created_at" => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s'))),
+            "updated_at" => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s')))
+        ];
 
-        $simpan = $this->model->insert($data);
+        $model = $this->model->insert($data);
 
-        if ($simpan) {
+        if ($model) {
             session()->setFlashdata('pesan_insert', 'data berhasil di tambahkan');
             return redirect()->to('sides/akun');
         } else {
@@ -72,30 +66,23 @@ class Akun extends BaseController
     public function updated($id)
     {
 
-        $tombol = $this->request->getPost('submit');
+        $data = [
+            "nama_depan" => $this->request->getPost('nama_depan'),
+            "nama_belakang" => $this->request->getPost('nama_belakang'),
+            "level" => $this->request->getPost('level'),
+            "email" => $this->request->getPost('email'),
+            "nomor_hp" => $this->request->getPost('nomor_hp'),
+            "username" => $this->request->getPost('username'),
+            "password" => password_hash($this->request->getPost('password'), PASSWORD_BCRYPT),
+            "updated_at" => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s')))
+        ];
 
-        if (isset($tombol)) {
-            $data = [
-                "nama" => $this->request->getPost('nama'),
-                "no_ktp" => $this->request->getPost('no_ktp'),
-                "jenis_kelamin" => $this->request->getPost('jenis_kelamin'),
-                "desa" => $this->request->getPost('desa'),
-                "dusun" => $this->request->getPost('dusun'),
-                "rw" => $this->request->getPost('rt'),
-                "status" => $this->request->getPost('status'),
-                "pendidikan" => $this->request->getPost('pendidikan'),
-                "agama" => $this->request->getPost('agama'),
-                "created_at" => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s'))),
-                "updated_at" => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s')))
-            ];
-
-            $simpan = $this->model->updateById($data, $id);
-            if ($simpan) {
-                session()->setFlashdata('pesanUpdated', true);
-                return redirect()->to('sides/akun');
-            } else {
-                return false;
-            }
+        $simpan = $this->model->updateById($data, $id);
+        if ($simpan) {
+            session()->setFlashdata('pesanUpdated', true);
+            return redirect()->to('sides/akun');
+        } else {
+            return false;
         }
     }
 
@@ -114,5 +101,17 @@ class Akun extends BaseController
     {
         session_destroy();
         return redirect()->to('auth');
+    }
+
+    public function checkUser($username)
+    {
+        $model = $this->model->checkUsername($username);
+        $isUnique = array('is_unique' => !($model));
+        $response['status'] = 200;
+        $response['status_message'] = 'data berhasil didapatkan';
+        $response['data'] = $isUnique;
+
+        $json = json_encode($response);
+        echo $json;
     }
 }

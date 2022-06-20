@@ -74,6 +74,9 @@ $routes->get('sides/akun', 'Akun::index');
 $routes->get('sides/akun/show/(:num)', 'Akun::show/$1');
 $routes->post('sides/akun/update/(:num)', 'Akun::updated/$1');
 $routes->get('sides/akun/delete/(:num)', 'Akun::destroy/$1');
+
+//services akun
+$routes->get('services/akun/(:any)', 'Akun::checkUser/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

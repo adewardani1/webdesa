@@ -29,21 +29,6 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-    <?php
-    if (session()->getFlashdata('pesan_insert')) { ?>
-        <script>
-            alert('data berhasil di tambahkan');
-        </script>
-    <?php } else if (session()->getFlashdata('pesan_hapus')) { ?>
-        <script>
-            alert('data berhasil di hapus');
-        </script>
-    <?php } else if (session()->getFlashdata('pesanUpdated')) { ?>
-        <script>
-            alert('data berhasil di update');
-        </script>
-    <?php }
-    ?>
     <div class="wrapper">
 
         <!-- Preloader -->
@@ -75,7 +60,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="<?php base_url('sides'); ?>" class="brand-link">
+            <a href="index3.html" class="brand-link">
                 <img src="<?php echo base_url('img/logo-desajatituju.png'); ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">SIDES</span>
             </a>
@@ -97,7 +82,7 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="<?php echo base_url('sides/penduduk'); ?>" class="nav-link">
+                            <a href="<?php echo base_url('/sides/penduduk'); ?>" class="nav-link">
                                 <i class="fas fa-users"></i>
                                 <p>
                                     Penduduk
@@ -105,7 +90,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo base_url('sides/berita'); ?>" class="nav-link">
+                            <a href="<?php echo base_url('/sides/berita'); ?>" class="nav-link">
                                 <i class="fas fa-newspaper"></i>
                                 <p>
                                     Berita
@@ -113,7 +98,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo base_url('sides/aspirasi'); ?>" class="nav-link">
+                            <a href="<?php echo base_url('/sides/aspirasi'); ?>" class="nav-link">
                                 <i class="fas fa-lightbulb"></i>
                                 <p>
                                     Aspirasi Warga
@@ -142,7 +127,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Data Penduduk</h1>
+                            <h1 class="m-0">Data Akun</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -156,64 +141,72 @@
             <!-- /.content-header -->
 
             <!-- Main content -->
-            <section class="content">
+            <section class="content pb-5">
                 <div class="container-fluid">
                     <!-- Small boxes (Stat box) -->
                     <div class="row">
                         <div class="col-12">
-                            <div class="card">
+                            <div class="card card-info">
                                 <div class="card-header">
-                                    <a class="btn btn-primary" href="<?php echo base_url('sides/akun/create'); ?>">Tambah Data</a>
-                                    <div class="card-tools">
-                                        <div class="input-group input-group-sm" style="width: 150px;">
-                                            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-                                            <div class="input-group-append">
-                                                <button type="submit" class="btn btn-default">
-                                                    <i class="fas fa-search"></i>
-                                                </button>
+                                    <h3 class="card-title">Tambah</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <!-- form start -->
+                                <form class="form-horizontal" method="post" action="<?php echo base_url('/sides/akun/save'); ?>">
+                                    <div class="card-body">
+                                        <div class="form-group row">
+                                            <label for="inputEmail3" class="col-sm-2 col-form-label">Nama Depan</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" onchange="valUserPass()" id="nama_depan" name="nama_depan" class="form-control" placeholder="Nama Depan">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputEmail3" class="col-sm-2 col-form-label">Nama Belakang</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="nama_belakang" class="form-control" placeholder="Nama Belakang">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="exampleSelectBorder" class="col-sm-2 col-form-label">Jenis Akun</label>
+                                            <div class="col-sm-10">
+                                                <select name="level" class="custom-select form-control-border" id="exampleSelectBorder">
+                                                    <option value="Master">Master</option>
+                                                    <option value="Admin">Admin</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputPassword3" class="col-sm-2 col-form-label">email</label>
+                                            <div class="col-sm-10">
+                                                <input type="email" name="email" class="form-control" id="inputPassword3" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputPassword3" class="col-sm-2 col-form-label">Nomor Hp</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" onkeypress="return isNumberKey(event)" name="nomor_hp" class="form-control" placeholder="Nomor Hp">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputPassword3" class="col-sm-2 col-form-label">Username</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" value="" id="username" name="username" class="form-control" id="inputPassword3" readonly placeholder="Username">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" value="" id="password" name="password" class="form-control" id="inputPassword3" readonly placeholder="Password">
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- /.card-header -->
-                                <div class="card-body table-responsive p-0">
-                                    <table class="table table-hover text-nowrap">
-                                        <thead>
-                                            <tr>
-                                                <th>No.</th>
-                                                <th>Username</th>
-                                                <th>Jenis Akun</th>
-                                                <th>#Di Buat</th>
-                                                <th>#Di Ubah</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                            $nomor = null;
-                                            foreach ($akun as $row) {
-                                                $nomor++; ?>
-                                                <tr>
-                                                    <td><?php echo $nomor; ?></td>
-                                                    <td><?php echo $row->username; ?></td>
-                                                    <td><?php echo $row->level; ?></td>
-                                                    <td><?php echo $row->created_at; ?></td>
-                                                    <td><?php echo $row->updated_at; ?></td>
-                                                    <td>
-                                                        <div class="btn-group" role="group" aria-label="Basic example">
-                                                            <a class="btn btn-danger" href="<?php echo base_url('sides/akun/delete/' . $row->id); ?>">Hapus</a>
-                                                            <a class="btn btn-warning" href="<?php echo base_url('sides/akun/show/' . $row->id); ?>">Edit</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            <?php }
-                                            ?>
-
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!-- /.card-body -->
+                                    <!-- /.card-body -->
+                                    <div class="card-footer">
+                                        <button type="submit" name="submit" class="btn btn-info float-right">Submit</button>
+                                        <!-- <input type="submit" class="btn btn-info float-right" value="Submit"> -->
+                                    </div>
+                                    <!-- /.card-footer -->
+                                </form>
                             </div>
                             <!-- /.card -->
                         </div>
@@ -232,14 +225,62 @@
                 <b>Version</b> 1.0.0
             </div>
         </footer>
-
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
-        <!-- /.control-sidebar -->
     </div>
 
+    <script>
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : evt.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        }
+
+        function valUserPass() {
+            const getIdUsername = document.getElementById("nama_depan");
+            let randomNumber = Math.floor(1000 + Math.random() * 9000);
+            let valUsername = getIdUsername.value + Math.floor(1000 + Math.random() * 9000);
+
+            //generate username
+            document.getElementById('username').value = valUsername;
+
+            //generate password
+            document.getElementById('password').value = valUsername + "@admin";
+
+            let isUnique = isUniqueUsername(valUsername);
+
+            if (!isUnique) {
+                if (!isUniqueId) {
+                    document.getElementById('username').value = '';
+                    document.getElementById('username').innerHTML = '';
+                    document.getElementById('username').innerText = '';
+                    do {
+                        let result = getIdUsername.value + Math.floor(1000 + Math.random() * 9000);
+
+                        document.getElementById('username').value = result;
+                        document.getElementById('username').textContent = result;
+                        document.getElementById('username').innerText = result;
+
+                        //generate username unique
+                        document.getElementById('username').setAttribute('value', result);
+                    } while (!isUniqueLoginId);
+                }
+            }
+        }
+
+        async function isUniqueUsername(valUsername) {
+            fetch('/services/akun/' + valUsername, {
+                    method: 'GET'
+                })
+                .then(response => response.json())
+                .then((data) => {
+
+                    // Printing our response 
+                    return data.data['is_unique'];
+                    // Printing our field of our response
+                })
+                .catch(errorMsg => {});
+        }
+    </script>
     <!-- jQuery -->
     <script src="<?php echo base_url('adminLTE/plugins/jquery/jquery.min.js'); ?>"></script>
     <!-- jQuery UI 1.11.4 -->
@@ -270,10 +311,8 @@
     <script src="<?php echo base_url('adminLTE/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js'); ?>"></script>
     <!-- AdminLTE App -->
     <script src="<?php echo base_url('adminLTE/dist/js/adminlte.js'); ?>"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="<?php echo base_url('adminLTE/dist/js/demo.js'); ?>"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="<?php echo base_url('adminLTE/dist/js/pages/dashboard.js'); ?>"></script>
+
+
     <!-- ./wrapper -->
 </body>
 
