@@ -41,48 +41,122 @@ class Akun extends BaseController
 
     public function insert()
     {
-        $data = [
-            "nama_depan" => $this->request->getPost('nama_depan'),
-            "nama_belakang" => $this->request->getPost('nama_belakang'),
-            "level" => $this->request->getPost('level'),
-            "email" => $this->request->getPost('email'),
-            "nomor_hp" => $this->request->getPost('nomor_hp'),
-            "username" => $this->request->getPost('username'),
-            "password" => password_hash($this->request->getPost('password'), PASSWORD_BCRYPT),
-            "created_at" => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s'))),
-            "updated_at" => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s')))
-        ];
+        $validation = $this->validate([
+            'nama_depan' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Nama Depan tidak boleh kosong',
+                ]
+            ],
 
-        $model = $this->model->insert($data);
+            'nama_belakang' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Nama Belakang tidak boleh kosong',
+                ]
+            ],
 
-        if ($model) {
-            session()->setFlashdata('pesan_insert', 'data berhasil di tambahkan');
-            return redirect()->to('sides/akun');
+            'email' => [
+                'rules' => 'required|valid_email',
+                'errors' => [
+                    'required' => 'Email tidak boleh kosong',
+                    'valid_email' => 'Format email salah'
+                ]
+            ],
+
+            'nomor_hp' => [
+                'rules' => 'required|min_length[11]|max_length[13]',
+                'errors' => [
+                    'required' => 'Nomor Hp tidak boleh kosong',
+                    'min_length' => 'Nomor Hp wajib minimal 11 digit',
+                    'max_length' => 'Nomor Hp wajib maximal 13 digit',
+                ]
+            ]
+
+        ]);
+        if (!$validation) {
+            return redirect()->to('sides/akun/create')->withInput();
         } else {
-            return false;
+            $data = [
+                "nama_depan" => $this->request->getPost('nama_depan'),
+                "nama_belakang" => $this->request->getPost('nama_belakang'),
+                "level" => $this->request->getPost('level'),
+                "email" => $this->request->getPost('email'),
+                "nomor_hp" => $this->request->getPost('nomor_hp'),
+                "username" => $this->request->getPost('username'),
+                "password" => password_hash($this->request->getPost('password'), PASSWORD_BCRYPT),
+                "created_at" => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s'))),
+                "updated_at" => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s')))
+            ];
+
+            $model = $this->model->insert($data);
+
+            if ($model) {
+                session()->setFlashdata('pesan_insert', 'data berhasil di tambahkan');
+                return redirect()->to('sides/akun');
+            } else {
+                return false;
+            }
         }
     }
 
     public function updated($id)
     {
+        $validation = $this->validate([
+            'nama_depan' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Nama Depan tidak boleh kosong',
+                ]
+            ],
 
-        $data = [
-            "nama_depan" => $this->request->getPost('nama_depan'),
-            "nama_belakang" => $this->request->getPost('nama_belakang'),
-            "level" => $this->request->getPost('level'),
-            "email" => $this->request->getPost('email'),
-            "nomor_hp" => $this->request->getPost('nomor_hp'),
-            "username" => $this->request->getPost('username'),
-            "password" => password_hash($this->request->getPost('password'), PASSWORD_BCRYPT),
-            "updated_at" => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s')))
-        ];
+            'nama_belakang' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Nama Belakang tidak boleh kosong',
+                ]
+            ],
 
-        $simpan = $this->model->updateById($data, $id);
-        if ($simpan) {
-            session()->setFlashdata('pesanUpdated', true);
-            return redirect()->to('sides/akun');
+            'email' => [
+                'rules' => 'required|valid_email',
+                'errors' => [
+                    'required' => 'Email tidak boleh kosong',
+                    'valid_email' => 'Format email salah'
+                ]
+            ],
+
+            'nomor_hp' => [
+                'rules' => 'required|min_length[11]|max_length[13]',
+                'errors' => [
+                    'required' => 'Nomor Hp tidak boleh kosong',
+                    'min_length' => 'Nomor Hp wajib minimal 11 digit',
+                    'max_length' => 'Nomor Hp wajib maximal 13 digit',
+                ]
+            ]
+
+        ]);
+
+        if (!$validation) {
+            return redirect()->to('sides/akun/show/' . $id)->withInput();
         } else {
-            return false;
+            $data = [
+                "nama_depan" => $this->request->getPost('nama_depan'),
+                "nama_belakang" => $this->request->getPost('nama_belakang'),
+                "level" => $this->request->getPost('level'),
+                "email" => $this->request->getPost('email'),
+                "nomor_hp" => $this->request->getPost('nomor_hp'),
+                "username" => $this->request->getPost('username'),
+                "password" => password_hash($this->request->getPost('password'), PASSWORD_BCRYPT),
+                "updated_at" => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s')))
+            ];
+
+            $simpan = $this->model->updateById($data, $id);
+            if ($simpan) {
+                session()->setFlashdata('pesanUpdated', true);
+                return redirect()->to('sides/akun');
+            } else {
+                return false;
+            }
         }
     }
 
@@ -113,5 +187,10 @@ class Akun extends BaseController
 
         $json = json_encode($response);
         echo $json;
+    }
+
+    function numeric_wcomma($str)
+    {
+        return preg_match('/^[0-9,]+$/', $str);
     }
 }

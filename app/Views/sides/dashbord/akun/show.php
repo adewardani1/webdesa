@@ -153,17 +153,24 @@
                                 <!-- /.card-header -->
                                 <!-- form start -->
                                 <form class="form-horizontal" method="post" action="<?php echo base_url('/sides/akun/update/' . $akun->id); ?>">
+                                    <?php $validation = \Config\Services::validation(); ?>
                                     <div class="card-body">
                                         <div class="form-group row">
                                             <label for="inputEmail3" class="col-sm-2 col-form-label">Nama Depan</label>
                                             <div class="col-sm-10">
-                                                <input type="text" onchange="valUserPass()" value="<?php echo $akun->nama_depan; ?>" id="nama_depan" name="nama_depan" class="form-control" placeholder="Nama Depan">
+                                                <input type="text" onkeyup="valUserPass()" value="<?php echo $akun->nama_depan; ?>" id="nama_depan" name="nama_depan" class="form-control <?php echo $validation->hasError('nama_depan') ? 'is-invalid' : null ?>" placeholder="Nama Depan">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('nama_depan'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="inputEmail3" class="col-sm-2 col-form-label">Nama Belakang</label>
                                             <div class="col-sm-10">
-                                                <input type="text" name="nama_belakang" value="<?php echo $akun->nama_belakang; ?>" class="form-control" placeholder="Nama Belakang">
+                                                <input type="text" name="nama_belakang" value="<?php echo $akun->nama_belakang; ?>" class="form-control <?php echo $validation->hasError('nama_belakang') ? 'is-invalid' : null ?>" placeholder="Nama Belakang">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('nama_belakang'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -178,13 +185,19 @@
                                         <div class="form-group row">
                                             <label for="inputPassword3" class="col-sm-2 col-form-label">email</label>
                                             <div class="col-sm-10">
-                                                <input type="email" value="<?php echo $akun->email; ?>" name="email" class="form-control" id="inputPassword3" placeholder="Email">
+                                                <input type="email" value="<?php echo $akun->email; ?>" name="email" class="form-control <?php echo $validation->hasError('email') ? 'is-invalid' : null ?>" id="inputPassword3" placeholder="Email">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('email'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="inputPassword3" class="col-sm-2 col-form-label">Nomor Hp</label>
                                             <div class="col-sm-10">
-                                                <input type="text" onkeypress="return isNumberKey(event)" value="<?php echo $akun->nomor_hp; ?>" name="nomor_hp" class="form-control" placeholder="Nomor Hp">
+                                                <input type="text" onkeypress="return isNumberKey(event)" value="<?php echo $akun->nomor_hp; ?>" name="nomor_hp" class="form-control <?php echo $validation->hasError('nomor_hp') ? 'is-invalid' : null ?>" placeholder="Nomor Hp">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('nomor_hp'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -193,12 +206,7 @@
                                                 <input type="text" value="<?php echo $akun->username; ?>" id="username" name="username" class="form-control" id="inputPassword3" readonly placeholder="Username">
                                             </div>
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" value="" id="password" name="password" class="form-control" id="inputPassword3" readonly placeholder="Password">
-                                            </div>
-                                        </div>
+                                        <input type="text" hidden value="" id="password" name="password" class="form-control" id="inputPassword3" readonly placeholder="Password">
                                     </div>
                                     <!-- /.card-body -->
                                     <div class="card-footer">
@@ -264,6 +272,18 @@
                         document.getElementById('username').setAttribute('value', result);
                     } while (!isUniqueLoginId);
                 }
+            }
+
+            if (getIdUsername.value == '') {
+                //generate username
+                document.getElementById('username').value = '';
+                document.getElementById('username').innerHTML = '';
+                document.getElementById('username').innerText = '';
+
+                //generate password
+                document.getElementById('password').value = '';
+                document.getElementById('password').innerHTML = '';
+                document.getElementById('password').innerText = '';
             }
         }
 
