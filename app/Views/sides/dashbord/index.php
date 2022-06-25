@@ -29,6 +29,13 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
+  <?php
+  if (session()->getFlashdata('level')) { ?>
+    <script>
+      alert('hak akses tidak terpenuhi');
+    </script>
+  <?php }
+  ?>
   <div class="wrapper">
 
     <!-- Preloader -->
@@ -106,14 +113,18 @@
                 </p>
               </a>
             </li>
-            <li class="nav-item">
-              <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
-                <i class="fas fa-user-circle"></i>
-                <p>
-                  Akun
-                </p>
-              </a>
-            </li>
+            <?php
+            if (session()->get('level') === 'Master') { ?>
+              <li class="nav-item">
+                <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
+                  <i class="fas fa-user-circle"></i>
+                  <p>
+                    Akun
+                  </p>
+                </a>
+              </li>
+            <?php }
+            ?>
           </ul>
         </nav>
         <!-- /.sidebar-menu -->
@@ -150,62 +161,36 @@
               <!-- small box -->
               <div class="small-box bg-info">
                 <div class="inner">
-                  <h3>150</h3>
+                  <h3><?php echo $penduduk->total; ?></h3>
 
-                  <p>New Orders</p>
+                  <p>Penduduk</p>
                 </div>
                 <div class="icon">
-                  <i class="ion ion-bag"></i>
+                  <i class="fas fa-users"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="<?php echo base_url('sides/penduduk'); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
             <!-- ./col -->
-            <div class="col-lg-3 col-6">
-              <!-- small box -->
-              <div class="small-box bg-success">
-                <div class="inner">
-                  <h3>53<sup style="font-size: 20px">%</sup></h3>
+            <?php
+            if (session()->get('level') == 'Master') { ?>
+              <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-success">
+                  <div class="inner">
+                    <h3><?php echo $akun->total; ?></h3>
 
-                  <p>Bounce Rate</p>
+                    <p>Akun</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-person-add"></i>
+                  </div>
+                  <a href="<?php echo base_url('sides/akun'); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <div class="icon">
-                  <i class="ion ion-stats-bars"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-              <!-- small box -->
-              <div class="small-box bg-warning">
-                <div class="inner">
-                  <h3>44</h3>
+            <?php }
+            ?>
 
-                  <p>User Registrations</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-person-add"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-              <!-- small box -->
-              <div class="small-box bg-danger">
-                <div class="inner">
-                  <h3>65</h3>
-
-                  <p>Unique Visitors</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-pie-graph"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-            <!-- ./col -->
           </div>
           <!-- /.row -->
           <!-- Main row -->

@@ -29,17 +29,6 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-    <?php
-    if (session()->getFlashdata('alert')) { ?>
-        <script>
-            alert('gambar harus format jpg / png / jpeg');
-        </script>
-    <?php } else if (session()->getFlashdata('loc')) { ?>
-        <script>
-            alert('gagal simpan');
-        </script>
-    <?php }
-    ?>
     <div class="wrapper">
 
         <!-- Preloader -->
@@ -116,14 +105,18 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
-                                <i class="fas fa-user-circle"></i>
-                                <p>
-                                    Akun
-                                </p>
-                            </a>
-                        </li>
+                        <?php
+                        if (session()->get('level') == 'Master') { ?>
+                            <li class="nav-item">
+                                <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
+                                    <i class="fas fa-user-circle"></i>
+                                    <p>
+                                        Akun
+                                    </p>
+                                </a>
+                            </li>
+                        <?php }
+                        ?>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -164,17 +157,24 @@
                                 <!-- /.card-header -->
                                 <!-- form start -->
                                 <form class="form-horizontal" method="post" enctype="multipart/form-data" action="<?php echo base_url('sides/berita/save'); ?>">
+                                    <?php $validation = \Config\Services::validation(); ?>
                                     <div class="card-body">
                                         <div class="form-group row">
                                             <label for="inputEmail3" class="col-sm-2 col-form-label">Judul Berita</label>
                                             <div class="col-sm-10">
-                                                <input type="text" name="judul" class="form-control" placeholder="Judul Berita">
+                                                <input type="text" name="judul" class="form-control <?php echo $validation->hasError('judul') ? 'is-invalid' : null ?>" placeholder="Judul Berita">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('judul'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="inputPassword3" class="col-sm-2 col-form-label">Isi Berita</label>
                                             <div class="col-sm-10">
-                                                <textarea class="form-control" name="konten" rows="3" placeholder="Isi Berita"></textarea>
+                                                <textarea class="form-control <?php echo $validation->hasError('konten') ? 'is-invalid' : null ?>" name="konten" rows="3" placeholder="Isi Berita"></textarea>
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('konten'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -190,7 +190,10 @@
                                             <label class="col-sm-2 col-form-label" for="exampleInputFile">File input</label>
                                             <div class="input-group col-sm-10">
                                                 <div class="custom-file">
-                                                    <input name="gambar" type="file">
+                                                    <input name="gambar" type="file" class="<?php echo $validation->hasError('gambar') ? 'is-invalid' : null ?>">
+                                                    <div class="invalid-feedback">
+                                                        <?php echo $validation->getError('gambar'); ?>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

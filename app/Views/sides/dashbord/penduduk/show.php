@@ -105,14 +105,18 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
-                                <i class="fas fa-user-circle"></i>
-                                <p>
-                                    Akun
-                                </p>
-                            </a>
-                        </li>
+                        <?php
+                        if (session()->get('level') == 'Master') { ?>
+                            <li class="nav-item">
+                                <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
+                                    <i class="fas fa-user-circle"></i>
+                                    <p>
+                                        Akun
+                                    </p>
+                                </a>
+                            </li>
+                        <?php }
+                        ?>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

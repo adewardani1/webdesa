@@ -9,6 +9,7 @@ use CodeIgniter\Filters\Honeypot;
 use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
 use \App\Filters\Auth;
+use \App\Filters\IsAdmin;
 
 class Filters extends BaseConfig
 {
@@ -24,7 +25,8 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'isLoggedIn'    => Auth::class
+        'isLoggedIn'    => Auth::class,
+        'isAdmin'       => IsAdmin::class
     ];
 
     /**
@@ -68,9 +70,23 @@ class Filters extends BaseConfig
      */
     public $filters = [
         'isLoggedIn' => [
-            'before' =>[
+            'before' => [
                 'sides',
                 'sides/*',
+                'penduduk',
+                'berita',
+                'akun'
+            ]
+        ],
+
+        'isAdmin' => [
+            'before' => [
+                'sides/akun',
+                'sides/akun/create',
+                'sides/akun/show',
+                'sides/akun/delete',
+                'sides/akun/insert',
+                'akun'
             ]
         ]
     ];

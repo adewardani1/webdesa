@@ -23,16 +23,15 @@ class AspirasiWarga extends BaseController
         }
     }
 
-    public function show($id)
+    public function delete($id)
     {
-        $data = [
-            'penduduk' => $this->model->getAspirasiById($id)
-        ];
+        $model = $this->model->deleteById($id);
 
-        if ($data) {
-            return view('sides/dashbord/aspirasi_warga/show', $data);
+        if ($model) {
+            return redirect()->to('sides/aspirasi');
         } else {
-            return false;
+            session()->setFlashdata('gagal', true);
+            return redirect()->to('sides/aspirasi');
         }
     }
 }

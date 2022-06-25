@@ -30,16 +30,11 @@
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <?php
-    if (session()->getFlashdata('pesan_insert')) { ?>
+    if (session()->getFlashdata('gagal')) { ?>
         <script>
-            alert('data berhasil di tambahkan');
+            alert('gagal hapus data');
         </script>
-    <?php } else if (session()->getFlashdata('pesan_hapus')) { ?>
-        <script>
-            alert('data berhasil di hapus');
-        </script>
-    <?php }
-    ?>
+    <?php } ?>
     <div class="wrapper">
 
         <!-- Preloader -->
@@ -163,20 +158,40 @@
                                         <thead>
                                             <tr>
                                                 <th>No.</th>
-                                                <th>Headline</th>
-                                                <th>Jenis Berita</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Email</th>
+                                                <th>Address</th>
+                                                <th>Nomor Hp</th>
+                                                <th>Message</th>
                                                 <th>#Di Buat</th>
                                                 <th>#Di Ubah</th>
                                                 <th>Action</th>
-                                                <th>gambar</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>rijal</td>
-                                                <td>uad</td>
-                                            </tr>
-
+                                            <?php
+                                            $nomor = null;
+                                            foreach ($aspirasi as $row) {
+                                                $nomor++ ?>
+                                                <tr>
+                                                    <td><?php echo $nomor; ?></td>
+                                                    <td><?php echo $row->nama_depan; ?></td>
+                                                    <td><?php echo $row->nama_belakang; ?></td>
+                                                    <td><?php echo $row->email; ?></td>
+                                                    <td><?php echo $row->alamat; ?></td>
+                                                    <td><?php echo $row->nomor_hp; ?></td>
+                                                    <td><?php echo $row->pesan; ?></td>
+                                                    <td><?php echo $row->created_at; ?></td>
+                                                    <td><?php echo $row->updated_at; ?></td>
+                                                    <td>
+                                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                                            <a class="btn btn-danger" href="<?php echo base_url('sides/aspirasi/delete/' . $row->id); ?>">Hapus</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            <?php }
+                                            ?>
                                         </tbody>
                                     </table>
                                 </div>

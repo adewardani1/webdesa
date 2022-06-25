@@ -83,7 +83,7 @@
                         <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
                         <li class="nav-item active">
                             <a href="<?php echo base_url('/sides/penduduk'); ?>" class="nav-link active">
-                                <i class="nav-icon fas fa-th"></i>
+                                <i class="fas fa-users"></i>
                                 <p>
                                     Penduduk
                                 </p>
@@ -91,7 +91,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="<?php echo base_url('/sides/berita'); ?>" class="nav-link">
-                                <i class="nav-icon fas fa-th"></i>
+                                <i class="fas fa-newspaper"></i>
                                 <p>
                                     Berita
                                 </p>
@@ -99,20 +99,24 @@
                         </li>
                         <li class="nav-item">
                             <a href="<?php echo base_url('/sides/aspirasi'); ?>" class="nav-link">
-                                <i class="nav-icon fas fa-th"></i>
+                                <i class="fas fa-lightbulb"></i>
                                 <p>
                                     Aspirasi Warga
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
-                                <i class="fas fa-user-circle"></i>
-                                <p>
-                                    Akun
-                                </p>
-                            </a>
-                        </li>
+                        <?php
+                        if (session()->get('level') == 'Master') { ?>
+                            <li class="nav-item">
+                                <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
+                                    <i class="fas fa-user-circle"></i>
+                                    <p>
+                                        Akun
+                                    </p>
+                                </a>
+                            </li>
+                        <?php }
+                        ?>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

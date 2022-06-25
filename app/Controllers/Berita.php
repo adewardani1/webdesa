@@ -33,10 +33,31 @@ class Berita extends BaseController
     public function insert()
     {
         $validation = $this->validate([
+            'judul' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'judul harus di isi',
+                ]
+            ],
+
+            'konten' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'isi berita harus di isi',
+                ]
+            ],
+
+            'jenis' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'jenis berita harus di isi',
+                ]
+            ],
+
             'gambar' => [
                 'rules' => 'uploaded[gambar]|mime_in[gambar,image/jpg,image/jpeg,image/gif,image/png]|max_size[gambar,2048]',
                 'errors' => [
-                    'uploaded' => 'Harus Ada File yang diupload',
+                    'uploaded' => 'gambar harus di upload',
                     'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
                     'max_size' => 'Ukuran File Maksimal 2 MB'
                 ]
@@ -44,8 +65,8 @@ class Berita extends BaseController
         ]);
 
         if (!$validation) {
-            session()->setFlashdata('alert', true);
-            return redirect()->to('sides/berita/create');
+            //session()->setFlashdata('alert', true);
+            return redirect()->to('sides/berita/create')->withInput();
         } else {
             $image = $this->request->getFile('gambar');
             $gambar = $image->getClientName();
@@ -87,10 +108,31 @@ class Berita extends BaseController
         $file = empty($_FILES['gambar']['name']);
         if (!$file) {
             $validation = $this->validate([
+                'judul' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required' => 'judul harus di isi',
+                    ]
+                ],
+
+                'konten' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required' => 'isi berita harus di isi',
+                    ]
+                ],
+
+                'jenis' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required' => 'jenis berita harus di isi',
+                    ]
+                ],
+
                 'gambar' => [
                     'rules' => 'uploaded[gambar]|mime_in[gambar,image/jpg,image/jpeg,image/gif,image/png]|max_size[gambar,2048]',
                     'errors' => [
-                        'uploaded' => 'Harus Ada File yang diupload',
+                        'uploaded' => 'gambar harus di upload',
                         'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
                         'max_size' => 'Ukuran File Maksimal 2 MB'
                     ]
