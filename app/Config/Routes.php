@@ -73,6 +73,14 @@ $routes->get('sides/akun/show/(:num)', 'Akun::show/$1');
 $routes->post('sides/akun/update/(:num)', 'Akun::updated/$1');
 $routes->get('sides/akun/delete/(:num)', 'Akun::destroy/$1');
 
+//route visi-misi
+$routes->get('sides/visimisi/create', 'VisiMisi::create'); //tampil form tambah
+$routes->post('sides/visimisi/save', 'VisiMisi::insert');
+$routes->get('sides/visimisi', 'VisiMisi::index');
+$routes->get('sides/visimisi/show/(:num)', 'VisiMisi::show/$1');
+$routes->post('sides/visimisi/update/(:num)', 'VisiMisi::updated/$1');
+$routes->get('sides/visimisi/delete/(:num)', 'VisiMisi::destroy/$1');
+$routes->get('sides/visimisi/foto/(:num)', 'VisiMisi::foto/$1'); //tampil foto
 //services akun
 $routes->get('services/akun/(:any)', 'Akun::checkUser/$1');
 /*

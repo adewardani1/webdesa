@@ -106,10 +106,18 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="<?php echo base_url('sides/aspirasi'); ?>" class="nav-link">
                 <i class="fas fa-lightbulb"></i>
                 <p>
                   Aspirasi Warga
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?php echo base_url('sides/visimisi'); ?>" class="nav-link">
+                <i class="fas fa-tasks"></i>
+                <p>
+                  Visi-Misi
                 </p>
               </a>
             </li>
@@ -161,12 +169,27 @@
               <!-- small box -->
               <div class="small-box bg-info">
                 <div class="inner">
-                  <h3><?php echo $penduduk->total; ?></h3>
+                  <h3><?php echo $pendudukPerempuan->perempuan; ?></h3>
 
-                  <p>Penduduk</p>
+                  <p>Penduduk Perempuan</p>
                 </div>
                 <div class="icon">
-                  <i class="fas fa-users"></i>
+                  <i class="fas fa-female"></i>
+                </div>
+                <a href="<?php echo base_url('sides/penduduk'); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-6">
+              <!-- small box -->
+              <div class="small-box bg-info">
+                <div class="inner">
+                  <h3><?php echo $pendudukLaki->laki; ?></h3>
+
+                  <p>Penduduk Laki-Laki</p>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-male"></i>
                 </div>
                 <a href="<?php echo base_url('sides/penduduk'); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               </div>
@@ -190,24 +213,12 @@
               </div>
             <?php }
             ?>
-
           </div>
           <!-- /.row -->
           <!-- Main row -->
           <div class="row">
-            <!-- Left col -->
-            <section class="col-lg-7 connectedSortable">
-              <!-- Custom tabs (Charts with tabs)-->
-              <!-- /.card -->
-
-              <!-- /.card -->
-            </section>
             <!-- /.Left col -->
             <!-- right col (We are only adding the ID to make the widgets sortable)-->
-            <section class="col-lg-5 connectedSortable">
-              <!-- /.card -->
-              <!-- /.card -->
-            </section>
             <!-- right col -->
           </div>
           <!-- /.row (main row) -->
@@ -216,19 +227,13 @@
       <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-    <footer class="main-footer fixed-bottom">
+    <!-- <footer class="main-footer fixed-bottom">
       <strong>Copyright &copy; 2021 <a href="#">SIDES Jatitujuh</a>.</strong>
       All rights reserved.
       <div class="float-right d-none d-sm-inline-block">
         <b>Version</b> 1.0.0
       </div>
-    </footer>
-
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-      <!-- Control sidebar content goes here -->
-    </aside>
-    <!-- /.control-sidebar -->
+    </footer> -->
   </div>
 
   <!-- jQuery -->
