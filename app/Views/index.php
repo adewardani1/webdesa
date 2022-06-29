@@ -441,7 +441,7 @@
   <!-- end berita terkini -->
  
 
-  <!-- start follow berita terkini -->
+  <!-- start follow -->
   <div class="jumbotron-follow">
     <div class="container">
       <div class="row">
@@ -458,7 +458,7 @@
       </div>
     </div>
   </div>
-  <!-- end follow terkini -->
+  <!-- end follow -->
 
   <!-- Optional JavaScript; choose one of the two! -->
 
