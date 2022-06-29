@@ -377,9 +377,9 @@
 
   <!-- end layanan publik -->
 
-  <!-- start peduli lindungi -->
+   <!-- start peduli lindungi -->
 
-  <div class="jumbotron-covid">
+   <div class="jumbotron-covid">
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
@@ -393,13 +393,72 @@
           </div>
         </div>
         <div class="col-sm-4">
-
+        <p>Yang tervaksin</p> <p>25</p>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.telkom.tracencare&hl=in&gl=US"><img src="/img/googleplay.png" width="130px" height="100px"></a><br>
+        <a href="https://apps.apple.com/id/app/pedulilindungi/id1504600374"><img src="/img/appstore.png"width="130px" height="100px"></a>
+        <p>Download Aplikasi Pedulilindungi</p>
         </div>
       </div>
     </div>
   </div>
-
   <!-- end peduli lindungin -->
+
+  <!-- start berita terkini -->
+  <div class="jumbotron-berita">
+    <div class="container">
+      <div class="header text-center">
+        <h1>BERITA TERKINI</h1>
+        <hr />
+      </div>
+      <div class="d-flex">
+      <a href="" class="terbaru">Terkini</a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <img src="/img/bg-peduli.jpeg" height="150" width="2000"/>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="group-profile" data-aos="fade-right" data-aos-duration="1000">
+          <img class="img-fluid" src="/img/foto.png" alt="">
+        </div>
+        <div class="group-profile" data-aos="fade-up" data-aos-duration="1000">
+          <img class="img-fluid" src="/img/foto.png" alt="">
+        </div>
+        <div class="group-profile" data-aos="fade-up" data-aos-duration="1000">
+          <img class="img-fluid" src="/img/foto.png" alt="">
+        </div>
+        <div class="group-profile" data-aos="fade-left" data-aos-duration="1000">
+          <img class="img-fluid" src="/img/foto.png" alt="">
+        </div>
+      </div>
+      <div class="box-detail text-center">
+       <a href="#" class="btn-berita">Berita Lainnya</a>
+      </div>
+    </div>
+  </div>
+  <!-- end berita terkini -->
+ 
+
+  <!-- start follow berita terkini -->
+  <div class="jumbotron-follow">
+    <div class="container">
+      <div class="row">
+        <div class="header text-center">
+          <h1>FOLLOW US</h1>
+          <hr/>
+        </div>
+        <div class="col-sm-6">
+            <blockquote class="twitter-tweet"><p lang="qme" dir="ltr"> <a href="https://t.co/cFo1N2WOGo">pic.twitter.com/cFo1N2WOGo</a></p>&mdash; Sanpie ⚓☔ (@Sanpie34i) <a href="https://twitter.com/Sanpie34i/status/1541757150699343872?ref_src=twsrc%5Etfw">June 28, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div class="col-sm-6">
+            <blockquote class="twitter-tweet"><p lang="in" dir="ltr">Skrng tw kn mn yg idol bnrn <a href="https://twitter.com/C_JesslynJKT48?ref_src=twsrc%5Etfw">@C_JesslynJKT48</a> <a href="https://t.co/5HTsVxszRf">pic.twitter.com/5HTsVxszRf</a></p>&mdash; Kobo Kanaeru (こぼ) ☔ @ホロライブID (@kobokanaeru) <a href="https://twitter.com/kobokanaeru/status/1541756536262864896?ref_src=twsrc%5Etfw">June 28, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end follow terkini -->
 
   <!-- Optional JavaScript; choose one of the two! -->
 
