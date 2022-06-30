@@ -134,7 +134,7 @@ class PemerintahDesa extends BaseController
 
     public function uploadImage($tempfile, $gambar)
     {
-        $locDir = FCPATH . '../private/pemerintah_desa/' . $gambar;
+        $locDir = FCPATH . 'img/pemerintah_desa/' . $gambar;
         $moveDir = move_uploaded_file($tempfile, $locDir);
 
         if ($moveDir) {
@@ -147,7 +147,7 @@ class PemerintahDesa extends BaseController
     public function foto($id)
     {
         $model = $this->model->getPemerintahDesaById($id);
-        $path =  FCPATH . '../private/pemerintah_desa/' . $model->gambar;
+        $path =  FCPATH . 'img/pemerintah_desa/' . $model->gambar;
 
         if (file_exists($path)) {
             return $this->response->download($path, null);

@@ -170,7 +170,7 @@ class Kelembagaan extends BaseController
 
     public function uploadImage($tempfile, $gambar)
     {
-        $locDir = FCPATH . '../private/kelembagaan/' . $gambar;
+        $locDir = FCPATH . 'img/kelembagaan/' . $gambar;
         $moveDir = move_uploaded_file($tempfile, $locDir);
 
         if ($moveDir) {
@@ -183,7 +183,7 @@ class Kelembagaan extends BaseController
     public function foto($id)
     {
         $model = $this->model->getKelembagaanById($id);
-        $path =  FCPATH . '../private/kelembagaan/' . $model->gambar;
+        $path =  FCPATH . 'img/kelembagaan/' . $model->gambar;
 
         if (file_exists($path)) {
             return $this->response->download($path, null);

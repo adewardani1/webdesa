@@ -135,7 +135,7 @@ class VisiMisi extends BaseController
 
     public function uploadImage($tempfile, $gambar)
     {
-        $locDir = '../private/visi_misi/' . $gambar;
+        $locDir = FCPATH . 'img/visi_misi/' . $gambar;
         $moveDir = move_uploaded_file($tempfile, $locDir);
 
         if ($moveDir) {
@@ -148,7 +148,7 @@ class VisiMisi extends BaseController
     public function foto($id)
     {
         $model = $this->model->getGambarVisiMisiById($id);
-        $path =  FCPATH . '../private/visi_misi/' . $model->gambar;
+        $path =  FCPATH . 'img/visi_misi/' . $model->gambar;
 
         if (file_exists($path)) {
             return $this->response->download($path, null);

@@ -204,7 +204,7 @@ class Berita extends BaseController
 
     public function uploadImage($tempfile, $gambar)
     {
-        $locDir = '../private/berita/' . $gambar;
+        $locDir = FCPATH . 'img/berita/' . $gambar;
         $moveDir = move_uploaded_file($tempfile, $locDir);
 
         if ($moveDir) {
@@ -217,7 +217,7 @@ class Berita extends BaseController
     public function foto($id)
     {
         $model = $this->model->getBeritaById($id);
-        $path =  FCPATH . '../private/berita/' . $model->gambar;
+        $path =  FCPATH . 'img/berita/' . $model->gambar;
 
         if (file_exists($path)) {
             return $this->response->download($path, null);
