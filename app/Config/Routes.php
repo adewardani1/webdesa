@@ -81,6 +81,33 @@ $routes->get('sides/visimisi/show/(:num)', 'VisiMisi::show/$1');
 $routes->post('sides/visimisi/update/(:num)', 'VisiMisi::updated/$1');
 $routes->get('sides/visimisi/delete/(:num)', 'VisiMisi::destroy/$1');
 $routes->get('sides/visimisi/foto/(:num)', 'VisiMisi::foto/$1'); //tampil foto
+
+//route kelembagaan
+$routes->get('sides/kelembagaan/create', 'Kelembagaan::create'); //tampil form tambah
+$routes->post('sides/kelembagaan/save', 'Kelembagaan::insert');
+$routes->get('sides/kelembagaan', 'Kelembagaan::index');
+$routes->get('sides/kelembagaan/show/(:num)', 'Kelembagaan::show/$1');
+$routes->post('sides/kelembagaan/update/(:num)', 'Kelembagaan::updated/$1');
+$routes->get('sides/kelembagaan/delete/(:num)', 'Kelembagaan::destroy/$1');
+$routes->get('sides/kelembagaan/foto/(:num)', 'Kelembagaan::foto/$1'); //tampil foto
+
+//route pemerintah-desa
+$routes->get('sides/pemerintah-desa/create', 'PemerintahDesa::create'); //tampil form tambah
+$routes->post('sides/pemerintah-desa/save', 'PemerintahDesa::insert');
+$routes->get('sides/pemerintah-desa', 'PemerintahDesa::index');
+$routes->get('sides/pemerintah-desa/show/(:num)', 'PemerintahDesa::show/$1');
+$routes->post('sides/pemerintah-desa/update/(:num)', 'PemerintahDesa::updated/$1');
+$routes->get('sides/pemerintah-desa/delete/(:num)', 'PemerintahDesa::destroy/$1');
+$routes->get('sides/pemerintah-desa/foto/(:num)', 'PemerintahDesa::foto/$1'); //tampil foto
+
+//route galeri
+$routes->get('sides/galeri/create', 'Galeri::create'); //tampil form tambah
+$routes->post('sides/galeri/save', 'Galeri::insert');
+$routes->get('sides/galeri', 'Galeri::index');
+$routes->get('sides/galeri/show/(:num)', 'Galeri::show/$1');
+$routes->post('sides/galeri/update/(:num)', 'Galeri::updated/$1');
+$routes->get('sides/galeri/delete/(:num)', 'Galeri::destroy/$1');
+$routes->get('sides/galeri/foto/(:num)', 'Galeri::foto/$1'); //tampil foto
 //services akun
 $routes->get('services/akun/(:any)', 'Akun::checkUser/$1');
 /*

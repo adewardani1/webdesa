@@ -445,82 +445,43 @@
     /* end css peduli lindungi */
 
     /* start css berita */
+
     .jumbotron-berita {
         font-family: 'Roboto', sans-serif;
-        padding: 2rem 1rem;
-        margin-bottom: 2rem;
+        margin-top: 20px;
+    }
+
+    .jumbotron-berita .container .row .col-sm-4 .card {
+        transition: 0.3s ease;
+    }
+
+    .jumbotron-berita .container .row .col-sm-4 .card:hover {
+        box-shadow: 0px 0px 5px 1px black;
     }
 
     .jumbotron-berita .container .header {
-        margin-top: 30px;
+        margin-bottom: 20px;
     }
 
-    .jumbotron-berita .container .header h1 {
-        font-weight: 900;
-    }
-
-    .jumbotron-berita .container .header p {
-        font-weight: 400;
-    }
-
-    .jumbotron-berita .container .header hr {
-        padding: 3px 0px;
-        width: 30px;
-        margin: auto;
-        background-color: red !important;
-
-    }
-
-    .jumbotron-berita .container .d-flex {
-        margin-top: 30px;
-    }
-
-    .jumbotron-berita .container .d-flex .group-profile {
-        background-color: black;
-        padding: 13px;
-        box-shadow: 0px 0px 20px gray;
-        margin: 0px 30px;
-    }
-
-    .jumbotron-berita .container .d-flex .group-profile img {
-        width: 150px;
-        height: 180px;
-    }
-
-    .jumbotron-berita .container .d-flex .terbaru {
-        background-color: grey;
+    .jumbotron-berita .container .text-center a {
         text-decoration: none;
+        padding: 20px;
         color: white;
-        font-weight: 700;
-        padding: 5px 60px;
-        border-color: white;
+        font-weight: bold;
+        background-color: #ff6600;
+        transition: 0.3s ease;
     }
 
-
-    .jumbotron-berita .container .box-detail {
-        margin-top: 50px;
-    }
-
-    .jumbotron-berita .container .box-detail .btn-berita {
-        background-color: #FF712B;
-        padding: 13px 50px;
-        border-radius: 30px;
-    }
-
-    .jumbotron-berita .container .box-detail a {
-        font-family: 'Roboto', sans-serif;
-        text-decoration: none;
-        color: white;
-        font-weight: bolder;
-        font-size: 20px;
+    .jumbotron-berita .container .text-center a:hover {
+        background-color: #cc5200;
     }
 
     /* end css berita */
 
     /* start css follow */
+
     .jumbotron-follow {
         font-family: 'Roboto', sans-serif;
-        padding: 2rem 1rem;
         margin-bottom: 2rem;
     }
 
@@ -555,12 +516,15 @@
     /* end css follow */
 
     /* start css footer */
-    .sosial-media{
+
+    .sosial-media {
         transition: 0.3s ease;
     }
-    .sosial-media:hover{
+
+    .sosial-media:hover {
         color: blue !important;
     }
+
     /* end css footer */
 }
 
