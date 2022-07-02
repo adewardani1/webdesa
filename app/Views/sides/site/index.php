@@ -410,11 +410,11 @@
         foreach ($beritaTerkini as $row) { ?>
           <div class="col-sm-4">
             <div class="card">
-              <img src="/img/Screenshot (158).png" class="card-img-top" alt="...">
+              <img src="/img/berita/<?php echo $row->gambar; ?>" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title text-dark"><?php echo $row->judul; ?></h5>
                 <p class="card-text text-dark"><?php echo $row->konten; ?></p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="<?php echo base_url('berita/' . $row->id); ?>" class="btn btn-primary">Selengkapnya</a>
               </div>
             </div>
           </div>

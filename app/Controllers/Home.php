@@ -21,4 +21,14 @@ class Home extends BaseController
 
         return view('sides/site/index', $data);
     }
+
+    public function getGaleri()
+    {
+        return view('sides/site/galeri');
+    }
+
+    public function getBeritaById($id)
+    {
+        echo $id;
+    }
 }

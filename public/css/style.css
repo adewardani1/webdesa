@@ -526,6 +526,86 @@
     }
 
     /* end css footer */
+
+    /* start css galeri */
+
+    .jumbotron-galeri {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("/img/desajatituju.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 2rem 1rem;
+    }
+
+    .jumbotron-galeri .jumbotron-text h1 {
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 900 !important;
+        margin-top: 150px;
+        font-size: 100px;
+        color: white;
+        font-style: italic;
+    }
+
+    .jumbotron-galeri .jumbotron-text p {
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 900 !important;
+        font-size: 40px;
+        color: white;
+        font-style: italic;
+    }
+
+    .jumbotron-konten-swiper {
+        background-color: #1c1c1c !important;
+        padding: 1rem 1rem 3rem 1rem;
+    }
+
+    .jumbotron-konten-swiper .box-konten h1 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+        font-style: italic;
+        color: #00cc00;
+        text-decoration: underline;
+        text-underline-position: under;
+        text-underline-offset: 5px;
+        text-decoration-thickness: 5px;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide {
+        background-color: #1c1c1c;
+    }
+
+    /* end css galeri */
 }
 
 @media (max-width: 576px) {

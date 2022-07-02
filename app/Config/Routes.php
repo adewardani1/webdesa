@@ -34,6 +34,9 @@ $routes->setAutoRoute(true);
 
 //route view desaq
 $routes->get('/', 'Home::index');
+$routes->get('/galeri', 'Home::getGaleri');
+$routes->get('berita/(:num)', 'Home::getBeritaById/$1');
+
 
 
 //route login SIDES
