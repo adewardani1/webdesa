@@ -36,9 +36,11 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('galeri/', 'Home::getGaleri');
 $routes->get('kelembagaan/', 'Home::getKelembagaan');
-$routes->get('news/', 'Home::getBeritaById');
-
-
+$routes->get('pemerintahan-desa/', 'Home::getPemerintahDesa');
+$routes->get('visi-misi/', 'Home::getVisiMisi');
+$routes->get('kontak/', 'Home::getKontak');
+$routes->get('news/', 'Home::getBerita');
+$routes->get('pengumuman/', 'Home::getPengumuman');
 
 //route login SIDES
 $routes->get('auth', 'Login::index');

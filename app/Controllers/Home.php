@@ -48,11 +48,7 @@ class Home extends BaseController
         return view('sides/site/berita/berita-detail');
     }
 
-<<<<<<< HEAD
-    public function getBeritaById($id)
-=======
     public function makeRegexTagP($val)
->>>>>>> 6c77f0d09efdc9966ac86a8d48b01a76a53345e6
     {
         $re = '/(.*?[\.\!\?]){3}/';
         // Pattern matches anything to a `.!?` three times. \ is added to make it literal 
@@ -62,5 +58,34 @@ class Home extends BaseController
         $result = preg_replace($re, $subst, $str);
 
         echo $result;
+    }
+
+    public function getPemerintahDesa()
+    {
+        
+        return view('sides/site/pemerintahan-desa');
+    }
+
+    public function getVisiMisi()
+    {
+        
+        return view('sides/site/visi-misi');
+    }
+
+    public function getKontak()
+    {
+        
+        return view('sides/site/kontak');
+    }
+
+    public function getBerita()
+    {
+        
+        return view('sides/site/berita/index');
+    }
+    public function getPengumuman()
+    {
+        
+        return view('sides/site/pengumuman');
     }
 }

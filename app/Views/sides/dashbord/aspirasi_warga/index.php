@@ -105,7 +105,7 @@
                                 </p>
                             </a>
                         </li>
-                        <<<<<<< HEAD <li class="nav-item">
+                            <li class="nav-item">
                             <a href="<?php echo base_url('sides/visimisi'); ?>" class="nav-link">
                                 <i class="fas fa-tasks"></i>
                                 <p>
@@ -137,8 +137,6 @@
                                     </p>
                                 </a>
                             </li>
-                            =======
-                            >>>>>>> d480623739874ee4bea10caf9738074577eae343
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -193,7 +191,7 @@
                                         <thead>
                                             <tr>
                                                 <th>No.</th>
-                                                <<<<<<< HEAD <th>First Name</th>
+                                                <th>First Name</th>
                                                     <th>Last Name</th>
                                                     <th>Email</th>
                                                     <th>Address</th>
@@ -227,22 +225,6 @@
                                                 </tr>
                                             <?php }
                                             ?>
-                                            =======
-                                            <th>Headline</th>
-                                            <th>Jenis Berita</th>
-                                            <th>#Di Buat</th>
-                                            <th>#Di Ubah</th>
-                                            <th>Action</th>
-                                            <th>gambar</th>
-                                            </tr>
-                                            </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>rijal</td>
-                                                <td>uad</td>
-                                            </tr>
-
-                                            >>>>>>> d480623739874ee4bea10caf9738074577eae343
                                         </tbody>
                                     </table>
                                 </div>
