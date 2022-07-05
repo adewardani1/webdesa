@@ -105,7 +105,7 @@
                             <a href="<?php echo base_url('sides/berita'); ?>" class="nav-link active">
                                 <i class="fas fa-newspaper"></i>
                                 <p>
-                                    Berita
+                                    Content
                                 </p>
                             </a>
                         </li>
@@ -215,8 +215,9 @@
                                         <thead>
                                             <tr>
                                                 <th>No.</th>
-                                                <th>Judul Berita</th>
-                                                <th>Jenis Berita</th>
+                                                <th>Nama Pembuat</th>
+                                                <th>Judul</th>
+                                                <th>Jenis</th>
                                                 <th>#Di Buat</th>
                                                 <th>#Di Ubah</th>
                                                 <th>Action</th>
@@ -230,6 +231,7 @@
                                                 $nomor++; ?>
                                                 <tr>
                                                     <td><?php echo $nomor; ?></td>
+                                                    <td><?php echo $row->nama_depan; ?></td>
                                                     <td><?php echo $row->judul; ?></td>
                                                     <td><?php echo $row->jenis; ?></td>
                                                     <td><?php echo $row->created_at; ?></td>

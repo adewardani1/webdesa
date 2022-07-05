@@ -22,6 +22,53 @@ class ModelHome extends Model
         return $this->database->query($sql)->getRow();
     }
 
+    public function getNews()
+    {
+        $sql = "
+            SELECT
+                berita.id,
+                berita.gambar,
+                berita.judul,
+                berita.konten,
+                berita.created_at
+            FROM berita
+        ";
+
+        return $this->database->query($sql)->getResult();
+    }
+
+    public function getNewsById($id)
+    {
+        $sql = "
+            SELECT
+                akun.nama_depan,
+                berita.gambar,
+                berita.judul,
+                berita.konten,
+                berita.created_at,
+                berita.updated_at
+            FROM berita
+            INNER JOIN akun ON akun.id = berita.id_akun
+            WHERE berita.id = '" . $id . "'
+        ";
+
+        return $this->database->query($sql)->getRow();
+    }
+
+    public function getRecentNews()
+    {
+        $sql = "
+            SELECT
+                berita.id,
+                berita.judul,
+                berita.updated_at
+            FROM berita
+            WHERE berita.updated_at IN (SELECT max(berita.updated_at) FROM berita);
+        ";
+
+        return $this->database->query($sql)->getRow();
+    }
+
     public function getNewsNow()
     {
         $sql = "

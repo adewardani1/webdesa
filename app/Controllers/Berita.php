@@ -154,6 +154,7 @@ class Berita extends BaseController
                     'judul' => $this->request->getPost('judul'),
                     'jenis' => $this->request->getPost('jenis'),
                     'konten' => $this->request->getPost('konten'),
+                    'id_akun' => session()->get('id'),
                     'updated_at' => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s')))
                     // 'tmp' => $img->getTempName();
                     // 'gambar' => $_FILES["gambar"]["name"]

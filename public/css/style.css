@@ -467,24 +467,11 @@
     font-size: 10px;
   }
 
-  .jumbotron-berita
-    .container
-    .row
-    .col-sm-4
-    .card
-    .card-body
-    .btn-selengkapnya {
+  .jumbotron-berita .container .row .col-sm-4 .card .card-body .btn-selengkapnya {
     margin-top: 30px;
   }
 
-  .jumbotron-berita
-    .container
-    .row
-    .col-sm-4
-    .card
-    .card-body
-    .btn-selengkapnya
-    a {
+  .jumbotron-berita .container .row .col-sm-4 .card .card-body .btn-selengkapnya a {
     text-decoration: none;
     color: black;
     border-style: solid;
@@ -494,14 +481,7 @@
     transition: 0.3s ease;
   }
 
-  .jumbotron-berita
-    .container
-    .row
-    .col-sm-4
-    .card
-    .card-body
-    .btn-selengkapnya
-    a:hover {
+  .jumbotron-berita .container .row .col-sm-4 .card .card-body .btn-selengkapnya a:hover {
     background-color: #cc5200;
     color: white;
     border-radius: 5px;
@@ -690,10 +670,8 @@
   .jumbotron-kontak {
     padding: 2rem 1rem;
     background-color: #e9ecef;
-    background-image: linear-gradient(
-        rgba(64, 84, 178),
-        rgba(0.5, 0.5, 0.5, 0.5)
-      ),
+    background-image: linear-gradient(rgba(64, 84, 178),
+        rgba(0.5, 0.5, 0.5, 0.5)),
       url("/img/kantor.jpg");
     height: 900px;
     background-repeat: no-repeat;
@@ -740,6 +718,7 @@
   /* start detail berita */
 
   .jumbotron-detail {
+    font-family: "Roboto", sans-serif;
     padding: 2rem 1rem;
     background-color: #e9ecef;
     height: 600px;
@@ -755,8 +734,8 @@
   }
 
   .jumbotron-detail p {
-    color: white !important;
-    font-weight: 900;
+    color: #b3b3b3 !important;
+    font-weight: 500;
     padding-top: 20%;
   }
 
@@ -871,14 +850,7 @@
     color: black !important;
   }
 
-  .detail
-    .container
-    .row
-    .col-sm-4
-    .side
-    .group-side
-    .fontawesome-side
-    .fab:hover {
+  .detail .container .row .col-sm-4 .side .group-side .fontawesome-side .fab:hover {
     color: #00d877 !important;
   }
 
@@ -933,21 +905,11 @@
     padding: 20px;
   }
 
-  .jumbotron-galeri-konten
-    .container
-    .row
-    .col-right
-    .swiper
-    .swiper-button-next {
+  .jumbotron-galeri-konten .container .row .col-right .swiper .swiper-button-next {
     color: #00d877 !important;
   }
 
-  .jumbotron-galeri-konten
-    .container
-    .row
-    .col-right
-    .swiper
-    .swiper-button-prev {
+  .jumbotron-galeri-konten .container .row .col-right .swiper .swiper-button-prev {
     color: #00d877 !important;
   }
 
@@ -974,13 +936,7 @@
     height: 400px;
   }
 
-  .jumbotron-galeri-konten
-    .container
-    .row
-    .col-sm-6
-    .swiper
-    .swiper-wrapper
-    .swiper-slide {
+  .jumbotron-galeri-konten .container .row .col-sm-6 .swiper .swiper-wrapper .swiper-slide {
     text-align: center;
 
     /* Center slide text vertically */
@@ -998,14 +954,7 @@
     align-items: center;
   }
 
-  .jumbotron-galeri-konten
-    .container
-    .row
-    .col-sm-6
-    .swiper
-    .swiper-wrapper
-    .swiper-slide
-    img {
+  .jumbotron-galeri-konten .container .row .col-sm-6 .swiper .swiper-wrapper .swiper-slide img {
     width: 600px;
     height: 400px;
   }
@@ -1013,9 +962,11 @@
   /* end css galeri */
 
   /* start css tampilan berita */
+
   .news-judul {
     font-family: "Roboto", sans-serif;
   }
+
   .news-judul h1 {
     font-size: 80px;
     font-weight: 900;
@@ -1023,29 +974,37 @@
     margin-top: 10rem;
     margin-bottom: 5rem;
   }
+
   .jumbotron-news {
     font-family: "Roboto", sans-serif;
     margin-top: 20px;
-    margin-bottom: 50px;
+    padding-bottom: 10px;
+    background-color: #262626;
   }
 
   .jumbotron-news .container .row .col-sm-4 .card {
     transition: 0.3s ease;
     margin-bottom: 3rem;
+    margin-top: 40px;
   }
 
   .jumbotron-news .container .row .col-sm-4 .card:hover {
     box-shadow: 0px 0px 5px 1px black;
   }
 
-  .jumbotron-news .container .row .col-sm-4 .card .card-body {
+  /* .jumbotron-news .container .row .col-sm-4 .card .card-body {
     text-align: center !important;
-  }
+  } */
 
   .jumbotron-news .container .row .col-sm-4 .card .card-body .date-berita {
     color: #b3b3b3 !important;
     font-weight: lighter;
     font-size: 10px;
+  }
+
+  .jumbotron-news .container .row .col-sm-4 .card .card-body .card-title {
+    font-size: 30px;
+    font-weight: 900;
   }
 
   .jumbotron-news .container .row .col-sm-4 .card .card-body .btn-read-more {
@@ -1062,14 +1021,7 @@
     transition: 0.3s ease;
   }
 
-  .jumbotron-news
-    .container
-    .row
-    .col-sm-4
-    .card
-    .card-body
-    .btn-read-more
-    a:hover {
+  .jumbotron-news .container .row .col-sm-4 .card .card-body .btn-read-more a:hover {
     background-color: #cc5200;
     color: white;
     border-radius: 5px;
@@ -1091,9 +1043,11 @@
   .jumbotron-news .container .text-center a:hover {
     background-color: #cc5200;
   }
+
   /* end css tampilan berita */
 
   /* start css pengumuman */
+
   .jumbotron-pengumuman {
     padding: 2rem 1rem;
     background-color: #e9ecef;
@@ -1149,14 +1103,7 @@
     transition: 0.3s ease;
   }
 
-  .jumbotron-isi
-    .container
-    .row
-    .col-sm-4
-    .card
-    .card-body
-    .btn-read-more
-    a:hover {
+  .jumbotron-isi .container .row .col-sm-4 .card .card-body .btn-read-more a:hover {
     background-color: #cc5200;
     color: white;
     border-radius: 5px;
@@ -1179,7 +1126,7 @@
     background-color: #cc5200;
   }
 
-  /* end css pengumuman */
+  /* e  nd css pengumuman */
 }
 
 @media (max-width: 576px) {

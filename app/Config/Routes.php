@@ -40,6 +40,7 @@ $routes->get('pemerintahan-desa/', 'Home::getPemerintahDesa');
 $routes->get('visi-misi/', 'Home::getVisiMisi');
 $routes->get('kontak/', 'Home::getKontak');
 $routes->get('news/', 'Home::getBerita');
+$routes->get('news/(:num)', 'Home::getBeritaById/$1');
 $routes->get('pengumuman/', 'Home::getPengumuman');
 
 //route login SIDES

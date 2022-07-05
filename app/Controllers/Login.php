@@ -61,8 +61,10 @@ class Login extends BaseController
             return redirect()->to('/auth');
         } else {
             $newdata = [
+                'id'  => $model->id,
                 'username'  => $user,
                 'password'  => $model->password,
+                'nama_depan'  => $model->nama_depan,
                 'level'  => $model->level,
                 'isLogged' => true
             ];

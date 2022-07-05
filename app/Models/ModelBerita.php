@@ -26,7 +26,10 @@ class ModelBerita extends Model
     public function show()
     {
         $sql = "
-            SELECT * FROM berita
+            SELECT
+                *
+            FROM berita
+            INNER JOIN akun ON akun.id = berita.id_akun
         ";
 
         return $this->database->query($sql)->getResult();

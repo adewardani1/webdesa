@@ -94,7 +94,7 @@
                             <a href="<?php echo base_url('sides/berita'); ?>" class="nav-link active">
                                 <i class="fas fa-newspaper"></i>
                                 <p>
-                                    Berita
+                                    Content
                                 </p>
                             </a>
                         </li>
@@ -214,8 +214,9 @@
                                             <label for="exampleSelectBorder" class="col-sm-2 col-form-label">Jenis Berita</label>
                                             <div class="col-sm-10">
                                                 <select name="jenis" class="custom-select form-control-border" id="exampleSelectBorder">
-                                                    <option value="Headline">Headline</option>
                                                     <option value="Biasa">Biasa</option>
+                                                    <option value="Headline">Headline</option>
+                                                    <option value="Event">Event</option>
                                                 </select>
                                             </div>
                                         </div>

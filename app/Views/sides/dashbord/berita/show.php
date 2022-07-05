@@ -109,7 +109,7 @@
                             <a href="<?php echo base_url('sides/berita'); ?>" class="nav-link active">
                                 <i class="fas fa-newspaper"></i>
                                 <p>
-                                    Berita
+                                    Content
                                 </p>
                             </a>
                         </li>

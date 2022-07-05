@@ -26,8 +26,10 @@ class ModelLogin extends Model
     {
         $sql = "
             SELECT
+                akun.id,
                 akun.username,
                 akun.password,
+                akun.nama_depan,
                 akun.level
             FROM akun
             WHERE akun.username = '" . $user . "'

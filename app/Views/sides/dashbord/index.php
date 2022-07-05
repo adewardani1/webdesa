@@ -101,7 +101,7 @@
               <a href="<?php echo base_url('/berita'); ?>" class="nav-link">
                 <i class="fas fa-newspaper"></i>
                 <p>
-                  Berita
+                  Content
                 </p>
               </a>
             </li>
