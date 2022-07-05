@@ -106,50 +106,52 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <<<<<<< HEAD <li class="nav-item">
                             <a href="<?php echo base_url('sides/visimisi'); ?>" class="nav-link">
                                 <i class="fas fa-tasks"></i>
                                 <p>
                                     Visi-Misi
                                 </p>
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?php echo base_url('sides/kelembagaan'); ?>" class="nav-link">
-                                <i class="fas fa-university"></i>
-                                <p>
-                                    Kelembagaan
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?php echo base_url('sides/pemerintah-desa'); ?>" class="nav-link">
-                                <i class="fas fa-gavel"></i>
-                                <p>
-                                    Pemerintah Desa
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?php echo base_url('sides/galeri'); ?>" class="nav-link">
-                                <i class="fas fa-images"></i>
-                                <p>
-                                    Galeri
-                                </p>
-                            </a>
-                        </li>
-                        <?php
-                        if (session()->get('level') == 'Master') { ?>
+                            </li>
                             <li class="nav-item">
-                                <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
-                                    <i class="fas fa-user-circle"></i>
+                                <a href="<?php echo base_url('sides/kelembagaan'); ?>" class="nav-link">
+                                    <i class="fas fa-university"></i>
                                     <p>
-                                        Akun
+                                        Kelembagaan
                                     </p>
                                 </a>
                             </li>
-                        <?php }
-                        ?>
+                            <li class="nav-item">
+                                <a href="<?php echo base_url('sides/pemerintah-desa'); ?>" class="nav-link">
+                                    <i class="fas fa-gavel"></i>
+                                    <p>
+                                        Pemerintah Desa
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo base_url('sides/galeri'); ?>" class="nav-link">
+                                    <i class="fas fa-images"></i>
+                                    <p>
+                                        Galeri
+                                    </p>
+                                </a>
+                            </li>
+                            =======
+                            >>>>>>> d480623739874ee4bea10caf9738074577eae343
+                            <?php
+                            if (session()->get('level') == 'Master') { ?>
+                                <li class="nav-item">
+                                    <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
+                                        <i class="fas fa-user-circle"></i>
+                                        <p>
+                                            Akun
+                                        </p>
+                                    </a>
+                                </li>
+                            <?php }
+                            ?>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

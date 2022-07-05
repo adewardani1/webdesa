@@ -58,6 +58,8 @@ $routes->get('sides/penduduk/delete/(:num)', 'Penduduk::destroy/$1');
 
 //route aspirasi
 $routes->get('sides/aspirasi', 'AspirasiWarga::index');
+$routes->get('sides/aspirasi/(:num)', 'AspirasiWarga::show/$1');
+$routes->post('sides/aspirasi/update(:num)', 'AspirasiWarga::update/$1');
 $routes->get('sides/aspirasi/delete(:num)', 'AspirasiWarga::delete/$1');
 
 //route berita

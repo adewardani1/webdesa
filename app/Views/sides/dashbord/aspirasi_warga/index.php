@@ -105,38 +105,40 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <<<<<<< HEAD <li class="nav-item">
                             <a href="<?php echo base_url('sides/visimisi'); ?>" class="nav-link">
                                 <i class="fas fa-tasks"></i>
                                 <p>
                                     Visi-Misi
                                 </p>
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?php echo base_url('sides/kelembagaan'); ?>" class="nav-link">
-                                <i class="fas fa-university"></i>
-                                <p>
-                                    Kelembagaan
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?php echo base_url('sides/pemerintah-desa'); ?>" class="nav-link">
-                                <i class="fas fa-gavel"></i>
-                                <p>
-                                    Pemerintah Desa
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?php echo base_url('sides/galeri'); ?>" class="nav-link">
-                                <i class="fas fa-images"></i>
-                                <p>
-                                    Galeri
-                                </p>
-                            </a>
-                        </li>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo base_url('sides/kelembagaan'); ?>" class="nav-link">
+                                    <i class="fas fa-university"></i>
+                                    <p>
+                                        Kelembagaan
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo base_url('sides/pemerintah-desa'); ?>" class="nav-link">
+                                    <i class="fas fa-gavel"></i>
+                                    <p>
+                                        Pemerintah Desa
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo base_url('sides/galeri'); ?>" class="nav-link">
+                                    <i class="fas fa-images"></i>
+                                    <p>
+                                        Galeri
+                                    </p>
+                                </a>
+                            </li>
+                            =======
+                            >>>>>>> d480623739874ee4bea10caf9738074577eae343
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -191,15 +193,15 @@
                                         <thead>
                                             <tr>
                                                 <th>No.</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Email</th>
-                                                <th>Address</th>
-                                                <th>Nomor Hp</th>
-                                                <th>Message</th>
-                                                <th>#Di Buat</th>
-                                                <th>#Di Ubah</th>
-                                                <th>Action</th>
+                                                <<<<<<< HEAD <th>First Name</th>
+                                                    <th>Last Name</th>
+                                                    <th>Email</th>
+                                                    <th>Address</th>
+                                                    <th>Nomor Hp</th>
+                                                    <th>Message</th>
+                                                    <th>#Di Buat</th>
+                                                    <th>#Di Ubah</th>
+                                                    <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -225,6 +227,22 @@
                                                 </tr>
                                             <?php }
                                             ?>
+                                            =======
+                                            <th>Headline</th>
+                                            <th>Jenis Berita</th>
+                                            <th>#Di Buat</th>
+                                            <th>#Di Ubah</th>
+                                            <th>Action</th>
+                                            <th>gambar</th>
+                                            </tr>
+                                            </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>rijal</td>
+                                                <td>uad</td>
+                                            </tr>
+
+                                            >>>>>>> d480623739874ee4bea10caf9738074577eae343
                                         </tbody>
                                     </table>
                                 </div>

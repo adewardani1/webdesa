@@ -38,27 +38,34 @@
                     </li>
                 </div>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">PENGUMUMAN</a>
+                    <<<<<<< HEAD <a class="nav-link" href="#">PENGUMUMAN</a>
+                        =======
+                        <a class="nav-link" href="#">PENGUMUMAN</a>
+                        >>>>>>> d480623739874ee4bea10caf9738074577eae343
                 </li>
                 <div class="dropdown">
                     <li class="nav-item">
                         <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">HELLO DESA</a>
                         <ul class="dropdown-menu bg-dark text-white" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="<?php echo base_url('/kontak'); ?>">Kontak</a></li>
-                            <li><a class="dropdown-item" href="#">Laporan Terkini</a></li>
-                        </ul>
+                            <<<<<<< HEAD <li><a class="dropdown-item" href="<?php echo base_url('/kontak'); ?>">Kontak</a>
                     </li>
-                </div>
-                <li class="nav-item">
-                    <a class="nav-link">|</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa-solid fa-circle-exclamation"></i></a>
-                </li>
+                    =======
+                    <li><a class="dropdown-item" href="<?php echo base_url('/kontak'); ?>">Kontak</a></li>
+                    >>>>>>> d480623739874ee4bea10caf9738074577eae343
+                    <li><a class="dropdown-item" href="#">Laporan Terkini</a></li>
             </ul>
+            </li>
         </div>
+        <li class="nav-item">
+            <a class="nav-link">|</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-solid fa-circle-exclamation"></i></a>
+        </li>
+        </ul>
+    </div>
     </div>
 </nav>

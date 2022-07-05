@@ -42,6 +42,9 @@ class Home extends BaseController
 
     public function getBeritaById()
     {
+        $data = [
+            'berita' => $this->model->getBeritaById()
+        ];
         return view('sides/site/berita/berita-detail');
     }
 
