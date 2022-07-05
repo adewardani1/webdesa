@@ -53,9 +53,6 @@
                     <a class="nav-link">|</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fa-solid fa-circle-exclamation"></i></a>
                 </li>
             </ul>
