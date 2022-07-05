@@ -84,6 +84,7 @@ class Filters extends BaseConfig
                 'sides/akun',
                 'sides/akun/create',
                 'sides/akun/show',
+                'sides/akun/show/*',
                 'sides/akun/delete',
                 'sides/akun/insert',
                 'akun'

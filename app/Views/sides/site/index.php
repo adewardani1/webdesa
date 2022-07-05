@@ -388,8 +388,8 @@
           <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
-          <a href="https://play.google.com/store/apps/details?id=com.telkom.tracencare&hl=in&gl=US"><img src="/img/googleplay.png" width="130px" height="100px"></a><br>
-          <a href="https://apps.apple.com/id/app/pedulilindungi/id1504600374"><img src="/img/appstore.png" width="130px" height="100px"></a>
+          <a href="https://play.google.com/store/apps/details?id=com.telkom.tracencare&hl=in&gl=US"><img src="<?php echo base_url('img/googleplay.png'); ?>" width="130px" height="100px"></a><br>
+          <a href="https://apps.apple.com/id/app/pedulilindungi/id1504600374"><img src="<?php echo base_url('img/appstore.png'); ?>" width="130px" height="100px"></a>
           <p>Download Aplikasi Pedulilindungi</p>
         </div>
       </div>
@@ -411,10 +411,12 @@
           <div class="col-sm-4">
             <div class="card">
               <img src="/img/berita/<?php echo $row->gambar; ?>" class="card-img-top" alt="...">
-              <div class="card-body">
+              <div class="card-body mb-3">
                 <h5 class="card-title text-dark"><?php echo $row->judul; ?></h5>
-                <p class="card-text text-dark"><?php echo $row->konten; ?></p>
-                <a href="<?php echo base_url('berita/' . $row->id); ?>" class="btn btn-primary">Selengkapnya</a>
+                <p class="date-berita"><?php echo $row->created_at; ?></p>
+                <div class="btn-selengkapnya">
+                  <a href="<?php echo base_url('berita/' . $row->id); ?>">Selengkapnya</a>
+                </div>
               </div>
             </div>
           </div>

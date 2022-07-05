@@ -29,9 +29,10 @@ class ModelHome extends Model
                 berita.id,
                 berita.gambar,
                 berita.judul,
-                berita.konten
+                berita.konten,
+                berita.created_at
             FROM berita
-            WHERE berita.created_at >= DATE_ADD(NOW(),INTERVAL -10 DAY) LIMIT 3
+            WHERE berita.created_at >= DATE_ADD(NOW(),INTERVAL -30 DAY) LIMIT 3
         ";
 
         return $this->database->query($sql)->getResult();
@@ -59,5 +60,32 @@ class ModelHome extends Model
         ";
 
         return $this->database->query($sql)->getRow();
+    }
+
+    public function getGaleri()
+    {
+        $sql = "
+            SELECT
+                galeri.gambar AS gambar
+            FROM galeri
+        ";
+
+        return $this->database->query($sql)->getResult();
+    }
+
+    public function getKelembagaan()
+    {
+        $sql = "
+            SELECT
+                kelembagaan.gambar,
+                kelembagaan.nama
+            FROM kelembagaan
+        ";
+
+        return $this->database->query($sql)->getResult();
+    }
+
+    public function getBeritaById($id)
+    {
     }
 }

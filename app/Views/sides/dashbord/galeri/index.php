@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="<?php echo base_url('adminLTE/plugins/daterangepicker/daterangepicker.css'); ?>">
     <!-- summernote -->
     <link rel="stylesheet" href="<?php echo base_url('adminLTE/plugins/summernote/summernote-bs4.min.css'); ?>">
+    <link rel="icon" href="<?php echo base_url('img/logo-desajatituju.png'); ?>">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">

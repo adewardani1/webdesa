@@ -24,11 +24,36 @@ class Home extends BaseController
 
     public function getGaleri()
     {
-        return view('sides/site/galeri');
+        $data = [
+            'galeri' => $this->model->getGaleri()
+        ];
+
+        return view('sides/site/galeri', $data);
     }
 
-    public function getBeritaById($id)
+    public function getKelembagaan()
     {
-        echo $id;
+        $data = [
+            'kelembagaan' => $this->model->getKelembagaan()
+        ];
+
+        return view('sides/site/kelembagaan', $data);
+    }
+
+    public function getBeritaById()
+    {
+        return view('sides/site/berita/berita-detail');
+    }
+
+    public function makeRegexTagP($val)
+    {
+        $re = '/(.*?[\.\!\?]){3}/';
+        // Pattern matches anything to a `.!?` three times. \ is added to make it literal 
+        $str = $val;
+        $subst = '$0<p></p>';
+
+        $result = preg_replace($re, $subst, $str);
+
+        echo $result;
     }
 }

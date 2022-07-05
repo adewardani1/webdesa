@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="icon" href="<?php echo base_url('img/logo-desajatituju.png'); ?>">
     <title>Desa Jatitujuh</title>
 </head>
 

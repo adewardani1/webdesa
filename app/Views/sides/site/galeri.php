@@ -19,26 +19,31 @@
 
 <!-- start swiper galeri -->
 
-<div class="jumbotron-konten-swiper">
-    <div class="box-konten text-center mt-5">
-        <h1>GALERI FOTO DESA</h1>
-        <p>Dokumentasi foto-foto seputar penyelenggaraan pemerintahan desa, pembangunan, pemberdayaan, wisata, seni dan budaya, olahraga dan lain sebagainya.</p>
-    </div>
-    <div class="swiper mySwiper mt-5">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img class="rounded" src="/img/foto.png" alt="" srcset="">
+<div class="jumbotron-galeri-konten">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-left col-sm-6 rounded-3">
+                <h1>GALERI DESA</h1>
+                <p>Dokumentasi foto-foto seputar penyelenggaraan pemerintahan desa, pembangunan, pemberdayaan, wisata, seni dan budaya, olahraga dan lain sebagainya.</p>
             </div>
-            <div class="swiper-slide">
-                <img class="rounded" src="/img/foto.png" alt="" srcset="">
-            </div>
-            <div class="swiper-slide">
-                <img class="rounded" src="/img/foto.png" alt="" srcset="">
+            <div class="col-right col-sm-6">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <?php
+                        foreach ($galeri as $row) { ?>
+                            <div class="swiper-slide">
+                                <img class="rounded" src="<?php echo base_url('img/galeri/' . $row->gambar); ?>" alt="" srcset="">
+                            </div>
+                        <?php }
+                        ?>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
             </div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
     </div>
+
 </div>
 
 <!-- end swiper galeri -->
