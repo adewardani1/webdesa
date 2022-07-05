@@ -131,22 +131,6 @@
           <p>HELLO DESA</p>
         </div>
       </div>
-      <div class="btn-menu text-center">
-        <div class="btn-icon">
-          <i class="fa-solid fa-basket-shopping fa-4x"></i>
-        </div>
-        <div class="btn-text">
-          <p>PRODUK DESA</p>
-        </div>
-      </div>
-      <div class="btn-menu text-center">
-        <div class="btn-icon">
-          <i class="fa-solid fa-building fa-4x"></i>
-        </div>
-        <div class="btn-text">
-          <p>BUMDES</p>
-        </div>
-      </div>
       <!-- <a href="#" class="">
         <i class="fa-solid fa-house-user"></i><br>
         HOME

@@ -1,6 +1,4 @@
 @media (min-width: 992px) {
-
-
   body {
     font-family: "Times New Roman", Times, serif;
   }
@@ -84,7 +82,7 @@
 
   .d-flex .btn-menu {
     border: 3px solid #f2de5c;
-    padding: 0px 56.5px;
+    padding: 0px 90px;
     transition: 0.5s ease;
   }
 
@@ -132,7 +130,7 @@
   }
 
   .box-head-profil .container .row .col-sm-6 h3 {
-    font-family: 'Parisienne', cursive;
+    font-family: "Parisienne", cursive;
     font-weight: 900;
     font-size: 50px;
     margin-top: 50px;
@@ -145,7 +143,7 @@
   }
 
   .box-head-profil .container .row .col-sm-6 a {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     background-color: #fc6a6a;
     padding: 20px 40px;
     text-decoration: none;
@@ -162,7 +160,8 @@
 
   /* start css statistik */
   .jumbotron-statistik {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("/img/desajatituju.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+      url("/img/desajatituju.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: 30px;
@@ -180,7 +179,7 @@
   }
 
   .wave-container h1 {
-    font-family: 'Parisienne', cursive;
+    font-family: "Parisienne", cursive;
     font-weight: bolder;
     color: #faee02;
     opacity: 0.7;
@@ -198,7 +197,7 @@
   }
 
   .wave-container .d-flex .icon p {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 23px;
     margin-top: 20px;
     color: white !important;
@@ -220,7 +219,7 @@
   }
 
   .wave-container .d-flex .btn-statistik a {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     text-decoration: none;
     color: white;
     font-weight: bolder;
@@ -231,7 +230,7 @@
   /* start css sotk */
 
   .jumbotron-sotk {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     padding: 2rem 1rem;
     margin-bottom: 2rem;
   }
@@ -253,7 +252,6 @@
     width: 30px;
     margin: auto;
     background-color: red !important;
-
   }
 
   .jumbotron-sotk .container .d-flex {
@@ -283,7 +281,7 @@
   }
 
   .jumbotron-sotk .container .box-detail a {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     text-decoration: none;
     color: white;
     font-weight: bolder;
@@ -299,7 +297,7 @@
   /* start css layanan */
 
   .jumbotron-layanan .container h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: bolder;
   }
 
@@ -359,7 +357,7 @@
 
   .jumbotron-covid {
     background-image: url("/img/bg-peduli.jpeg");
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     padding: 2rem 1rem;
   }
 
@@ -421,7 +419,7 @@
 
   .jumbotron-covid {
     background-image: url("/img/bg-peduli.jpeg");
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     padding: 2rem 1rem;
   }
 
@@ -447,7 +445,7 @@
   /* start css berita */
 
   .jumbotron-berita {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     margin-top: 20px;
   }
 
@@ -469,11 +467,24 @@
     font-size: 10px;
   }
 
-  .jumbotron-berita .container .row .col-sm-4 .card .card-body .btn-selengkapnya {
+  .jumbotron-berita
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-selengkapnya {
     margin-top: 30px;
   }
 
-  .jumbotron-berita .container .row .col-sm-4 .card .card-body .btn-selengkapnya a {
+  .jumbotron-berita
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-selengkapnya
+    a {
     text-decoration: none;
     color: black;
     border-style: solid;
@@ -483,7 +494,14 @@
     transition: 0.3s ease;
   }
 
-  .jumbotron-berita .container .row .col-sm-4 .card .card-body .btn-selengkapnya a:hover {
+  .jumbotron-berita
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-selengkapnya
+    a:hover {
     background-color: #cc5200;
     color: white;
     border-radius: 5px;
@@ -511,7 +529,7 @@
   /* start css follow */
 
   .jumbotron-follow {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     margin-bottom: 2rem;
   }
 
@@ -536,7 +554,6 @@
     width: 30px;
     margin: auto;
     background-color: red !important;
-
   }
 
   .jumbotron-berita .container .d-flex {
@@ -548,7 +565,7 @@
   /* start css kelembagaan */
 
   .jumbotron-kelembagaan {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     color: #595959;
   }
 
@@ -568,15 +585,16 @@
   }
 
   .jumbotron-img-kelembagaan {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("/img/desajatituju.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+      url("/img/desajatituju.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     padding: 2rem 1rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
   }
 
   .jumbotron-img-kelembagaan .container .row {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 0.5);
     padding-top: 20px;
     border-radius: 10px;
   }
@@ -672,8 +690,10 @@
   .jumbotron-kontak {
     padding: 2rem 1rem;
     background-color: #e9ecef;
-    background-image: linear-gradient(rgba(64, 84, 178),
-        rgba(0.5, 0.5, 0.5, 0.5)),
+    background-image: linear-gradient(
+        rgba(64, 84, 178),
+        rgba(0.5, 0.5, 0.5, 0.5)
+      ),
       url("/img/kantor.jpg");
     height: 900px;
     background-repeat: no-repeat;
@@ -690,6 +710,7 @@
   .jumbotron-kontak h5 {
     color: white !important;
     padding-top: 1rem;
+    margin-bottom: 5rem;
   }
 
   .jumbotron-kontak p {
@@ -697,7 +718,7 @@
   }
 
   .jumbotron-kontak .widget {
-    margin: 0px 0px 40px 0px;
+    margin: 0px 20px 40px 0px;
     padding: 30px 30px 30px 30px;
     background-color: rgba(255, 255, 255, 0.25);
   }
@@ -850,11 +871,16 @@
     color: black !important;
   }
 
-  .detail .container .row .col-sm-4 .side .group-side .fontawesome-side .fab:hover {
+  .detail
+    .container
+    .row
+    .col-sm-4
+    .side
+    .group-side
+    .fontawesome-side
+    .fab:hover {
     color: #00d877 !important;
   }
-
-
 
   /* end detail berita */
 
@@ -873,14 +899,15 @@
   /* start css galeri */
 
   .jumbotron-galeri {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("/img/desajatituju.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+      url("/img/desajatituju.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     padding: 2rem 1rem;
   }
 
   .jumbotron-galeri .jumbotron-text h1 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-weight: 900 !important;
     margin-top: 150px;
     font-size: 100px;
@@ -889,7 +916,7 @@
   }
 
   .jumbotron-galeri .jumbotron-text p {
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-weight: 900 !important;
     font-size: 40px;
     color: white;
@@ -906,17 +933,27 @@
     padding: 20px;
   }
 
-  .jumbotron-galeri-konten .container .row .col-right .swiper .swiper-button-next {
+  .jumbotron-galeri-konten
+    .container
+    .row
+    .col-right
+    .swiper
+    .swiper-button-next {
     color: #00d877 !important;
   }
 
-  .jumbotron-galeri-konten .container .row .col-right .swiper .swiper-button-prev {
+  .jumbotron-galeri-konten
+    .container
+    .row
+    .col-right
+    .swiper
+    .swiper-button-prev {
     color: #00d877 !important;
   }
 
   .jumbotron-galeri-konten .container .row .col-sm-6 h1 {
     color: #00d877 !important;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: italic;
     font-weight: bold;
     text-decoration: underline;
@@ -928,7 +965,7 @@
 
   .jumbotron-galeri-konten .container .row .col-sm-6 p {
     margin-top: 20px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 20px;
   }
 
@@ -937,7 +974,13 @@
     height: 400px;
   }
 
-  .jumbotron-galeri-konten .container .row .col-sm-6 .swiper .swiper-wrapper .swiper-slide {
+  .jumbotron-galeri-konten
+    .container
+    .row
+    .col-sm-6
+    .swiper
+    .swiper-wrapper
+    .swiper-slide {
     text-align: center;
 
     /* Center slide text vertically */
@@ -955,12 +998,188 @@
     align-items: center;
   }
 
-  .jumbotron-galeri-konten .container .row .col-sm-6 .swiper .swiper-wrapper .swiper-slide img {
+  .jumbotron-galeri-konten
+    .container
+    .row
+    .col-sm-6
+    .swiper
+    .swiper-wrapper
+    .swiper-slide
+    img {
     width: 600px;
     height: 400px;
   }
 
   /* end css galeri */
+
+  /* start css tampilan berita */
+  .news-judul {
+    font-family: "Roboto", sans-serif;
+  }
+  .news-judul h1 {
+    font-size: 80px;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+  }
+  .jumbotron-news {
+    font-family: "Roboto", sans-serif;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  .jumbotron-news .container .row .col-sm-4 .card {
+    transition: 0.3s ease;
+    margin-bottom: 3rem;
+  }
+
+  .jumbotron-news .container .row .col-sm-4 .card:hover {
+    box-shadow: 0px 0px 5px 1px black;
+  }
+
+  .jumbotron-news .container .row .col-sm-4 .card .card-body {
+    text-align: center !important;
+  }
+
+  .jumbotron-news .container .row .col-sm-4 .card .card-body .date-berita {
+    color: #b3b3b3 !important;
+    font-weight: lighter;
+    font-size: 10px;
+  }
+
+  .jumbotron-news .container .row .col-sm-4 .card .card-body .btn-read-more {
+    margin-top: 30px;
+  }
+
+  .jumbotron-news .container .row .col-sm-4 .card .card-body .btn-read-more a {
+    text-decoration: none;
+    color: black;
+    border-style: solid;
+    border-width: 1px;
+    padding: 15px 20px 15px 20px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+
+  .jumbotron-news
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-read-more
+    a:hover {
+    background-color: #cc5200;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .jumbotron-news .container .header {
+    margin-bottom: 20px;
+  }
+
+  .jumbotron-news .container .text-center a {
+    text-decoration: none;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    background-color: #ffa600;
+    transition: 0.3s ease;
+  }
+
+  .jumbotron-news .container .text-center a:hover {
+    background-color: #cc5200;
+  }
+  /* end css tampilan berita */
+
+  /* start css pengumuman */
+  .jumbotron-pengumuman {
+    padding: 2rem 1rem;
+    background-color: #e9ecef;
+    background-image: url("/img/jatitujuh_desa.jpg");
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 25%;
+    text-align: center;
+    margin-bottom: 10rem;
+  }
+
+  .jumbotron-isi {
+    font-family: "Roboto", sans-serif;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  .jumbotron-pengumuman h1 {
+    color: black !important;
+    font-weight: 900;
+  }
+
+  .jumbotron-isi .container .row .col-sm-4 .card {
+    transition: 0.3s ease;
+  }
+
+  .jumbotron-isi .container .row .col-sm-4 .card:hover {
+    box-shadow: 0px 0px 5px 1px black;
+  }
+
+  .jumbotron-isi .container .row .col-sm-4 .card .card-body {
+    text-align: center !important;
+  }
+
+  .jumbotron-isi .container .row .col-sm-4 .card .card-body .date-berita {
+    color: #b3b3b3 !important;
+    font-weight: lighter;
+    font-size: 10px;
+  }
+
+  .jumbotron-isi .container .row .col-sm-4 .card .card-body .btn-read-more {
+    margin-top: 30px;
+  }
+
+  .jumbotron-isi .container .row .col-sm-4 .card .card-body .btn-read-more a {
+    text-decoration: none;
+    color: black;
+    border-style: solid;
+    border-width: 1px;
+    padding: 15px 20px 15px 20px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+
+  .jumbotron-isi
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-read-more
+    a:hover {
+    background-color: #cc5200;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .jumbotron-isi .container .header {
+    margin-bottom: 20px;
+  }
+
+  .jumbotron-isi .container .text-center a {
+    text-decoration: none;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    background-color: #ffa600;
+    transition: 0.3s ease;
+  }
+
+  .jumbotron-isi .container .text-center a:hover {
+    background-color: #cc5200;
+  }
+
+  /* end css pengumuman */
 }
 
 @media (max-width: 576px) {
@@ -976,7 +1195,6 @@
   .navbar .container .navbar-toggler {
     border-color: rgb(247, 247, 247);
   }
-
 
   .navbar .container .navbar-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(247,247,247)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");

@@ -59,4 +59,33 @@ class Home extends BaseController
 
         echo $result;
     }
+
+    public function getPemerintahDesa()
+    {
+        
+        return view('sides/site/pemerintahan-desa');
+    }
+
+    public function getVisiMisi()
+    {
+        
+        return view('sides/site/visi-misi');
+    }
+
+    public function getKontak()
+    {
+        
+        return view('sides/site/kontak');
+    }
+
+    public function getBerita()
+    {
+        
+        return view('sides/site/berita/index');
+    }
+    public function getPengumuman()
+    {
+        
+        return view('sides/site/pengumuman');
+    }
 }
