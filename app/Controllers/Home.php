@@ -29,7 +29,7 @@ class Home extends BaseController
         return view('site/kontak');
     }
 
-    public function berita_detail()
+    public function getBeritaById($id)
     {
         return view('site/berita-detail');
     }
