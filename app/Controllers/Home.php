@@ -2,61 +2,35 @@
 
 namespace App\Controllers;
 
-use App\Models\ModelHome;
-
 class Home extends BaseController
 {
-    public function __construct()
-    {
-        $this->model = new ModelHome();
-    }
     public function index()
     {
-        $data = [
-            'penduduk'          => $this->model->getCountPenduduk(),
-            'pendudukPerempuan' => $this->model->getCountPendudukPerempuan(),
-            'pendudukLaki'      => $this->model->getCountPendudukLaki(),
-            'beritaTerkini'     => $this->model->getNewsNow()
-        ];
-
-        return view('sides/site/index', $data);
+        return view('site/index');
     }
 
-    public function getGaleri()
+    public function sejarah()
     {
-        $data = [
-            'galeri' => $this->model->getGaleri()
-        ];
-
-        return view('sides/site/galeri', $data);
+        return view('site/sejarah-desa');
     }
 
-    public function getKelembagaan()
+    public function visi_misi()
     {
-        $data = [
-            'kelembagaan' => $this->model->getKelembagaan()
-        ];
-
-        return view('sides/site/kelembagaan', $data);
+        return view('site/visi-misi');
     }
 
-    public function getBeritaById()
+    public function pemerintahan_desa()
     {
-        $data = [
-            'berita' => $this->model->getBeritaById()
-        ];
-        return view('sides/site/berita/berita-detail');
+        return view('site/pemerintahan-desa');
     }
 
-    public function makeRegexTagP($val)
+    public function kontak_desa()
     {
-        $re = '/(.*?[\.\!\?]){3}/';
-        // Pattern matches anything to a `.!?` three times. \ is added to make it literal 
-        $str = $val;
-        $subst = '$0<p></p>';
+        return view('site/kontak');
+    }
 
-        $result = preg_replace($re, $subst, $str);
-
-        echo $result;
+    public function berita_detail()
+    {
+        return view('site/berita-detail');
     }
 }

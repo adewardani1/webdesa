@@ -8,14 +8,14 @@
 </div>
 <div class="pemerintahan">
     <div class="container">
-    <p>Alamat: Jl. Raya Randudongkal – Belik KM 7 Desa Bulakan Kecamatan Belik Kabupaten Pemalang Provinsi Jawa Tengah, Kodepos: 52356</p>
+        <p>Alamat: Jl. Raya Randudongkal – Belik KM 7 Desa Bulakan Kecamatan Belik Kabupaten Pemalang Provinsi Jawa Tengah, Kodepos: 52356</p>
         <p>Email: bulakan@desakupemalang.id</p>
         <p>Telp: +6287830841173</p>
 
         <h3>SOTK</h3>
         <div class="text-center">
             <img src="/img/pemerintahan.png" alt="">
-        </div> 
+        </div>
     </div>
 </div>
 
