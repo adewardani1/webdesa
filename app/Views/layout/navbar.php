@@ -11,16 +11,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('/');?>">HOME</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url('/'); ?>">HOME</a>
+                </li>
                 <div class="dropdown">
                     <li class="nav-item">
                         <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">PROFILE</a>
                         <ul class="dropdown-menu bg-dark text-white" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="<?php echo base_url('/sejarah-desa');?>">Sejarah Desa</a></li>
-                            <li><a class="dropdown-item" href="<?php echo base_url('/pemerintahan-desa');?>">Pemerintahan Desa</a></li>
-                            <li><a class="dropdown-item" href="<?php echo base_url('/visi-misi');?>">Visi Misi</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('/sejarah-desa'); ?>">Sejarah Desa</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('/pemerintahan-desa'); ?>">Pemerintahan Desa</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('/visi-misi'); ?>">Visi Misi</a></li>
                             <li><a class="dropdown-item" href="#">Demografi</a></li>
                             <li><a class="dropdown-item" href="#">Statistik</a></li>
                             <li><a class="dropdown-item" href="#">Kelembagaan</a></li>
@@ -38,16 +38,18 @@
                     </li>
                 </div>
                 <li class="nav-item">
+                    <<<<<<< HEAD <a class="nav-link" href="#">PENGUMUMAN</a>
+                        =======
                         <a class="nav-link" href="#">PENGUMUMAN</a>
+                        >>>>>>> d480623739874ee4bea10caf9738074577eae343
                 </li>
                 <div class="dropdown">
                     <li class="nav-item">
                         <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">HELLO DESA</a>
                         <ul class="dropdown-menu bg-dark text-white" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="<?php echo base_url('/kontak');?>">Kontak</a></li>
-                            <li><a class="dropdown-item" href="#">Laporan Terkini</a></li>
-                        </ul>
+                            <<<<<<< HEAD <li><a class="dropdown-item" href="<?php echo base_url('/kontak'); ?>">Kontak</a>
                     </li>
+<<<<<<< HEAD
                 </div>
                 <li class="nav-item">
                     <a class="nav-link">|</a>
@@ -55,7 +57,25 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fa-solid fa-circle-exclamation"></i></a>
                 </li>
+=======
+                    =======
+                    <li><a class="dropdown-item" href="<?php echo base_url('/kontak'); ?>">Kontak</a></li>
+                    >>>>>>> d480623739874ee4bea10caf9738074577eae343
+                    <li><a class="dropdown-item" href="#">Laporan Terkini</a></li>
+>>>>>>> 6c77f0d09efdc9966ac86a8d48b01a76a53345e6
             </ul>
+            </li>
         </div>
+        <li class="nav-item">
+            <a class="nav-link">|</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-solid fa-circle-exclamation"></i></a>
+        </li>
+        </ul>
+    </div>
     </div>
 </nav>

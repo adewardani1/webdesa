@@ -26,20 +26,16 @@
     <link rel="stylesheet" href="<?php echo base_url('adminLTE/plugins/daterangepicker/daterangepicker.css'); ?>">
     <!-- summernote -->
     <link rel="stylesheet" href="<?php echo base_url('adminLTE/plugins/summernote/summernote-bs4.min.css'); ?>">
+    <link rel="icon" href="<?php echo base_url('img/logo-desajatituju.png'); ?>">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <?php
-    if (session()->getFlashdata('pesan_insert')) { ?>
+    if (session()->getFlashdata('gagal')) { ?>
         <script>
-            alert('data berhasil di tambahkan');
+            alert('gagal hapus data');
         </script>
-    <?php } else if (session()->getFlashdata('pesan_hapus')) { ?>
-        <script>
-            alert('data berhasil di hapus');
-        </script>
-    <?php }
-    ?>
+    <?php } ?>
     <div class="wrapper">
 
         <!-- Preloader -->
@@ -109,6 +105,40 @@
                                 </p>
                             </a>
                         </li>
+                        <<<<<<< HEAD <li class="nav-item">
+                            <a href="<?php echo base_url('sides/visimisi'); ?>" class="nav-link">
+                                <i class="fas fa-tasks"></i>
+                                <p>
+                                    Visi-Misi
+                                </p>
+                            </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo base_url('sides/kelembagaan'); ?>" class="nav-link">
+                                    <i class="fas fa-university"></i>
+                                    <p>
+                                        Kelembagaan
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo base_url('sides/pemerintah-desa'); ?>" class="nav-link">
+                                    <i class="fas fa-gavel"></i>
+                                    <p>
+                                        Pemerintah Desa
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo base_url('sides/galeri'); ?>" class="nav-link">
+                                    <i class="fas fa-images"></i>
+                                    <p>
+                                        Galeri
+                                    </p>
+                                </a>
+                            </li>
+                            =======
+                            >>>>>>> d480623739874ee4bea10caf9738074577eae343
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -163,20 +193,56 @@
                                         <thead>
                                             <tr>
                                                 <th>No.</th>
-                                                <th>Headline</th>
-                                                <th>Jenis Berita</th>
-                                                <th>#Di Buat</th>
-                                                <th>#Di Ubah</th>
-                                                <th>Action</th>
-                                                <th>gambar</th>
+                                                <<<<<<< HEAD <th>First Name</th>
+                                                    <th>Last Name</th>
+                                                    <th>Email</th>
+                                                    <th>Address</th>
+                                                    <th>Nomor Hp</th>
+                                                    <th>Message</th>
+                                                    <th>#Di Buat</th>
+                                                    <th>#Di Ubah</th>
+                                                    <th>Action</th>
                                             </tr>
                                         </thead>
+                                        <tbody>
+                                            <?php
+                                            $nomor = null;
+                                            foreach ($aspirasi as $row) {
+                                                $nomor++ ?>
+                                                <tr>
+                                                    <td><?php echo $nomor; ?></td>
+                                                    <td><?php echo $row->nama_depan; ?></td>
+                                                    <td><?php echo $row->nama_belakang; ?></td>
+                                                    <td><?php echo $row->email; ?></td>
+                                                    <td><?php echo $row->alamat; ?></td>
+                                                    <td><?php echo $row->nomor_hp; ?></td>
+                                                    <td><?php echo $row->pesan; ?></td>
+                                                    <td><?php echo $row->created_at; ?></td>
+                                                    <td><?php echo $row->updated_at; ?></td>
+                                                    <td>
+                                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                                            <a class="btn btn-danger" href="<?php echo base_url('sides/aspirasi/delete/' . $row->id); ?>">Hapus</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            <?php }
+                                            ?>
+                                            =======
+                                            <th>Headline</th>
+                                            <th>Jenis Berita</th>
+                                            <th>#Di Buat</th>
+                                            <th>#Di Ubah</th>
+                                            <th>Action</th>
+                                            <th>gambar</th>
+                                            </tr>
+                                            </thead>
                                         <tbody>
                                             <tr>
                                                 <td>rijal</td>
                                                 <td>uad</td>
                                             </tr>
 
+                                            >>>>>>> d480623739874ee4bea10caf9738074577eae343
                                         </tbody>
                                     </table>
                                 </div>

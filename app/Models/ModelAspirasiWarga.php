@@ -48,4 +48,9 @@ class ModelAspirasiWarga extends Model
 
         return $this->database->query($sql)->getRow();
     }
+
+    public function deleteById($id)
+    {
+        return $this->database->delete(['id' => $id]);
+    }
 }

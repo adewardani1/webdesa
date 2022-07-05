@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @media (min-width: 992px) {
   body {
     font-family: "Sora", sans-serif;
@@ -838,3 +839,989 @@
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(247,247,247)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   }
 }
+=======
+@media (min-width: 992px) {
+
+
+  body {
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  /* start css navbar */
+
+  .bg-nav {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  p,
+  .navbar-nav .nav-item a {
+    color: white !important;
+  }
+
+  .navbar .container .box-title-desa {
+    margin: 0px 15px;
+  }
+
+  .navbar .container .desa-1 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .navbar .container .desa-2 {
+    font-size: 15.2px;
+    font-weight: 350;
+  }
+
+  .navbar .container .desa-3 {
+    font-size: 13.4px;
+    font-weight: 350;
+  }
+
+  .navbar .container .nav-item {
+    margin: 0px 18px;
+    font-size: 17px;
+  }
+
+  /* end css navbar */
+
+  /* start css carousel */
+
+  .carousel .carousel-item {
+    height: 670px;
+  }
+
+  .carousel .carousel-inner .carousel-item img {
+    /* background-size: cover;
+        width: 500px;
+        height: 900px; */
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 800px;
+  }
+
+  .carousel .carousel-inner .carousel-item img {
+    animation: zoom-in 30s ease infinite;
+  }
+
+  @keyframes zoom-in {
+    0% {
+      transform: scale(1, 1);
+    }
+
+    50% {
+      transform: scale(1.5, 1.5);
+    }
+  }
+
+  /* end css carousel */
+
+  /* start css btn-menu */
+
+  .bg-flex {
+    background-color: #fff8cc;
+  }
+
+  .d-flex .btn-menu {
+    border: 3px solid #f2de5c;
+    padding: 0px 56.5px;
+    transition: 0.5s ease;
+  }
+
+  .d-flex .btn-menu .btn-icon {
+    transition: 0.3s ease;
+  }
+
+  .d-flex .btn-menu .btn-icon:hover {
+    color: #f2de5c;
+  }
+
+  .d-flex .btn-menu:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .d-flex .btn-menu .btn-text p {
+    color: black !important;
+    font-weight: bold;
+  }
+
+  .d-flex .btn-menu .btn-icon {
+    margin: 40px 0px;
+  }
+
+  .d-flex .btn-menu .btn-icon i {
+    transition: 0.3s ease;
+  }
+
+  .d-flex .btn-menu .btn-icon i:hover {
+    font-size: 70px;
+  }
+
+  /* end css btn-menu */
+
+  /* start css box-head-profil */
+
+  .box-head-profil .container .row .col-sm-6 h1 {
+    font-weight: bold;
+    font-size: 100px;
+    text-align: left;
+  }
+
+  .box-head-profil .container .row .col-sm-6 p {
+    font-size: 23px;
+  }
+
+  .box-head-profil .container .row .col-sm-6 h3 {
+    font-family: 'Parisienne', cursive;
+    font-weight: 900;
+    font-size: 50px;
+    margin-top: 50px;
+  }
+
+  .box-head-profil .container .row .col-sm-6 h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+
+  .box-head-profil .container .row .col-sm-6 a {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fc6a6a;
+    padding: 20px 40px;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    transition: 0.3s ease;
+  }
+
+  .box-head-profil .container .row .col-sm-6 a:hover {
+    background-color: #b50404;
+  }
+
+  /* start css box-head-profil */
+
+  /* start css statistik */
+  .jumbotron-statistik {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("/img/desajatituju.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 30px;
+    box-shadow: 0px 20px 20px grey;
+  }
+
+  .wave-container {
+    /* background-image: url("/img/desajatituju.jpg"); */
+
+    /* height: 900px; */
+    margin-top: 30px;
+    /* opacity: 0.70; */
+    /* background-color: black !important; */
+    /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
+  }
+
+  .wave-container h1 {
+    font-family: 'Parisienne', cursive;
+    font-weight: bolder;
+    color: #faee02;
+    opacity: 0.7;
+    font-size: 80px;
+    margin-top: 40px;
+  }
+
+  .wave-container .d-flex {
+    margin-top: 50px;
+  }
+
+  .wave-container .d-flex .icon {
+    margin: 40px 70px;
+    color: white;
+  }
+
+  .wave-container .d-flex .icon p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 23px;
+    margin-top: 20px;
+    color: white !important;
+    font-weight: bolder;
+  }
+
+  .wave-container .d-flex .btn-statistik {
+    margin: 0px 30px;
+    padding: 20px;
+    border-radius: 40px;
+    border-style: solid;
+    border-color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .wave-container .d-flex .btn-statistik:hover {
+    background-color: red;
+  }
+
+  .wave-container .d-flex .btn-statistik a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+  }
+
+  /* end css statistik */
+
+  /* start css sotk */
+
+  .jumbotron-sotk {
+    font-family: 'Roboto', sans-serif;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .jumbotron-sotk .container .header {
+    margin-top: 30px;
+  }
+
+  .jumbotron-sotk .container .header h1 {
+    font-weight: 900;
+  }
+
+  .jumbotron-sotk .container .header p {
+    font-weight: 400;
+  }
+
+  .jumbotron-sotk .container .header hr {
+    padding: 3px 0px;
+    width: 30px;
+    margin: auto;
+    background-color: red !important;
+
+  }
+
+  .jumbotron-sotk .container .d-flex {
+    margin-top: 30px;
+  }
+
+  .jumbotron-sotk .container .d-flex .group-profile {
+    background-color: black;
+    padding: 13px;
+    box-shadow: 0px 0px 20px gray;
+    margin: 0px 30px;
+  }
+
+  .jumbotron-sotk .container .d-flex .group-profile img {
+    width: 150px;
+    height: 180px;
+  }
+
+  .jumbotron-sotk .container .box-detail {
+    background-color: #595959;
+    padding: 10px 0px;
+  }
+
+  .jumbotron-sotk .container .box-detail {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .jumbotron-sotk .container .box-detail a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+  }
+
+  .jumbotron-sotk .container .box-detail a:hover {
+    text-decoration: underline;
+  }
+
+  /* end css sotk */
+
+  /* start css layanan */
+
+  .jumbotron-layanan .container h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+  }
+
+  .jumbotron-layanan .container .header-layanan hr {
+    color: red;
+    padding: 3px 0px;
+    width: 30px;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .jumbotron-layanan .container .row-1 .col-sm-1 {
+    margin-top: 20px;
+  }
+
+  .jumbotron-layanan .container .row-1 .col-sm-1 a {
+    text-decoration: none;
+    color: white;
+    background-color: #0047b3;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    border-radius: 100px;
+    padding: 30px 15px 15px 15px;
+    border-style: solid;
+    border-color: white;
+    border-width: 5px;
+    box-shadow: 0px 0px 10px gray;
+    transition: 0.3s ease;
+  }
+
+  .jumbotron-layanan .container .row-1 .col-sm-1 a:hover {
+    background-color: #ff6600;
+  }
+
+  .jumbotron-layanan .container .row-2 .col-sm-1 a {
+    text-decoration: none;
+    color: white;
+    background-color: #ff6600;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    border-radius: 100px;
+    padding: 30px 15px 15px 15px;
+    border-style: solid;
+    border-color: white;
+    border-width: 5px;
+    box-shadow: 0px 0px 10px gray;
+    transition: 0.3s ease;
+  }
+
+  .jumbotron-layanan .container .row-2 .col-sm-1 a:hover {
+    background-color: #0047b3;
+  }
+
+  /* end css layanan */
+
+  /* start css peduli lindungi */
+
+  .jumbotron-covid {
+    background-image: url("/img/bg-peduli.jpeg");
+    font-family: 'Roboto', sans-serif;
+    padding: 2rem 1rem;
+  }
+
+  .jumbotron-covid .container .row .col-sm-4 .group-text-peduli h2 {
+    font-size: 25px;
+    font-weight: bolder;
+  }
+
+  .jumbotron-covid .container .row .col-sm-4 .group-text-peduli p {
+    font-weight: lighter;
+  }
+
+  .jumbotron-covid .container .row .col-sm-4 .group-text-peduli .btn-vaksin {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    padding: 10px 20px;
+  }
+
+  /* end css peduli lindungi */
+
+  /* .jumbotron-layanan .container .d-flex .group-layanan .text-layanan {
+        float: right;
+    } */
+
+  /* .d-flex{
+        background-color: ;
+    }
+
+    .d-flex .space {
+        padding: 50px 75.3px;
+        color: #076187;
+    }
+
+    .d-flex button {
+        border: 1px solid #c1d600;
+    }
+
+    .d-flex button p {
+        color: #076187 !important;
+        font-weight: bold;
+        font-size: 16px;
+    } */
+
+  /* .d-flex button .space p {
+        color: #0256cc !important;
+    } */
+
+  /* .box-btn button {
+        padding: 70px;
+    } */
+
+  /* img {
+        width: 300px;
+    } */
+
+  /* start css peduli lindungi */
+
+  .jumbotron-covid {
+    background-image: url("/img/bg-peduli.jpeg");
+    font-family: 'Roboto', sans-serif;
+    padding: 2rem 1rem;
+  }
+
+  .jumbotron-covid .container .row .col-sm-4 .group-text-peduli h2 {
+    font-size: 25px;
+    font-weight: bolder;
+  }
+
+  .jumbotron-covid .container .row .col-sm-4 .group-text-peduli p {
+    font-weight: lighter;
+  }
+
+  .jumbotron-covid .container .row .col-sm-4 .group-text-peduli .btn-vaksin {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    padding: 10px 20px;
+  }
+
+  /* end css peduli lindungi */
+
+  /* start css berita */
+
+  .jumbotron-berita {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+  }
+
+  .jumbotron-berita .container .row .col-sm-4 .card {
+    transition: 0.3s ease;
+  }
+
+  .jumbotron-berita .container .row .col-sm-4 .card:hover {
+    box-shadow: 0px 0px 5px 1px black;
+  }
+
+  .jumbotron-berita .container .row .col-sm-4 .card .card-body {
+    text-align: center !important;
+  }
+
+  .jumbotron-berita .container .row .col-sm-4 .card .card-body .date-berita {
+    color: #b3b3b3 !important;
+    font-weight: lighter;
+    font-size: 10px;
+  }
+
+  .jumbotron-berita .container .row .col-sm-4 .card .card-body .btn-selengkapnya {
+    margin-top: 30px;
+  }
+
+  .jumbotron-berita .container .row .col-sm-4 .card .card-body .btn-selengkapnya a {
+    text-decoration: none;
+    color: black;
+    border-style: solid;
+    border-width: 1px;
+    padding: 15px 20px 15px 20px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+
+  .jumbotron-berita .container .row .col-sm-4 .card .card-body .btn-selengkapnya a:hover {
+    background-color: #cc5200;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .jumbotron-berita .container .header {
+    margin-bottom: 20px;
+  }
+
+  .jumbotron-berita .container .text-center a {
+    text-decoration: none;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    background-color: #ffa600;
+    transition: 0.3s ease;
+  }
+
+  .jumbotron-berita .container .text-center a:hover {
+    background-color: #cc5200;
+  }
+
+  /* end css berita */
+
+  /* start css follow */
+
+  .jumbotron-follow {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 2rem;
+  }
+
+  .jumbotron-follow .container .header {
+    margin-top: 30px;
+  }
+
+  .jumbotron-follow .container .p {
+    font-weight: 900;
+  }
+
+  .jumbotron-follow .container .header h1 {
+    font-weight: 900;
+  }
+
+  .jumbotron-follow .container .header p {
+    font-weight: 400;
+  }
+
+  .jumbotron-follow .container .header hr {
+    padding: 3px 0px;
+    width: 30px;
+    margin: auto;
+    background-color: red !important;
+
+  }
+
+  .jumbotron-berita .container .d-flex {
+    margin-top: 30px;
+  }
+
+  /* end css follow */
+
+  /* start css kelembagaan */
+
+  .jumbotron-kelembagaan {
+    font-family: 'Roboto', sans-serif;
+    color: #595959;
+  }
+
+  .jumbotron-kelembagaan .group-konten-jumbotron {
+    margin-top: 200px;
+  }
+
+  .jumbotron-kelembagaan .group-konten-jumbotron hr {
+    width: 100px;
+    height: 5px;
+    color: #ffa600;
+    margin: 50px auto;
+  }
+
+  .jumbotron-kelembagaan .group-konten-jumbotron p {
+    color: #595959 !important;
+  }
+
+  .jumbotron-img-kelembagaan {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("/img/desajatituju.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem 1rem;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .jumbotron-img-kelembagaan .container .row {
+    background-color: rgba(0, 0, 0, .5);
+    padding-top: 20px;
+    border-radius: 10px;
+  }
+
+  .jumbotron-img-kelembagaan .container .row .col-sm-3 .img-kelembagaan {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* end css kelembagaan */
+  /* start visi misi */
+  .jumbotron-visimisi {
+    font-family: "Roboto", sans-serif;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    margin-top: 10rem;
+    margin-left: 10rem;
+  }
+
+  .jumbotron-visimisi .container h1 {
+    font-size: 60px;
+    color: black !important;
+    font-weight: bolder;
+  }
+
+  .jumbotron-visimisi .container p {
+    margin-left: 4rem;
+    font-size: 18px;
+    color: grey !important;
+    font-weight: bolder;
+  }
+
+  .jumbotron-visimisi .container img {
+    margin-top: 4rem;
+    margin-left: 4rem;
+    width: 1080px;
+    height: 576px;
+  }
+
+  /* end visi misi */
+
+  /* start pemerintahan desa */
+  .jumbotron-pemerintahan {
+    padding: 2rem 1rem;
+    background-color: #e9ecef;
+    background-image: url("/img/sotk.jpg");
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50%;
+    text-align: center;
+  }
+
+  .jumbotron-pemerintahan h1 {
+    color: white !important;
+    font-weight: 900;
+  }
+
+  .jumbotron-pemerintahan h4 {
+    color: white !important;
+    font-weight: 900;
+  }
+
+  .pemerintahan .container {
+    margin-top: 3rem;
+  }
+
+  .pemerintahan .container p {
+    margin: 3px;
+    padding: 3px;
+    color: grey !important;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .pemerintahan .container h3 {
+    margin-top: 3rem;
+    color: black !important;
+    font-weight: bolder;
+    text-align: center;
+  }
+
+  .pemerintahan .container img {
+    width: 837.8px;
+    height: 841.98px;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  /* end pemerintahan desa */
+
+  /* start kontak */
+  .jumbotron-kontak {
+    padding: 2rem 1rem;
+    background-color: #e9ecef;
+    background-image: linear-gradient(rgba(64, 84, 178),
+        rgba(0.5, 0.5, 0.5, 0.5)),
+      url("/img/kantor.jpg");
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10rem;
+    text-align: center;
+  }
+
+  .jumbotron-kontak h1 {
+    color: white !important;
+    font-weight: 900;
+  }
+
+  .jumbotron-kontak h5 {
+    color: white !important;
+    padding-top: 1rem;
+  }
+
+  .jumbotron-kontak p {
+    padding: 0 0;
+  }
+
+  .jumbotron-kontak .widget {
+    margin: 0px 0px 40px 0px;
+    padding: 30px 30px 30px 30px;
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .jumbotron-kontak .widget .box {
+    text-align: left;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .jumbotron-kontak .widget .box .icon {
+    margin-right: 15px;
+  }
+
+  /* end kontak */
+
+  /* start detail berita */
+
+  .jumbotron-detail {
+    padding: 2rem 1rem;
+    background-color: #e9ecef;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    text-align: center;
+  }
+
+  .jumbotron-detail h1 {
+    color: white !important;
+    font-weight: 900;
+  }
+
+  .jumbotron-detail p {
+    color: white !important;
+    font-weight: 900;
+    padding-top: 20%;
+  }
+
+  .detail {
+    margin-top: 3rem;
+  }
+
+  .detail p {
+    color: black !important;
+    font-size: 20px;
+    font-weight: 100;
+  }
+
+  .detail .side p {
+    color: black !important;
+    font-size: 20px;
+    font-weight: 100;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .detail .side img {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    width: 210px;
+    height: 297.16px;
+  }
+
+  .detail .post-nav {
+    margin: 50px 0;
+    display: table;
+    width: 100%;
+  }
+
+  .detail .post-nav a {
+    display: table-cell;
+    width: 47.5%;
+    padding: 0 2.5% 0 0;
+    height: 140px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 11px;
+    transition: 0.3 ease;
+    text-decoration: none;
+  }
+
+  .detail .post-nav a:hover {
+    text-decoration: underline !important;
+  }
+
+  .detail .post-nav a span {
+    font-size: 10px;
+    color: #6a6a6a;
+    display: block;
+    text-transform: uppercase;
+    transition: 0.3 ease;
+    text-decoration: none;
+  }
+
+  .detail .post-nav a span .judul {
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    word-wrap: break-word;
+    color: #333;
+    margin-top: 10px;
+  }
+
+  .detail .komen-area {
+    margin: 60px -60px;
+    padding: 40px 60px;
+    background-color: #fafafa;
+  }
+
+  .detail .widget {
+    font-size: 14px;
+    margin: 35px 0 40px;
+    line-height: 1.6667em;
+  }
+
+  .detail .widget a {
+    color: #535353;
+  }
+
+  .detail .widget .judul a {
+    transition: 0.3 ease;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+
+  .detail .widget .judul a:hover {
+    text-decoration: underline !important;
+  }
+
+  .detail .widget .waktu {
+    display: block;
+    opacity: 0.6;
+  }
+
+  .detail .container .row {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .detail .container .row .col-sm-7 p {
+    color: #535353 !important;
+  }
+
+  .detail .container .row .col-sm-4 .side .group-side .fontawesome-side .fab {
+    font-size: 30px;
+    transition: 0.3 ease;
+    margin: 0px 5px;
+    color: black !important;
+  }
+
+  .detail .container .row .col-sm-4 .side .group-side .fontawesome-side .fab:hover {
+    color: #00d877 !important;
+  }
+
+
+
+  /* end detail berita */
+
+  /* start css footer */
+
+  .sosial-media {
+    transition: 0.3s ease;
+  }
+
+  .sosial-media:hover {
+    color: blue !important;
+  }
+
+  /* end css footer */
+
+  /* start css galeri */
+
+  .jumbotron-galeri {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("/img/desajatituju.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem 1rem;
+  }
+
+  .jumbotron-galeri .jumbotron-text h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900 !important;
+    margin-top: 150px;
+    font-size: 100px;
+    color: white;
+    font-style: italic;
+  }
+
+  .jumbotron-galeri .jumbotron-text p {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900 !important;
+    font-size: 40px;
+    color: white;
+    font-style: italic;
+  }
+
+  .jumbotron-galeri-konten {
+    background-color: black;
+    padding: 1px 0px;
+  }
+
+  .jumbotron-galeri-konten .container .row .col-left {
+    background-color: #333333;
+    padding: 20px;
+  }
+
+  .jumbotron-galeri-konten .container .row .col-right .swiper .swiper-button-next {
+    color: #00d877 !important;
+  }
+
+  .jumbotron-galeri-konten .container .row .col-right .swiper .swiper-button-prev {
+    color: #00d877 !important;
+  }
+
+  .jumbotron-galeri-konten .container .row .col-sm-6 h1 {
+    color: #00d877 !important;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 50px;
+    text-underline-position: under;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 5px;
+  }
+
+  .jumbotron-galeri-konten .container .row .col-sm-6 p {
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+  }
+
+  .jumbotron-galeri-konten .container .row .col-sm-6 .swiper {
+    width: 700px;
+    height: 400px;
+  }
+
+  .jumbotron-galeri-konten .container .row .col-sm-6 .swiper .swiper-wrapper .swiper-slide {
+    text-align: center;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .jumbotron-galeri-konten .container .row .col-sm-6 .swiper .swiper-wrapper .swiper-slide img {
+    width: 600px;
+    height: 400px;
+  }
+
+  /* end css galeri */
+}
+
+@media (max-width: 576px) {
+  .bg-nav {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  p,
+  .navbar-nav .nav-item a {
+    color: white !important;
+  }
+
+  .navbar .container .navbar-toggler {
+    border-color: rgb(247, 247, 247);
+  }
+
+
+  .navbar .container .navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(247,247,247)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+}
+>>>>>>> 6c77f0d09efdc9966ac86a8d48b01a76a53345e6

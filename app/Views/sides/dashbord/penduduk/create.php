@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="<?php echo base_url('adminLTE/plugins/daterangepicker/daterangepicker.css'); ?>">
     <!-- summernote -->
     <link rel="stylesheet" href="<?php echo base_url('adminLTE/plugins/summernote/summernote-bs4.min.css'); ?>">
+    <link rel="icon" href="<?php echo base_url('img/logo-desajatituju.png'); ?>">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -102,6 +103,38 @@
                                 <i class="fas fa-lightbulb"></i>
                                 <p>
                                     Aspirasi Warga
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/visimisi'); ?>" class="nav-link">
+                                <i class="fas fa-tasks"></i>
+                                <p>
+                                    Visi-Misi
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/kelembagaan'); ?>" class="nav-link">
+                                <i class="fas fa-university"></i>
+                                <p>
+                                    Kelembagaan
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/pemerintah-desa'); ?>" class="nav-link">
+                                <i class="fas fa-gavel"></i>
+                                <p>
+                                    Pemerintah Desa
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/galeri'); ?>" class="nav-link">
+                                <i class="fas fa-images"></i>
+                                <p>
+                                    Galeri
                                 </p>
                             </a>
                         </li>

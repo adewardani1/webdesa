@@ -13,7 +13,8 @@ class Sides extends BaseController
     public function index()
     {
         $data = [
-            'penduduk' => $this->model->countPenduduk(),
+            'pendudukPerempuan' => $this->model->countPendudukPerempuan(),
+            'pendudukLaki' => $this->model->countPendudukLaki(),
             'akun' => $this->model->countAkun(),
             'pendudukByGender' => $this->model->countPendudukByGender()
         ];

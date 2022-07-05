@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="<?php echo base_url('adminLTE/plugins/icheck-bootstrap/icheck-bootstrap.min.css'); ?>">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?php echo base_url('adminLTE/dist/css/adminlte.min.css'); ?>">
+    <link rel="icon" href="<?php echo base_url('img/logo-desajatituju.png'); ?>">
 </head>
 
 <body class="hold-transition login-page">

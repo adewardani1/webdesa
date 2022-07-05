@@ -2,35 +2,65 @@
 
 namespace App\Controllers;
 
+use App\Models\ModelHome;
+
 class Home extends BaseController
 {
+    public function __construct()
+    {
+        $this->model = new ModelHome();
+    }
     public function index()
     {
-        return view('site/index');
+        $data = [
+            'penduduk'          => $this->model->getCountPenduduk(),
+            'pendudukPerempuan' => $this->model->getCountPendudukPerempuan(),
+            'pendudukLaki'      => $this->model->getCountPendudukLaki(),
+            'beritaTerkini'     => $this->model->getNewsNow()
+        ];
+
+        return view('sides/site/index', $data);
     }
 
-    public function sejarah()
+    public function getGaleri()
     {
-        return view('site/sejarah-desa');
+        $data = [
+            'galeri' => $this->model->getGaleri()
+        ];
+
+        return view('sides/site/galeri', $data);
     }
 
-    public function visi_misi()
+    public function getKelembagaan()
     {
-        return view('site/visi-misi');
+        $data = [
+            'kelembagaan' => $this->model->getKelembagaan()
+        ];
+
+        return view('sides/site/kelembagaan', $data);
     }
 
-    public function pemerintahan_desa()
+    public function getBeritaById()
     {
-        return view('site/pemerintahan-desa');
+        $data = [
+            'berita' => $this->model->getBeritaById()
+        ];
+        return view('sides/site/berita/berita-detail');
     }
 
-    public function kontak_desa()
-    {
-        return view('site/kontak');
-    }
-
+<<<<<<< HEAD
     public function getBeritaById($id)
+=======
+    public function makeRegexTagP($val)
+>>>>>>> 6c77f0d09efdc9966ac86a8d48b01a76a53345e6
     {
-        return view('site/berita-detail');
+        $re = '/(.*?[\.\!\?]){3}/';
+        // Pattern matches anything to a `.!?` three times. \ is added to make it literal 
+        $str = $val;
+        $subst = '$0<p></p>';
+
+        $result = preg_replace($re, $subst, $str);
+
+        echo $result;
     }
 }

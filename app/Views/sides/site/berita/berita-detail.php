@@ -3,7 +3,7 @@
 <?= $this->section('content') ?>
 <div class="jumbotron-detail" style="background-image: url('/img/sotk.jpg');">
     <p>Pemerintahan Desa Jatitujuh</p>
-    <h1>SOTK</h1>
+    <h1>DETAIL BERITA</h1>
 </div>
 
 <div class="detail">
@@ -17,36 +17,36 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ea assumenda modi aliquid recusandae at, alias sint, porro, illo tenetur minus! Sit facilis natus, sint dolorem perspiciatis impedit dolor eligendi!</p>
 
                 <div class="post-nav">
-                        <a href="">
-                            <span><i class="fa fa-long-arrow-left mr-2"></i>Previous Article</span><br/>
-                            <span class="judul">agasgaqwgasg</span><br/>
-                            <span><img width="245" height="100" src="/img/WhatsApp Image 2022-04-26 at 21.30.05.jpeg" alt=""></span>
-                        </a>
-                        <a href="">
-                            <span>Next Article<i class="fa fa-long-arrow-right"></i></span><br/>
-                            <span class="judul">agasgaqwgasg</span><br/>
-                            <span><img width="245" height="100" src="/img/WhatsApp Image 2022-04-26 at 21.30.05.jpeg" alt=""></span>
-                        </a>
-                </div> 
+                    <a href="">
+                        <span><i class="fa fa-long-arrow-left mr-2"></i>Previous Article</span><br />
+                        <span class="judul">agasgaqwgasg</span><br />
+                        <span><img width="245" height="100" src="/img/WhatsApp Image 2022-04-26 at 21.30.05.jpeg" alt=""></span>
+                    </a>
+                    <a href="">
+                        <span>Next Article<i class="fa fa-long-arrow-right"></i></span><br />
+                        <span class="judul">agasgaqwgasg</span><br />
+                        <span><img width="245" height="100" src="/img/WhatsApp Image 2022-04-26 at 21.30.05.jpeg" alt=""></span>
+                    </a>
+                </div>
                 <div id="komen" class="komen-area">
                     <div id="" class="">
                         <h3 id="">Leave Reply
-                          <small><a rel="nofollow" id="cancel-comment-reply-link" href="/layanan-posyandu-dan-posbindu-di-gang-mangun/#respond" style="display:none;">Cancel reply</a></small>
+                            <small><a rel="nofollow" id="cancel-comment-reply-link" href="/layanan-posyandu-dan-posbindu-di-gang-mangun/#respond" style="display:none;">Cancel reply</a></small>
                         </h3>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="side">
-                    <div style="margin-left: 100px">
-                        <h5 style="font-weight:bolder;">PEMDES JATITUJUH</h1>
+                    <div class="group-side" style="margin-left: 100px">
+                        <h5 style="font-weight:bolder;">PEMDES JATITUJUH</h5>
                         <p style="font-size:12px;">Jl. Raya Randudongkal Belik KM 7 Desa Bulakan Kecamatan Belik Kabupaten Pemalang Provinsi Jawa Tengah</p>
 
-                        <h5 style="font-weight:bolder;">KEPALA DESA</h1>
+                        <h5 style="font-weight:bolder;">KEPALA DESA</h5>
                         <img src="/img/foto.png" alt="">
 
                         <h5>IKUTI KAMI</h5>
-                        <div class="p-3 mb-2">
+                        <div class="p-3 mb-2 fontawesome-side">
                             <!-- Facebook -->
                             <a href=""><i class="fab fa-facebook-f p-1 sosial-media"></i></a>
 
@@ -61,16 +61,16 @@
                         </div>
 
                         <div class="widget">
-                            <h5>RECENT POST</h3>
+                            <h5>RECENT POST</h5>
                             <div class="">
                                 <span class="judul"><a href="" title="">Harapan Kades Sigit di Pelepasan Peserta Didik TK Nurul Fahmi</a></span>
                                 <time class="waktu">01/07/2022</time>
                             </div>
                         </div>
                     </div>
-                </div>        
+                </div>
             </div>
         </div>
-     </div>    
+    </div>
 </div>
 <?= $this->endSection() ?>

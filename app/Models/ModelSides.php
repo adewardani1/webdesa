@@ -11,12 +11,25 @@ class ModelSides extends Model
         $this->database = db_connect();
     }
 
-    public function countPenduduk()
+    public function countPendudukPerempuan()
     {
         $sql = "
             SELECT
-                COUNT(*) AS total
+                COUNT(penduduk.jenis_kelamin) AS perempuan
             FROM penduduk
+            WHERE penduduk.jenis_kelamin = 'Perempuan'
+        ";
+
+        return $this->database->query($sql)->getRow();
+    }
+
+    public function countPendudukLaki()
+    {
+        $sql = "
+            SELECT
+                COUNT(penduduk.jenis_kelamin) AS laki
+            FROM penduduk
+            WHERE penduduk.jenis_kelamin = 'Laki-Laki'
         ";
 
         return $this->database->query($sql)->getRow();

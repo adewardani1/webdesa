@@ -5,6 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- Bootstrap CSS -->
 
   <title>Desa Jatitujuh</title>
@@ -130,6 +131,58 @@
           <p>HELLO DESA</p>
         </div>
       </div>
+      <div class="btn-menu text-center">
+        <div class="btn-icon">
+          <i class="fa-solid fa-basket-shopping fa-4x"></i>
+        </div>
+        <div class="btn-text">
+          <p>PRODUK DESA</p>
+        </div>
+      </div>
+      <div class="btn-menu text-center">
+        <div class="btn-icon">
+          <i class="fa-solid fa-building fa-4x"></i>
+        </div>
+        <div class="btn-text">
+          <p>BUMDES</p>
+        </div>
+      </div>
+      <!-- <a href="#" class="">
+        <i class="fa-solid fa-house-user"></i><br>
+        HOME
+      </a>
+      <a href="#" class="">
+        <i class="fa-solid fa-house-user"></i><br>
+        BERANDA
+      </a> -->
+      <!-- <button>
+        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
+        <p>PROFILE</p>
+      </button>
+      <button>
+        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
+        <p>INFORMASI PUBLIK</p>
+      </button>
+      <button>
+        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
+        <p>PENGUMUMAN</p>
+      </button>
+      <button>
+        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
+        <p>ASPIRASI WARGA</p>
+      </button>
+      <button>
+        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
+        <p>HELLO DESA</p>
+      </button>
+      <button>
+        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
+        <p>PRODUK DESA</p>
+      </button>
+      <button>
+        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
+        <p>BUMDES</p>
+      </button> -->
     </div>
   </div>
 
@@ -141,7 +194,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
-          <img width="350px" height="400px" src="img/foto.png" alt="">
+          <img src="" alt="">
         </div>
         <div class="col-sm-6">
           <h1>"</h1>
@@ -167,27 +220,17 @@
       <div class="d-flex justify-content-center">
         <div class="text-center icon">
           <i class="fa-solid fa-users fa-4x"></i>
-          <p>2000</p>
+          <p><?php echo $penduduk->penduduk; ?></p>
           <p>Penduduk</p>
         </div>
         <div class="text-center icon">
-          <i class="fa-solid fa-user-tie fa-4x"></i>
-          <p>2000</p>
-          <p>Kepala Heluarga</p>
-        </div>
-        <div class="text-center icon">
-          <i class="fa-solid fa-people-group fa-4x"></i>
-          <p>2000</p>
-          <P>Anggota Keluarga</P>
-        </div>
-        <div class="text-center icon">
           <i class="fa-solid fa-person fa-4x"></i>
-          <p>2000</p>
+          <p><?php echo $pendudukLaki->laki; ?></p>
           <p>Laki-Laki</p>
         </div>
         <div class="text-center icon">
           <i class="fa-solid fa-person-dress fa-4x"></i>
-          <p>2000</p>
+          <p><?php echo $pendudukPerempuan->perempuan; ?></p>
           <p>Perempuan</p>
         </div>
       </div>
@@ -228,7 +271,7 @@
         </div>
       </div>
       <div class="box-detail">
-        <a href="<?php echo base_url('/pemerintahan-desa');?>">Selengkapnya</a>
+        <a href="#">Selengkapnya</a>
       </div>
     </div>
   </div>
@@ -324,9 +367,9 @@
 
   <!-- end layanan publik -->
 
-   <!-- start peduli lindungi -->
+  <!-- start peduli lindungi -->
 
-   <div class="jumbotron-covid">
+  <div class="jumbotron-covid">
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
@@ -340,122 +383,102 @@
           </div>
         </div>
         <div class="col-sm-4">
-        <p>Yang tervaksin</p> <p>25</p>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-        <a href="https://play.google.com/store/apps/details?id=com.telkom.tracencare&hl=in&gl=US"><img src="/img/googleplay.png" width="130px" height="100px"></a><br>
-        <a href="https://apps.apple.com/id/app/pedulilindungi/id1504600374"><img src="/img/appstore.png"width="130px" height="100px"></a>
-        <p>Download Aplikasi Pedulilindungi</p>
+          <p>Yang tervaksin</p>
+          <p>25</p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.telkom.tracencare&hl=in&gl=US"><img src="<?php echo base_url('img/googleplay.png'); ?>" width="130px" height="100px"></a><br>
+          <a href="https://apps.apple.com/id/app/pedulilindungi/id1504600374"><img src="<?php echo base_url('img/appstore.png'); ?>" width="130px" height="100px"></a>
+          <p>Download Aplikasi Pedulilindungi</p>
         </div>
       </div>
     </div>
   </div>
+
   <!-- end peduli lindungin -->
 
   <!-- start berita terkini -->
+
   <div class="jumbotron-berita">
     <div class="container">
       <div class="header text-center">
         <h1>BERITA TERKINI</h1>
-        <hr />
       </div>
-      <div class="d-flex">
-      <a href="" class="terbaru">Terkini</a>
+      <div class="row">
+        <?php
+        foreach ($beritaTerkini as $row) { ?>
+          <div class="col-sm-4">
+            <div class="card">
+              <img src="/img/berita/<?php echo $row->gambar; ?>" class="card-img-top" alt="...">
+              <div class="card-body mb-3">
+                <h5 class="card-title text-dark"><?php echo $row->judul; ?></h5>
+                <p class="date-berita"><?php echo $row->created_at; ?></p>
+                <div class="btn-selengkapnya">
+                  <a href="<?php echo base_url('berita/' . $row->id); ?>">Selengkapnya</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        <?php }
+        ?>
+
+        <!-- <div class="col-sm-4">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-dark">Card title</h5>
+              <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-dark">Card title</h5>
+              <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div> -->
       </div>
-      <div class="d-flex justify-content-center">
-        <img src="/img/bg-peduli.jpeg" height="150" width="2000"/>
-      </div>
-      <div class="d-flex justify-content-center">
-        <div class="group-profile" data-aos="fade-right" data-aos-duration="1000">
-          <img class="img-fluid" src="/img/foto.png" alt="">
-        </div>
-        <div class="group-profile" data-aos="fade-up" data-aos-duration="1000">
-          <img class="img-fluid" src="/img/foto.png" alt="">
-        </div>
-        <div class="group-profile" data-aos="fade-up" data-aos-duration="1000">
-          <img class="img-fluid" src="/img/foto.png" alt="">
-        </div>
-        <div class="group-profile" data-aos="fade-left" data-aos-duration="1000">
-          <img class="img-fluid" src="/img/foto.png" alt="">
-        </div>
-      </div>
-      <div class="box-detail text-center">
-       <a href="#" class="btn-berita">Berita Lainnya</a>
+      <div class="text-center my-5">
+        <a href="#" class="btn-berita">Berita Lainnya</a>
       </div>
     </div>
   </div>
+
   <!-- end berita terkini -->
- 
+
 
   <!-- start follow -->
+
   <div class="jumbotron-follow">
     <div class="container">
       <div class="row">
         <div class="header text-center">
           <h1>FOLLOW US</h1>
-          <hr/>
+          <hr />
         </div>
-        <div class="col-sm-6">
-            <blockquote class="twitter-tweet"><p lang="qme" dir="ltr"> <a href="https://t.co/cFo1N2WOGo">pic.twitter.com/cFo1N2WOGo</a></p>&mdash; Sanpie ⚓☔ (@Sanpie34i) <a href="https://twitter.com/Sanpie34i/status/1541757150699343872?ref_src=twsrc%5Etfw">June 28, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="col-sm-6 mx-auto">
+          <blockquote class="twitter-tweet">
+            <p lang="qme" dir="ltr"> <a href="https://t.co/cFo1N2WOGo">pic.twitter.com/cFo1N2WOGo</a></p>&mdash; Sanpie ⚓☔ (@Sanpie34i) <a href="https://twitter.com/Sanpie34i/status/1541757150699343872?ref_src=twsrc%5Etfw">June 28, 2022</a>
+          </blockquote>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
-        <div class="col-sm-6">
-            <blockquote class="twitter-tweet"><p lang="in" dir="ltr">Skrng tw kn mn yg idol bnrn <a href="https://twitter.com/C_JesslynJKT48?ref_src=twsrc%5Etfw">@C_JesslynJKT48</a> <a href="https://t.co/5HTsVxszRf">pic.twitter.com/5HTsVxszRf</a></p>&mdash; Kobo Kanaeru (こぼ) ☔ @ホロライブID (@kobokanaeru) <a href="https://twitter.com/kobokanaeru/status/1541756536262864896?ref_src=twsrc%5Etfw">June 28, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="col-sm-6 mx-auto">
+          <blockquote class="twitter-tweet">
+            <p lang="in" dir="ltr">Skrng tw kn mn yg idol bnrn <a href="https://twitter.com/C_JesslynJKT48?ref_src=twsrc%5Etfw">@C_JesslynJKT48</a> <a href="https://t.co/5HTsVxszRf">pic.twitter.com/5HTsVxszRf</a></p>&mdash; Kobo Kanaeru (こぼ) ☔ @ホロライブID (@kobokanaeru) <a href="https://twitter.com/kobokanaeru/status/1541756536262864896?ref_src=twsrc%5Etfw">June 28, 2022</a>
+          </blockquote>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
       </div>
     </div>
   </div>
+
   <!-- end follow -->
-
-  <div class="jumbotron-pengaduan">
-    <div class="container">
-      
-        <div class="header text-center">
-          <h1>FORM PENGADUAN DAN ASPIRASI WARGA</h1>
-        </div>
-        <div class="form">
-          <form action="">
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="mb-3" >
-                <label for="exampleInputEmail1" class="form-label">Nama Depan</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              </div>
-              <div class="mb-3" >
-                <label for="exampleInputEmail1" class="form-label">Nama Belakang</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              </div>
-              <div class="mb-3" >
-                <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="mb-3" >
-                <label for="exampleInputEmail1" class="form-label">Alamat</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              </div>
-              <div class="mb-3" >
-                <label for="exampleInputEmail1" class="form-label">No HP</label>
-                <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              </div>
-              <div class="mb-3" >
-                <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
-            </div>
-              <div class="text-center">
-                <button type="submit" class="btn btn-outline-success">Submit</button>
-              </div>
-          </div>
-          </form>
-        </div>
-    </div>
-  </div>
-
-  <!-- Start Form Pengaduan -->
-
-  <!-- End Form Pengaduan -->
 
   <!-- Optional JavaScript; choose one of the two! -->
 

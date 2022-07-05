@@ -33,10 +33,31 @@ class Berita extends BaseController
     public function insert()
     {
         $validation = $this->validate([
+            'judul' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'judul harus di isi',
+                ]
+            ],
+
+            'konten' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'isi berita harus di isi',
+                ]
+            ],
+
+            'jenis' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'jenis berita harus di isi',
+                ]
+            ],
+
             'gambar' => [
                 'rules' => 'uploaded[gambar]|mime_in[gambar,image/jpg,image/jpeg,image/gif,image/png]|max_size[gambar,2048]',
                 'errors' => [
-                    'uploaded' => 'Harus Ada File yang diupload',
+                    'uploaded' => 'gambar harus di upload',
                     'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
                     'max_size' => 'Ukuran File Maksimal 2 MB'
                 ]
@@ -87,10 +108,31 @@ class Berita extends BaseController
         $file = empty($_FILES['gambar']['name']);
         if (!$file) {
             $validation = $this->validate([
+                'judul' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required' => 'judul harus di isi',
+                    ]
+                ],
+
+                'konten' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required' => 'isi berita harus di isi',
+                    ]
+                ],
+
+                'jenis' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required' => 'jenis berita harus di isi',
+                    ]
+                ],
+
                 'gambar' => [
                     'rules' => 'uploaded[gambar]|mime_in[gambar,image/jpg,image/jpeg,image/gif,image/png]|max_size[gambar,2048]',
                     'errors' => [
-                        'uploaded' => 'Harus Ada File yang diupload',
+                        'uploaded' => 'gambar harus di upload',
                         'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
                         'max_size' => 'Ukuran File Maksimal 2 MB'
                     ]
@@ -162,7 +204,7 @@ class Berita extends BaseController
 
     public function uploadImage($tempfile, $gambar)
     {
-        $locDir = '../private/berita/' . $gambar;
+        $locDir = FCPATH . 'img/berita/' . $gambar;
         $moveDir = move_uploaded_file($tempfile, $locDir);
 
         if ($moveDir) {
@@ -175,7 +217,7 @@ class Berita extends BaseController
     public function foto($id)
     {
         $model = $this->model->getBeritaById($id);
-        $path =  FCPATH . '../private/berita/' . $model->gambar;
+        $path =  FCPATH . 'img/berita/' . $model->gambar;
 
         if (file_exists($path)) {
             return $this->response->download($path, null);
