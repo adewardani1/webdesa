@@ -44,6 +44,7 @@
 
   .carousel .carousel-item {
     height: 670px;
+    font-family: "Roboto", sans-serif;
   }
 
   .carousel .carousel-inner .carousel-item img {
@@ -56,6 +57,7 @@
     left: 0;
     width: 400px;
     height: 800px;
+    filter: brightness(60%)
   }
 
   .carousel .carousel-inner .carousel-item img {
@@ -1049,6 +1051,7 @@
   /* start css pengumuman */
 
   .jumbotron-pengumuman {
+    font-family: "Roboto", sans-serif;
     padding: 2rem 1rem;
     background-color: #e9ecef;
     background-image: url("/img/jatitujuh_desa.jpg");
@@ -1067,8 +1070,9 @@
   }
 
   .jumbotron-pengumuman h1 {
-    color: black !important;
+    color: white !important;
     font-weight: 900;
+    font-size: 100px;
   }
 
   .jumbotron-isi .container .row .col-sm-4 .card {
@@ -1126,7 +1130,88 @@
     background-color: #cc5200;
   }
 
-  /* e  nd css pengumuman */
+  /* end css pengumuman */
+
+  /* start css event */
+
+  .jumbotron-event {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .jumbotron-event p {
+    font-size: 100px;
+    text-align: center;
+    margin-top: 200px;
+  }
+
+  .jumbotron-kontent-event {
+    font-family: "Roboto", sans-serif;
+    background-color: #333333;
+  }
+
+  .jumbotron-kontent-event .container .row .col-sm-4 .card {
+    transition: 0.3s ease;
+    margin-bottom: 3rem;
+    margin-top: 40px;
+  }
+
+  .jumbotron-kontent-event .container .row .col-sm-4 .card:hover {
+    box-shadow: 0px 0px 5px 1px black;
+  }
+
+  /* .jumbotron-news .container .row .col-sm-4 .card .card-body {
+    text-align: center !important;
+  } */
+
+  .jumbotron-kontent-event .container .row .col-sm-4 .card .card-body .date-berita {
+    color: #b3b3b3 !important;
+    font-weight: lighter;
+    font-size: 10px;
+  }
+
+  .jumbotron-kontent-event .container .row .col-sm-4 .card .card-body .card-title {
+    font-size: 30px;
+    font-weight: 900;
+  }
+
+  .jumbotron-kontent-event .container .row .col-sm-4 .card .card-body .btn-read-more {
+    margin-top: 30px;
+  }
+
+  .jumbotron-kontent-event .container .row .col-sm-4 .card .card-body .btn-read-more a {
+    text-decoration: none;
+    color: black;
+    border-style: solid;
+    border-width: 1px;
+    padding: 15px 20px 15px 20px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+
+  .jumbotron-kontent-event .container .row .col-sm-4 .card .card-body .btn-read-more a:hover {
+    background-color: #cc5200;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .jumbotron-kontent-event .container .header {
+    margin-bottom: 20px;
+  }
+
+  .jumbotron-kontent-event .container .text-center a {
+    text-decoration: none;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    background-color: #ffa600;
+    transition: 0.3s ease;
+  }
+
+  .jumbotron-kontent-event .container .text-center a:hover {
+    background-color: #cc5200;
+  }
+
+  /* end css event */
 }
 
 @media (max-width: 576px) {

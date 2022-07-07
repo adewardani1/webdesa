@@ -12,7 +12,8 @@ class ModelBerita extends Model
         'gambar',
         'judul',
         'jenis',
-        'konten'
+        'konten',
+        'id_akun'
     ];
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';

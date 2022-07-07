@@ -32,6 +32,7 @@ class ModelHome extends Model
                 berita.konten,
                 berita.created_at
             FROM berita
+            WHERE berita.jenis = 'Berita'
         ";
 
         return $this->database->query($sql)->getResult();
@@ -53,6 +54,21 @@ class ModelHome extends Model
         ";
 
         return $this->database->query($sql)->getRow();
+    }
+
+    public function getNewsHeadline()
+    {
+        $sql = "
+            SELECT
+                berita.id,
+                berita.gambar,
+                berita.judul,
+                berita.updated_at
+            FROM berita
+            WHERE berita.jenis = 'Headline'
+        ";
+
+        return $this->database->query($sql)->getResult();
     }
 
     public function getRecentNews()
@@ -83,6 +99,100 @@ class ModelHome extends Model
         ";
 
         return $this->database->query($sql)->getResult();
+    }
+
+    public function getEvent()
+    {
+        $sql = "
+            SELECT
+                berita.id,
+                berita.gambar,
+                berita.judul,
+                berita.updated_at
+            FROM berita
+            WHERE berita.jenis = 'Event'
+        ";
+
+        return $this->database->query($sql)->getResult();
+    }
+
+    public function getEventById($id)
+    {
+        $sql = "
+            SELECT
+                akun.nama_depan,
+                berita.gambar,
+                berita.judul,
+                berita.konten,
+                berita.created_at,
+                berita.updated_at
+            FROM berita
+            INNER JOIN akun ON akun.id = berita.id_akun
+            WHERE berita.id = '" . $id . "'
+        ";
+
+        return $this->database->query($sql)->getRow();
+    }
+
+    public function getRecentEvent()
+    {
+        $sql = "
+            SELECT
+                berita.id,
+                berita.judul,
+                berita.updated_at
+            FROM berita
+            WHERE berita.updated_at IN (SELECT max(berita.updated_at) FROM berita)
+        ";
+
+        return $this->database->query($sql)->getRow();
+    }
+
+    public function getPengumuman()
+    {
+        $sql = "
+            SELECT
+                berita.id,
+                berita.judul,
+                berita.gambar,
+                berita.updated_at
+            FROM berita
+            WHERE berita.jenis = 'Pengumuman'
+        ";
+
+        return $this->database->query($sql)->getResult();
+    }
+
+    public function getPengumumanById($id)
+    {
+        $sql = "
+            SELECT
+                akun.nama_depan,
+                berita.gambar,
+                berita.judul,
+                berita.konten,
+                berita.created_at,
+                berita.updated_at
+            FROM berita
+            INNER JOIN akun ON akun.id = berita.id_akun
+            WHERE berita.id = '" . $id . "'
+        ";
+
+        return $this->database->query($sql)->getRow();
+    }
+
+    public function getRecentPengumuman()
+    {
+        $sql = "
+            SELECT
+                berita.id,
+                berita.judul,
+                berita.updated_at
+            FROM berita
+            WHERE berita.updated_at IN (SELECT max(berita.updated_at) FROM berita)
+        ";
+
+        return $this->database->query($sql)->getRow();
     }
 
     public function getCountPendudukPerempuan()
@@ -130,9 +240,5 @@ class ModelHome extends Model
         ";
 
         return $this->database->query($sql)->getResult();
-    }
-
-    public function getBeritaById($id)
-    {
     }
 }

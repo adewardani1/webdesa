@@ -22,33 +22,22 @@
 
   <?= $this->Section('content') ?>
   <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
     <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="2000">
-        <img src="/img/desajatituju.jpg" class="img-size d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
+      <?php
+      $counter = 0;
+      foreach ($beritaHeadline as $row) { ?>
+        <div class="carousel-item <?= ($counter == 0) ? "active" : "" ?>" data-bs-interval="2000">
+          <a href="<?php echo base_url('news/' . $row->id); ?>">
+            <img src="/img/berita/<?php echo $row->gambar; ?>" class="img-size d-block w-100" alt="">
+          </a>
+          <div class="carousel-caption d-none d-md-block">
+            <h5><?php echo $row->judul; ?></h5>
+            <p><?php echo date("Y-m-d", strtotime($row->updated_at)); ?></p>
+          </div>
         </div>
-      </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <img src="/img/WhatsApp Image 2022-04-26 at 21.29.46.jpeg" class="img-size d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
-        </div>
-      </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <img src="/img/WhatsApp Image 2022-04-26 at 21.30.05.jpeg" class="img-size d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
-        </div>
-      </div>
+      <?php $counter++;
+      }
+      ?>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -399,7 +388,7 @@
                 <h5 class="card-title text-dark"><?php echo $row->judul; ?></h5>
                 <p class="date-berita"><?php echo $row->created_at; ?></p>
                 <div class="btn-selengkapnya">
-                  <a href="<?php echo base_url('berita/' . $row->id); ?>">Selengkapnya</a>
+                  <a href="<?php echo base_url('news/' . $row->id); ?>">Selengkapnya</a>
                 </div>
               </div>
             </div>
@@ -429,7 +418,7 @@
         </div> -->
       </div>
       <div class="text-center my-5">
-        <a href="#" class="btn-berita">Berita Lainnya</a>
+        <a href="<?php echo base_url('news'); ?>" class="btn-berita">Berita Lainnya</a>
       </div>
     </div>
   </div>

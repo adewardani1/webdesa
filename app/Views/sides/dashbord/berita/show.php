@@ -180,7 +180,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Data Berita</h1>
+                            <h1 class="m-0">Data Konten</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -209,7 +209,7 @@
                                     <?php $validation = \Config\Services::validation(); ?>
                                     <div class="card-body">
                                         <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-2 col-form-label">Judul Berita</label>
+                                            <label for="inputEmail3" class="col-sm-2 col-form-label">Judul Konten</label>
                                             <div class="col-sm-10">
                                                 <input type="text" name="judul" value="<?php echo $berita->judul; ?>" class="form-control <?php echo $validation->hasError('judul') ? 'is-invalid' : null ?>" placeholder="Judul Berita">
                                                 <div class="invalid-feedback">
@@ -218,7 +218,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="inputPassword3" class="col-sm-2 col-form-label">Isi Berita</label>
+                                            <label for="inputPassword3" class="col-sm-2 col-form-label">Isi Konten</label>
                                             <div class="col-sm-10">
                                                 <textarea class="form-control <?php echo $validation->hasError('konten') ? 'is-invalid' : null ?>" name="konten" rows="3" placeholder="Isi Berita"><?php echo $berita->konten; ?></textarea>
                                                 <div class="invalid-feedback">
@@ -227,11 +227,13 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="exampleSelectBorder" class="col-sm-2 col-form-label">Jenis Berita</label>
+                                            <label for="exampleSelectBorder" class="col-sm-2 col-form-label">Jenis Konten</label>
                                             <div class="col-sm-10">
                                                 <select name="jenis" class="custom-select form-control-border" id="exampleSelectBorder">
-                                                    <option value="Headline">Headline</option>
                                                     <option value="Biasa">Biasa</option>
+                                                    <option value="Headline">Headline</option>
+                                                    <option value="Event">Event</option>
+                                                    <option value="Pengumuman">Pengumuman</option>
                                                 </select>
                                             </div>
                                         </div>

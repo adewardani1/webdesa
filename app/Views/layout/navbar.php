@@ -18,11 +18,11 @@
                     <li class="nav-item">
                         <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">PROFILE</a>
                         <ul class="dropdown-menu bg-dark text-white" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="<?php echo base_url('sejarah-desa/'); ?>">Sejarah Desa</a></li>
-                            <li><a class="dropdown-item" href="<?php echo base_url('pemerintahan-desa/'); ?>">Pemerintahan Desa</a></li>
-                            <li><a class="dropdown-item" href="<?php echo base_url('visi-misi/'); ?>">Visi Misi</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('sejarah-desa'); ?>">Sejarah Desa</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('pemerintahan-desa'); ?>">Pemerintahan Desa</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('visi-misi'); ?>">Visi Misi</a></li>
                             <li><a class="dropdown-item" href="#">Demografi</a></li>
-                            <li><a class="dropdown-item" href="<?php echo base_url('kelembagaan/'); ?>">Kelembagaan</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('kelembagaan'); ?>">Kelembagaan</a></li>
                         </ul>
                     </li>
                 </div>
@@ -30,9 +30,9 @@
                     <li class="nav-item">
                         <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">INFORMASI PUBLIK</a>
                         <ul class="dropdown-menu bg-dark text-white" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="<?php echo base_url('news/'); ?>">Berita</a></li>
-                            <li><a class="dropdown-item" href="#">Event</a></li>
-                            <li><a class="dropdown-item" href="<?php echo base_url('galeri/'); ?>">Galeri</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('news'); ?>">Berita</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('event'); ?>">Event</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('galeri'); ?>">Galeri</a></li>
                         </ul>
                     </li>
                 </div>

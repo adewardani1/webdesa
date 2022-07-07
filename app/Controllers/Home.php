@@ -16,7 +16,8 @@ class Home extends BaseController
             'penduduk'          => $this->model->getCountPenduduk(),
             'pendudukPerempuan' => $this->model->getCountPendudukPerempuan(),
             'pendudukLaki'      => $this->model->getCountPendudukLaki(),
-            'beritaTerkini'     => $this->model->getNewsNow()
+            'beritaTerkini'     => $this->model->getNewsNow(),
+            'beritaHeadline'    => $this->model->getNewsHeadline()
         ];
 
         return view('sides/site/index', $data);
@@ -84,10 +85,41 @@ class Home extends BaseController
 
         return view('sides/site/berita/show', $data);
     }
+
+    public function getEvent()
+    {
+        $data = [
+            'event' => $this->model->getEvent(),
+        ];
+
+        return view('sides/site/event/index', $data);
+    }
+
+    public function getEventById($id)
+    {
+        $data = [
+            'event' => $this->model->getEventById($id),
+            'recentEvent' => $this->model->getRecentEvent()
+        ];
+
+        return view('sides/site/event/show', $data);
+    }
+
     public function getPengumuman()
     {
+        $data = [
+            'pengumuman' => $this->model->getPengumuman()
+        ];
+        return view('sides/site/pengumuman/index', $data);
+    }
 
-        return view('sides/site/pengumuman');
+    public function getPengumumanById($id)
+    {
+        $data = [
+            'pengumuman' => $this->model->getPengumumanById($id),
+            'recentPengumuman' => $this->model->getRecentPengumuman()
+        ];
+        return view('sides/site/pengumuman/show', $data);
     }
 
     public function makeRegexTagP($val)

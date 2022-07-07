@@ -78,7 +78,8 @@ class Berita extends BaseController
                 'gambar' => $upload,
                 'judul' => $this->request->getPost('judul'),
                 'jenis' => $this->request->getPost('jenis'),
-                'konten' => $this->request->getPost('konten')
+                'konten' => $this->request->getPost('konten'),
+                'id_akun' => session()->get('id'),
                 // 'tmp' => $img->getTempName();
                 // 'gambar' => $_FILES["gambar"]["name"]
             ];

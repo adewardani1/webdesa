@@ -34,14 +34,17 @@ $routes->setAutoRoute(true);
 
 //route view desa
 $routes->get('/', 'Home::index');
-$routes->get('galeri/', 'Home::getGaleri');
-$routes->get('kelembagaan/', 'Home::getKelembagaan');
-$routes->get('pemerintahan-desa/', 'Home::getPemerintahDesa');
-$routes->get('visi-misi/', 'Home::getVisiMisi');
-$routes->get('kontak/', 'Home::getKontak');
-$routes->get('news/', 'Home::getBerita');
+$routes->get('galeri', 'Home::getGaleri');
+$routes->get('kelembagaan', 'Home::getKelembagaan');
+$routes->get('pemerintahan-desa', 'Home::getPemerintahDesa');
+$routes->get('visi-misi', 'Home::getVisiMisi');
+$routes->get('kontak', 'Home::getKontak');
+$routes->get('news', 'Home::getBerita');
 $routes->get('news/(:num)', 'Home::getBeritaById/$1');
-$routes->get('pengumuman/', 'Home::getPengumuman');
+$routes->get('pengumuman', 'Home::getPengumuman');
+$routes->get('pengumuman/(:num)', 'Home::getPengumumanById/$1');
+$routes->get('event', 'Home::getEvent');
+$routes->get('event/(:num)', 'Home::getEventById/$1');
 
 //route login SIDES
 $routes->get('auth', 'Login::index');
