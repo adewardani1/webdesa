@@ -6,6 +6,19 @@ use CodeIgniter\Model;
 
 class ModelHome extends Model
 {
+    protected $table = 'komentar';
+    protected $primaryKey = 'id';
+    protected $allowedFields = [
+        'komentar',
+        'nama',
+        'email',
+        'website',
+        'id_berita'
+    ];
+    protected $useTimestamps = true;
+    protected $createdField  = 'created_at';
+    protected $updatedField  = 'updated_at';
+
     public function __construct()
     {
         $this->database = db_connect();
@@ -32,7 +45,7 @@ class ModelHome extends Model
                 berita.konten,
                 berita.created_at
             FROM berita
-            WHERE berita.jenis = 'Berita'
+            WHERE berita.jenis = 'news'
         ";
 
         return $this->database->query($sql)->getResult();
@@ -111,7 +124,7 @@ class ModelHome extends Model
                 berita.judul,
                 berita.updated_at
             FROM berita
-            WHERE berita.jenis = 'Event'
+            WHERE berita.jenis = 'event'
         ";
 
         return $this->database->query($sql)->getResult();
@@ -159,7 +172,7 @@ class ModelHome extends Model
                 berita.gambar,
                 berita.updated_at
             FROM berita
-            WHERE berita.jenis = 'Pengumuman'
+            WHERE berita.jenis = 'pengumuman'
         ";
 
         return $this->database->query($sql)->getResult();

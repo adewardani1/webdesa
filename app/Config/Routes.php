@@ -39,12 +39,20 @@ $routes->get('kelembagaan', 'Home::getKelembagaan');
 $routes->get('pemerintahan-desa', 'Home::getPemerintahDesa');
 $routes->get('visi-misi', 'Home::getVisiMisi');
 $routes->get('kontak', 'Home::getKontak');
+
+//route news
 $routes->get('news', 'Home::getBerita');
 $routes->get('news/(:num)', 'Home::getBeritaById/$1');
+
+//route pengumuman
 $routes->get('pengumuman', 'Home::getPengumuman');
 $routes->get('pengumuman/(:num)', 'Home::getPengumumanById/$1');
+
+//route event
 $routes->get('event', 'Home::getEvent');
 $routes->get('event/(:num)', 'Home::getEventById/$1');
+
+//roiute submit komentar
 $routes->post('comment/submit/(:num)', 'Home::insert/$1');
 
 //route login SIDES
@@ -121,8 +129,13 @@ $routes->get('sides/galeri/show/(:num)', 'Galeri::show/$1');
 $routes->post('sides/galeri/update/(:num)', 'Galeri::updated/$1');
 $routes->get('sides/galeri/delete/(:num)', 'Galeri::destroy/$1');
 $routes->get('sides/galeri/foto/(:num)', 'Galeri::foto/$1'); //tampil foto
+
 //services akun
 $routes->get('services/akun/(:any)', 'Akun::checkUser/$1');
+
+//route komentar
+$routes->get('sides/komentar', 'Komentar::index');
+$routes->get('sides/komentar/delete/(:num)', 'Komentar::destroy/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

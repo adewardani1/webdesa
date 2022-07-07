@@ -138,6 +138,14 @@
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/komentar'); ?>" class="nav-link">
+                                <i class="fas fa-comment-alt"></i>
+                                <p>
+                                    Komentar
+                                </p>
+                            </a>
+                        </li>
                         <li class="nav-item active">
                             <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link active">
                                 <i class="fas fa-user-circle"></i>

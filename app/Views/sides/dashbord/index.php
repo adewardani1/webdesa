@@ -145,6 +145,14 @@
                 </p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="<?php echo base_url('sides/komentar'); ?>" class="nav-link">
+                <i class="fas fa-comment-alt"></i>
+                <p>
+                  Komentar
+                </p>
+              </a>
+            </li>
             <?php
             if (session()->get('level') === "Master") { ?>
               <li class="nav-item">
@@ -220,7 +228,7 @@
             </div>
             <!-- ./col -->
             <?php
-            if (session()->get('level') == 'Master') { ?>
+            if (session()->get('level') === 'Master') { ?>
               <div class="col-lg-3 col-6">
                 <!-- small box -->
                 <div class="small-box bg-success">

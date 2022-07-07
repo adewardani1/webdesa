@@ -138,8 +138,16 @@
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/komentar'); ?>" class="nav-link">
+                                <i class="fas fa-comment-alt"></i>
+                                <p>
+                                    Komentar
+                                </p>
+                            </a>
+                        </li>
                         <?php
-                        if (session()->get('level') == 'Master') { ?>
+                        if (session()->get('level') === 'Master') { ?>
                             <li class="nav-item">
                                 <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
                                     <i class="fas fa-user-circle"></i>
@@ -214,10 +222,10 @@
                                             <label for="exampleSelectBorder" class="col-sm-2 col-form-label">Jenis Kontent</label>
                                             <div class="col-sm-10">
                                                 <select name="jenis" class="custom-select form-control-border" id="exampleSelectBorder">
-                                                    <option value="Berita">Berita</option>
+                                                    <option value="news">Berita</option>
                                                     <option value="Headline">Headline</option>
-                                                    <option value="Event">Event</option>
-                                                    <option value="Pengumuman">Pengumuman</option>
+                                                    <option value="event">Event</option>
+                                                    <option value="pengumuman">Pengumuman</option>
                                                 </select>
                                             </div>
                                         </div>
