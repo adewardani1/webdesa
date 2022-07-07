@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 16, 2022 at 04:12 PM
+-- Generation Time: Jul 07, 2022 at 04:39 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -29,9 +29,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `akun` (
   `id` int(11) NOT NULL,
+  `nama_depan` varchar(255) NOT NULL,
+  `nama_belakang` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `level` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `nomor_hp` varchar(255) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -40,8 +44,10 @@ CREATE TABLE `akun` (
 -- Dumping data for table `akun`
 --
 
-INSERT INTO `akun` (`id`, `username`, `password`, `level`, `created_at`, `updated_at`) VALUES
-(1, 'admin', '$2y$10$au6B7TnUzE7zTGv1hsK5.em3DTbAmQrml2PBv2bqmcyfMWky3bgZ.', 'master', '2022-06-15 06:03:13', '2022-06-15 06:03:13');
+INSERT INTO `akun` (`id`, `nama_depan`, `nama_belakang`, `username`, `password`, `level`, `email`, `nomor_hp`, `created_at`, `updated_at`) VALUES
+(1, 'admin', 'admin', 'admin', '$2y$10$au6B7TnUzE7zTGv1hsK5.em3DTbAmQrml2PBv2bqmcyfMWky3bgZ.', 'Admin', '', '0', '2022-06-15 06:03:13', '2022-06-15 06:03:13'),
+(3, 'hafiz', 'hidayat', 'hafiz5738', '$2y$10$iP7JVN1clvEWCrcnCK1hCuRF0qTKllYAk1BHk91692c6Abs8Z3lhW', 'Master', 'rijal.1344@gmail.com', '081393784144', '2022-06-21 04:47:38', '2022-06-21 04:57:53'),
+(4, 'hidayat', 'khairi', 'hidayat8343', '$2y$10$UL86HgTqlPhRADXmYe9PAui2/MzdmQGg1EYJzlPH4LC3Ov14BWt3O', 'Master', 'faisal@gmail.com', '08908797902', '2022-06-23 05:56:15', '2022-06-23 06:33:17');
 
 -- --------------------------------------------------------
 
@@ -55,13 +61,18 @@ CREATE TABLE `aspirasi` (
   `nama_belakang` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `alamat` text NOT NULL,
-  `nomor_hp` int(255) NOT NULL,
-  `berkas_pdf` varchar(255) DEFAULT NULL,
-  `berkas_foto` varchar(255) DEFAULT NULL,
+  `nomor_hp` varchar(255) NOT NULL,
   `pesan` text NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `aspirasi`
+--
+
+INSERT INTO `aspirasi` (`id`, `nama_depan`, `nama_belakang`, `email`, `alamat`, `nomor_hp`, `pesan`, `created_at`, `updated_at`) VALUES
+(1, 'rijal', 'hafizhun hidayat', 'rijal.1344@gmail.com', 'jl.kusumah indah 3, kec weru, kab cirebon', '081393784144', 'jadi begini pak bu', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -75,6 +86,7 @@ CREATE TABLE `berita` (
   `judul` varchar(255) DEFAULT NULL,
   `jenis` varchar(255) NOT NULL,
   `konten` text DEFAULT NULL,
+  `id_akun` int(11) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -83,9 +95,72 @@ CREATE TABLE `berita` (
 -- Dumping data for table `berita`
 --
 
-INSERT INTO `berita` (`id`, `gambar`, `judul`, `jenis`, `konten`, `created_at`, `updated_at`) VALUES
-(7, 'Screenshot (1).png', 'rijal', 'Headline', 'ddddd', '2022-06-13 07:05:38', '2022-06-14 07:49:35'),
-(8, 'Screenshot (8).png', 'sds', 'Biasa', 'sdas', '2022-06-13 07:20:25', '2022-06-13 07:20:25');
+INSERT INTO `berita` (`id`, `gambar`, `judul`, `jenis`, `konten`, `id_akun`, `created_at`, `updated_at`) VALUES
+(7, 'Screenshot (1).png', 'faisal', 'Berita', 'ddddd', 3, '2022-06-13 07:05:38', '2022-06-24 17:36:24'),
+(8, 'Screenshot (8).png', 'sds', 'Berita', 'Sebanyak 25 siswa siswi TK Muslimat Nurul Fahmi Bulakan melakukan wisuda yang didampingi orang tua masing-masing.\n\nDalam sambutannya Sigit berharap, segala ilmu yang sudah diajarkan oleh para guru di TK Nurul Fahmi kepada para siswa dapat bermanfaat dan menjadi bekal untuk melangkah ke pendidikan selanjutnya.\n\n“Semoga apa yang telah didapatkan oleh para siswa di TK Nurul Fahmi ini dapat bermanfaat dan menjadi bekal untuk melangkah ke pendidikan selanjutnya,” ucapnya.', 3, '2022-06-13 07:20:25', '2022-07-05 20:12:43'),
+(9, 'Screenshot (158).png', 'ssss', 'Headline', 'llll', 3, '2022-06-24 17:25:43', '2022-06-24 17:25:43'),
+(11, 'Screenshot (26).png', 'cascascascasc', 'Headline', 'jadi', 3, '2022-06-30 20:00:11', '2022-06-30 20:00:11'),
+(15, 'Screenshot (51).png', 'ewfwfw', 'Event', 'aqwfqe', 1, '2022-07-06 21:06:20', '2022-07-06 21:06:20'),
+(16, 'Screenshot (1124).png', 'sjsjsjj', 'Pengumuman', 'lkskldldldl', 1, '2022-07-07 09:05:33', '2022-07-07 09:05:33');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `galeri`
+--
+
+CREATE TABLE `galeri` (
+  `id` int(11) NOT NULL,
+  `gambar` varchar(255) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `galeri`
+--
+
+INSERT INTO `galeri` (`id`, `gambar`, `created_at`, `updated_at`) VALUES
+(3, 'Screenshot (39).png', '2022-07-01 06:24:39', '2022-07-01 06:24:39'),
+(4, 'Screenshot (52).png', '2022-07-03 05:32:46', '2022-07-03 05:32:46'),
+(5, 'Screenshot (125).png', '2022-07-03 05:32:55', '2022-07-03 05:32:55'),
+(6, 'Screenshot (230).png', '2022-07-03 05:33:05', '2022-07-03 05:33:05');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kelembagaan`
+--
+
+CREATE TABLE `kelembagaan` (
+  `id` int(11) NOT NULL,
+  `gambar` varchar(255) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kelembagaan`
+--
+
+INSERT INTO `kelembagaan` (`id`, `gambar`, `nama`, `created_at`, `updated_at`) VALUES
+(2, 'osis.png', 'OSIS', '2022-07-04 07:47:45', '2022-07-04 07:47:45'),
+(3, 'Logo-UAD-Berwarna.png', 'universitas ahmad dahlan', '2022-07-04 07:48:09', '2022-07-04 07:48:09'),
+(4, 'logo-desajatituju.png', 'jatitujuh', '2022-07-04 11:15:36', '2022-07-04 11:15:36');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pemerintah_desa`
+--
+
+CREATE TABLE `pemerintah_desa` (
+  `id` int(11) NOT NULL,
+  `gambar` varchar(255) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -114,9 +189,22 @@ CREATE TABLE `penduduk` (
 --
 
 INSERT INTO `penduduk` (`id`, `nama`, `no_ktp`, `jenis_kelamin`, `desa`, `dusun`, `rt`, `rw`, `status`, `pendidikan`, `agama`, `created_at`, `updated_at`) VALUES
-(4, 'rijal', 2314, 'Laki-Laki', 'wefW', 'WEFWE', 345, 345, 'ef', 'wef', 'Islam', '2022-06-12 10:04:12', '2022-06-12 10:04:12'),
+(4, 'rijal hafizhun hidayat', 2314, 'Laki-Laki', 'megu gede', 'WEFWE', 345, 345, 'ef', 'wef', 'Islam', '2022-06-16 22:31:56', '2022-06-16 22:31:56'),
 (5, 'hafizhun', 34341, 'Perempuan', 'efwe', 'EF3', 4, 4, 'fef', 'weq', 'Islam', '2022-06-14 13:53:49', '2022-06-14 13:53:49'),
 (6, 'sacas', 3431, 'Laki-Laki', 'wfw', 'wef', 3, 3242, 'wv', 'ff', 'Islam', '2022-06-12 21:19:40', '2022-06-12 21:19:40');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `visi_misi`
+--
+
+CREATE TABLE `visi_misi` (
+  `id` int(11) NOT NULL,
+  `gambar` varchar(255) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
@@ -138,12 +226,37 @@ ALTER TABLE `aspirasi`
 -- Indexes for table `berita`
 --
 ALTER TABLE `berita`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_akun` (`id_akun`);
+
+--
+-- Indexes for table `galeri`
+--
+ALTER TABLE `galeri`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `kelembagaan`
+--
+ALTER TABLE `kelembagaan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pemerintah_desa`
+--
+ALTER TABLE `pemerintah_desa`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `penduduk`
 --
 ALTER TABLE `penduduk`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `visi_misi`
+--
+ALTER TABLE `visi_misi`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -154,25 +267,49 @@ ALTER TABLE `penduduk`
 -- AUTO_INCREMENT for table `akun`
 --
 ALTER TABLE `akun`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `aspirasi`
 --
 ALTER TABLE `aspirasi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `berita`
 --
 ALTER TABLE `berita`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `galeri`
+--
+ALTER TABLE `galeri`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `kelembagaan`
+--
+ALTER TABLE `kelembagaan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `pemerintah_desa`
+--
+ALTER TABLE `pemerintah_desa`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `penduduk`
 --
 ALTER TABLE `penduduk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `visi_misi`
+--
+ALTER TABLE `visi_misi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

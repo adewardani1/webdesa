@@ -43,6 +43,7 @@ class ModelHome extends Model
         $sql = "
             SELECT
                 akun.nama_depan,
+                berita.id,
                 berita.gambar,
                 berita.judul,
                 berita.konten,
@@ -121,6 +122,7 @@ class ModelHome extends Model
         $sql = "
             SELECT
                 akun.nama_depan,
+                berita.id,
                 berita.gambar,
                 berita.judul,
                 berita.konten,
@@ -168,6 +170,7 @@ class ModelHome extends Model
         $sql = "
             SELECT
                 akun.nama_depan,
+                berita.id,
                 berita.gambar,
                 berita.judul,
                 berita.konten,
@@ -240,5 +243,10 @@ class ModelHome extends Model
         ";
 
         return $this->database->query($sql)->getResult();
+    }
+
+    public function insertKomentar($data)
+    {
+        return $this->database->table('komentar')->insert($data);
     }
 }

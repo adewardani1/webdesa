@@ -41,8 +41,87 @@ class Penduduk extends BaseController
 
     public function insert()
     {
-        $tombol = $this->request->getPost('submit');
-        if (isset($tombol)) {
+        $validation = $this->validate([
+            'nama' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'nama wajib di isi',
+                ]
+            ],
+
+            'no_ktp' => [
+                'rules' => 'required|integer|min_length[16]|max_length[16]',
+                'errors' => [
+                    'required' => 'nomor ktp wajib di isi',
+                    'min_length' => 'Nomor KTP minimal harus 16 angka',
+                    'max_length' => 'Nomor KTP tidak lebih dari 16 angka'
+                ]
+            ],
+
+            'jenis_kelamin' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'jenis kelamin wajib di isi',
+                ]
+            ],
+
+            'desa' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'desa wajib di isi',
+                ]
+            ],
+
+            'dusun' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'dusun wajib di isi',
+                ]
+            ],
+
+            'rt' => [
+                'rules' => 'required|integer|min_length[1]|max_length[2]',
+                'errors' => [
+                    'required' => 'Rt wajib di isi',
+                    'min_length' => 'Nomor Rt minimal 1 angka',
+                    'max_length' => 'Nomor Rt maximal 2 angka'
+                ]
+            ],
+
+            'rw' => [
+                'rules' => 'required|integer|min_length[1]|max_length[2]',
+                'errors' => [
+                    'required' => 'Rw wajib di isi',
+                    'min_length' => 'Nomor Rw minimal 1 angka',
+                    'max_length' => 'Nomor Rw maximal 2 angka'
+                ]
+            ],
+
+            'status' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'status wajib di isi',
+                ]
+            ],
+
+            'pendidikan' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'pendidikan wajib di isi',
+                ]
+            ],
+
+            'agama' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'agama wajib di isi',
+                ]
+            ],
+        ]);
+
+        if (!$validation) {
+            return redirect()->to('sides/penduduk/create')->withInput();
+        } else {
             $data = [
                 "nama" => $this->request->getPost('nama'),
                 "no_ktp" => $this->request->getPost('no_ktp'),
@@ -57,31 +136,110 @@ class Penduduk extends BaseController
                 "created_at" => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s'))),
                 "updated_at" => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s')))
             ];
-        }
 
-        $simpan = $this->model->insert($data);
+            $simpan = $this->model->insert($data);
 
-        if ($simpan) {
-            session()->setFlashdata('pesan_insert', 'data berhasil di tambahkan');
-            return redirect()->to('sides/penduduk');
-        } else {
-            return false;
+            if ($simpan) {
+                session()->setFlashdata('pesan_insert', 'data berhasil di tambahkan');
+                return redirect()->to('sides/penduduk');
+            } else {
+                return false;
+            }
         }
     }
 
     public function updated($id)
     {
 
-        $tombol = $this->request->getPost('submit');
+        $validation = $this->validate([
+            'nama' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'nama wajib di isi',
+                ]
+            ],
 
-        if (isset($tombol)) {
+            'no_ktp' => [
+                'rules' => 'required|integer|min_length[16]|max_length[16]',
+                'errors' => [
+                    'required' => 'nomor ktp wajib di isi',
+                    'min_length' => 'Nomor KTP minimal harus 16 angka',
+                    'max_length' => 'Nomor KTP tidak lebih dari 16 angka'
+                ]
+            ],
+
+            'jenis_kelamin' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'jenis kelamin wajib di isi',
+                ]
+            ],
+
+            'desa' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'desa wajib di isi',
+                ]
+            ],
+
+            'dusun' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'dusun wajib di isi',
+                ]
+            ],
+
+            'rt' => [
+                'rules' => 'required|integer|min_length[1]|max_length[2]',
+                'errors' => [
+                    'required' => 'Rt wajib di isi',
+                    'min_length' => 'Nomor Rt minimal 1 angka',
+                    'max_length' => 'Nomor Rt maximal 2 angka'
+                ]
+            ],
+
+            'rw' => [
+                'rules' => 'required|integer|min_length[1]|max_length[2]',
+                'errors' => [
+                    'required' => 'Rw wajib di isi',
+                    'min_length' => 'Nomor Rw minimal 1 angka',
+                    'max_length' => 'Nomor Rw maximal 2 angka'
+                ]
+            ],
+
+            'status' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'status wajib di isi',
+                ]
+            ],
+
+            'pendidikan' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'pendidikan wajib di isi',
+                ]
+            ],
+
+            'agama' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'agama wajib di isi',
+                ]
+            ],
+        ]);
+
+        if (!$validation) {
+            return redirect()->to('sides/penduduk/show/' . $id)->withInput();
+        } else {
             $data = [
                 "nama" => $this->request->getPost('nama'),
                 "no_ktp" => $this->request->getPost('no_ktp'),
                 "jenis_kelamin" => $this->request->getPost('jenis_kelamin'),
                 "desa" => $this->request->getPost('desa'),
                 "dusun" => $this->request->getPost('dusun'),
-                "rw" => $this->request->getPost('rt'),
+                "rt" => $this->request->getPost('rt'),
+                "rw" => $this->request->getPost('rw'),
                 "status" => $this->request->getPost('status'),
                 "pendidikan" => $this->request->getPost('pendidikan'),
                 "agama" => $this->request->getPost('agama'),
@@ -90,6 +248,7 @@ class Penduduk extends BaseController
             ];
 
             $simpan = $this->model->updateById($data, $id);
+
             if ($simpan) {
                 session()->setFlashdata('pesanUpdated', true);
                 return redirect()->to('sides/penduduk');

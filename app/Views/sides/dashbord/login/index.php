@@ -18,17 +18,7 @@
 </head>
 
 <body class="hold-transition login-page">
-    <?php
-    if (session()->getFlashdata('alert')) { ?>
-        <script>
-            alert("username atau password salah!");
-        </script>
-    <?php } else if (session()->getFlashdata('logFirst')) { ?>
-        <script>
-            alert("Login terlebih dahulu");
-        </script>
-    <?php }
-    ?>
+
     <div class="login-box">
         <div class="login-logo">
             <a href="#"><b>SI-</b>DESA</a>
@@ -75,7 +65,17 @@
         </div>
     </div>
     <!-- /.login-box -->
-
+    <?php
+    if (session()->getFlashdata('alert')) { ?>
+        <script>
+            alert("username atau password salah!");
+        </script>
+    <?php } else if (session()->getFlashdata('logFirst')) { ?>
+        <script>
+            alert("Login terlebih dahulu");
+        </script>
+    <?php }
+    ?>
     <!-- jQuery -->
     <script src="<?php echo base_url('adminLTE/plugins/jquery/jquery.min.js'); ?>"></script>
     <!-- Bootstrap 4 -->

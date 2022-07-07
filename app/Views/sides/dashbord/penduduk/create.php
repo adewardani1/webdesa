@@ -190,68 +190,96 @@
                                 <!-- /.card-header -->
                                 <!-- form start -->
                                 <form class="form-horizontal" method="post" action="<?php echo base_url('/sides/penduduk/save'); ?>">
+                                    <?php $validation = \Config\Services::validation(); ?>
                                     <div class="card-body">
                                         <div class="form-group row">
                                             <label for="inputEmail3" class="col-sm-2 col-form-label">Nama</label>
                                             <div class="col-sm-10">
-                                                <input type="text" name="nama" class="form-control" placeholder="Nama">
+                                                <input type="text" name="nama" value="<?php echo old('nama'); ?>" class="form-control <?php echo $validation->hasError('nama') ? 'is-invalid' : null ?>" placeholder="Nama">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('nama'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="inputPassword3" class="col-sm-2 col-form-label">Nomor ktp</label>
                                             <div class="col-sm-10">
-                                                <input type="text" onkeypress="return isNumberKey(event)" name="no_ktp" class="form-control" id="inputPassword3" placeholder="Nomor Ktp">
+                                                <input type="text" onkeypress="return isNumberKey(event)" name="no_ktp" value="<?php echo old('no_ktp'); ?>" class="form-control <?php echo $validation->hasError('no_ktp') ? 'is-invalid' : null ?>" id="inputPassword3" placeholder="Nomor Ktp">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('no_ktp'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="exampleSelectBorder" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                                             <div class="col-sm-10">
-                                                <select name="jenis_kelamin" class="custom-select form-control-border" id="exampleSelectBorder">
+                                                <select name="jenis_kelamin" class="custom-select form-control-border <?php echo $validation->hasError('jenis_kelamin') ? 'is-invalid' : null ?>" id="exampleSelectBorder">
                                                     <option value="Laki-Laki">Laki-Laki</option>
                                                     <option value="Perempuan">Perempuan</option>
                                                 </select>
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('jenis_kelamin'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="inputPassword3" class="col-sm-2 col-form-label">Desa</label>
                                             <div class="col-sm-10">
-                                                <input type="text" name="desa" class="form-control" id="inputPassword3" placeholder="Desa">
+                                                <input type="text" name="desa" value="<?php echo old('desa'); ?>" class="form-control <?php echo $validation->hasError('desa') ? 'is-invalid' : null ?>" id="inputPassword3" placeholder="Desa">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('desa'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="inputPassword3" class="col-sm-2 col-form-label">Dusun</label>
                                             <div class="col-sm-10">
-                                                <input type="text" name="dusun" class="form-control" id="inputPassword3" placeholder="Dusun">
+                                                <input type="text" name="dusun" value="<?php echo old('dusun'); ?>" class="form-control <?php echo $validation->hasError('dusun') ? 'is-invalid' : null ?>" id="inputPassword3" placeholder="Dusun">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('dusun'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="inputPassword3" class="col-sm-2 col-form-label">Rt</label>
                                             <div class="col-sm-10">
-                                                <input type="text" onkeypress="return isNumberKey(event)" name="rt" class="form-control" id="inputPassword3" placeholder="Rt">
+                                                <input type="text" onkeypress="return isNumberKey(event)" name="rt" value="<?php echo old('rt'); ?>" class="form-control <?php echo $validation->hasError('rt') ? 'is-invalid' : null ?>" id="inputPassword3" placeholder="Rt">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('rt'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="inputPassword3" class="col-sm-2 col-form-label">Rw</label>
                                             <div class="col-sm-10">
-                                                <input type="text" onkeypress="return isNumberKey(event)" name="rw" class="form-control" id="inputPassword3" placeholder="Rw">
+                                                <input type="text" onkeypress="return isNumberKey(event)" name="rw" value="<?php echo old('rw'); ?>" class="form-control <?php echo $validation->hasError('rw') ? 'is-invalid' : null ?>" id="inputPassword3" placeholder="Rw">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('rw'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="inputPassword3" class="col-sm-2 col-form-label">Status</label>
                                             <div class="col-sm-10">
-                                                <input type="text" name="status" class="form-control" id="inputPassword3" placeholder="Status">
+                                                <input type="text" name="status" value="<?php echo old('status'); ?>" class="form-control <?php echo $validation->hasError('status') ? 'is-invalid' : null ?>" id="inputPassword3" placeholder="Status">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('status'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="inputPassword3" class="col-sm-2 col-form-label">Pendidikan</label>
                                             <div class="col-sm-10">
-                                                <input type="text" name="pendidikan" class="form-control" id="inputPassword3" placeholder="Pendidikan">
+                                                <input type="text" name="pendidikan" value="<?php echo old('pendidikan'); ?>" class="form-control <?php echo $validation->hasError('pendidikan') ? 'is-invalid' : null ?>" id="inputPassword3" placeholder="Pendidikan">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('pendidikan'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="exampleSelectBorder" class="col-sm-2 col-form-label">Agama</label>
                                             <div class="col-sm-10">
-                                                <select name="agama" class="custom-select form-control-border" id="exampleSelectBorder">
+                                                <select name="agama" class="custom-select form-control-border <?php echo $validation->hasError('agama') ? 'is-invalid' : null ?>" id="exampleSelectBorder">
                                                     <option value="Islam">Islam</option>
                                                     <option value="Kristen">Kristen</option>
                                                     <option value="Khatolik">Khatolik</option>
@@ -259,6 +287,9 @@
                                                     <option value="Budha">Budha</option>
                                                     <option value="Kong Hu Cu">Kong Hu Cu</option>
                                                 </select>
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('agama'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

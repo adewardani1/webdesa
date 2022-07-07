@@ -24,12 +24,36 @@
                 echo $result;
                 ?>
 
-                <div id="komen" class="komen-area">
-                    <div id="" class="">
-                        <h3 id="">Leave Reply
-                            <small><a rel="nofollow" id="cancel-comment-reply-link" href="/layanan-posyandu-dan-posbindu-di-gang-mangun/#respond" style="display:none;">Cancel reply</a></small>
-                        </h3>
-                    </div>
+                <div class="row row-above">
+                    <form action="<?php echo base_url('comment/submit/' . $pengumuman->id); ?>" method="post">
+                        <div class="col-sm-12">
+                            <h1>LEAVE A REPLY</h1>
+                            <p>Your email address will not be published. Required fields are marked *</p>
+                            <label for="">Comment*</label>
+                            <textarea required name="komentar" id="" cols="67" rows="10"></textarea>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="mt-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Name*</label>
+                                        <input type="text" name="nama" class="form" id="exampleFormControlInput1" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="mt-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Email*</label>
+                                        <input type="email" name="email" class="form" id="exampleFormControlInput1" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="mt-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Website</label>
+                                        <input type="text" name="website" class="form" id="exampleFormControlInput1">
+                                    </div>
+                                </div>
+                            </div>
+                            <input class="btn-submit" type="submit" name="submit" value="Post">
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="col-sm-4">

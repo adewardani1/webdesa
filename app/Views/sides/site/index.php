@@ -450,6 +450,13 @@
       </div>
     </div>
   </div>
+  <?php
+  if (session()->getFlashdata('berhasil')) { ?>
+    <script>
+      alert('komentar anda telah kami terima, terima kasih');
+    </script>
+  <?php }
+  ?>
 
   <!-- end follow -->
 

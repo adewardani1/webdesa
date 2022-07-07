@@ -30,21 +30,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-    <?php
-    if (session()->getFlashdata('alert')) { ?>
-        <script>
-            alert('gambar harus format jpg / png / jpeg');
-        </script>
-    <?php } else if (session()->getFlashdata('loc')) { ?>
-        <script>
-            alert('gagal simpan');
-        </script>
-    <?php } else if (session()->getFlashdata('error')) { ?>
-        <script>
-            alert('gagal update berita');
-        </script>
-    <?php }
-    ?>
+
     <div class="wrapper">
 
         <!-- Preloader -->
@@ -274,7 +260,21 @@
             </div>
         </footer>
     </div>
-
+    <?php
+    if (session()->getFlashdata('alert')) { ?>
+        <script>
+            alert('gambar harus format jpg / png / jpeg');
+        </script>
+    <?php } else if (session()->getFlashdata('loc')) { ?>
+        <script>
+            alert('gagal simpan');
+        </script>
+    <?php } else if (session()->getFlashdata('error')) { ?>
+        <script>
+            alert('gagal update berita');
+        </script>
+    <?php }
+    ?>
     <!-- jQuery -->
     <script src="<?php echo base_url('adminLTE/plugins/jquery/jquery.min.js'); ?>"></script>
     <!-- jQuery UI 1.11.4 -->

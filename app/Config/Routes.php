@@ -45,6 +45,7 @@ $routes->get('pengumuman', 'Home::getPengumuman');
 $routes->get('pengumuman/(:num)', 'Home::getPengumumanById/$1');
 $routes->get('event', 'Home::getEvent');
 $routes->get('event/(:num)', 'Home::getEventById/$1');
+$routes->post('comment/submit/(:num)', 'Home::insert/$1');
 
 //route login SIDES
 $routes->get('auth', 'Login::index');

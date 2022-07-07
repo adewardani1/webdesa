@@ -106,52 +106,50 @@
                                 </p>
                             </a>
                         </li>
-                        <<<<<<< HEAD <li class="nav-item">
+                        <li class="nav-item">
                             <a href="<?php echo base_url('sides/visimisi'); ?>" class="nav-link">
                                 <i class="fas fa-tasks"></i>
                                 <p>
                                     Visi-Misi
                                 </p>
                             </a>
-                            </li>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/kelembagaan'); ?>" class="nav-link">
+                                <i class="fas fa-university"></i>
+                                <p>
+                                    Kelembagaan
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/pemerintah-desa'); ?>" class="nav-link">
+                                <i class="fas fa-gavel"></i>
+                                <p>
+                                    Pemerintah Desa
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/galeri'); ?>" class="nav-link">
+                                <i class="fas fa-images"></i>
+                                <p>
+                                    Galeri
+                                </p>
+                            </a>
+                        </li>
+                        <?php
+                        if (session()->get('level') == 'Master') { ?>
                             <li class="nav-item">
-                                <a href="<?php echo base_url('sides/kelembagaan'); ?>" class="nav-link">
-                                    <i class="fas fa-university"></i>
+                                <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
+                                    <i class="fas fa-user-circle"></i>
                                     <p>
-                                        Kelembagaan
+                                        Akun
                                     </p>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="<?php echo base_url('sides/pemerintah-desa'); ?>" class="nav-link">
-                                    <i class="fas fa-gavel"></i>
-                                    <p>
-                                        Pemerintah Desa
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="<?php echo base_url('sides/galeri'); ?>" class="nav-link">
-                                    <i class="fas fa-images"></i>
-                                    <p>
-                                        Galeri
-                                    </p>
-                                </a>
-                            </li>
-                            =======
-                            >>>>>>> d480623739874ee4bea10caf9738074577eae343
-                            <?php
-                            if (session()->get('level') == 'Master') { ?>
-                                <li class="nav-item">
-                                    <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
-                                        <i class="fas fa-user-circle"></i>
-                                        <p>
-                                            Akun
-                                        </p>
-                                    </a>
-                                </li>
-                            <?php }
-                            ?>
+                        <?php }
+                        ?>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -192,17 +190,24 @@
                                 <!-- /.card-header -->
                                 <!-- form start -->
                                 <form class="form-horizontal" method="post" action="<?php echo base_url('/sides/penduduk/update/' . $penduduk->id); ?>">
+                                    <?php $validation = \Config\Services::validation(); ?>
                                     <div class="card-body">
                                         <div class="form-group row">
                                             <label for="inputEmail3" class="col-sm-2 col-form-label">Nama</label>
                                             <div class="col-sm-10">
-                                                <input type="text" name="nama" class="form-control" value="<?php echo $penduduk->nama; ?>" placeholder="Nama">
+                                                <input type="text" name="nama" class="form-control <?php echo $validation->hasError('nama') ? 'is-invalid' : null ?>" value="<?php echo $penduduk->nama; ?>" placeholder="Nama">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('nama'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="inputPassword3" class="col-sm-2 col-form-label">Nomor ktp</label>
                                             <div class="col-sm-10">
-                                                <input type="text" onkeypress="return isNumberKey(event)" name="no_ktp" value="<?php echo $penduduk->no_ktp; ?>" class="form-control" id="inputPassword3" placeholder="Nomor Ktp">
+                                                <input type="text" onkeypress="return isNumberKey(event)" name="no_ktp" value="<?php echo $penduduk->no_ktp; ?>" class="form-control <?php echo $validation->hasError('no_ktp') ? 'is-invalid' : null ?>" id="inputPassword3" placeholder="Nomor Ktp">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('no_ktp'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -225,37 +230,55 @@
                                         <div class="form-group row">
                                             <label for="inputPassword3" class="col-sm-2 col-form-label">Desa</label>
                                             <div class="col-sm-10">
-                                                <input type="text" name="desa" class="form-control" value="<?php echo $penduduk->desa; ?>" id="inputPassword3" placeholder="Desa">
+                                                <input type="text" name="desa" class="form-control <?php echo $validation->hasError('desa') ? 'is-invalid' : null ?>" value="<?php echo $penduduk->desa; ?>" id="inputPassword3" placeholder="Desa">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('desa'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="inputPassword3" class="col-sm-2 col-form-label">Dusun</label>
                                             <div class="col-sm-10">
-                                                <input type="text" name="dusun" class="form-control" value="<?php echo $penduduk->dusun; ?>" id="inputPassword3" placeholder="Dusun">
+                                                <input type="text" name="dusun" class="form-control <?php echo $validation->hasError('dusun') ? 'is-invalid' : null ?>" value="<?php echo $penduduk->dusun; ?>" id="inputPassword3" placeholder="Dusun">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('dusun'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="inputPassword3" class="col-sm-2 col-form-label">Rt</label>
                                             <div class="col-sm-10">
-                                                <input type="text" onkeypress="return isNumberKey(event)" value="<?php echo $penduduk->rt; ?>" name="rt" class="form-control" id="inputPassword3" placeholder="Rt">
+                                                <input type="text" onkeypress="return isNumberKey(event)" value="<?php echo $penduduk->rt; ?>" name="rt" class="form-control <?php echo $validation->hasError('rt') ? 'is-invalid' : null ?>" id="inputPassword3" placeholder="Rt">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('rt'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="inputPassword3" class="col-sm-2 col-form-label">Rw</label>
                                             <div class="col-sm-10">
-                                                <input type="text" onkeypress="return isNumberKey(event)" value="<?php echo $penduduk->rw; ?>" name="rw" class="form-control" id="inputPassword3" placeholder="Rw">
+                                                <input type="text" onkeypress="return isNumberKey(event)" value="<?php echo $penduduk->rw; ?>" name="rw" class="form-control <?php echo $validation->hasError('rw') ? 'is-invalid' : null ?>" id="inputPassword3" placeholder="Rw">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('rw'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="inputPassword3" class="col-sm-2 col-form-label">Status</label>
                                             <div class="col-sm-10">
-                                                <input type="text" name="status" class="form-control" value="<?php echo $penduduk->status; ?>" id="inputPassword3" placeholder="Status">
+                                                <input type="text" name="status" class="form-control  <?php echo $validation->hasError('status') ? 'is-invalid' : null ?>" value="<?php echo $penduduk->status; ?>" id="inputPassword3" placeholder="Status">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('status'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="inputPassword3" class="col-sm-2 col-form-label">Pendidikan</label>
                                             <div class="col-sm-10">
-                                                <input type="text" name="pendidikan" class="form-control" value="<?php echo $penduduk->pendidikan; ?>" id="inputPassword3" placeholder="Pendidikan">
+                                                <input type="text" name="pendidikan" class="form-control <?php echo $validation->hasError('pendidikan') ? 'is-invalid' : null ?>" value="<?php echo $penduduk->pendidikan; ?>" id="inputPassword3" placeholder="Pendidikan">
+                                                <div class="invalid-feedback">
+                                                    <?php echo $validation->getError('pendidikan'); ?>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">

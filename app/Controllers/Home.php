@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\ModelHome;
+use CodeIgniter\Validation\Rules;
+use Config\Validation;
 
 class Home extends BaseController
 {
@@ -120,6 +122,25 @@ class Home extends BaseController
             'recentPengumuman' => $this->model->getRecentPengumuman()
         ];
         return view('sides/site/pengumuman/show', $data);
+    }
+
+    public function insert($id)
+    {
+        $data = [
+            'komentar' => $this->request->getPost('komentar'),
+            'nama' => $this->request->getPost('nama'),
+            'email' => $this->request->getPost('email'),
+            'website' => $this->request->getPost('website'),
+            'id_berita' => $id,
+            'created_at' => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s'))),
+            'updated_at' => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s')))
+        ];
+
+        $this->model->insertKomentar($data);
+
+        session()->setFlashdata('berhasil', true);
+
+        return redirect()->to('/');
     }
 
     public function makeRegexTagP($val)

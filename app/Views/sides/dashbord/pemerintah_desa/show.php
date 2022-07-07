@@ -30,13 +30,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-    <?php
-    if (session()->getFlashdata('alert')) { ?>
-        <script>
-            alert('gagal update');
-        </script>
-    <?php }
-    ?>
+
     <div class="wrapper">
 
         <!-- Preloader -->
@@ -236,7 +230,13 @@
             </div>
         </footer>
     </div>
-
+    <?php
+    if (session()->getFlashdata('alert')) { ?>
+        <script>
+            alert('gagal update');
+        </script>
+    <?php }
+    ?>
     <!-- jQuery -->
     <script src="<?php echo base_url('adminLTE/plugins/jquery/jquery.min.js'); ?>"></script>
     <!-- jQuery UI 1.11.4 -->
