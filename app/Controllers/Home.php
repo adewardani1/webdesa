@@ -43,14 +43,6 @@ class Home extends BaseController
         return view('sides/site/kelembagaan', $data);
     }
 
-    // public function getBeritaById()
-    // {
-    //     $data = [
-    //         'berita' => $this->model->getBeritaById()
-    //     ];
-    //     return view('sides/site/berita/berita-detail');
-    // }
-
     public function getPemerintahDesa()
     {
 
