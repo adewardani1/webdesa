@@ -26,22 +26,14 @@ class Home extends BaseController
         return view('sides/site/index', $data);
     }
 
-    public function getGaleri()
+    public function sejarah()
     {
-        $data = [
-            'galeri' => $this->model->getGaleri()
-        ];
-
-        return view('sides/site/galeri', $data);
+        return view('site/sejarah-desa');
     }
 
-    public function getKelembagaan()
+    public function visi_misi()
     {
-        $data = [
-            'kelembagaan' => $this->model->getKelembagaan()
-        ];
-
-        return view('sides/site/kelembagaan', $data);
+        return view('site/visi-misi');
     }
 
     public function getPemerintahDesa()
@@ -136,15 +128,8 @@ class Home extends BaseController
         return redirect()->to('/');
     }
 
-    public function makeRegexTagP($val)
+    public function kontak_desa()
     {
-        $re = '/(.*?[\.\!\?]){3}/';
-        // Pattern matches anything to a `.!?` three times. \ is added to make it literal 
-        $str = $val;
-        $subst = '$0<p></p>';
-
-        $result = preg_replace($re, $subst, $str);
-
-        return $result;
+        return view('site/kontak');
     }
 }

@@ -32,7 +32,7 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
-//route view desa
+//route view desaq
 $routes->get('/', 'Home::index');
 $routes->get('galeri', 'Home::getGaleri');
 $routes->get('kelembagaan', 'Home::getKelembagaan');
