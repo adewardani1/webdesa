@@ -92,6 +92,15 @@ class Home extends BaseController
         return view('sides/site/event/show', $data);
     }
 
+    public function getGaleri()
+    {
+        $data = [
+            'galeri' => $this->model->getGaleri()
+        ];
+
+        return view('sides/site/galeri', $data);
+    }
+
     public function getPengumuman()
     {
         $data = [
@@ -126,6 +135,27 @@ class Home extends BaseController
         session()->setFlashdata('berhasil', true);
 
         return redirect()->to('/');
+    }
+
+    public function insertAspirasi()
+    {
+        $data = [
+            'nama_depan' => $this->request->getPost('nama_depan'),
+            'nama_belakang' => $this->request->getPost('nama_belakang'),
+            'email' => $this->request->getPost('email'),
+            'alamat' => $this->request->getPost('alamat'),
+            'nomor_hp' => $this->request->getPost('nomor_hp'),
+            'pesan' => $this->request->getPost('pesan'),
+            'created_at' => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s'))),
+            'updated_at' => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s')))
+        ];
+
+        $simpan = $this->model->insertAspirasi($data);
+
+        if ($simpan) {
+            session()->setFlashdata('success', true);
+            return redirect()->to('/');
+        }
     }
 
     public function kontak_desa()

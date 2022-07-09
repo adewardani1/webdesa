@@ -194,7 +194,7 @@ class Berita extends BaseController
 
     public function destroy($id)
     {
-        $deleteBeritaById = $this->model->delete(['id' => $id]);
+        $deleteBeritaById = $this->model->deleteById($id);
 
         if ($deleteBeritaById) {
             session()->setFlashdata('pesan_hapus', true);

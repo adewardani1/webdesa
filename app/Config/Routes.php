@@ -52,8 +52,9 @@ $routes->get('pengumuman/(:num)', 'Home::getPengumumanById/$1');
 $routes->get('event', 'Home::getEvent');
 $routes->get('event/(:num)', 'Home::getEventById/$1');
 
-//roiute submit komentar
+//route submit komentar
 $routes->post('comment/submit/(:num)', 'Home::insert/$1');
+$routes->post('aspirasi/submit', 'Home::insertAspirasi');
 
 //route login SIDES
 $routes->get('auth', 'Login::index');
@@ -73,9 +74,7 @@ $routes->get('sides/penduduk/delete/(:num)', 'Penduduk::destroy/$1');
 
 //route aspirasi
 $routes->get('sides/aspirasi', 'AspirasiWarga::index');
-$routes->get('sides/aspirasi/(:num)', 'AspirasiWarga::show/$1');
-$routes->post('sides/aspirasi/update(:num)', 'AspirasiWarga::update/$1');
-$routes->get('sides/aspirasi/delete(:num)', 'AspirasiWarga::delete/$1');
+$routes->get('sides/aspirasi/delete/(:num)', 'AspirasiWarga::destroy/$1');
 
 //route berita
 $routes->get('sides/berita/create', 'Berita::create'); //tampil form tambah

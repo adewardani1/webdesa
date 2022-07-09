@@ -28,7 +28,14 @@ class ModelBerita extends Model
     {
         $sql = "
             SELECT
-                *
+                berita.gambar,
+                berita.judul,
+                berita.jenis,
+                berita.konten,
+                berita.id,
+                berita.created_at,
+                berita.updated_at,
+                akun.nama_depan
             FROM berita
             INNER JOIN akun ON akun.id = berita.id_akun
         ";
@@ -40,7 +47,11 @@ class ModelBerita extends Model
     {
         $sql = "
             SELECT
-                *
+                berita.id,
+                berita.gambar,
+                berita.judul,
+                berita.jenis,
+                berita.konten
             FROM berita
             WHERE berita.id = '" . $id . "'
         ";
@@ -59,7 +70,7 @@ class ModelBerita extends Model
 
     public function deleteById($id)
     {
-        return $this->database->delete(['id' => $id]);
+        return $this->database->table('berita')->delete(['id' => $id]);
     }
     // ...
 }

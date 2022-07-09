@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 07, 2022 at 04:39 AM
+-- Generation Time: Jul 09, 2022 at 05:06 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -96,12 +96,12 @@ CREATE TABLE `berita` (
 --
 
 INSERT INTO `berita` (`id`, `gambar`, `judul`, `jenis`, `konten`, `id_akun`, `created_at`, `updated_at`) VALUES
-(7, 'Screenshot (1).png', 'faisal', 'Berita', 'ddddd', 3, '2022-06-13 07:05:38', '2022-06-24 17:36:24'),
-(8, 'Screenshot (8).png', 'sds', 'Berita', 'Sebanyak 25 siswa siswi TK Muslimat Nurul Fahmi Bulakan melakukan wisuda yang didampingi orang tua masing-masing.\n\nDalam sambutannya Sigit berharap, segala ilmu yang sudah diajarkan oleh para guru di TK Nurul Fahmi kepada para siswa dapat bermanfaat dan menjadi bekal untuk melangkah ke pendidikan selanjutnya.\n\n“Semoga apa yang telah didapatkan oleh para siswa di TK Nurul Fahmi ini dapat bermanfaat dan menjadi bekal untuk melangkah ke pendidikan selanjutnya,” ucapnya.', 3, '2022-06-13 07:20:25', '2022-07-05 20:12:43'),
+(7, 'Screenshot (1).png', 'faisal', 'news', 'ddddd', 3, '2022-06-13 07:05:38', '2022-06-24 17:36:24'),
+(8, 'Screenshot (8).png', 'sds', 'news', 'Sebanyak 25 siswa siswi TK Muslimat Nurul Fahmi Bulakan melakukan wisuda yang didampingi orang tua masing-masing.\n\nDalam sambutannya Sigit berharap, segala ilmu yang sudah diajarkan oleh para guru di TK Nurul Fahmi kepada para siswa dapat bermanfaat dan menjadi bekal untuk melangkah ke pendidikan selanjutnya.\n\n“Semoga apa yang telah didapatkan oleh para siswa di TK Nurul Fahmi ini dapat bermanfaat dan menjadi bekal untuk melangkah ke pendidikan selanjutnya,” ucapnya.', 3, '2022-06-13 07:20:25', '2022-07-05 20:12:43'),
 (9, 'Screenshot (158).png', 'ssss', 'Headline', 'llll', 3, '2022-06-24 17:25:43', '2022-06-24 17:25:43'),
 (11, 'Screenshot (26).png', 'cascascascasc', 'Headline', 'jadi', 3, '2022-06-30 20:00:11', '2022-06-30 20:00:11'),
-(15, 'Screenshot (51).png', 'ewfwfw', 'Event', 'aqwfqe', 1, '2022-07-06 21:06:20', '2022-07-06 21:06:20'),
-(16, 'Screenshot (1124).png', 'sjsjsjj', 'Pengumuman', 'lkskldldldl', 1, '2022-07-07 09:05:33', '2022-07-07 09:05:33');
+(15, 'Screenshot (51).png', 'ewfwfw', 'event', 'aqwfqe', 1, '2022-07-06 21:06:20', '2022-07-06 21:06:20'),
+(16, 'Screenshot (1124).png', 'sjsjsjj', 'pengumuman', 'lkskldldldl', 1, '2022-07-07 09:05:33', '2022-07-07 09:05:33');
 
 -- --------------------------------------------------------
 
@@ -148,6 +148,32 @@ INSERT INTO `kelembagaan` (`id`, `gambar`, `nama`, `created_at`, `updated_at`) V
 (2, 'osis.png', 'OSIS', '2022-07-04 07:47:45', '2022-07-04 07:47:45'),
 (3, 'Logo-UAD-Berwarna.png', 'universitas ahmad dahlan', '2022-07-04 07:48:09', '2022-07-04 07:48:09'),
 (4, 'logo-desajatituju.png', 'jatitujuh', '2022-07-04 11:15:36', '2022-07-04 11:15:36');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `komentar`
+--
+
+CREATE TABLE `komentar` (
+  `id` int(11) NOT NULL,
+  `komentar` varchar(255) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `website` varchar(255) DEFAULT NULL,
+  `id_berita` int(11) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `komentar`
+--
+
+INSERT INTO `komentar` (`id`, `komentar`, `nama`, `email`, `website`, `id_berita`, `created_at`, `updated_at`) VALUES
+(3, 'zzzzz', 'zzzz', 'rijal1900018040@webmail.uad.ac.id', '', 15, '2022-07-07 21:16:31', '2022-07-07 21:16:31'),
+(4, 'rtrt', 'wegw', 'rijal.1344@gmail.com', '', 15, '2022-07-07 21:19:55', '2022-07-07 21:19:55'),
+(7, 'damfakm', 'rijal', 'kevinhamizan21@gmail.com', '', 16, '2022-07-07 21:25:09', '2022-07-07 21:25:09');
 
 -- --------------------------------------------------------
 
@@ -242,6 +268,12 @@ ALTER TABLE `kelembagaan`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `komentar`
+--
+ALTER TABLE `komentar`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `pemerintah_desa`
 --
 ALTER TABLE `pemerintah_desa`
@@ -294,6 +326,12 @@ ALTER TABLE `kelembagaan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `komentar`
+--
+ALTER TABLE `komentar`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `pemerintah_desa`
 --
 ALTER TABLE `pemerintah_desa`
@@ -303,7 +341,7 @@ ALTER TABLE `pemerintah_desa`
 -- AUTO_INCREMENT for table `penduduk`
 --
 ALTER TABLE `penduduk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `visi_misi`

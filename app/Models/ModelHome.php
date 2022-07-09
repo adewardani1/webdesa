@@ -262,4 +262,9 @@ class ModelHome extends Model
     {
         return $this->database->table('komentar')->insert($data);
     }
+
+    public function insertAspirasi($data)
+    {
+        return $this->database->table('aspirasi')->insert($data);
+    }
 }
