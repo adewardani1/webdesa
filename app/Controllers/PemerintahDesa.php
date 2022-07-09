@@ -12,6 +12,7 @@ class PemerintahDesa extends BaseController
     {
         $this->model = new ModelPemerintahDesa();
     }
+
     public function index()
     {
         $data = [
