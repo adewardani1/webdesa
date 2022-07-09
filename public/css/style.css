@@ -57,7 +57,7 @@
     left: 0;
     width: 400px;
     height: 800px;
-    filter: brightness(60%)
+    filter: brightness(60%);
   }
 
   .carousel .carousel-inner .carousel-item img {
@@ -469,11 +469,24 @@
     font-size: 10px;
   }
 
-  .jumbotron-berita .container .row .col-sm-4 .card .card-body .btn-selengkapnya {
+  .jumbotron-berita
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-selengkapnya {
     margin-top: 30px;
   }
 
-  .jumbotron-berita .container .row .col-sm-4 .card .card-body .btn-selengkapnya a {
+  .jumbotron-berita
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-selengkapnya
+    a {
     text-decoration: none;
     color: black;
     border-style: solid;
@@ -483,7 +496,14 @@
     transition: 0.3s ease;
   }
 
-  .jumbotron-berita .container .row .col-sm-4 .card .card-body .btn-selengkapnya a:hover {
+  .jumbotron-berita
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-selengkapnya
+    a:hover {
     background-color: #cc5200;
     color: white;
     border-radius: 5px;
@@ -672,8 +692,10 @@
   .jumbotron-kontak {
     padding: 2rem 1rem;
     background-color: #e9ecef;
-    background-image: linear-gradient(rgba(64, 84, 178),
-        rgba(0.5, 0.5, 0.5, 0.5)),
+    background-image: linear-gradient(
+        rgba(64, 84, 178),
+        rgba(0.5, 0.5, 0.5, 0.5)
+      ),
       url("/img/kantor.jpg");
     height: 900px;
     background-repeat: no-repeat;
@@ -852,7 +874,14 @@
     color: black !important;
   }
 
-  .detail .container .row .col-sm-4 .side .group-side .fontawesome-side .fab:hover {
+  .detail
+    .container
+    .row
+    .col-sm-4
+    .side
+    .group-side
+    .fontawesome-side
+    .fab:hover {
     color: #00d877 !important;
   }
 
@@ -907,11 +936,21 @@
     padding: 20px;
   }
 
-  .jumbotron-galeri-konten .container .row .col-right .swiper .swiper-button-next {
+  .jumbotron-galeri-konten
+    .container
+    .row
+    .col-right
+    .swiper
+    .swiper-button-next {
     color: #00d877 !important;
   }
 
-  .jumbotron-galeri-konten .container .row .col-right .swiper .swiper-button-prev {
+  .jumbotron-galeri-konten
+    .container
+    .row
+    .col-right
+    .swiper
+    .swiper-button-prev {
     color: #00d877 !important;
   }
 
@@ -938,7 +977,13 @@
     height: 400px;
   }
 
-  .jumbotron-galeri-konten .container .row .col-sm-6 .swiper .swiper-wrapper .swiper-slide {
+  .jumbotron-galeri-konten
+    .container
+    .row
+    .col-sm-6
+    .swiper
+    .swiper-wrapper
+    .swiper-slide {
     text-align: center;
 
     /* Center slide text vertically */
@@ -956,7 +1001,14 @@
     align-items: center;
   }
 
-  .jumbotron-galeri-konten .container .row .col-sm-6 .swiper .swiper-wrapper .swiper-slide img {
+  .jumbotron-galeri-konten
+    .container
+    .row
+    .col-sm-6
+    .swiper
+    .swiper-wrapper
+    .swiper-slide
+    img {
     width: 600px;
     height: 400px;
   }
@@ -1023,7 +1075,14 @@
     transition: 0.3s ease;
   }
 
-  .jumbotron-news .container .row .col-sm-4 .card .card-body .btn-read-more a:hover {
+  .jumbotron-news
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-read-more
+    a:hover {
     background-color: #cc5200;
     color: white;
     border-radius: 5px;
@@ -1107,7 +1166,14 @@
     transition: 0.3s ease;
   }
 
-  .jumbotron-isi .container .row .col-sm-4 .card .card-body .btn-read-more a:hover {
+  .jumbotron-isi
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-read-more
+    a:hover {
     background-color: #cc5200;
     color: white;
     border-radius: 5px;
@@ -1163,22 +1229,47 @@
     text-align: center !important;
   } */
 
-  .jumbotron-kontent-event .container .row .col-sm-4 .card .card-body .date-berita {
+  .jumbotron-kontent-event
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .date-berita {
     color: #b3b3b3 !important;
     font-weight: lighter;
     font-size: 10px;
   }
 
-  .jumbotron-kontent-event .container .row .col-sm-4 .card .card-body .card-title {
+  .jumbotron-kontent-event
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .card-title {
     font-size: 30px;
     font-weight: 900;
   }
 
-  .jumbotron-kontent-event .container .row .col-sm-4 .card .card-body .btn-read-more {
+  .jumbotron-kontent-event
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-read-more {
     margin-top: 30px;
   }
 
-  .jumbotron-kontent-event .container .row .col-sm-4 .card .card-body .btn-read-more a {
+  .jumbotron-kontent-event
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-read-more
+    a {
     text-decoration: none;
     color: black;
     border-style: solid;
@@ -1188,7 +1279,14 @@
     transition: 0.3s ease;
   }
 
-  .jumbotron-kontent-event .container .row .col-sm-4 .card .card-body .btn-read-more a:hover {
+  .jumbotron-kontent-event
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-read-more
+    a:hover {
     background-color: #cc5200;
     color: white;
     border-radius: 5px;
@@ -1254,6 +1352,29 @@
   }
 
   /* end css reply */
+
+  /* start css demografi */
+  .jumbotron-demografi {
+    padding: 2rem 1rem;
+    background-color: #e9ecef;
+    background-image: linear-gradient(
+        rgba(64, 84, 178),
+        rgba(0.5, 0.5, 0.5, 0.5)
+      ),
+      url("/img/demografi.jpg");
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10rem;
+    text-align: center;
+  }
+
+  .jumbotron-demografi h1 {
+    color: white !important;
+    font-weight: 900;
+  }
+
+  /* end css demografi */
 }
 
 @media (max-width: 576px) {

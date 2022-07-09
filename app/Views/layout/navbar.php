@@ -21,7 +21,7 @@
                             <li><a class="dropdown-item" href="<?php echo base_url('sejarah-desa'); ?>">Sejarah Desa</a></li>
                             <li><a class="dropdown-item" href="<?php echo base_url('pemerintahan-desa'); ?>">Pemerintahan Desa</a></li>
                             <li><a class="dropdown-item" href="<?php echo base_url('visi-misi'); ?>">Visi Misi</a></li>
-                            <li><a class="dropdown-item" href="#">Demografi</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('demografi'); ?>">Demografi</a></li>
                             <li><a class="dropdown-item" href="<?php echo base_url('kelembagaan'); ?>">Kelembagaan</a></li>
                         </ul>
                     </li>

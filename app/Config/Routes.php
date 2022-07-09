@@ -39,6 +39,8 @@ $routes->get('kelembagaan', 'Home::getKelembagaan');
 $routes->get('pemerintahan-desa', 'Home::getPemerintahDesa');
 $routes->get('visi-misi', 'Home::getVisiMisi');
 $routes->get('kontak', 'Home::getKontak');
+$routes->get('demografi', 'Home::getDemografi');
+
 
 //route news
 $routes->get('news', 'Home::getBerita');

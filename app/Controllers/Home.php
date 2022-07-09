@@ -132,4 +132,17 @@ class Home extends BaseController
     {
         return view('site/kontak');
     }
+
+    public function getKelembagaan()
+    {
+        $data = [
+            'kelembagaan' => $this->model->getKelembagaan(),
+        ];
+        return view('sides/site/kelembagaan', $data);
+    }
+
+    public function getDemografi()
+    {
+        return view('site/demografi');
+    }
 }
