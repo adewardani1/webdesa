@@ -62,7 +62,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
+            <a href="<?php base_url('sides'); ?>" class="brand-link">
                 <img src="<?php echo base_url('img/logo-desajatituju.png'); ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">SIDES</span>
             </a>
@@ -92,7 +92,7 @@
                             </a>
                         </li>
                         <li class="nav-item active">
-                            <a href="<?php echo base_url('sides/berita'); ?>" class="nav-link active">
+                            <a href="<?php echo base_url('sides/content'); ?>" class="nav-link active">
                                 <i class="fas fa-newspaper"></i>
                                 <p>
                                     Content
@@ -159,7 +159,6 @@
                             </li>
                         <?php }
                         ?>
-
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -174,7 +173,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Data Konten</h1>
+                            <h1 class="m-0">Data Content</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -188,67 +187,68 @@
             <!-- /.content-header -->
 
             <!-- Main content -->
-            <section class="content pb-5">
+            <section class="content">
                 <div class="container-fluid">
                     <!-- Small boxes (Stat box) -->
                     <div class="row">
                         <div class="col-12">
-                            <div class="card card-info">
+                            <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title">Tambah</h3>
+                                    <a class="btn btn-primary" href="<?php echo base_url('sides/berita/create'); ?>">Tambah Data</a>
+                                    <div class="card-tools">
+                                        <div class="input-group input-group-sm" style="width: 150px;">
+                                            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-default">
+                                                    <i class="fas fa-search"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- /.card-header -->
-                                <!-- form start -->
-                                <form class="form-horizontal" method="post" enctype="multipart/form-data" action="<?php echo base_url('sides/berita/update/' . $berita->id); ?>">
-                                    <?php $validation = \Config\Services::validation(); ?>
-                                    <div class="card-body">
-                                        <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-2 col-form-label">Judul Konten</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" name="judul" value="<?php echo $berita->judul; ?>" class="form-control <?php echo $validation->hasError('judul') ? 'is-invalid' : null ?>" placeholder="Judul Berita">
-                                                <div class="invalid-feedback">
-                                                    <?php echo $validation->getError('judul'); ?>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="inputPassword3" class="col-sm-2 col-form-label">Isi Konten</label>
-                                            <div class="col-sm-10">
-                                                <textarea class="form-control <?php echo $validation->hasError('konten') ? 'is-invalid' : null ?>" name="konten" rows="3" placeholder="Isi Berita"><?php echo $berita->konten; ?></textarea>
-                                                <div class="invalid-feedback">
-                                                    <?php echo $validation->getError('konten'); ?>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="exampleSelectBorder" class="col-sm-2 col-form-label">Jenis Konten</label>
-                                            <div class="col-sm-10">
-                                                <select name="jenis" class="custom-select form-control-border" id="exampleSelectBorder">
-                                                    <option value="Biasa">Biasa</option>
-                                                    <option value="Headline">Headline</option>
-                                                    <option value="Event">Event</option>
-                                                    <option value="Pengumuman">Pengumuman</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-2 col-form-label" for="exampleInputFile">File input</label>
-                                            <div class="input-group col-sm-10">
-                                                <div class="custom-file">
-                                                    <input name="gambar" type="file" class="<?php echo $validation->hasError('gambar') ? 'is-invalid' : null ?>">
-                                                    <div class="invalid-feedback">
-                                                        <?php echo $validation->getError('gambar'); ?>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- /.card-body -->
-                                    <div class="card-footer">
-                                        <button type="submit" name="submit" class="btn btn-info float-right">Submit</button>
-                                    </div>
-                                    <!-- /.card-footer -->
-                                </form>
+                                <div class="card-body table-responsive p-0">
+                                    <table class="table table-hover text-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th>No.</th>
+                                                <th>Nama Pembuat</th>
+                                                <th>Judul</th>
+                                                <th>Jenis</th>
+                                                <th>#Di Buat</th>
+                                                <th>#Di Ubah</th>
+                                                <th>Action</th>
+                                                <th>gambar</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $nomor = null;
+                                            foreach ($berita as $row) {
+                                                $nomor++; ?>
+                                                <tr>
+                                                    <td><?php echo $nomor; ?></td>
+                                                    <td><?php echo $row->nama_depan; ?></td>
+                                                    <td><?php echo $row->judul; ?></td>
+                                                    <td><?php echo $row->jenis; ?></td>
+                                                    <td><?php echo $row->created_at; ?></td>
+                                                    <td><?php echo $row->updated_at; ?></td>
+                                                    <td>
+                                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                                            <a class="btn btn-danger" href="<?php echo base_url('sides/berita/delete/' . $row->id); ?>">Hapus</a>
+                                                            <a class="btn btn-warning" href="<?php echo base_url('sides/berita/show/' . $row->id); ?>">Edit</a>
+                                                        </div>
+                                                    </td>
+                                                    <td><a href="<?php echo base_url('sides/berita/foto/' . $row->id); ?>" class="btn btn-outline-primary"><i class="fas fa-image"></i> Download</a></td>
+                                                </tr>
+                                            <?php }
+                                            ?>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
                             </div>
                             <!-- /.card -->
                         </div>
@@ -267,22 +267,13 @@
                 <b>Version</b> 1.0.0
             </div>
         </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
     </div>
-    <?php
-    if (session()->getFlashdata('alert')) { ?>
-        <script>
-            alert('gambar harus format jpg / png / jpeg');
-        </script>
-    <?php } else if (session()->getFlashdata('loc')) { ?>
-        <script>
-            alert('gagal simpan');
-        </script>
-    <?php } else if (session()->getFlashdata('error')) { ?>
-        <script>
-            alert('gagal update berita');
-        </script>
-    <?php }
-    ?>
     <!-- jQuery -->
     <script src="<?php echo base_url('adminLTE/plugins/jquery/jquery.min.js'); ?>"></script>
     <!-- jQuery UI 1.11.4 -->
@@ -313,17 +304,26 @@
     <script src="<?php echo base_url('adminLTE/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js'); ?>"></script>
     <!-- AdminLTE App -->
     <script src="<?php echo base_url('adminLTE/dist/js/adminlte.js'); ?>"></script>
-
-
+    <!-- AdminLTE for demo purposes -->
+    <script src="<?php echo base_url('adminLTE/dist/js/demo.js'); ?>"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="<?php echo base_url('adminLTE/dist/js/pages/dashboard.js'); ?>"></script>
     <!-- ./wrapper -->
-    <script>
-        function isNumberKey(evt) {
-            var charCode = (evt.which) ? evt.which : evt.keyCode
-            if (charCode > 31 && (charCode < 48 || charCode > 57))
-                return false;
-            return true;
-        }
-    </script>
+    <?php
+    if (session()->getFlashdata('pesan_insert')) { ?>
+        <script>
+            alert('data berhasil di tambahkan');
+        </script>
+    <?php } else if (session()->getFlashdata('pesan_hapus')) { ?>
+        <script>
+            alert('data berhasil di hapus');
+        </script>
+    <?php } else if (session()->getFlashdata('not-found')) { ?>
+        <script>
+            alert('file tidak di temukan');
+        </script>
+    <?php }
+    ?>
 </body>
 
 </html>

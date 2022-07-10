@@ -2,15 +2,15 @@
 
 namespace App\Controllers;
 
-use App\Models\ModelBerita;
+use App\Models\ModelContent;
 use CodeIgniter\Validation\Rules;
 use Config\Validation;
 
-class Berita extends BaseController
+class Content extends BaseController
 {
     public function __construct()
     {
-        $this->model = new ModelBerita();
+        $this->model = new ModelContent();
     }
     public function index()
     {
@@ -19,7 +19,7 @@ class Berita extends BaseController
         ];
 
         if ($data) {
-            return view('sides/dashbord/berita/index', $data);
+            return view('sides/dashbord/content/index', $data);
         } else {
             return false;
         }
@@ -27,7 +27,7 @@ class Berita extends BaseController
 
     public function create()
     {
-        return view('sides/dashbord/berita/create');
+        return view('sides/dashbord/content/create');
     }
 
     public function insert()
@@ -66,13 +66,14 @@ class Berita extends BaseController
 
         if (!$validation) {
             //session()->setFlashdata('alert', true);
-            return redirect()->to('sides/berita/create')->withInput();
+            return redirect()->to('sides/content/create')->withInput();
         } else {
             $image = $this->request->getFile('gambar');
             $gambar = $image->getClientName();
             $tempfile = $image->getTempName();
+            $jenis = $this->request->getPost('jenis');
 
-            $upload = $this->uploadImage($tempfile, $gambar);
+            $upload = $this->uploadImage($tempfile, $gambar, $jenis);
 
             $data = [
                 'gambar' => $upload,
@@ -88,10 +89,10 @@ class Berita extends BaseController
         $simpan = $this->model->insert($data);
         if (!$simpan) {
             session()->setFlashdata('error', true);
-            return redirect()->to('sides/berita');
+            return redirect()->to('sides/content');
         } else {
             session()->setFlashdata('pesan_insert', true);
-            return redirect()->to('sides/berita');
+            return redirect()->to('sides/content');
         }
     }
 
@@ -101,7 +102,7 @@ class Berita extends BaseController
             'berita' => $this->model->getBeritaById($id)
         ];
 
-        return view('sides/dashbord/berita/show', $data);
+        return view('sides/dashbord/content/show', $data);
     }
 
     public function updated($id)
@@ -142,13 +143,15 @@ class Berita extends BaseController
 
             if (!$validation) {
                 session()->setFlashdata('alert', true);
-                return redirect()->to('sides/berita/show/' . $id);
+                return redirect()->to('sides/content/show/' . $id);
             } else {
                 $image = $this->request->getFile('gambar');
                 $gambar = $image->getClientName();
                 $tempfile = $image->getTempName();
 
-                $upload = $this->uploadImage($tempfile, $gambar);
+                $jenis = $this->request->getPost('jenis');
+
+                $upload = $this->uploadImage($tempfile, $gambar, $jenis);
 
                 $data = [
                     'gambar' => $upload,
@@ -165,10 +168,10 @@ class Berita extends BaseController
             $simpan = $this->model->updateById($data, $id);
             if (!$simpan) {
                 session()->setFlashdata('error', true);
-                return redirect()->to('sides/berita/show/' . $id);
+                return redirect()->to('sides/content/show/' . $id);
             } else {
                 session()->setFlashdata('pesan_insert', true);
-                return redirect()->to('sides/berita');
+                return redirect()->to('sides/content');
             }
         } else {
 
@@ -184,29 +187,39 @@ class Berita extends BaseController
             $simpan = $this->model->updateById($data, $id);
             if (!$simpan) {
                 session()->setFlashdata('error', true);
-                return redirect()->to('sides/berita/show/' . $id);
+                return redirect()->to('sides/content/show/' . $id);
             } else {
                 session()->setFlashdata('pesan_insert', true);
-                return redirect()->to('sides/berita');
+                return redirect()->to('sides/content');
             }
         }
     }
 
     public function destroy($id)
     {
-        $deleteBeritaById = $this->model->deleteById($id);
+        // $deleteBeritaById = $this->model->deleteById($id);
+        $model = $this->model->getBeritaById($id);
 
-        if ($deleteBeritaById) {
-            session()->setFlashdata('pesan_hapus', true);
-            return redirect()->to('sides/berita');
+        $path = FCPATH . 'img/content/' . $model->jenis . '/' . $model->gambar;
+
+        if (file_exists($path)) {
+            unlink($path);
+            $deleteBeritaById = $this->model->deleteById($id);
+            if ($deleteBeritaById) {
+                session()->setFlashdata('pesan_hapus', true);
+                return redirect()->to('sides/content');
+            } else {
+                return false;
+            }
         } else {
-            return false;
+            session()->setFlashdata('not-found', true);
+            return redirect()->to('sides/content');
         }
     }
 
-    public function uploadImage($tempfile, $gambar)
+    public function uploadImage($tempfile, $gambar, $jenis)
     {
-        $locDir = FCPATH . 'img/berita/' . $gambar;
+        $locDir = FCPATH . 'img/content/' . $jenis . '/' . $gambar;
         $moveDir = move_uploaded_file($tempfile, $locDir);
 
         if ($moveDir) {
@@ -219,7 +232,7 @@ class Berita extends BaseController
     public function foto($id)
     {
         $model = $this->model->getBeritaById($id);
-        $path =  FCPATH . 'img/berita/' . $model->gambar;
+        $path =  FCPATH . 'img/content/' . $model->jenis . '/' . $model->gambar;
 
         if (file_exists($path)) {
             return $this->response->download($path, null);

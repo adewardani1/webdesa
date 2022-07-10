@@ -77,13 +77,13 @@ $routes->get('sides/aspirasi', 'AspirasiWarga::index');
 $routes->get('sides/aspirasi/delete/(:num)', 'AspirasiWarga::destroy/$1');
 
 //route berita
-$routes->get('sides/berita/create', 'Berita::create'); //tampil form tambah
-$routes->post('sides/berita/save', 'Berita::insert');
-$routes->get('sides/berita', 'Berita::index');
-$routes->get('sides/berita/show/(:num)', 'Berita::show/$1');
-$routes->post('sides/berita/update/(:num)', 'Berita::updated/$1');
-$routes->get('sides/berita/delete/(:num)', 'Berita::destroy/$1');
-$routes->get('sides/berita/foto/(:num)', 'Berita::foto/$1'); //tampil foto
+$routes->get('sides/content/create', 'Content::create'); //tampil form tambah
+$routes->post('sides/content/save', 'Content::insert');
+$routes->get('sides/content', 'Content::index');
+$routes->get('sides/content/show/(:num)', 'Content::show/$1');
+$routes->post('sides/content/update/(:num)', 'Content::updated/$1');
+$routes->get('sides/content/delete/(:num)', 'Content::destroy/$1');
+$routes->get('sides/content/foto/(:num)', 'Content::foto/$1'); //tampil foto
 
 //route akun
 $routes->get('sides/akun/create', 'Akun::create'); //tampil form tambah

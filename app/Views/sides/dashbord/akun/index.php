@@ -91,7 +91,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo base_url('sides/berita'); ?>" class="nav-link">
+                            <a href="<?php echo base_url('sides/content'); ?>" class="nav-link">
                                 <i class="fas fa-newspaper"></i>
                                 <p>
                                     Berita

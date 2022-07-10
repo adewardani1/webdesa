@@ -91,7 +91,7 @@
                             </a>
                         </li>
                         <li class="nav-item active">
-                            <a href="<?php echo base_url('sides/berita'); ?>" class="nav-link active">
+                            <a href="<?php echo base_url('sides/content'); ?>" class="nav-link active">
                                 <i class="fas fa-newspaper"></i>
                                 <p>
                                     Content
@@ -197,7 +197,7 @@
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form class="form-horizontal" method="post" enctype="multipart/form-data" action="<?php echo base_url('sides/berita/save'); ?>">
+                                <form class="form-horizontal" method="post" enctype="multipart/form-data" action="<?php echo base_url('sides/content/save'); ?>">
                                     <?php $validation = \Config\Services::validation(); ?>
                                     <div class="card-body">
                                         <div class="form-group row">
@@ -223,7 +223,7 @@
                                             <div class="col-sm-10">
                                                 <select name="jenis" class="custom-select form-control-border" id="exampleSelectBorder">
                                                     <option value="news">Berita</option>
-                                                    <option value="Headline">Headline</option>
+                                                    <option value="headline">Headline</option>
                                                     <option value="event">Event</option>
                                                     <option value="pengumuman">Pengumuman</option>
                                                 </select>
