@@ -66,6 +66,15 @@ class PemerintahDesa extends BaseController
             session()->setFlashdata('error', true);
             return redirect()->to('sides/pemerintah-desa');
         } else {
+
+            session()->remove('isPemerintahDesa');
+
+            $newdata = [
+                'isPemerintahDesa' => true,
+            ];
+
+            session()->set($newdata);
+
             session()->setFlashdata('pesan_insert', true);
             return redirect()->to('sides/pemerintah-desa');
         }

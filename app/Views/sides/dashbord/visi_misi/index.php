@@ -195,7 +195,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <?php
-                                    if ($count === 0) { ?>
+                                    if (!session()->get('isVisiMisi')) { ?>
                                         <a class="btn btn-primary" href="<?php echo base_url('sides/visimisi/create'); ?>">Tambah Data</a>
                                     <?php }
                                     ?>
@@ -272,21 +272,6 @@
         </aside>
         <!-- /.control-sidebar -->
     </div>
-    <?php
-    if (session()->getFlashdata('pesan_insert')) { ?>
-        <script>
-            alert('data berhasil di tambahkan');
-        </script>
-    <?php } else if (session()->getFlashdata('pesan_hapus')) { ?>
-        <script>
-            alert('data berhasil di hapus');
-        </script>
-    <?php } else if (session()->getFlashdata('error')) { ?>
-        <script>
-            alert('data gagal di tambahkan');
-        </script>
-    <?php }
-    ?>
     <!-- jQuery -->
     <script src="<?php echo base_url('adminLTE/plugins/jquery/jquery.min.js'); ?>"></script>
     <!-- jQuery UI 1.11.4 -->
@@ -322,6 +307,25 @@
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="<?php echo base_url('adminLTE/dist/js/pages/dashboard.js'); ?>"></script>
     <!-- ./wrapper -->
+    <?php
+    if (session()->getFlashdata('pesan_insert')) { ?>
+        <script>
+            alert('data berhasil di tambahkan');
+        </script>
+    <?php } else if (session()->getFlashdata('pesan_hapus')) { ?>
+        <script>
+            alert('data berhasil di hapus');
+        </script>
+    <?php } else if (session()->getFlashdata('error')) { ?>
+        <script>
+            alert('data gagal di tambahkan');
+        </script>
+    <?php } else if (session()->getFlashdata('back')) { ?>
+        <script>
+            alert('data visi misi hanya bisa tambah 1 saja');
+        </script>
+    <?php }
+    ?>
 </body>
 
 </html>

@@ -194,7 +194,11 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <a class="btn btn-primary" href="<?php echo base_url('/sides/pemerintah-desa/create'); ?>">Tambah Data</a>
+                                    <?php
+                                    if (!session()->get('isPemerintahDesa')) { ?>
+                                        <a class="btn btn-primary" href="<?php echo base_url('/sides/pemerintah-desa/create'); ?>">Tambah Data</a>
+                                    <?php }
+                                    ?>
                                     <div class="card-tools">
                                         <div class="input-group input-group-sm" style="width: 150px;">
                                             <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
@@ -267,21 +271,6 @@
         </aside>
         <!-- /.control-sidebar -->
     </div>
-    <?php
-    if (session()->getFlashdata('pesan_insert')) { ?>
-        <script>
-            alert('data berhasil di tambahkan');
-        </script>
-    <?php } else if (session()->getFlashdata('pesan_hapus')) { ?>
-        <script>
-            alert('data berhasil di hapus');
-        </script>
-    <?php } else if (session()->getFlashdata('pesanUpdated')) { ?>
-        <script>
-            alert('data berhasil di ubah');
-        </script>
-    <?php }
-    ?>
     <!-- jQuery -->
     <script src="<?php echo base_url('adminLTE/plugins/jquery/jquery.min.js'); ?>"></script>
     <!-- jQuery UI 1.11.4 -->
@@ -317,6 +306,25 @@
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="<?php echo base_url('adminLTE/dist/js/pages/dashboard.js'); ?>"></script>
     <!-- ./wrapper -->
+    <?php
+    if (session()->getFlashdata('pesan_insert')) { ?>
+        <script>
+            alert('data berhasil di tambahkan');
+        </script>
+    <?php } else if (session()->getFlashdata('pesan_hapus')) { ?>
+        <script>
+            alert('data berhasil di hapus');
+        </script>
+    <?php } else if (session()->getFlashdata('pesanUpdated')) { ?>
+        <script>
+            alert('data berhasil di ubah');
+        </script>
+    <?php } else if (session()->getFlashdata('back')) { ?>
+        <script>
+            alert('data pemerintah desa hanya bisa tambah 1 saja');
+        </script>
+    <?php }
+    ?>
 </body>
 
 </html>

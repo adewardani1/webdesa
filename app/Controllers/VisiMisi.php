@@ -81,11 +81,20 @@ class VisiMisi extends BaseController
             ];
         }
 
+        session()->remove('isVisiMisi');
+
         $simpan = $this->model->insert($data);
         if (!$simpan) {
             session()->setFlashdata('error', true);
             return redirect()->to('sides/visimisi');
         } else {
+
+            $newdata = [
+                'isVisiMisi' => true,
+            ];
+
+            session()->set($newdata);
+
             session()->setFlashdata('pesan_insert', true);
             return redirect()->to('sides/visimisi');
         }
@@ -130,6 +139,18 @@ class VisiMisi extends BaseController
         } else {
             session()->setFlashdata('pesan_insert', true);
             return redirect()->to('sides/visimisi');
+        }
+    }
+
+    public function destroy($id)
+    {
+        $deleteVisiMisiById = $this->model->deleteById($id);
+
+        if ($deleteVisiMisiById) {
+            session()->setFlashdata('pesan_hapus', true);
+            return redirect()->to('sides/visimisi');
+        } else {
+            return false;
         }
     }
 

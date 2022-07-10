@@ -55,4 +55,9 @@ class ModelVisiMisi extends Model
     {
         return $this->database->table('visi_misi')->update($data, ['id' => $id]);
     }
+
+    public function deleteById($id)
+    {
+        return $this->database->table('visi_misi')->delete(['id' => $id]);
+    }
 }
