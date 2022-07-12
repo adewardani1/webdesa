@@ -29,6 +29,7 @@ class ModelKomentar extends Model
     {
         $sql = "
             SELECT
+                komentar.id,
                 komentar.komentar,
                 komentar.nama,
                 komentar.email,
@@ -39,6 +40,38 @@ class ModelKomentar extends Model
                 berita.jenis
             FROM komentar
             INNER JOIN berita ON berita.id = komentar.id_berita
+        ";
+
+        return $this->database->query($sql)->getResult();
+    }
+
+    public function getNama()
+    {
+        $sql = "
+            SELECT
+                komentar.nama
+            FROM komentar
+        ";
+
+        return $this->database->query($sql)->getResult();
+    }
+
+    public function search($search)
+    {
+        $sql = "
+            SELECT
+                komentar.id,
+                komentar.komentar,
+                komentar.nama,
+                komentar.email,
+                komentar.website,
+                komentar.created_at,
+                komentar.updated_at,
+                berita.id,
+                berita.jenis
+            FROM komentar
+            INNER JOIN berita ON berita.id = komentar.id_berita
+            WHERE komentar.nama='" . $search . "'
         ";
 
         return $this->database->query($sql)->getResult();

@@ -194,11 +194,10 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <a class="btn btn-primary" href="<?php echo base_url('sides/berita/create'); ?>">Tambah Data</a>
+                                    <a class="btn btn-primary" href="<?php echo base_url('sides/content/create'); ?>">Tambah Data</a>
                                     <div class="card-tools">
                                         <div class="input-group input-group-sm" style="width: 150px;">
                                             <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
                                             <div class="input-group-append">
                                                 <button type="submit" class="btn btn-default">
                                                     <i class="fas fa-search"></i>
@@ -206,6 +205,24 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <hr>
+                                    <form action="<?php echo base_url('sides/content/search'); ?>" method="post">
+                                        <div class="row mt-3">
+                                            <div class="col-sm-3">
+                                                <div class="form-group">
+                                                    <label for="exampleSelectBorderWidth2">Jenis Content</label>
+                                                    <select name="jenis" class="custom-select form-control-border border-width-2" id="exampleSelectBorderWidth2">
+                                                        <option disabled selected>--Pilih Jenis--</option>
+                                                        <option value="news">Berita</option>
+                                                        <option value="event">Event</option>
+                                                        <option value="pengumuman">Pengumuman</option>
+                                                        <option value="headline">Headline</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary mt-3">Cari</button>
+                                    </form>
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body table-responsive p-0">
@@ -236,11 +253,11 @@
                                                     <td><?php echo $row->updated_at; ?></td>
                                                     <td>
                                                         <div class="btn-group" role="group" aria-label="Basic example">
-                                                            <a class="btn btn-danger" href="<?php echo base_url('sides/berita/delete/' . $row->id); ?>">Hapus</a>
-                                                            <a class="btn btn-warning" href="<?php echo base_url('sides/berita/show/' . $row->id); ?>">Edit</a>
+                                                            <a class="btn btn-danger" href="<?php echo base_url('sides/content/delete/' . $row->id); ?>">Hapus</a>
+                                                            <a class="btn btn-warning" href="<?php echo base_url('sides/content/show/' . $row->id); ?>">Edit</a>
                                                         </div>
                                                     </td>
-                                                    <td><a href="<?php echo base_url('sides/berita/foto/' . $row->id); ?>" class="btn btn-outline-primary"><i class="fas fa-image"></i> Download</a></td>
+                                                    <td><a href="<?php echo base_url('sides/content/foto/' . $row->id); ?>" class="btn btn-outline-primary"><i class="fas fa-image"></i> Download</a></td>
                                                 </tr>
                                             <?php }
                                             ?>

@@ -13,7 +13,8 @@ class AspirasiWarga extends BaseController
     public function index()
     {
         $data = [
-            'aspirasi' => $this->model->show()
+            'aspirasi' => $this->model->show(),
+            'namaDepan' => $this->model->getNamaDepan()
         ];
 
         if ($data) {
@@ -43,6 +44,21 @@ class AspirasiWarga extends BaseController
         if ($delete) {
             session()->setFlashdata('pesan_hapus', true);
             return redirect()->to('sides/aspirasi');
+        }
+    }
+
+    public function search()
+    {
+        $search = $this->request->getPost('search');
+        if (empty($search)) {
+            return redirect()->to('sides/aspirasi');
+        } else {
+            $data = [
+                'aspirasi' => $this->model->search($search),
+                'namaDepan' => $this->model->getNamaDepan()
+            ];
+
+            return view('sides/dashbord/aspirasi_warga/search', $data);
         }
     }
 }

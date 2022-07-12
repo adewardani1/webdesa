@@ -59,6 +59,26 @@ class ModelContent extends Model
         return $this->database->query($sql)->getRow();
     }
 
+    public function searchByJenis($jenis)
+    {
+        $sql = "
+            SELECT
+                berita.gambar,
+                berita.judul,
+                berita.jenis,
+                berita.konten,
+                berita.id,
+                berita.created_at,
+                berita.updated_at,
+                akun.nama_depan
+            FROM berita
+            INNER JOIN akun ON akun.id = berita.id_akun
+            WHERE berita.jenis = '" . $jenis . "'
+        ";
+
+        return $this->database->query($sql);
+    }
+
     // public function update()
     // {
     //     return $this->database->update($data, ['id' => $id]);

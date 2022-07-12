@@ -80,7 +80,7 @@
             <img src="<?php echo base_url('adminLTE/dist/img/user2-160x160.jpg'); ?>" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="#" class="d-block">Alexander Pierce</a>
+            <a href="#" class="d-block"><?php echo session()->get('nama_depan'); ?></a>
           </div>
         </div>
 
@@ -90,7 +90,7 @@
             <!-- Add icons to the links using the .nav-icon class
             with font-awesome or any other icon font library -->
             <li class="nav-item">
-              <a href="<?php echo base_url('/penduduk'); ?>" class="nav-link">
+              <a href="<?php echo base_url('sides/penduduk'); ?>" class="nav-link">
                 <i class="fas fa-users"></i>
                 <p>
                   Penduduk
@@ -98,7 +98,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?php echo base_url('/berita'); ?>" class="nav-link">
+              <a href="<?php echo base_url('sides/content'); ?>" class="nav-link">
                 <i class="fas fa-newspaper"></i>
                 <p>
                   Content

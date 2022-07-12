@@ -26,7 +26,6 @@
     <link rel="stylesheet" href="<?php echo base_url('adminLTE/plugins/daterangepicker/daterangepicker.css'); ?>">
     <!-- summernote -->
     <link rel="stylesheet" href="<?php echo base_url('adminLTE/plugins/summernote/summernote-bs4.min.css'); ?>">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="icon" href="<?php echo base_url('img/logo-desajatituju.png'); ?>">
 </head>
 
@@ -63,7 +62,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="<?php base_url('/sides'); ?>" class="brand-link">
+            <a href="<?php base_url('sides'); ?>" class="brand-link">
                 <img src="<?php echo base_url('img/logo-desajatituju.png'); ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">SIDES</span>
             </a>
@@ -84,16 +83,16 @@
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
-                        <li class="nav-item active">
-                            <a href="<?php echo base_url('sides/penduduk'); ?>" class="nav-link active">
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/penduduk'); ?>" class="nav-link">
                                 <i class="fas fa-users"></i>
                                 <p>
                                     Penduduk
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="<?php echo base_url('sides/content'); ?>" class="nav-link">
+                        <li class="nav-item active">
+                            <a href="<?php echo base_url('sides/content'); ?>" class="nav-link active">
                                 <i class="fas fa-newspaper"></i>
                                 <p>
                                     Content
@@ -149,7 +148,7 @@
                             </a>
                         </li>
                         <?php
-                        if (session()->get('level') === 'Master') { ?>
+                        if (session()->get('level') == 'Master') { ?>
                             <li class="nav-item">
                                 <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
                                     <i class="fas fa-user-circle"></i>
@@ -174,7 +173,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Data Penduduk</h1>
+                            <h1 class="m-0">Data Content</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -195,24 +194,35 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <a class="btn btn-primary" href="<?php echo base_url('sides/penduduk/create'); ?>">Tambah Data</a>
+                                    <a class="btn btn-primary" href="<?php echo base_url('sides/content/create'); ?>">Tambah Data</a>
                                     <div class="card-tools">
-                                        <div class="input-group input-group-sm">
-                                            <form action="<?php echo base_url('sides/penduduk/search'); ?>" method="post">
-                                                <select class="search form-control" style="width: 200px;" name="search">
-                                                    <option disabled selected></option>
-                                                    <?php
-                                                    foreach ($namaPenduduk as $row) { ?>
-                                                        <option value="<?php echo $row->nama; ?>"><?php echo $row->nama; ?></option>
-                                                    <?php }
-                                                    ?>
-                                                </select>
+                                        <div class="input-group input-group-sm" style="width: 150px;">
+                                            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                                            <div class="input-group-append">
                                                 <button type="submit" class="btn btn-default">
                                                     <i class="fas fa-search"></i>
                                                 </button>
-                                            </form>
+                                            </div>
                                         </div>
                                     </div>
+                                    <hr>
+                                    <form action="<?php echo base_url('sides/content/search'); ?>" method="post">
+                                        <div class="row mt-3">
+                                            <div class="col-sm-3">
+                                                <div class="form-group">
+                                                    <label for="exampleSelectBorderWidth2">Jenis Content</label>
+                                                    <select name="jenis" class="custom-select form-control-border border-width-2" id="exampleSelectBorderWidth2">
+                                                        <option disabled selected>--Pilih Jenis--</option>
+                                                        <option value="news">Berita</option>
+                                                        <option value="event">Event</option>
+                                                        <option value="pengumuman">Pengumuman</option>
+                                                        <option value="headline">Headline</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary mt-3">Cari</button>
+                                    </form>
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body table-responsive p-0">
@@ -220,47 +230,38 @@
                                         <thead>
                                             <tr>
                                                 <th>No.</th>
-                                                <th>Nama</th>
-                                                <th>Nomor Ktp</th>
-                                                <th>Jenis Kelamin</th>
-                                                <th>Desa</th>
-                                                <th>Dusun</th>
-                                                <th>Rt</th>
-                                                <th>Rw</th>
-                                                <th>Status</th>
-                                                <th>Pendidikan</th>
-                                                <th>Agama</th>
+                                                <th>Nama Pembuat</th>
+                                                <th>Judul</th>
+                                                <th>Jenis</th>
+                                                <th>#Di Buat</th>
+                                                <th>#Di Ubah</th>
                                                 <th>Action</th>
+                                                <th>gambar</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php
                                             $nomor = null;
-                                            foreach ($penduduk as $row) { ?>
-                                                <?php $nomor++; ?>
+                                            foreach ($berita as $row) {
+                                                $nomor++; ?>
                                                 <tr>
                                                     <td><?php echo $nomor; ?></td>
-                                                    <td><?php echo $row->nama; ?></td>
-                                                    <td><?php echo $row->no_ktp; ?></td>
-                                                    <td><?php echo $row->jenis_kelamin; ?></td>
-                                                    <td><?php echo $row->desa; ?></td>
-                                                    <td><?php echo $row->dusun; ?></td>
-                                                    <td><?php echo $row->rt; ?></td>
-                                                    <td><?php echo $row->rw; ?></td>
-                                                    <td><?php echo $row->status; ?></td>
-                                                    <td><?php echo $row->pendidikan; ?></td>
-                                                    <td><?php echo $row->agama; ?></td>
+                                                    <td><?php echo $row->nama_depan; ?></td>
+                                                    <td><?php echo $row->judul; ?></td>
+                                                    <td><?php echo $row->jenis; ?></td>
+                                                    <td><?php echo $row->created_at; ?></td>
+                                                    <td><?php echo $row->updated_at; ?></td>
                                                     <td>
                                                         <div class="btn-group" role="group" aria-label="Basic example">
-                                                            <a class="btn btn-danger" href="<?php echo base_url('/sides/penduduk/delete/' . $row->id); ?>">Hapus</a>
-                                                            <a class="btn btn-warning" href="<?php echo base_url('/sides/penduduk/show/' . $row->id); ?>">Edit</a>
-                                                            <!-- <button type="button" class="btn btn-danger">Hapus</button>
-                                                            <button type="button" class="btn btn-warning">Edit</button> -->
+                                                            <a class="btn btn-danger" href="<?php echo base_url('sides/berita/delete/' . $row->id); ?>">Hapus</a>
+                                                            <a class="btn btn-warning" href="<?php echo base_url('sides/berita/show/' . $row->id); ?>">Edit</a>
                                                         </div>
                                                     </td>
+                                                    <td><a href="<?php echo base_url('sides/berita/foto/' . $row->id); ?>" class="btn btn-outline-primary"><i class="fas fa-image"></i> Download</a></td>
                                                 </tr>
                                             <?php }
                                             ?>
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -324,7 +325,6 @@
     <script src="<?php echo base_url('adminLTE/dist/js/demo.js'); ?>"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="<?php echo base_url('adminLTE/dist/js/pages/dashboard.js'); ?>"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- ./wrapper -->
     <?php
     if (session()->getFlashdata('pesan_insert')) { ?>
@@ -335,21 +335,12 @@
         <script>
             alert('data berhasil di hapus');
         </script>
-    <?php } else if (session()->getFlashdata('pesanUpdated')) { ?>
+    <?php } else if (session()->getFlashdata('not-found')) { ?>
         <script>
-            alert('data berhasil di ubah');
+            alert('file tidak di temukan');
         </script>
     <?php }
     ?>
-
-    <script>
-        $(document).ready(function() {
-            $('.search').select2({
-                width: 'resolve',
-                placeholder: "nama penduduk"
-            });
-        });
-    </script>
 </body>
 
 </html>

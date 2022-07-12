@@ -28,7 +28,7 @@
       foreach ($beritaHeadline as $row) { ?>
         <div class="carousel-item <?= ($counter == 0) ? "active" : "" ?>" data-bs-interval="2000">
           <a href="<?php echo base_url('news/' . $row->id); ?>">
-            <img src="/img/berita/<?php echo $row->gambar; ?>" class="img-size d-block w-100" alt="">
+            <img src="/img/content/<?php echo $row->jenis; ?>/<?php echo $row->gambar; ?>" class="img-size d-block w-100" alt="">
           </a>
           <div class="carousel-caption d-none d-md-block">
             <h5><?php echo $row->judul; ?></h5>
@@ -383,7 +383,7 @@
         foreach ($beritaTerkini as $row) { ?>
           <div class="col-sm-4">
             <div class="card">
-              <img src="/img/berita/<?php echo $row->gambar; ?>" class="card-img-top" alt="...">
+              <img src="/img/content/<?php echo $row->jenis; ?>/<?php echo $row->gambar; ?>" class="card-img-top" alt="...">
               <div class="card-body mb-3">
                 <h5 class="card-title text-dark"><?php echo $row->judul; ?></h5>
                 <p class="date-berita"><?php echo $row->created_at; ?></p>

@@ -15,7 +15,8 @@ class Komentar extends BaseController
     public function index()
     {
         $data = [
-            'komentar' => $this->model->show()
+            'komentar' => $this->model->show(),
+            'namaKomentar' => $this->model->getNama()
         ];
 
         if ($data) {
@@ -34,6 +35,21 @@ class Komentar extends BaseController
             return redirect()->to('sides/komentar');
         } else {
             return false;
+        }
+    }
+
+    public function search()
+    {
+        $search = $this->request->getPost('search');
+        if (empty($search)) {
+            return redirect()->to('sides/komentar');
+        } else {
+            $data = [
+                'komentar' => $this->model->search($search),
+                'namaKomentar' => $this->model->getNama()
+            ];
+
+            return view('sides/dashbord/komentar/search', $data);
         }
     }
 

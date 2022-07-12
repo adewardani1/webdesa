@@ -71,10 +71,12 @@ $routes->get('sides/penduduk', 'Penduduk::index');
 $routes->get('sides/penduduk/show/(:num)', 'Penduduk::show/$1');
 $routes->post('sides/penduduk/update/(:num)', 'Penduduk::updated/$1');
 $routes->get('sides/penduduk/delete/(:num)', 'Penduduk::destroy/$1');
+$routes->post('sides/penduduk/search', 'Penduduk::search');
 
 //route aspirasi
 $routes->get('sides/aspirasi', 'AspirasiWarga::index');
 $routes->get('sides/aspirasi/delete/(:num)', 'AspirasiWarga::destroy/$1');
+$routes->post('sides/aspirasi/search', 'AspirasiWarga::search');
 
 //route berita
 $routes->get('sides/content/create', 'Content::create'); //tampil form tambah
@@ -84,6 +86,7 @@ $routes->get('sides/content/show/(:num)', 'Content::show/$1');
 $routes->post('sides/content/update/(:num)', 'Content::updated/$1');
 $routes->get('sides/content/delete/(:num)', 'Content::destroy/$1');
 $routes->get('sides/content/foto/(:num)', 'Content::foto/$1'); //tampil foto
+$routes->post('sides/content/search', 'Content::search');
 
 //route akun
 $routes->get('sides/akun/create', 'Akun::create'); //tampil form tambah
@@ -135,6 +138,7 @@ $routes->get('services/akun/(:any)', 'Akun::checkUser/$1');
 //route komentar
 $routes->get('sides/komentar', 'Komentar::index');
 $routes->get('sides/komentar/delete/(:num)', 'Komentar::destroy/$1');
+$routes->post('sides/komentar/search', 'Komentar::search');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

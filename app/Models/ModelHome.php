@@ -43,6 +43,7 @@ class ModelHome extends Model
                 berita.gambar,
                 berita.judul,
                 berita.konten,
+                berita.jenis,
                 berita.created_at
             FROM berita
             WHERE berita.jenis = 'news'
@@ -60,6 +61,7 @@ class ModelHome extends Model
                 berita.gambar,
                 berita.judul,
                 berita.konten,
+                berita.jenis,
                 berita.created_at,
                 berita.updated_at
             FROM berita
@@ -77,9 +79,10 @@ class ModelHome extends Model
                 berita.id,
                 berita.gambar,
                 berita.judul,
+                berita.jenis,
                 berita.updated_at
             FROM berita
-            WHERE berita.jenis = 'Headline'
+            WHERE berita.jenis = 'headline'
         ";
 
         return $this->database->query($sql)->getResult();
@@ -107,6 +110,7 @@ class ModelHome extends Model
                 berita.gambar,
                 berita.judul,
                 berita.konten,
+                berita.jenis,
                 berita.created_at
             FROM berita
             WHERE berita.created_at >= DATE_ADD(NOW(),INTERVAL -30 DAY) LIMIT 3

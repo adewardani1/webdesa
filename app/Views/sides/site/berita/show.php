@@ -1,7 +1,7 @@
 <?= $this->extend('layout/page_layout') ?>
 
 <?= $this->section('content') ?>
-<div class="jumbotron-detail" style="background: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('/img/berita/<?php echo $berita->gambar; ?>');">
+<div class="jumbotron-detail" style="background: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('/img/content/<?php echo $berita->jenis; ?>/<?php echo $berita->gambar; ?>');">
     <p><?php echo date("Y-m-d", strtotime($berita->updated_at)); ?> By <?php echo $berita->nama_depan; ?></p>
     <h1><?php echo $berita->judul; ?></h1>
 </div>

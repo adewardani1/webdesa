@@ -12,7 +12,11 @@ class Login extends BaseController
     }
     public function index()
     {
-        return view('sides/dashbord/login/index');
+        session();
+        $data = [
+            'validation' => \Config\Services::validation()
+        ];
+        return view('sides/dashbord/login/index', $data);
     }
 
     public function auth()
@@ -35,7 +39,9 @@ class Login extends BaseController
         ]);
 
         if (!$validation) {
-            return redirect()->to('auth')->withInput();
+            $valid = \Config\Services::validation();
+            return redirect()->to('auth')->withInput()->with('validation', $valid);
+            //return view('sides/dashbord/login/index');
         } else {
             $user = $this->request->getPost('user');
             $pass = $this->request->getPost('pass');

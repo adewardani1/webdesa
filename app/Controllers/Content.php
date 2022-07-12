@@ -217,6 +217,25 @@ class Content extends BaseController
         }
     }
 
+    public function search()
+    {
+        $jenis = $this->request->getPost('jenis');
+
+        if (empty($jenis)) {
+            return redirect()->to('sides/content');
+        } else {
+            $manyData = $this->model->searchByJenis($jenis);
+
+            if ($manyData->getNumRows() > 0) {
+                $data = [
+                    'berita' =>  $manyData->getResult()
+                ];
+
+                return view('sides/dashbord/content/search', $data);
+            }
+        }
+    }
+
     public function uploadImage($tempfile, $gambar, $jenis)
     {
         $locDir = FCPATH . 'img/content/' . $jenis . '/' . $gambar;

@@ -26,8 +26,8 @@
     <link rel="stylesheet" href="<?php echo base_url('adminLTE/plugins/daterangepicker/daterangepicker.css'); ?>">
     <!-- summernote -->
     <link rel="stylesheet" href="<?php echo base_url('adminLTE/plugins/summernote/summernote-bs4.min.css'); ?>">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="icon" href="<?php echo base_url('img/logo-desajatituju.png'); ?>">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -48,13 +48,6 @@
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Home</a>
-                </li>
-            </ul>
-
-            <!-- right navbar links -->
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a href="<?php echo base_url('sides/logout'); ?>" class="nav-link btn btn-danger text-white">Log Out</a>
                 </li>
             </ul>
         </nav>
@@ -84,8 +77,8 @@
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
-                        <li class="nav-item active">
-                            <a href="<?php echo base_url('sides/penduduk'); ?>" class="nav-link active">
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/penduduk'); ?>" class="nav-link">
                                 <i class="fas fa-users"></i>
                                 <p>
                                     Penduduk
@@ -100,8 +93,8 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="<?php echo base_url('sides/aspirasi'); ?>" class="nav-link">
+                        <li class="nav-item active">
+                            <a href="<?php echo base_url('sides/aspirasi'); ?>" class="nav-link active">
                                 <i class="fas fa-lightbulb"></i>
                                 <p>
                                     Aspirasi Warga
@@ -174,7 +167,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Data Penduduk</h1>
+                            <h1 class="m-0">Data Aspirasi Warga</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -195,15 +188,14 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <a class="btn btn-primary" href="<?php echo base_url('sides/penduduk/create'); ?>">Tambah Data</a>
                                     <div class="card-tools">
                                         <div class="input-group input-group-sm">
-                                            <form action="<?php echo base_url('sides/penduduk/search'); ?>" method="post">
-                                                <select class="search form-control" style="width: 200px;" name="search">
+                                            <form action="<?php echo base_url('sides/aspirasi/search'); ?>" method="post">
+                                                <select class="search form-control" id="table_search" style="width: 200px;" name="search">
                                                     <option disabled selected></option>
                                                     <?php
-                                                    foreach ($namaPenduduk as $row) { ?>
-                                                        <option value="<?php echo $row->nama; ?>"><?php echo $row->nama; ?></option>
+                                                    foreach ($namaDepan as $row) { ?>
+                                                        <option value="<?php echo $row->nama_depan; ?>"><?php echo $row->nama_depan; ?></option>
                                                     <?php }
                                                     ?>
                                                 </select>
@@ -220,42 +212,35 @@
                                         <thead>
                                             <tr>
                                                 <th>No.</th>
-                                                <th>Nama</th>
-                                                <th>Nomor Ktp</th>
-                                                <th>Jenis Kelamin</th>
-                                                <th>Desa</th>
-                                                <th>Dusun</th>
-                                                <th>Rt</th>
-                                                <th>Rw</th>
-                                                <th>Status</th>
-                                                <th>Pendidikan</th>
-                                                <th>Agama</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Email</th>
+                                                <th>Address</th>
+                                                <th>Nomor Hp</th>
+                                                <th>Pesan</th>
+                                                <th>#Di Buat</th>
+                                                <th>#Di Ubah</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php
                                             $nomor = null;
-                                            foreach ($penduduk as $row) { ?>
-                                                <?php $nomor++; ?>
+                                            foreach ($aspirasi as $row) {
+                                                $nomor++ ?>
                                                 <tr>
                                                     <td><?php echo $nomor; ?></td>
-                                                    <td><?php echo $row->nama; ?></td>
-                                                    <td><?php echo $row->no_ktp; ?></td>
-                                                    <td><?php echo $row->jenis_kelamin; ?></td>
-                                                    <td><?php echo $row->desa; ?></td>
-                                                    <td><?php echo $row->dusun; ?></td>
-                                                    <td><?php echo $row->rt; ?></td>
-                                                    <td><?php echo $row->rw; ?></td>
-                                                    <td><?php echo $row->status; ?></td>
-                                                    <td><?php echo $row->pendidikan; ?></td>
-                                                    <td><?php echo $row->agama; ?></td>
+                                                    <td><?php echo $row->nama_depan; ?></td>
+                                                    <td><?php echo $row->nama_belakang; ?></td>
+                                                    <td><?php echo $row->email; ?></td>
+                                                    <td><?php echo $row->alamat; ?></td>
+                                                    <td><?php echo $row->nomor_hp; ?></td>
+                                                    <td><?php echo $row->pesan; ?></td>
+                                                    <td><?php echo $row->created_at; ?></td>
+                                                    <td><?php echo $row->updated_at; ?></td>
                                                     <td>
                                                         <div class="btn-group" role="group" aria-label="Basic example">
-                                                            <a class="btn btn-danger" href="<?php echo base_url('/sides/penduduk/delete/' . $row->id); ?>">Hapus</a>
-                                                            <a class="btn btn-warning" href="<?php echo base_url('/sides/penduduk/show/' . $row->id); ?>">Edit</a>
-                                                            <!-- <button type="button" class="btn btn-danger">Hapus</button>
-                                                            <button type="button" class="btn btn-warning">Edit</button> -->
+                                                            <a class="btn btn-danger" href="<?php echo base_url('sides/aspirasi/delete/' . $row->id); ?>">Hapus</a>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -326,30 +311,20 @@
     <script src="<?php echo base_url('adminLTE/dist/js/pages/dashboard.js'); ?>"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- ./wrapper -->
-    <?php
-    if (session()->getFlashdata('pesan_insert')) { ?>
-        <script>
-            alert('data berhasil di tambahkan');
-        </script>
-    <?php } else if (session()->getFlashdata('pesan_hapus')) { ?>
-        <script>
-            alert('data berhasil di hapus');
-        </script>
-    <?php } else if (session()->getFlashdata('pesanUpdated')) { ?>
-        <script>
-            alert('data berhasil di ubah');
-        </script>
-    <?php }
-    ?>
-
     <script>
         $(document).ready(function() {
-            $('.search').select2({
+            $('#table_search').select2({
                 width: 'resolve',
-                placeholder: "nama penduduk"
+                placeholder: "nama depan"
             });
         });
     </script>
+    <?php
+    if (session()->getFlashdata('pesan_hapus')) { ?>
+        <script>
+            alert('berhasil hapus data');
+        </script>
+    <?php } ?>
 </body>
 
 </html>

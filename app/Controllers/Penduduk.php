@@ -20,7 +20,8 @@ class Penduduk extends BaseController
     public function index()
     {
         $data = [
-            'penduduk' => $this->model->show()
+            'penduduk' => $this->model->show(),
+            'namaPenduduk' => $this->model->getNamaPenduduk()
         ];
 
         if ($data) {
@@ -273,5 +274,21 @@ class Penduduk extends BaseController
     {
         session_destroy();
         return redirect()->to('auth');
+    }
+
+    public function search()
+    {
+        $query = $this->request->getPost('search');
+
+        if (empty($query)) {
+            return redirect()->to('sides/penduduk');
+        } else {
+            $data = [
+                'penduduk' => $this->model->search($query),
+                'namaPenduduk' => $this->model->getNamaPenduduk()
+            ];
+
+            return view('sides/dashbord/penduduk/search', $data);
+        }
     }
 }

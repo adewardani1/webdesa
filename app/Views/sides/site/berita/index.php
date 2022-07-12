@@ -13,7 +13,7 @@
             foreach ($berita as $row) { ?>
                 <div class="col-sm-4">
                     <div class="card border-0" data-aos-duration="10000" data-aos="fade-up">
-                        <img src="/img/berita/<?php echo $row->gambar; ?>" alt="...">
+                        <img src="/img/content/<?php echo $row->jenis; ?>/<?php echo $row->gambar; ?>" alt="...">
                         <div class="card-body mb-3">
                             <p class="date-berita"><?php echo date("Y-m-d", strtotime($row->created_at)); ?></p>
                             <p class="card-title text-dark"><?php echo $row->judul; ?></p>

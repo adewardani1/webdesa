@@ -214,7 +214,7 @@
                                             <tr>
                                                 <th>No.</th>
                                                 <th>Gambar</th>
-                                                <th>Judul</th>
+                                                <th>Nama</th>
                                                 <th>#Di Buat</th>
                                                 <th>#Di Ubah</th>
                                                 <th>Action</th>

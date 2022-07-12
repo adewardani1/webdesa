@@ -27,6 +27,7 @@
     <!-- summernote -->
     <link rel="stylesheet" href="<?php echo base_url('adminLTE/plugins/summernote/summernote-bs4.min.css'); ?>">
     <link rel="icon" href="<?php echo base_url('img/logo-desajatituju.png'); ?>">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -47,6 +48,11 @@
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Home</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="<?php echo base_url('sides/logout'); ?>" class="nav-link btn btn-danger text-white">Log Out</a>
                 </li>
             </ul>
         </nav>
@@ -188,14 +194,20 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-tools">
-                                        <div class="input-group input-group-sm" style="width: 150px;">
-                                            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-                                            <div class="input-group-append">
+                                        <div class="input-group input-group-sm">
+                                            <form action="<?php echo base_url('sides/aspirasi/search'); ?>" method="post">
+                                                <select class="search form-control" id="table_search" style="width: 200px;" name="search">
+                                                    <option disabled selected></option>
+                                                    <?php
+                                                    foreach ($namaDepan as $row) { ?>
+                                                        <option value="<?php echo $row->nama_depan; ?>"><?php echo $row->nama_depan; ?></option>
+                                                    <?php }
+                                                    ?>
+                                                </select>
                                                 <button type="submit" class="btn btn-default">
                                                     <i class="fas fa-search"></i>
                                                 </button>
-                                            </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -302,7 +314,16 @@
     <script src="<?php echo base_url('adminLTE/dist/js/demo.js'); ?>"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="<?php echo base_url('adminLTE/dist/js/pages/dashboard.js'); ?>"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- ./wrapper -->
+    <script>
+        $(document).ready(function() {
+            $('#table_search').select2({
+                width: 'resolve',
+                placeholder: "nama depan"
+            });
+        });
+    </script>
     <?php
     if (session()->getFlashdata('pesan_hapus')) { ?>
         <script>

@@ -39,6 +39,17 @@ class ModelPenduduk extends Model
         return $this->database->query($sql)->getResult();
     }
 
+    public function getNamaPenduduk()
+    {
+        $sql = "
+            SELECT
+                penduduk.nama
+            FROM penduduk
+        ";
+
+        return $this->database->query($sql)->getResult();
+    }
+
     public function getPendudukById($id)
     {
         $sql = "
@@ -64,5 +75,21 @@ class ModelPenduduk extends Model
     {
         return $this->database->delete(['id' => $id]);
     }
-    // ...
+
+    public function search($q)
+    {
+        return $this->database->table('penduduk')->select('
+            id,
+            nama,
+            no_ktp,
+            jenis_kelamin,
+            desa,
+            dusun,
+            rt,
+            rw,
+            status,
+            pendidikan,
+            agama
+        ')->like('nama', $q)->get()->getResult();
+    }
 }
