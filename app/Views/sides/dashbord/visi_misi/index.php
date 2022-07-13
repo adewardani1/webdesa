@@ -312,6 +312,10 @@
         <script>
             alert('data visi misi hanya bisa tambah 1 saja');
         </script>
+    <?php } else if (session()->getFlashdata('pesan_update')) { ?>
+        <script>
+            alert('data berhasil di update');
+        </script>
     <?php }
     ?>
 </body>

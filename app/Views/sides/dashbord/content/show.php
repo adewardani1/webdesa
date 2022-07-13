@@ -199,7 +199,7 @@
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form class="form-horizontal" method="post" enctype="multipart/form-data" action="<?php echo base_url('sides/berita/update/' . $berita->id); ?>">
+                                <form class="form-horizontal" method="post" enctype="multipart/form-data" action="<?php echo base_url('sides/content/update/' . $berita->id); ?>">
                                     <?php $validation = \Config\Services::validation(); ?>
                                     <div class="card-body">
                                         <div class="form-group row">
@@ -224,10 +224,10 @@
                                             <label for="exampleSelectBorder" class="col-sm-2 col-form-label">Jenis Konten</label>
                                             <div class="col-sm-10">
                                                 <select name="jenis" class="custom-select form-control-border" id="exampleSelectBorder">
-                                                    <option value="Biasa">Biasa</option>
-                                                    <option value="Headline">Headline</option>
-                                                    <option value="Event">Event</option>
-                                                    <option value="Pengumuman">Pengumuman</option>
+                                                    <option value="news">Berita</option>
+                                                    <option value="headline">Headline</option>
+                                                    <option value="event">Event</option>
+                                                    <option value="pengumuman">Pengumuman</option>
                                                 </select>
                                             </div>
                                         </div>

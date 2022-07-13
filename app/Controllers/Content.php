@@ -145,6 +145,13 @@ class Content extends BaseController
                 session()->setFlashdata('alert', true);
                 return redirect()->to('sides/content/show/' . $id);
             } else {
+
+                $model = $this->model->getBeritaById($id);
+                $path = FCPATH . 'img/content/' . $model->jenis . '/' . $model->gambar;
+
+                if (file_exists($path)) {
+                    unlink($path);
+                }
                 $image = $this->request->getFile('gambar');
                 $gambar = $image->getClientName();
                 $tempfile = $image->getTempName();
@@ -170,7 +177,8 @@ class Content extends BaseController
                 session()->setFlashdata('error', true);
                 return redirect()->to('sides/content/show/' . $id);
             } else {
-                session()->setFlashdata('pesan_insert', true);
+
+                session()->setFlashdata('pesan_update', true);
                 return redirect()->to('sides/content');
             }
         } else {
@@ -184,12 +192,13 @@ class Content extends BaseController
                 // 'gambar' => $_FILES["gambar"]["name"]
             ];
 
+            $this->changeDir($data['jenis'], $id);
             $simpan = $this->model->updateById($data, $id);
             if (!$simpan) {
                 session()->setFlashdata('error', true);
                 return redirect()->to('sides/content/show/' . $id);
             } else {
-                session()->setFlashdata('pesan_insert', true);
+                session()->setFlashdata('pesan_update', true);
                 return redirect()->to('sides/content');
             }
         }
@@ -256,6 +265,14 @@ class Content extends BaseController
         if (file_exists($path)) {
             return $this->response->download($path, null);
         }
+    }
+
+    public function changeDir($jenis, $id)
+    {
+        $model = $this->model->getBeritaById($id);
+        $pathBefore =  FCPATH . 'img/content/' . $model->jenis . '/' . $model->gambar;
+        $pathAfter = FCPATH . 'img/content/' . $jenis . '/' . $model->gambar;
+        return rename($pathBefore, $pathAfter);
     }
 
     public function logout()

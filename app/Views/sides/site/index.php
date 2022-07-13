@@ -359,7 +359,7 @@
           <p>Yang tervaksin</p>
           <p>25</p>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar" role="progressbar" style="width: 200%;" aria-valuenow="25" aria-valuemin="300" aria-valuemax="300"></div>
           </div>
           <a href="https://play.google.com/store/apps/details?id=com.telkom.tracencare&hl=in&gl=US"><img src="<?php echo base_url('img/googleplay.png'); ?>" width="130px" height="100px"></a><br>
           <a href="https://apps.apple.com/id/app/pedulilindungi/id1504600374"><img src="<?php echo base_url('img/appstore.png'); ?>" width="130px" height="100px"></a>
