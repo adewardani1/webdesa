@@ -262,15 +262,6 @@
       <div class="row row-1 mt-5">
         <div class="col-sm-1 text-end">
           <a href="#">
-            <i class="fa-brands fa-whatsapp fa-2x"></i>
-          </a>
-        </div>
-        <div class="col-sm-2">
-          <h4>SURAT ONLINE</h4>
-          <P class="text-dark">buat surat online cepat via whatsapp</P>
-        </div>
-        <div class="col-sm-1 text-end">
-          <a href="#">
             <i class="fa-solid fa-bullhorn fa-2x"></i>
           </a>
         </div>
@@ -289,50 +280,21 @@
         </div>
         <div class="col-sm-1 text-end">
           <a href="#">
-            <i class="fa-solid fa-car fa-2x"></i>
+            <i class="fa-solid fa-person-chalkboard fa-2x"></i>
           </a>
         </div>
         <div class="col-sm-2">
-          <h4>MOBIL SIAGA</h4>
-          <P class="text-dark">Kontak mobil siaga bagi warga yang membutuhkan</P>
-        </div>
-      </div>
-      <div class="row row-2 mt-5">
-        <div class="col-sm-1 text-end">
-          <a href="#">
-            <i class="fa-solid fa-phone fa-2x"></i>
-          </a>
-        </div>
-        <div class="col-sm-2">
-          <h4>HELLO BUPATI</h4>
-          <P class="text-dark">Ruang aduan, aspirasi, permintaan informasi kabupaten majalengka</P>
+          <h4>PROFILE DESA</h4>
+          <P class="text-dark">Kontak untuk warga yang ingin memberikan aduan, saran maupun kritik</P>
         </div>
         <div class="col-sm-1 text-end">
           <a href="#">
-            <i class="fa-regular fa-address-book fa-2x"></i>
+            <i class="fa-solid fa-person-chalkboard fa-2x"></i>
           </a>
         </div>
         <div class="col-sm-2">
-          <h4>KEPENDUDUKAN ONLINE</h4>
-          <P class="text-dark">Layanan administrasi kependudukan online disdukcapil majalengka</P>
-        </div>
-        <div class="col-sm-1 text-end">
-          <a href="#">
-            <i class="fa-solid fa-house fa-2x"></i>
-          </a>
-        </div>
-        <div class="col-sm-2">
-          <h4>CEK PBB</h4>
-          <P class="text-dark">Cek data PBB online</P>
-        </div>
-        <div class="col-sm-1 text-end">
-          <a href="#">
-            <i class="fa-solid fa-house-chimney-window fa-2x"></i>
-          </a>
-        </div>
-        <div class="col-sm-2">
-          <h4>CEK BPUM</h4>
-          <P class="text-dark">Cek data penerima UMKM</P>
+          <h4>KONTAK DESA</h4>
+          <P class="text-dark">Kontak untuk warga yang ingin memberikan aduan, saran maupun kritik</P>
         </div>
       </div>
     </div>
@@ -426,33 +388,6 @@
   <!-- end berita terkini -->
 
 
-  <!-- start follow -->
-
-  <div class="jumbotron-follow">
-    <div class="container">
-      <div class="row">
-        <div class="header text-center">
-          <h1>FOLLOW US</h1>
-          <hr />
-        </div>
-        <div class="col-sm-6 mx-auto">
-          <blockquote class="twitter-tweet">
-            <p lang="qme" dir="ltr"> <a href="https://t.co/cFo1N2WOGo">pic.twitter.com/cFo1N2WOGo</a></p>&mdash; Sanpie ⚓☔ (@Sanpie34i) <a href="https://twitter.com/Sanpie34i/status/1541757150699343872?ref_src=twsrc%5Etfw">June 28, 2022</a>
-          </blockquote>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-        <div class="col-sm-6 mx-auto">
-          <blockquote class="twitter-tweet">
-            <p lang="in" dir="ltr">Skrng tw kn mn yg idol bnrn <a href="https://twitter.com/C_JesslynJKT48?ref_src=twsrc%5Etfw">@C_JesslynJKT48</a> <a href="https://t.co/5HTsVxszRf">pic.twitter.com/5HTsVxszRf</a></p>&mdash; Kobo Kanaeru (こぼ) ☔ @ホロライブID (@kobokanaeru) <a href="https://twitter.com/kobokanaeru/status/1541756536262864896?ref_src=twsrc%5Etfw">June 28, 2022</a>
-          </blockquote>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- end follow -->
-
   <!-- start form pengaduan -->
 
   <div class="jumbotron-pengaduan">
@@ -501,6 +436,35 @@
   </div>
 
   <!-- end form pengaduan -->
+
+
+  <!-- start follow -->
+
+  <div class="jumbotron-follow">
+    <div class="container">
+      <div class="row">
+        <div class="header text-center">
+          <h1>FOLLOW US</h1>
+          <hr />
+        </div>
+        <div class="col-sm-6 mx-auto">
+          <blockquote class="twitter-tweet">
+            <p lang="qme" dir="ltr"> <a href="https://t.co/cFo1N2WOGo">pic.twitter.com/cFo1N2WOGo</a></p>&mdash; Sanpie ⚓☔ (@Sanpie34i) <a href="https://twitter.com/Sanpie34i/status/1541757150699343872?ref_src=twsrc%5Etfw">June 28, 2022</a>
+          </blockquote>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div class="col-sm-6 mx-auto">
+          <blockquote class="twitter-tweet">
+            <p lang="in" dir="ltr">Skrng tw kn mn yg idol bnrn <a href="https://twitter.com/C_JesslynJKT48?ref_src=twsrc%5Etfw">@C_JesslynJKT48</a> <a href="https://t.co/5HTsVxszRf">pic.twitter.com/5HTsVxszRf</a></p>&mdash; Kobo Kanaeru (こぼ) ☔ @ホロライブID (@kobokanaeru) <a href="https://twitter.com/kobokanaeru/status/1541756536262864896?ref_src=twsrc%5Etfw">June 28, 2022</a>
+          </blockquote>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end follow -->
+
 
   <?php
   if (session()->getFlashdata('berhasil')) { ?>

@@ -298,6 +298,10 @@
 
   /* start css layanan */
 
+  .jumbotron-layanan {
+    margin-bottom: 50px;
+  }
+
   .jumbotron-layanan .container h1 {
     font-family: "Roboto", sans-serif;
     font-weight: bolder;
@@ -448,7 +452,7 @@
 
   .jumbotron-berita {
     font-family: "Roboto", sans-serif;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   .jumbotron-berita .container .row .col-sm-4 .card {
@@ -623,10 +627,8 @@
     padding: 2rem 1rem;
     background-color: #e9ecef;
     background-image: url("/img/sotk.jpg");
-    height: 900px;
-    background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 50%;
+    padding-top: 25%;
     text-align: center;
   }
 
@@ -680,6 +682,7 @@
     background-size: cover;
     padding-top: 10rem;
     text-align: center;
+
   }
 
   .jumbotron-kontak h1 {
@@ -701,6 +704,7 @@
     margin: 0px 20px 40px 0px;
     padding: 30px 30px 30px 30px;
     background-color: rgba(255, 255, 255, 0.25);
+    margin-left: 8rem;
   }
 
   .jumbotron-kontak .widget .box {
@@ -1261,6 +1265,7 @@
     padding: 2rem 1rem;
     background-color: rgb(250, 250, 250);
     padding: 10px 10px;
+    padding-bottom: 30px;
   }
 
   .jumbotron-pengaduan .container .header {
@@ -1286,6 +1291,7 @@
 
   .jumbotron-pengaduan .container .form button {
     width: auto;
+    margin-top: 20px;
   }
 
   /* end css form pengaduan */
