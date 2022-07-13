@@ -38,14 +38,19 @@ class Home extends BaseController
 
     public function getPemerintahDesa()
     {
+        $data = [
+            'pemerintahDesa' => $this->model->getPemerintahDesa()
+        ];
 
-        return view('sides/site/pemerintahan-desa');
+        return view('sides/site/pemerintahan-desa', $data);
     }
 
     public function getVisiMisi()
     {
-
-        return view('sides/site/visi-misi');
+        $data = [
+            'visiMisi' => $this->model->getVisiMisi()
+        ];
+        return view('sides/site/visi-misi', $data);
     }
 
     public function getKontak()

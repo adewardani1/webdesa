@@ -262,6 +262,28 @@ class ModelHome extends Model
         return $this->database->query($sql)->getResult();
     }
 
+    public function getPemerintahDesa()
+    {
+        $sql = "
+            SELECT
+                pemerintah_desa.gambar
+            FROM pemerintah_desa
+        ";
+
+        return $this->database->query($sql)->getRow();
+    }
+
+    public function getVisiMisi()
+    {
+        $sql = "
+            SELECT
+                visi_misi.gambar
+            FROM visi_misi
+        ";
+
+        return $this->database->query($sql)->getRow();
+    }
+
     public function insertKomentar($data)
     {
         return $this->database->table('komentar')->insert($data);

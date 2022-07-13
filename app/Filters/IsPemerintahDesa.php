@@ -12,7 +12,7 @@ class IsPemerintahDesa implements FilterInterface
     {
 
         $session = session();
-        if (!$session->get('isPemerintahDesa')) {
+        if ($session->get('isPemerintahDesa')) {
             $session->setFlashdata('back', true);
             return redirect()->to('sides/pemerintah-desa');
         }

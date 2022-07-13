@@ -15,25 +15,31 @@ class VisiMisi extends BaseController
     public function index()
     {
         $data = [
-            'visiMisi' => $this->model->show(),
-            'count' =>  $this->model->countAllData()
+            'visiMisi' => $this->model->show()->getResult()
         ];
 
-        if ($data) {
-            if ($data['count'] > 0) {
-                $newdata = [
-                    'isCount'  => true
-                ];
+        if ($this->model->show()->getNumRows() > 0) {
+            $newdata = [
+                'isVisiMisi' => true
+            ];
 
-                session()->set($newdata);
-            }
-
-            //dd(session()->get('isCount'));
-
-            return view('sides/dashbord/visi_misi/index', $data);
+            session()->set($newdata);
         } else {
-            return false;
+            session()->remove('isVisiMisi');
         }
+
+        return view('sides/dashbord/visi_misi/index', $data);
+        // if ($data) {
+        //     dd($data['count']);
+        //     if ($data['count'] > 0) {
+        //         $newdata = [
+        //             'isCount'  => true
+        //         ];
+
+        //         session()->set($newdata);
+        //     } else {
+        //         session()->remove('isCount');
+        //     }
     }
 
     public function create()
@@ -118,6 +124,13 @@ class VisiMisi extends BaseController
             //session()->setFlashdata('alert', true);
             return redirect()->to('sides/visimisi/show/' . $id)->withInput();
         } else {
+            $model = $this->model->getGambarVisiMisiById($id);
+            $path = FCPATH . 'img/visi_misi/' . $model->gambar;
+
+            if (file_exists($path)) {
+                unlink($path);
+            }
+
             $image = $this->request->getFile('gambar');
             $gambar = $image->getClientName();
             $tempfile = $image->getTempName();
@@ -144,13 +157,29 @@ class VisiMisi extends BaseController
 
     public function destroy($id)
     {
-        $deleteVisiMisiById = $this->model->deleteById($id);
+        // $deleteVisiMisiById = $this->model->deleteById($id);
 
-        if ($deleteVisiMisiById) {
-            session()->setFlashdata('pesan_hapus', true);
-            return redirect()->to('sides/visimisi');
+        // if ($deleteVisiMisiById) {
+        //     session()->setFlashdata('pesan_hapus', true);
+        //     return redirect()->to('sides/visimisi');
+        // } else {
+        //     return false;
+        // }
+        $model = $this->model->getGambarVisiMisiById($id);
+
+        $path = FCPATH . 'img/visi_misi/' . $model->gambar;
+        if (file_exists($path)) {
+            unlink($path);
+            $deleteVisiMisiById = $this->model->deleteById($id);
+            if ($deleteVisiMisiById) {
+                session()->setFlashdata('pesan_hapus', true);
+                return redirect()->to('sides/visimisi');
+            } else {
+                return false;
+            }
         } else {
-            return false;
+            session()->setFlashdata('not-found', true);
+            return redirect()->to('sides/visimisi');
         }
     }
 

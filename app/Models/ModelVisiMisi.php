@@ -26,7 +26,7 @@ class ModelVisiMisi extends Model
             SELECT * FROM visi_misi
         ";
 
-        return $this->database->query($sql)->getResult();
+        return $this->database->query($sql);
     }
 
     public function countAllData()

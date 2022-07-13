@@ -4,12 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ModelPemerintahDesa extends Model
+class ModelBerita extends Model
 {
-    protected $table = 'pemerintah_desa';
+    protected $table = 'berita';
     protected $primaryKey = 'id';
     protected $allowedFields = [
-        'gambar'
+        'gambar',
+        'judul',
+        'jenis',
+        'konten'
     ];
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';
@@ -23,19 +26,19 @@ class ModelPemerintahDesa extends Model
     public function show()
     {
         $sql = "
-            SELECT * FROM pemerintah_desa
+            SELECT * FROM berita
         ";
 
-        return $this->database->query($sql);
+        return $this->database->query($sql)->getResult();
     }
 
-    public function getPemerintahDesaById($id)
+    public function getBeritaById($id)
     {
         $sql = "
             SELECT
                 *
-            FROM pemerintah_desa
-            WHERE pemerintah_desa.id = '" . $id . "'
+            FROM berita
+            WHERE berita.id = '" . $id . "'
         ";
 
         return $this->database->query($sql)->getRow();
@@ -47,12 +50,12 @@ class ModelPemerintahDesa extends Model
     // }
     public function updateById($data, $id)
     {
-        return $this->database->table('pemerintah_desa')->update($data, ['id' => $id]);
+        return $this->database->table('berita')->update($data, ['id' => $id]);
     }
 
     public function deleteById($id)
     {
-        return $this->database->table('pemerintah_desa')->delete(['id' => $id]);
+        return $this->database->delete(['id' => $id]);
     }
     // ...
 }

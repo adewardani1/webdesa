@@ -97,13 +97,15 @@ class Filters extends BaseConfig
 
         'isVisiMisi' => [
             'before' => [
-                'sides/visimisi/*'
+                'sides/visimisi/create',
+                'sides/visimisi/save'
             ]
         ],
 
         'isPemerintahDesa' => [
             'before' => [
-                'sides/pemerintah-desa/*'
+                'sides/pemerintah-desa/create',
+                'sides/pemerintah-desa/save'
             ]
         ]
     ];

@@ -12,7 +12,7 @@ class IsVisiMisi implements FilterInterface
     {
 
         $session = session();
-        if (!$session->get('isVisiMisi')) {
+        if ($session->get('isVisiMisi')) {
             $session->setFlashdata('back', true);
             return redirect()->to('sides/visimisi');
         }
