@@ -30,21 +30,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-    <?php
-    if (session()->getFlashdata('pesan_insert')) { ?>
-        <script>
-            alert('data berhasil di tambahkan');
-        </script>
-    <?php } else if (session()->getFlashdata('pesan_hapus')) { ?>
-        <script>
-            alert('data berhasil di hapus');
-        </script>
-    <?php } else if (session()->getFlashdata('pesanUpdated')) { ?>
-        <script>
-            alert('data berhasil di ubah');
-        </script>
-    <?php }
-    ?>
+
     <div class="wrapper">
 
         <!-- Preloader -->
@@ -98,7 +84,7 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="<?php echo base_url('/sides/penduduk'); ?>" class="nav-link">
+                            <a href="<?php echo base_url('sides/penduduk'); ?>" class="nav-link">
                                 <i class="fas fa-users"></i>
                                 <p>
                                     Penduduk
@@ -106,15 +92,15 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo base_url('/sides/berita'); ?>" class="nav-link">
+                            <a href="<?php echo base_url('sides/content'); ?>" class="nav-link">
                                 <i class="fas fa-newspaper"></i>
                                 <p>
-                                    Berita
+                                    Content
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo base_url('/sides/aspirasi'); ?>" class="nav-link">
+                            <a href="<?php echo base_url('sides/aspirasi'); ?>" class="nav-link">
                                 <i class="fas fa-lightbulb"></i>
                                 <p>
                                     Aspirasi Warga
@@ -153,8 +139,16 @@
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/komentar'); ?>" class="nav-link">
+                                <i class="fas fa-comment-alt"></i>
+                                <p>
+                                    Komentar
+                                </p>
+                            </a>
+                        </li>
                         <?php
-                        if (session()->get('level') == 'Master') { ?>
+                        if (session()->get('level') === 'Master') { ?>
                             <li class="nav-item">
                                 <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
                                     <i class="fas fa-user-circle"></i>
@@ -273,7 +267,21 @@
         </aside>
         <!-- /.control-sidebar -->
     </div>
-
+    <?php
+    if (session()->getFlashdata('pesan_insert')) { ?>
+        <script>
+            alert('data berhasil di tambahkan');
+        </script>
+    <?php } else if (session()->getFlashdata('pesan_hapus')) { ?>
+        <script>
+            alert('data berhasil di hapus');
+        </script>
+    <?php } else if (session()->getFlashdata('pesanUpdated')) { ?>
+        <script>
+            alert('data berhasil di ubah');
+        </script>
+    <?php }
+    ?>
     <!-- jQuery -->
     <script src="<?php echo base_url('adminLTE/plugins/jquery/jquery.min.js'); ?>"></script>
     <!-- jQuery UI 1.11.4 -->

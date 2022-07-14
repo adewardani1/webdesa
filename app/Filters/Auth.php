@@ -10,9 +10,10 @@ class Auth implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
+        $session = session();
 
-        if (!session()->get('isLogged')) {
-            session()->setFlashdata('logFirst', true);
+        if (!$session->get('isLogged')) {
+            $session->setFlashdata('logFirst', true);
             return redirect()->to('auth');
         }
     }

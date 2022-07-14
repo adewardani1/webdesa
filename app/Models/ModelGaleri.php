@@ -52,7 +52,7 @@ class ModelGaleri extends Model
 
     public function deleteById($id)
     {
-        return $this->database->delete(['id' => $id]);
+        return $this->database->table('galeri')->delete(['id' => $id]);
     }
     // ...
 }

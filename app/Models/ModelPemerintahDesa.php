@@ -26,7 +26,7 @@ class ModelPemerintahDesa extends Model
             SELECT * FROM pemerintah_desa
         ";
 
-        return $this->database->query($sql)->getResult();
+        return $this->database->query($sql);
     }
 
     public function getPemerintahDesaById($id)
@@ -52,7 +52,7 @@ class ModelPemerintahDesa extends Model
 
     public function deleteById($id)
     {
-        return $this->database->delete(['id' => $id]);
+        return $this->database->table('pemerintah_desa')->delete(['id' => $id]);
     }
     // ...
 }

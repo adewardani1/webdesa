@@ -12,11 +12,23 @@ class PemerintahDesa extends BaseController
     {
         $this->model = new ModelPemerintahDesa();
     }
+
     public function index()
     {
         $data = [
-            'pemerintahDesa' => $this->model->show()
+            'pemerintahDesa' => $this->model->show()->getResult()
         ];
+
+        if ($this->model->show()->getNumRows() > 0) {
+            $newdata = [
+                'isPemerintahDesa' => true
+            ];
+
+            session()->set($newdata);
+        } else {
+            session()->remove('isPemerintahDesa');
+        }
+
 
         if ($data) {
             return view('sides/dashbord/pemerintah_desa/index', $data);
@@ -65,6 +77,7 @@ class PemerintahDesa extends BaseController
             session()->setFlashdata('error', true);
             return redirect()->to('sides/pemerintah-desa');
         } else {
+
             session()->setFlashdata('pesan_insert', true);
             return redirect()->to('sides/pemerintah-desa');
         }
@@ -96,6 +109,13 @@ class PemerintahDesa extends BaseController
             session()->setFlashdata('alert', true);
             return redirect()->to('sides/pemerintah-desa/show/' . $id);
         } else {
+            $model = $this->model->getPemerintahDesaById($id);
+            $path = FCPATH . 'img/pemerintah_desa/' . $model->gambar;
+
+            if (file_exists($path)) {
+                unlink($path);
+            }
+
             $image = $this->request->getFile('gambar');
             $gambar = $image->getClientName();
             $tempfile = $image->getTempName();
@@ -122,13 +142,21 @@ class PemerintahDesa extends BaseController
 
     public function destroy($id)
     {
-        $deleteBeritaById = $this->model->delete(['id' => $id]);
+        $model = $this->model->getPemerintahDesaById($id);
 
-        if ($deleteBeritaById) {
-            session()->setFlashdata('pesan_hapus', true);
-            return redirect()->to('sides/pemerintah-desa');
+        $path = FCPATH . 'img/pemerintah_desa/' . $model->gambar;
+        if (file_exists($path)) {
+            unlink($path);
+            $deletePemerintahDesaById = $this->model->deleteById($id);
+            if ($deletePemerintahDesaById) {
+                session()->setFlashdata('pesan_hapus', true);
+                return redirect()->to('sides/pemerintah-desa');
+            } else {
+                return false;
+            }
         } else {
-            return false;
+            session()->setFlashdata('not-found', true);
+            return redirect()->to('sides/pemerintah-desa');
         }
     }
 

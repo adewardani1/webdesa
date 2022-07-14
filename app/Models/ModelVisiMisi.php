@@ -26,7 +26,7 @@ class ModelVisiMisi extends Model
             SELECT * FROM visi_misi
         ";
 
-        return $this->database->query($sql)->getResult();
+        return $this->database->query($sql);
     }
 
     public function countAllData()
@@ -54,5 +54,10 @@ class ModelVisiMisi extends Model
     public function updateById($data, $id)
     {
         return $this->database->table('visi_misi')->update($data, ['id' => $id]);
+    }
+
+    public function deleteById($id)
+    {
+        return $this->database->table('visi_misi')->delete(['id' => $id]);
     }
 }

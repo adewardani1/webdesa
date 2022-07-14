@@ -30,17 +30,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-    <?php
-    if (session()->getFlashdata('pesan_insert')) { ?>
-        <script>
-            alert('data berhasil di tambahkan');
-        </script>
-    <?php } else if (session()->getFlashdata('pesan_hapus')) { ?>
-        <script>
-            alert('data berhasil di hapus');
-        </script>
-    <?php }
-    ?>
+
     <div class="wrapper">
 
         <!-- Preloader -->
@@ -102,10 +92,10 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo base_url('sides/berita'); ?>" class="nav-link">
+                            <a href="<?php echo base_url('sides/content'); ?>" class="nav-link">
                                 <i class="fas fa-newspaper"></i>
                                 <p>
-                                    Berita
+                                    Content
                                 </p>
                             </a>
                         </li>
@@ -149,8 +139,16 @@
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/komentar'); ?>" class="nav-link">
+                                <i class="fas fa-comment-alt"></i>
+                                <p>
+                                    Komentar
+                                </p>
+                            </a>
+                        </li>
                         <?php
-                        if (session()->get('level') == 'Master') { ?>
+                        if (session()->get('level') === 'Master') { ?>
                             <li class="nav-item">
                                 <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
                                     <i class="fas fa-user-circle"></i>
@@ -216,7 +214,7 @@
                                             <tr>
                                                 <th>No.</th>
                                                 <th>Gambar</th>
-                                                <th>Judul</th>
+                                                <th>Nama</th>
                                                 <th>#Di Buat</th>
                                                 <th>#Di Ubah</th>
                                                 <th>Action</th>
@@ -271,7 +269,6 @@
         </aside>
         <!-- /.control-sidebar -->
     </div>
-
     <!-- jQuery -->
     <script src="<?php echo base_url('adminLTE/plugins/jquery/jquery.min.js'); ?>"></script>
     <!-- jQuery UI 1.11.4 -->
@@ -307,6 +304,21 @@
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="<?php echo base_url('adminLTE/dist/js/pages/dashboard.js'); ?>"></script>
     <!-- ./wrapper -->
+    <?php
+    if (session()->getFlashdata('pesan_insert')) { ?>
+        <script>
+            alert('data berhasil di tambahkan');
+        </script>
+    <?php } else if (session()->getFlashdata('pesan_hapus')) { ?>
+        <script>
+            alert('data berhasil di hapus');
+        </script>
+    <?php } else if (session()->getFlashdata('back')) { ?>
+        <script>
+            alert('ata pemerintah desa hanya bisa tambah 1 saja');
+        </script>
+    <?php }
+    ?>
 </body>
 
 </html>

@@ -14,7 +14,7 @@
 
         <h3>SOTK</h3>
         <div class="text-center">
-            <img src="/img/pemerintahan.png" alt="">
+            <img src="/img/pemerintah_desa/<?php echo $pemerintahDesa->gambar; ?>" alt="">
         </div>
     </div>
 </div>

@@ -11,8 +11,9 @@ class IsAdmin implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
 
-        if (session()->get('level') === 'Admin') {
-            session()->setFlashdata('level', true);
+        $session = session();
+        if ($session->get('level') === 'Admin') {
+            $session->setFlashdata('akses', true);
             return redirect()->to('sides');
         }
     }

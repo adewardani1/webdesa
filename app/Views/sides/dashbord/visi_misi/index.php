@@ -30,21 +30,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-    <?php
-    if (session()->getFlashdata('pesan_insert')) { ?>
-        <script>
-            alert('data berhasil di tambahkan');
-        </script>
-    <?php } else if (session()->getFlashdata('pesan_hapus')) { ?>
-        <script>
-            alert('data berhasil di hapus');
-        </script>
-    <?php } else if (session()->getFlashdata('error')) { ?>
-        <script>
-            alert('data gagal di tambahkan');
-        </script>
-    <?php }
-    ?>
+
     <div class="wrapper">
 
         <!-- Preloader -->
@@ -106,10 +92,10 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo base_url('sides/berita'); ?>" class="nav-link">
+                            <a href="<?php echo base_url('sides/content'); ?>" class="nav-link">
                                 <i class="fas fa-newspaper"></i>
                                 <p>
-                                    Berita
+                                    Content
                                 </p>
                             </a>
                         </li>
@@ -153,8 +139,16 @@
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/komentar'); ?>" class="nav-link">
+                                <i class="fas fa-comment-alt"></i>
+                                <p>
+                                    Komentar
+                                </p>
+                            </a>
+                        </li>
                         <?php
-                        if (session()->get('level') == 'Master') { ?>
+                        if (session()->get('level') === 'Master') { ?>
                             <li class="nav-item">
                                 <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
                                     <i class="fas fa-user-circle"></i>
@@ -201,22 +195,10 @@
                             <div class="card">
                                 <div class="card-header">
                                     <?php
-                                    if ($count === 0) { ?>
+                                    if (!session()->get('isVisiMisi')) { ?>
                                         <a class="btn btn-primary" href="<?php echo base_url('sides/visimisi/create'); ?>">Tambah Data</a>
                                     <?php }
                                     ?>
-
-                                    <div class="card-tools">
-                                        <div class="input-group input-group-sm" style="width: 150px;">
-                                            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-                                            <div class="input-group-append">
-                                                <button type="submit" class="btn btn-default">
-                                                    <i class="fas fa-search"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body table-responsive p-0">
@@ -278,7 +260,6 @@
         </aside>
         <!-- /.control-sidebar -->
     </div>
-
     <!-- jQuery -->
     <script src="<?php echo base_url('adminLTE/plugins/jquery/jquery.min.js'); ?>"></script>
     <!-- jQuery UI 1.11.4 -->
@@ -314,6 +295,25 @@
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="<?php echo base_url('adminLTE/dist/js/pages/dashboard.js'); ?>"></script>
     <!-- ./wrapper -->
+    <?php
+    if (session()->getFlashdata('pesan_insert')) { ?>
+        <script>
+            alert('data berhasil di tambahkan');
+        </script>
+    <?php } else if (session()->getFlashdata('pesan_hapus')) { ?>
+        <script>
+            alert('data berhasil di hapus');
+        </script>
+    <?php } else if (session()->getFlashdata('error')) { ?>
+        <script>
+            alert('data gagal di tambahkan');
+        </script>
+    <?php } else if (session()->getFlashdata('back')) { ?>
+        <script>
+            alert('data visi misi hanya bisa tambah 1 saja');
+        </script>
+    <?php }
+    ?>
 </body>
 
 </html>

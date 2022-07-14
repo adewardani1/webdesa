@@ -30,21 +30,6 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-    <?php
-    if (session()->getFlashdata('pesan_insert')) { ?>
-        <script>
-            alert('data berhasil di tambahkan');
-        </script>
-    <?php } else if (session()->getFlashdata('pesan_hapus')) { ?>
-        <script>
-            alert('data berhasil di hapus');
-        </script>
-    <?php } else if (session()->getFlashdata('pesanUpdated')) { ?>
-        <script>
-            alert('data berhasil di update');
-        </script>
-    <?php }
-    ?>
     <div class="wrapper">
 
         <!-- Preloader -->
@@ -106,7 +91,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo base_url('sides/berita'); ?>" class="nav-link">
+                            <a href="<?php echo base_url('sides/content'); ?>" class="nav-link">
                                 <i class="fas fa-newspaper"></i>
                                 <p>
                                     Berita
@@ -118,6 +103,46 @@
                                 <i class="fas fa-lightbulb"></i>
                                 <p>
                                     Aspirasi Warga
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/visimisi'); ?>" class="nav-link">
+                                <i class="fas fa-tasks"></i>
+                                <p>
+                                    Visi-Misi
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="<?php echo base_url('sides/kelembagaan'); ?>" class="nav-link">
+                                <i class="fas fa-university"></i>
+                                <p>
+                                    Kelembagaan
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/pemerintah-desa'); ?>" class="nav-link">
+                                <i class="fas fa-gavel"></i>
+                                <p>
+                                    Pemerintah Desa
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/galeri'); ?>" class="nav-link">
+                                <i class="fas fa-images"></i>
+                                <p>
+                                    Galeri
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/komentar'); ?>" class="nav-link">
+                                <i class="fas fa-comment-alt"></i>
+                                <p>
+                                    Komentar
                                 </p>
                             </a>
                         </li>
@@ -143,7 +168,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Data Penduduk</h1>
+                            <h1 class="m-0">Data Akun</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -241,6 +266,21 @@
         <!-- /.control-sidebar -->
     </div>
 
+    <?php
+    if (session()->getFlashdata('pesan_insert')) { ?>
+        <script>
+            alert('data berhasil di tambahkan');
+        </script>
+    <?php } else if (session()->getFlashdata('pesan_hapus')) { ?>
+        <script>
+            alert('data berhasil di hapus');
+        </script>
+    <?php } else if (session()->getFlashdata('pesanUpdated')) { ?>
+        <script>
+            alert('data berhasil di update');
+        </script>
+    <?php }
+    ?>
     <!-- jQuery -->
     <script src="<?php echo base_url('adminLTE/plugins/jquery/jquery.min.js'); ?>"></script>
     <!-- jQuery UI 1.11.4 -->

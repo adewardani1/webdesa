@@ -18,17 +18,7 @@
 </head>
 
 <body class="hold-transition login-page">
-    <?php
-    if (session()->getFlashdata('alert')) { ?>
-        <script>
-            alert("username atau password salah!");
-        </script>
-    <?php } else if (session()->getFlashdata('logFirst')) { ?>
-        <script>
-            alert("Login terlebih dahulu");
-        </script>
-    <?php }
-    ?>
+
     <div class="login-box">
         <div class="login-logo">
             <a href="#"><b>SI-</b>DESA</a>
@@ -37,9 +27,7 @@
         <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Login untuk masuk</p>
-
-                <form action="<?php echo base_url('/auth/proses'); ?>" method="post" autocomplete="off">
-                    <?php $validation = \Config\Services::validation(); ?>
+                <form action="<?php echo base_url('auth/proses'); ?>" method="post" autocomplete="off">
                     <div class="input-group mb-3">
                         <input type="text" name="user" class="form-control <?php echo $validation->hasError('user') ? 'is-invalid' : null ?>" placeholder="Username">
                         <div class="input-group-append">
@@ -75,7 +63,17 @@
         </div>
     </div>
     <!-- /.login-box -->
-
+    <?php
+    if (session()->getFlashdata('alert')) { ?>
+        <script>
+            alert("username atau password salah!");
+        </script>
+    <?php } else if (session()->getFlashdata('logFirst')) { ?>
+        <script>
+            alert("Login terlebih dahulu");
+        </script>
+    <?php }
+    ?>
     <!-- jQuery -->
     <script src="<?php echo base_url('adminLTE/plugins/jquery/jquery.min.js'); ?>"></script>
     <!-- Bootstrap 4 -->

@@ -30,13 +30,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-    <?php
-    if (session()->getFlashdata('alert')) { ?>
-        <script>
-            alert('gagal update');
-        </script>
-    <?php }
-    ?>
+
     <div class="wrapper">
 
         <!-- Preloader -->
@@ -98,10 +92,10 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo base_url('sides/berita'); ?>" class="nav-link">
+                            <a href="<?php echo base_url('sides/content'); ?>" class="nav-link">
                                 <i class="fas fa-newspaper"></i>
                                 <p>
-                                    Berita
+                                    Content
                                 </p>
                             </a>
                         </li>
@@ -142,6 +136,14 @@
                                 <i class="fas fa-images"></i>
                                 <p>
                                     Galeri
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/komentar'); ?>" class="nav-link">
+                                <i class="fas fa-comment-alt"></i>
+                                <p>
+                                    Komentar
                                 </p>
                             </a>
                         </li>
@@ -236,7 +238,13 @@
             </div>
         </footer>
     </div>
-
+    <?php
+    if (session()->getFlashdata('alert')) { ?>
+        <script>
+            alert('gagal update');
+        </script>
+    <?php }
+    ?>
     <!-- jQuery -->
     <script src="<?php echo base_url('adminLTE/plugins/jquery/jquery.min.js'); ?>"></script>
     <!-- jQuery UI 1.11.4 -->

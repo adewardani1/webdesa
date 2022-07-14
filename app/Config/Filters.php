@@ -10,6 +10,8 @@ use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
 use \App\Filters\Auth;
 use \App\Filters\IsAdmin;
+use \App\Filters\IsVisiMisi;
+use \App\Filters\IsPemerintahDesa;
 
 class Filters extends BaseConfig
 {
@@ -20,13 +22,15 @@ class Filters extends BaseConfig
      * @var array
      */
     public $aliases = [
-        'csrf'          => CSRF::class,
-        'toolbar'       => DebugToolbar::class,
-        'honeypot'      => Honeypot::class,
-        'invalidchars'  => InvalidChars::class,
-        'secureheaders' => SecureHeaders::class,
-        'isLoggedIn'    => Auth::class,
-        'isAdmin'       => IsAdmin::class
+        'csrf'              => CSRF::class,
+        'toolbar'           => DebugToolbar::class,
+        'honeypot'          => Honeypot::class,
+        'invalidchars'      => InvalidChars::class,
+        'secureheaders'     => SecureHeaders::class,
+        'isLoggedIn'        => Auth::class,
+        'isAdmin'           => IsAdmin::class,
+        'isVisiMisi'        => IsVisiMisi::class,
+        'isPemerintahDesa'  => IsPemerintahDesa::class
     ];
 
     /**
@@ -88,6 +92,20 @@ class Filters extends BaseConfig
                 'sides/akun/delete',
                 'sides/akun/insert',
                 'akun'
+            ]
+        ],
+
+        'isVisiMisi' => [
+            'before' => [
+                'sides/visimisi/create',
+                'sides/visimisi/save'
+            ]
+        ],
+
+        'isPemerintahDesa' => [
+            'before' => [
+                'sides/pemerintah-desa/create',
+                'sides/pemerintah-desa/save'
             ]
         ]
     ];
