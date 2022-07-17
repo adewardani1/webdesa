@@ -2,8 +2,8 @@
 
 <?= $this->section('content') ?>
 
-<div class="jumbotron-event">
-    <p class="text-dark">EVENT</p>
+<div class="jumbotron-event text-center">
+    <h1>EVENT</h1>
 </div>
 
 <div class="jumbotron-kontent-event">

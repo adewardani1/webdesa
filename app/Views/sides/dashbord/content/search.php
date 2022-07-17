@@ -253,8 +253,8 @@
                                                     <td><?php echo $row->updated_at; ?></td>
                                                     <td>
                                                         <div class="btn-group" role="group" aria-label="Basic example">
-                                                            <a class="btn btn-danger" href="<?php echo base_url('sides/berita/delete/' . $row->id); ?>">Hapus</a>
-                                                            <a class="btn btn-warning" href="<?php echo base_url('sides/berita/show/' . $row->id); ?>">Edit</a>
+                                                            <a class="btn btn-danger" href="<?php echo base_url('sides/content/delete/' . $row->id); ?>">Hapus</a>
+                                                            <a class="btn btn-warning" href="<?php echo base_url('sides/content/show/' . $row->id); ?>">Edit</a>
                                                         </div>
                                                     </td>
                                                     <td><a href="<?php echo base_url('sides/berita/foto/' . $row->id); ?>" class="btn btn-outline-primary"><i class="fas fa-image"></i> Download</a></td>

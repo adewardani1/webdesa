@@ -44,7 +44,8 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">HELLO DESA</a>
                         <ul class="dropdown-menu bg-dark text-white" aria-labelledby="dropdownMenuLink">
                             <li><a class="dropdown-item" href="<?php echo base_url('kontak/'); ?>">Kontak</a></li>
-                            <li><a class="dropdown-item" href="#">Laporan Terkini</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('laporan-terkini/'); ?>">Laporan Terkini</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('surat/'); ?>">Surat Online</a></li>
                         </ul>
                     </li>
                 </div>

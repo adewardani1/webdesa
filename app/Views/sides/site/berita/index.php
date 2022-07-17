@@ -1,11 +1,11 @@
 <?= $this->extend('layout/page_layout') ?>
 
 <?= $this->section('content') ?>
-<div class="news-judul">
-    <h1>
-        BERITA
-    </h1>
+
+<div class="news-judul text-center">
+    <h1>BERITA</h1>
 </div>
+
 <div class="jumbotron-news">
     <div class="container">
         <div class="row">

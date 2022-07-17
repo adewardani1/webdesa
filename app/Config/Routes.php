@@ -39,6 +39,9 @@ $routes->get('kelembagaan', 'Home::getKelembagaan');
 $routes->get('pemerintahan-desa', 'Home::getPemerintahDesa');
 $routes->get('visi-misi', 'Home::getVisiMisi');
 $routes->get('kontak', 'Home::getKontak');
+$routes->get('sejarah-desa', 'Home::getSejarah');
+
+$routes->get('laporan-terkini', 'Home::getLaporanTerkini');
 
 //route news
 $routes->get('news', 'Home::getBerita');
@@ -54,7 +57,13 @@ $routes->get('event/(:num)', 'Home::getEventById/$1');
 
 //route submit komentar
 $routes->post('comment/submit/(:num)', 'Home::insert/$1');
+
+//route submit aspirasi
 $routes->post('aspirasi/submit', 'Home::insertAspirasi');
+
+//route submit permohonan surat
+$routes->get('surat', 'Home::getSurat');
+$routes->post('surat/submit', 'Home::insertSuratPermohonan');
 
 //route login SIDES
 $routes->get('auth', 'Login::index');

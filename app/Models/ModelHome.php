@@ -293,4 +293,9 @@ class ModelHome extends Model
     {
         return $this->database->table('aspirasi')->insert($data);
     }
+
+    public function insertSurat($data)
+    {
+        return $this->database->table('surat')->insert($data);
+    }
 }

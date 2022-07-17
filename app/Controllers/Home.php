@@ -26,14 +26,14 @@ class Home extends BaseController
         return view('sides/site/index', $data);
     }
 
-    public function sejarah()
-    {
-        return view('site/sejarah-desa');
-    }
-
     public function visi_misi()
     {
         return view('site/visi-misi');
+    }
+
+    public function getSejarah()
+    {
+        return view('sides/site/sejarah-desa');
     }
 
     public function getPemerintahDesa()
@@ -58,6 +58,27 @@ class Home extends BaseController
 
         return view('sides/site/kontak');
     }
+
+    public function getLaporanTerkini()
+    {
+
+        return view('sides/site/laporan-terkini');
+    }
+
+
+    public function getSurat()
+    {
+
+        return view('sides/site/surat');
+    }
+    public function getKelembagaan()
+    {
+        $data = [
+            'kelembagaan' => $this->model->getKelembagaan(),
+        ];
+        return view('sides/site/kelembagaan', $data);
+    }
+
 
     public function getBerita()
     {
@@ -166,5 +187,68 @@ class Home extends BaseController
     public function kontak_desa()
     {
         return view('site/kontak');
+    }
+    public function insertSuratPermohonan()
+    {
+        $validation = $this->validate([
+            'nama' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'nama wajib di isi',
+                ]
+            ],
+
+            'email' => [
+                'rules' => 'required|valid_email',
+                'errors' => [
+                    'required' => 'Email tidak boleh kosong',
+                    'valid_email' => 'Format email salah'
+                ]
+            ],
+
+            'nik' => [
+                'rules' => 'required|integer|min_length[16]|max_length[16]',
+                'errors' => [
+                    'required' => 'Nomor NIK wajib di isi',
+                    'min_length' => 'Nomor NIK minimal harus 16 angka',
+                    'max_length' => 'Nomor NIK tidak lebih dari 16 angka'
+                ]
+            ],
+
+            'jenis' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'jenis wajib di isi',
+                ]
+            ],
+
+            'pesan' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'pesan wajib di isi',
+                ]
+            ]
+        ]);
+        if (!$validation) {
+            return redirect()->to('surat');
+        }
+
+        $data = [
+            'nama' => $this->request->getPost('nama'),
+            'email' => $this->request->getPost('email'),
+            'nik' => $this->request->getPost('nik'),
+            'jenis_surat' => $this->request->getPost('jenis'),
+            'pesan' => $this->request->getPost('pesan'),
+            "created_at" => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s'))),
+            "updated_at" => date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s')))
+        ];
+
+        $simpan = $this->model->insertSurat($data);
+
+        if ($simpan) {
+            return redirect()->to('surat');
+        } else {
+            return false;
+        }
     }
 }

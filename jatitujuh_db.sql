@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 09, 2022 at 05:06 AM
+-- Generation Time: Jul 13, 2022 at 07:13 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -98,8 +98,7 @@ CREATE TABLE `berita` (
 INSERT INTO `berita` (`id`, `gambar`, `judul`, `jenis`, `konten`, `id_akun`, `created_at`, `updated_at`) VALUES
 (7, 'Screenshot (1).png', 'faisal', 'news', 'ddddd', 3, '2022-06-13 07:05:38', '2022-06-24 17:36:24'),
 (8, 'Screenshot (8).png', 'sds', 'news', 'Sebanyak 25 siswa siswi TK Muslimat Nurul Fahmi Bulakan melakukan wisuda yang didampingi orang tua masing-masing.\n\nDalam sambutannya Sigit berharap, segala ilmu yang sudah diajarkan oleh para guru di TK Nurul Fahmi kepada para siswa dapat bermanfaat dan menjadi bekal untuk melangkah ke pendidikan selanjutnya.\n\n“Semoga apa yang telah didapatkan oleh para siswa di TK Nurul Fahmi ini dapat bermanfaat dan menjadi bekal untuk melangkah ke pendidikan selanjutnya,” ucapnya.', 3, '2022-06-13 07:20:25', '2022-07-05 20:12:43'),
-(9, 'Screenshot (158).png', 'ssss', 'Headline', 'llll', 3, '2022-06-24 17:25:43', '2022-06-24 17:25:43'),
-(11, 'Screenshot (26).png', 'cascascascasc', 'Headline', 'jadi', 3, '2022-06-30 20:00:11', '2022-06-30 20:00:11'),
+(9, 'desajatituju.jpg', 'ssss', 'headline', 'llll', 3, '2022-06-24 17:25:43', '2022-06-24 17:25:43'),
 (15, 'Screenshot (51).png', 'ewfwfw', 'event', 'aqwfqe', 1, '2022-07-06 21:06:20', '2022-07-06 21:06:20'),
 (16, 'Screenshot (1124).png', 'sjsjsjj', 'pengumuman', 'lkskldldldl', 1, '2022-07-07 09:05:33', '2022-07-07 09:05:33');
 
@@ -188,6 +187,13 @@ CREATE TABLE `pemerintah_desa` (
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `pemerintah_desa`
+--
+
+INSERT INTO `pemerintah_desa` (`id`, `gambar`, `created_at`, `updated_at`) VALUES
+(5, 'pemerintahan.png', '2022-07-13 09:47:15', '2022-07-13 10:15:46');
+
 -- --------------------------------------------------------
 
 --
@@ -217,7 +223,8 @@ CREATE TABLE `penduduk` (
 INSERT INTO `penduduk` (`id`, `nama`, `no_ktp`, `jenis_kelamin`, `desa`, `dusun`, `rt`, `rw`, `status`, `pendidikan`, `agama`, `created_at`, `updated_at`) VALUES
 (4, 'rijal hafizhun hidayat', 2314, 'Laki-Laki', 'megu gede', 'WEFWE', 345, 345, 'ef', 'wef', 'Islam', '2022-06-16 22:31:56', '2022-06-16 22:31:56'),
 (5, 'hafizhun', 34341, 'Perempuan', 'efwe', 'EF3', 4, 4, 'fef', 'weq', 'Islam', '2022-06-14 13:53:49', '2022-06-14 13:53:49'),
-(6, 'sacas', 3431, 'Laki-Laki', 'wfw', 'wef', 3, 3242, 'wv', 'ff', 'Islam', '2022-06-12 21:19:40', '2022-06-12 21:19:40');
+(6, 'sacas', 3431, 'Laki-Laki', 'wfw', 'wef', 3, 3242, 'wv', 'ff', 'Islam', '2022-06-12 21:19:40', '2022-06-12 21:19:40'),
+(10, 'test123', 2147483647, 'Perempuan', 'efwe', 'wef', 42, 33, 'wF', 'weq', 'Islam', '2022-07-13 08:36:50', '2022-07-13 08:36:50');
 
 -- --------------------------------------------------------
 
@@ -231,6 +238,13 @@ CREATE TABLE `visi_misi` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `visi_misi`
+--
+
+INSERT INTO `visi_misi` (`id`, `gambar`, `created_at`, `updated_at`) VALUES
+(7, 'visi-misi.png', '2022-07-13 10:13:09', '2022-07-13 10:13:09');
 
 --
 -- Indexes for dumped tables
@@ -335,19 +349,19 @@ ALTER TABLE `komentar`
 -- AUTO_INCREMENT for table `pemerintah_desa`
 --
 ALTER TABLE `pemerintah_desa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `penduduk`
 --
 ALTER TABLE `penduduk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `visi_misi`
 --
 ALTER TABLE `visi_misi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

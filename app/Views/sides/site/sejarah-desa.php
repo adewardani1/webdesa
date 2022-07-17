@@ -17,7 +17,6 @@
         <h1>SEJARAH</h1>
         <h3>DESA JATITUJUH</h3>
 
-
         <section>
             <div class="container-sejarah">
                 <div class="row">

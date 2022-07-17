@@ -1,25 +1,17 @@
-<!-- start navbar -->
-
 <?= $this->extend('layout/page_layout'); ?>
-
-<!-- end navbar -->
 
 <?= $this->Section('content'); ?>
 
-<!-- start jumbotron kelembagaan -->
-
-<div class="jumbotron-kelembagaan">
-    <div class="group-konten-jumbotron text-center">
-        <h1>LEMBAGA MASYARAKAT</h1>
-        <hr class="horizontal-line">
-        <p>lembaga masyarakat yang ada di desa jatitujuh kecamatan jatitujuh kabupaten jatitujuh</p>
-        <p>provinsi jawa tengah</p>
+<div class="jumbotron-kelembagaan jumbotron-fluid">
+    <div class="container">
+        <div class="group-konten-jumbotron text-center">
+            <h1>LEMBAGA MASYARAKAT</h1>
+            <hr class="horizontal-line">
+            <p>lembaga masyarakat yang ada di desa jatitujuh kecamatan jatitujuh kabupaten jatitujuh</p>
+            <p>provinsi jawa tengah</p>
+        </div>
     </div>
 </div>
-
-<!-- end jumbotron kelembagaan -->
-
-<!-- start gambar jumbotron kelembagaan -->
 
 <div class="jumbotron-img-kelembagaan">
     <div class="container">
@@ -35,5 +27,5 @@
         </div>
     </div>
 </div>
-<!-- end gambar jumbotron kelembagaan -->
+
 <?= $this->endSection(); ?>

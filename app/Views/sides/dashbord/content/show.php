@@ -224,10 +224,10 @@
                                             <label for="exampleSelectBorder" class="col-sm-2 col-form-label">Jenis Konten</label>
                                             <div class="col-sm-10">
                                                 <select name="jenis" class="custom-select form-control-border" id="exampleSelectBorder">
-                                                    <option value="Biasa">Biasa</option>
-                                                    <option value="Headline">Headline</option>
-                                                    <option value="Event">Event</option>
-                                                    <option value="Pengumuman">Pengumuman</option>
+                                                    <option value="news">Berita</option>
+                                                    <option value="headline">Headline</option>
+                                                    <option value="event">Event</option>
+                                                    <option value="pengumuman">Pengumuman</option>
                                                 </select>
                                             </div>
                                         </div>

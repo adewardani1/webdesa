@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-sm-7">
                 <?php
-                $pieces = explode(".", $berita->konten);
+                $pieces = explode(";", $berita->konten);
                 $result = '';
                 $result = $pieces[0];
                 $result = '<p .../>';
