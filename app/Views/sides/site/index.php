@@ -450,13 +450,78 @@
       </div>
     </div>
   </div>
+
+  <!-- end follow -->
+
+  <!-- start form pengaduan -->
+
+  <div class="jumbotron-pengaduan">
+    <div class="container">
+      <div class="header text-center">
+        <h1>FORM PENGADUAN DAN ASPIRASI WARGA</h1>
+      </div>
+      <div class="form">
+        <form action="<?php echo base_url('aspirasi/submit'); ?>" method="post">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nama Depan</label>
+                <input type="text" name="nama_depan" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nama Belakang</label>
+                <input type="text" name="nama_belakang" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Alamat</label>
+                <input type="text" name="alamat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">No HP</label>
+                <input type="text" name="nomor_hp" maxlength="13" minlength="10" onkeypress="return isNumberKey(event)" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
+                <textarea class="form-control" name="pesan" id="exampleFormControlTextarea1" rows="3" required></textarea>
+              </div>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-outline-success">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- end form pengaduan -->
+
   <?php
   if (session()->getFlashdata('berhasil')) { ?>
     <script>
       alert('komentar anda telah kami terima, terima kasih');
     </script>
+  <?php } else if (session()->getFlashdata('success')) { ?>
+    <script>
+      alert('aspirasi anda telah kami terima, terima kasih');
+    </script>
   <?php }
   ?>
+
+  <script>
+    function isNumberKey(evt) {
+      var charCode = (evt.which) ? evt.which : evt.keyCode
+      if (charCode > 31 && (charCode < 48 || charCode > 57))
+        return false;
+      return true;
+    }
+  </script>
 
   <!-- end follow -->
 

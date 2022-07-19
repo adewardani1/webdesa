@@ -132,6 +132,26 @@
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('sides/komentar'); ?>" class="nav-link">
+                                <i class="fas fa-comment-alt"></i>
+                                <p>
+                                    Komentar
+                                </p>
+                            </a>
+                        </li>
+                        <?php
+                        if (session()->get('level') === 'Master') { ?>
+                            <li class="nav-item">
+                                <a href="<?php echo base_url('sides/akun'); ?>" class="nav-link">
+                                    <i class="fas fa-user-circle"></i>
+                                    <p>
+                                        Akun
+                                    </p>
+                                </a>
+                            </li>
+                        <?php }
+                        ?>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -167,7 +187,6 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <a class="btn btn-primary" href="<?php echo base_url('/sides/aspirasi/create'); ?>">Tambah Data</a>
                                     <div class="card-tools">
                                         <div class="input-group input-group-sm" style="width: 150px;">
                                             <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
@@ -191,7 +210,7 @@
                                                 <th>Email</th>
                                                 <th>Address</th>
                                                 <th>Nomor Hp</th>
-                                                <th>Message</th>
+                                                <th>Pesan</th>
                                                 <th>#Di Buat</th>
                                                 <th>#Di Ubah</th>
                                                 <th>Action</th>
@@ -249,13 +268,6 @@
         </aside>
         <!-- /.control-sidebar -->
     </div>
-
-    <?php
-    if (session()->getFlashdata('gagal')) { ?>
-        <script>
-            alert('gagal hapus data');
-        </script>
-    <?php } ?>
     <!-- jQuery -->
     <script src="<?php echo base_url('adminLTE/plugins/jquery/jquery.min.js'); ?>"></script>
     <!-- jQuery UI 1.11.4 -->
@@ -291,6 +303,12 @@
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="<?php echo base_url('adminLTE/dist/js/pages/dashboard.js'); ?>"></script>
     <!-- ./wrapper -->
+    <?php
+    if (session()->getFlashdata('pesan_hapus')) { ?>
+        <script>
+            alert('berhasil hapus data');
+        </script>
+    <?php } ?>
 </body>
 
 </html>

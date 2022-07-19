@@ -35,4 +35,14 @@ class AspirasiWarga extends BaseController
             return false;
         }
     }
+
+    public function destroy($id)
+    {
+        $delete = $this->model->deleteById($id);
+
+        if ($delete) {
+            session()->setFlashdata('pesan_hapus', true);
+            return redirect()->to('sides/aspirasi');
+        }
+    }
 }

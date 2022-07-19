@@ -14,8 +14,6 @@ class ModelAspirasiWarga extends Model
         'email',
         'alamat',
         'nomor_hp',
-        'berkas_pdf',
-        'berkas_foto',
         'pesan'
     ];
 
@@ -37,20 +35,8 @@ class ModelAspirasiWarga extends Model
         return $this->database->query($sql)->getResult();
     }
 
-    public function getAspirasiById($id)
-    {
-        $sql = "
-            SELECT
-                *
-            FROM aspirasi
-            WHERE aspirasi.id = '" . $id . "'
-        ";
-
-        return $this->database->query($sql)->getRow();
-    }
-
     public function deleteById($id)
     {
-        return $this->database->delete(['id' => $id]);
+        return $this->database->table('aspirasi')->delete(['id' => $id]);
     }
 }

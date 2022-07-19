@@ -27,7 +27,7 @@ class Komentar extends BaseController
 
     public function destroy($id)
     {
-        $deleteKomentarById = $this->model->delete(['id' => $id]);
+        $deleteKomentarById = $this->model->deleteById($id);
 
         if ($deleteKomentarById) {
             session()->setFlashdata('pesan_hapus', true);
