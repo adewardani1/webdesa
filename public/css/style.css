@@ -58,7 +58,7 @@
     left: 0;
     width: 400px;
     height: 800px;
-    filter: brightness(60%)
+    filter: brightness(60%);
   }
 
   .carousel .carousel-inner .carousel-item img {
@@ -81,6 +81,7 @@
 
   .bg-flex {
     background-color: #fff8cc;
+    width: 100%;
   }
 
   .d-flex .btn-menu {
@@ -474,11 +475,24 @@
     font-size: 10px;
   }
 
-  .jumbotron-berita .container .row .col-sm-4 .card .card-body .btn-selengkapnya {
+  .jumbotron-berita
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-selengkapnya {
     margin-top: 30px;
   }
 
-  .jumbotron-berita .container .row .col-sm-4 .card .card-body .btn-selengkapnya a {
+  .jumbotron-berita
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-selengkapnya
+    a {
     text-decoration: none;
     color: black;
     border-style: solid;
@@ -488,7 +502,14 @@
     transition: 0.3s ease;
   }
 
-  .jumbotron-berita .container .row .col-sm-4 .card .card-body .btn-selengkapnya a:hover {
+  .jumbotron-berita
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-selengkapnya
+    a:hover {
     background-color: #cc5200;
     color: white;
     border-radius: 5px;
@@ -671,6 +692,11 @@
   .jumbotron-kontak {
     padding: 2rem 1rem;
     background-color: #e9ecef;
+    background-image: linear-gradient(
+        rgba(64, 84, 178),
+        rgba(0.5, 0.5, 0.5, 0.5)
+      ),
+      url("/img/kantor.jpg");
     height: 900px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -849,7 +875,14 @@
     color: black !important;
   }
 
-  .detail .container .row .col-sm-4 .side .group-side .fontawesome-side .fab:hover {
+  .detail
+    .container
+    .row
+    .col-sm-4
+    .side
+    .group-side
+    .fontawesome-side
+    .fab:hover {
     color: #00d877 !important;
   }
 
@@ -905,11 +938,21 @@
     padding: 20px;
   }
 
-  .jumbotron-galeri-konten .container .row .col-right .swiper .swiper-button-next {
+  .jumbotron-galeri-konten
+    .container
+    .row
+    .col-right
+    .swiper
+    .swiper-button-next {
     color: #00d877 !important;
   }
 
-  .jumbotron-galeri-konten .container .row .col-right .swiper .swiper-button-prev {
+  .jumbotron-galeri-konten
+    .container
+    .row
+    .col-right
+    .swiper
+    .swiper-button-prev {
     color: #00d877 !important;
   }
 
@@ -936,7 +979,13 @@
     height: 400px;
   }
 
-  .jumbotron-galeri-konten .container .row .col-sm-6 .swiper .swiper-wrapper .swiper-slide {
+  .jumbotron-galeri-konten
+    .container
+    .row
+    .col-sm-6
+    .swiper
+    .swiper-wrapper
+    .swiper-slide {
     text-align: center;
 
     /* Center slide text vertically */
@@ -954,7 +1003,14 @@
     align-items: center;
   }
 
-  .jumbotron-galeri-konten .container .row .col-sm-6 .swiper .swiper-wrapper .swiper-slide img {
+  .jumbotron-galeri-konten
+    .container
+    .row
+    .col-sm-6
+    .swiper
+    .swiper-wrapper
+    .swiper-slide
+    img {
     width: 600px;
     height: 400px;
   }
@@ -1027,7 +1083,14 @@
     transition: 0.3s ease;
   }
 
-  .jumbotron-news .container .row .col-sm-4 .card .card-body .btn-read-more a:hover {
+  .jumbotron-news
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-read-more
+    a:hover {
     background-color: #cc5200;
     color: white;
     border-radius: 5px;
@@ -1111,7 +1174,14 @@
     transition: 0.3s ease;
   }
 
-  .jumbotron-isi .container .row .col-sm-4 .card .card-body .btn-read-more a:hover {
+  .jumbotron-isi
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-read-more
+    a:hover {
     background-color: #cc5200;
     color: white;
     border-radius: 5px;
@@ -1182,22 +1252,47 @@
     text-align: center !important;
   } */
 
-  .jumbotron-kontent-event .container .row .col-sm-4 .card .card-body .date-berita {
+  .jumbotron-kontent-event
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .date-berita {
     color: #b3b3b3 !important;
     font-weight: lighter;
     font-size: 10px;
   }
 
-  .jumbotron-kontent-event .container .row .col-sm-4 .card .card-body .card-title {
+  .jumbotron-kontent-event
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .card-title {
     font-size: 30px;
     font-weight: 900;
   }
 
-  .jumbotron-kontent-event .container .row .col-sm-4 .card .card-body .btn-read-more {
+  .jumbotron-kontent-event
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-read-more {
     margin-top: 30px;
   }
 
-  .jumbotron-kontent-event .container .row .col-sm-4 .card .card-body .btn-read-more a {
+  .jumbotron-kontent-event
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-read-more
+    a {
     text-decoration: none;
     color: black;
     border-style: solid;
@@ -1207,7 +1302,14 @@
     transition: 0.3s ease;
   }
 
-  .jumbotron-kontent-event .container .row .col-sm-4 .card .card-body .btn-read-more a:hover {
+  .jumbotron-kontent-event
+    .container
+    .row
+    .col-sm-4
+    .card
+    .card-body
+    .btn-read-more
+    a:hover {
     background-color: #cc5200;
     color: white;
     border-radius: 5px;
@@ -1311,11 +1413,73 @@
   }
 
   /* end css form pengaduan */
+
+  /* start css demografi */
+  .jumbotron-demografi {
+    padding: 2rem 1rem;
+    background-image: url("/img/demografi.jpg");
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20rem;
+    text-align: center;
+  }
+
+  .jumbotron-demografi h1 {
+    color: black !important;
+    font-weight: 900;
+  }
+
+  .bg-navbar {
+    background: grey;
+    width: 800px;
+    margin: auto;
+  }
+
+  .navbar-demografi .container .nav-item {
+    color: #00d877 !important;
+  }
+
+  .content {
+    font-family: "Roboto", sans-serif;
+    padding: 2rem 1rem;
+    background-color: rgb(250, 250, 250);
+    padding: 10px 10px;
+  }
+
+  .content p {
+    color: black !important;
+  }
+
+  /* end css demografi */
+}
+
+.container-demografi {
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 @media (max-width: 576px) {
+
   .bg-nav {
     background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+  }
+
+  .bg-nav {
+    background: rgba(0, 0, 0, 0.6);
+    
+  }
+
+  .bg-flex {
+    background-color: #fff8cc;
+    padding-top: 30px;
+    width: 100%;
+  }
+
+  .carousel {
+    width: 100%;
   }
 
   p,

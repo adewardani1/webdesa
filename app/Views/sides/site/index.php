@@ -79,8 +79,9 @@
         HOME
       </a>
     </div> -->
-    <div class="d-flex justify-content-center bg-flex">
-      <div class="btn-menu text-center">
+
+    <div class="d-flex bg-flex">
+      <div class="col-sm-2 offset-1 btn-menu text-center">
         <div class="btn-icon">
           <i class="fa-solid fa-building-columns fa-4x"></i>
         </div>
@@ -88,7 +89,7 @@
           <p>PROFILE</p>
         </div>
       </div>
-      <div class="btn-menu text-center">
+      <div class="col-sm-2 btn-menu text-center">
         <div class="btn-icon">
           <i class="fa-solid fa-book-open fa-4x"></i>
         </div>
@@ -96,7 +97,7 @@
           <p>INFORMASI PUBLIK</p>
         </div>
       </div>
-      <div class="btn-menu text-center">
+      <div class="col-sm-2 btn-menu text-center">
         <div class="btn-icon">
           <i class="fa-solid fa-bullhorn fa-4x"></i>
         </div>
@@ -104,7 +105,7 @@
           <p>PENGUMUMAN</p>
         </div>
       </div>
-      <div class="btn-menu text-center">
+      <div class="col-sm-2 btn-menu text-center">
         <div class="btn-icon">
           <i class="fa-solid fa-users fa-4x"></i>
         </div>
@@ -112,7 +113,7 @@
           <p>ASPIRASI WARGA</p>
         </div>
       </div>
-      <div class="btn-menu text-center">
+      <div class="col-sm-2 btn-menu text-center">
         <div class="btn-icon">
           <i class="fa-solid fa-phone fa-4x"></i>
         </div>
@@ -120,7 +121,9 @@
           <p>HELLO DESA</p>
         </div>
       </div>
-      <!-- <a href="#" class="">
+    </div>
+
+    <!-- <a href="#" class="">
         <i class="fa-solid fa-house-user"></i><br>
         HOME
       </a>
@@ -128,7 +131,7 @@
         <i class="fa-solid fa-house-user"></i><br>
         BERANDA
       </a> -->
-      <!-- <button>
+    <!-- <button>
         <i class="fa-solid fa-house-user fa-2xl space"></i><br>
         <p>PROFILE</p>
       </button>
@@ -156,7 +159,7 @@
         <i class="fa-solid fa-house-user fa-2xl space"></i><br>
         <p>BUMDES</p>
       </button> -->
-    </div>
+  </div>
   </div>
 
   <!-- end menu button -->
@@ -166,7 +169,7 @@
   <div class="box-head-profil">
     <div class="container">
       <div class="row">
-        <div class="col-sm-6 mt-5">
+        <div class="foto col-sm-6 mt-5">
           <img src="/img/foto.png" alt="">
         </div>
         <div class=" col-sm-6">

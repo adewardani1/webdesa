@@ -35,13 +35,15 @@ $routes->setAutoRoute(true);
 //route view desaq
 $routes->get('/', 'Home::index');
 $routes->get('galeri', 'Home::getGaleri');
+
 $routes->get('kelembagaan', 'Home::getKelembagaan');
 $routes->get('pemerintahan-desa', 'Home::getPemerintahDesa');
 $routes->get('visi-misi', 'Home::getVisiMisi');
 $routes->get('kontak', 'Home::getKontak');
+$routes->get('demografi', 'Home::getDemografi');
 $routes->get('sejarah-desa', 'Home::getSejarah');
-
 $routes->get('laporan-terkini', 'Home::getLaporanTerkini');
+
 
 //route news
 $routes->get('news', 'Home::getBerita');

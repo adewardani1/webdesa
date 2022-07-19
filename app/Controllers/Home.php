@@ -71,14 +71,6 @@ class Home extends BaseController
 
         return view('sides/site/surat');
     }
-    public function getKelembagaan()
-    {
-        $data = [
-            'kelembagaan' => $this->model->getKelembagaan(),
-        ];
-        return view('sides/site/kelembagaan', $data);
-    }
-
 
     public function getBerita()
     {
@@ -184,9 +176,18 @@ class Home extends BaseController
         }
     }
 
-    public function kontak_desa()
+
+    public function getKelembagaan()
     {
-        return view('site/kontak');
+        $data = [
+            'kelembagaan' => $this->model->getKelembagaan(),
+        ];
+        return view('sides/site/kelembagaan', $data);
+    }
+
+    public function getDemografi()
+    {
+        return view('sides/site/demografi');
     }
     public function insertSuratPermohonan()
     {
