@@ -21,6 +21,7 @@
   <!-- start carousel -->
 
   <?= $this->Section('content') ?>
+
   <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
       <?php
@@ -52,114 +53,48 @@
 
   <!-- start menu button -->
 
-  <div class="box-btn">
-    <!-- <div class="box-btn-link text-center">
-      <a href="#" class="">
-        <i class="fa-solid fa-house-user"></i><br>
-        HOME
-      </a>
-      <a href="#" class="">
-        <i class="fa-solid fa-house-user"></i><br>
-        INFORMASI PUBLIK
-      </a>
-      <a href="#" class="">
-        <i class="fa-solid fa-house-user"></i>
-        HOME
-      </a>
-      <a href="#" class="">
-        <i class="fa-solid fa-house-user"></i>
-        HOME
-      </a>
-      <a href="#" class="">
-        <i class="fa-solid fa-house-user"></i>
-        HOME
-      </a>
-      <a href="#" class="">
-        <i class="fa-solid fa-house-user"></i>
-        HOME
-      </a>
-    </div> -->
-
-    <div class="d-flex bg-flex">
-      <div class="col-sm-2 offset-1 btn-menu text-center">
-        <div class="btn-icon">
-          <i class="fa-solid fa-building-columns fa-4x"></i>
-        </div>
-        <div class="btn-text">
-          <p>PROFILE</p>
-        </div>
+  <!-- <div class="box-btn"> -->
+  <div class="kotak-icon d-flex bg-flex justify-content-center">
+    <div class="button-icon col-sm-2 btn-menu text-center">
+      <div class="btn-icon">
+        <i class="fa-solid fa-building-columns fa-3x"></i>
       </div>
-      <div class="col-sm-2 btn-menu text-center">
-        <div class="btn-icon">
-          <i class="fa-solid fa-book-open fa-4x"></i>
-        </div>
-        <div class="btn-text">
-          <p>INFORMASI PUBLIK</p>
-        </div>
-      </div>
-      <div class="col-sm-2 btn-menu text-center">
-        <div class="btn-icon">
-          <i class="fa-solid fa-bullhorn fa-4x"></i>
-        </div>
-        <div class="btn-text">
-          <p>PENGUMUMAN</p>
-        </div>
-      </div>
-      <div class="col-sm-2 btn-menu text-center">
-        <div class="btn-icon">
-          <i class="fa-solid fa-users fa-4x"></i>
-        </div>
-        <div class="btn-text">
-          <p>ASPIRASI WARGA</p>
-        </div>
-      </div>
-      <div class="col-sm-2 btn-menu text-center">
-        <div class="btn-icon">
-          <i class="fa-solid fa-phone fa-4x"></i>
-        </div>
-        <div class="btn-text">
-          <p>HELLO DESA</p>
-        </div>
+      <div class="btn-icon btn-text">
+        <p>PROFILE</p>
       </div>
     </div>
-
-    <!-- <a href="#" class="">
-        <i class="fa-solid fa-house-user"></i><br>
-        HOME
-      </a>
-      <a href="#" class="">
-        <i class="fa-solid fa-house-user"></i><br>
-        BERANDA
-      </a> -->
-    <!-- <button>
-        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
-        <p>PROFILE</p>
-      </button>
-      <button>
-        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
+    <div class="col-sm-2 btn-menu text-center">
+      <div class="btn-icon">
+        <i class="fa-solid fa-book-open fa-3x"></i>
+      </div>
+      <div class="btn-text">
         <p>INFORMASI PUBLIK</p>
-      </button>
-      <button>
-        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
+      </div>
+    </div>
+    <div class="col-sm-2 btn-menu text-center">
+      <div class="btn-icon">
+        <i class="fa-solid fa-bullhorn fa-3x"></i>
+      </div>
+      <div class="btn-text">
         <p>PENGUMUMAN</p>
-      </button>
-      <button>
-        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
+      </div>
+    </div>
+    <div class="col-sm-2 btn-menu text-center">
+      <div class="btn-icon">
+        <i class="fa-solid fa-users fa-3x"></i>
+      </div>
+      <div class="btn-text">
         <p>ASPIRASI WARGA</p>
-      </button>
-      <button>
-        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
-        <p>HELLO DESA</p>
-      </button>
-      <button>
-        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
-        <p>PRODUK DESA</p>
-      </button>
-      <button>
-        <i class="fa-solid fa-house-user fa-2xl space"></i><br>
-        <p>BUMDES</p>
-      </button> -->
-  </div>
+      </div>
+    </div>
+    <div class="col-sm-2 btn-menu text-center">
+      <div class="btn-icon">
+        <i class="fa-solid fa-users fa-3x"></i>
+      </div>
+      <div class="btn-text">
+        <p>ASPIRASI WARGA</p>
+      </div>
+    </div>
   </div>
 
   <!-- end menu button -->
@@ -169,8 +104,8 @@
   <div class="box-head-profil">
     <div class="container">
       <div class="row">
-        <div class="foto col-sm-6 mt-5">
-          <img src="/img/foto.png" alt="">
+        <div class="foto col-sm-6 mt-5 text-center">
+          <img src="/img/foto.png" alt="" class="img-fluid justify-content-center">
         </div>
         <div class=" col-sm-6">
           <h1>"</h1>
@@ -233,16 +168,16 @@
         <hr />
       </div>
       <div class="d-flex justify-content-center">
-        <div class="group-profile" data-aos="fade-right" data-aos-duration="1000">
+        <div class="group-profile">
           <img class="img-fluid" src="/img/foto.png" alt="">
         </div>
-        <div class="group-profile" data-aos="fade-up" data-aos-duration="1000">
+        <div class="group-profile">
           <img class="img-fluid" src="/img/foto.png" alt="">
         </div>
-        <div class="group-profile" data-aos="fade-up" data-aos-duration="1000">
+        <div class="group-profile">
           <img class="img-fluid" src="/img/foto.png" alt="">
         </div>
-        <div class="group-profile" data-aos="fade-left" data-aos-duration="1000">
+        <div class="group-profile">
           <img class="img-fluid" src="/img/foto.png" alt="">
         </div>
       </div>
