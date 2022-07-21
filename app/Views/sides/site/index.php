@@ -158,40 +158,9 @@
 
   <!-- end data stattistik -->
 
-  <!-- start sotk -->
-
-  <div class="jumbotron-sotk">
-    <div class="container">
-      <div class="header text-center">
-        <h1>SOTK</h1>
-        <p class="text-black">Struktur Organisasi dan Tata kerja Pemerintah Desa Jatitujuh Kecamatan Jatitujuh Kabupaten Majalengka Provinsi Jawa Barat</p>
-        <hr />
-      </div>
-      <div class="d-flex justify-content-center">
-        <div class="group-profile">
-          <img class="img-fluid" src="/img/foto.png" alt="">
-        </div>
-        <div class="group-profile">
-          <img class="img-fluid" src="/img/foto.png" alt="">
-        </div>
-        <div class="group-profile">
-          <img class="img-fluid" src="/img/foto.png" alt="">
-        </div>
-        <div class="group-profile">
-          <img class="img-fluid" src="/img/foto.png" alt="">
-        </div>
-      </div>
-      <div class="box-detail">
-        <a href="#">Selengkapnya</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- end sotk -->
-
   <!-- start layanan publik -->
 
-  <div class="jumbotron-layanan">
+  <div class="jumbotron-layanan mt-5">
     <div class="container">
       <div class="header-layanan">
         <h1 class="text-center">Layanan Publik</h1>
@@ -295,27 +264,6 @@
           </div>
         <?php }
         ?>
-
-        <!-- <div class="col-sm-4">
-          <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title text-dark">Card title</h5>
-              <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title text-dark">Card title</h5>
-              <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div> -->
       </div>
       <div class="text-center my-5">
         <a href="<?php echo base_url('news'); ?>" class="btn-berita">Berita Lainnya</a>

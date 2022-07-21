@@ -2,14 +2,12 @@
 
 <?= $this->Section('content'); ?>
 
-<div class="jumbotron-kelembagaan jumbotron-fluid">
+<div class="jumbotron-laporan jumbotron-fluid">
     <div class="container">
-        <div class="group-konten-jumbotron text-center">
-            <h1>LEMBAGA MASYARAKAT</h1>
-            <hr class="horizontal-line">
-            <p>lembaga masyarakat yang ada di desa jatitujuh kecamatan jatitujuh kabupaten jatitujuh</p>
-            <p>provinsi jawa tengah</p>
-        </div>
+        <h1 class="">Sejarah Desa</h1>
+        <hr class="horizontal-line">
+        <p class="lead">Lembaga masyarakat yang ada di desa Jatitujuh Kecamatan Jatitujuh Kabupaten Jatitujuh</p>
+        <p class="lead">Provinsi Jawa Tengah</p>
     </div>
 </div>
 

@@ -4,10 +4,12 @@
 
 
 <div>
-    <div class="jumbotron-pemerintahan jumbotron-fluid">
+    <!-- Jumbotron -->
+    <div class="jumbotron-laporan jumbotron-fluid">
         <div class="container">
-            <h5 class="display-2 text-center">STOK</h5>
-            <h5 class="card-title text-dark text-center">Pemerintahan Desa Jatitujuh</h5>
+            <h1 class="">Pemerintah Desa</h1>
+            <hr class="horizontal-line">
+            <p class="lead">Desa Jatijutuh</p>
         </div>
     </div>
 

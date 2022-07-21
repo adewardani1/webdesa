@@ -8,13 +8,19 @@
 
 <!-- start jumbotron galeri -->
 
-<div class="jumbotron-galeri">
+<!-- <div class="jumbotron-galeri">
     <div class="jumbotron-text text-center">
-        <h1>GALERI</h1>
-        <p>JATITUJUH</p>
+        <h1>Galeri</h1>
+        <p>Desa Jatitujuh</p>
+    </div>
+</div> -->
+
+<div class="jumbotron-pengumuman jumbotron-fluid">
+    <div class="news-judul text-center">
+        <h1>Galeri</h1>
+        <p class="lead">Desa Jatitujuh</p>
     </div>
 </div>
-
 <!-- end jumbotron galeri -->
 
 <!-- start swiper galeri -->

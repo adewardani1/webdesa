@@ -4,6 +4,7 @@
 <div class="jumbotron-laporan jumbotron-fluid">
     <div class="container">
         <h1 class="">Demografi</h1>
+        <hr class="horizontal-line">
         <p class="lead">Desa Jatijutuh</p>
     </div>
 </div>

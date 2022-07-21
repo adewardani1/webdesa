@@ -8,8 +8,9 @@
 
 <!-- Jumbotron -->
 <div class="jumbotron-laporan jumbotron-fluid">
-    <div class="container">
-        <h1 class="">LAPORAN</h1>
+    <div class="news-judul text-center">
+        <h1 class="">Laporan</h1>
+        <hr class="horizontal-line">
         <p class="lead">Desa Jatijutuh</p>
     </div>
 </div>

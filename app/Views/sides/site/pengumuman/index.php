@@ -1,9 +1,17 @@
 <?= $this->extend('layout/page_layout') ?>
 
 <?= $this->section('content') ?>
-<div class="jumbotron-pengumuman">
-    <h1>PENGUMUMAN</h1>
+
+<div class="jumbotron-pengumuman jumbotron-fluid">
+    <div class="news-judul text-center">
+        <h1>Pengumuman</h1>
+    </div>
 </div>
+
+
+<!-- <div class="news-judul text-center">
+    <h1>PENGUMUMAN</h1>
+</div> -->
 
 <div class="jumbotron-isi">
     <div class="container">

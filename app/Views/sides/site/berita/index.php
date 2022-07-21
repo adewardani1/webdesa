@@ -2,8 +2,10 @@
 
 <?= $this->section('content') ?>
 
-<div class="news-judul text-center">
-    <h1>BERITA</h1>
+<div class="jumbotron-pengumuman jumbotron-fluid">
+    <div class="news-judul text-center">
+        <h1>Berita</h1>
+    </div>
 </div>
 
 <div class="jumbotron-news">

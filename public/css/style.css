@@ -576,11 +576,6 @@
 
   /* start css kelembagaan */
 
-  .jumbotron-kelembagaan {
-    font-family: "Roboto", sans-serif;
-    color: #595959;
-  }
-
   .jumbotron-kelembagaan .group-konten-jumbotron {
     margin-top: 200px;
   }
@@ -594,11 +589,11 @@
 
   .jumbotron-kelembagaan .group-konten-jumbotron p {
     color: #595959 !important;
+
   }
 
   .jumbotron-img-kelembagaan {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
-      url("/img/desajatituju.jpg");
+
     background-size: cover;
     background-repeat: no-repeat;
     padding: 2rem 1rem;
@@ -1120,7 +1115,7 @@
   /* end css tampilan berita */
 
   /* start css pengumuman */
-
+/* 
   .jumbotron-pengumuman {
     font-family: "Roboto", sans-serif;
     padding: 2rem 1rem;
@@ -1133,6 +1128,7 @@
     text-align: center;
     margin-bottom: 10rem;
   }
+  */
 
   .jumbotron-isi {
     font-family: "Roboto", sans-serif;
@@ -1140,11 +1136,11 @@
     margin-bottom: 50px;
   }
 
-  .jumbotron-pengumuman h1 {
+  /* .jumbotron-pengumuman h1 {
     color: white !important;
     font-weight: 900;
     font-size: 100px;
-  }
+  } */ */
 
   .jumbotron-isi .container .row .col-sm-4 .card {
     transition: 0.3s ease;
@@ -1466,10 +1462,8 @@
 
 @media (max-width: 576px) {
 
-  .button-icon{
-
-
-    
+  .jumbotron-pengumuman .news-judul h1{
+    padding-top: 180px;
   }
 
   .kotak-icon p{
@@ -1543,7 +1537,7 @@
 }
 
 .jumbotron-laporan h1 {
-  padding-top: 270px;
+  padding-top: 100px;
 }
 
 .container-sejarah {
@@ -1570,3 +1564,18 @@
   padding: 0 20px 40px 20px;
 }
 
+.jumbotron-pengumuman{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+      url("/img/desajatituju.jpg");
+  background-size: cover;
+    width: 100%;
+    min-height: 500px;
+    font-size: 70px;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+}
+
+.jumbotron-pengumuman h1 {
+  padding-top: 80px;
+}
